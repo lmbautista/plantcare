@@ -1,0 +1,36 @@
+%nav#main-nav.navmenu.navmenu-default.navmenu-fixed-left.offcanvas{ role:"navigation" }
+  %ul.nav.navbar-nav
+    %li.active
+      %a{href: "#"} Link
+    %li
+      %a{href: "#"} Link
+    %li.dropdown
+      %a.dropdown-toggle{ data: { toggle: "dropdown" }, href: "#" }
+        Dropdown
+        %b.caret
+      %ul.dropdown-menu
+        %li
+          %a{href: "#"} Action
+        %li
+          %a{href: "#"} Another action
+        %li
+          %a{href: "#"} Something else here
+        %li
+          %a{href: "#"} Separated link
+        %li
+          %a{href: "#"} One more separated link
+
+.navbar.navbar-default{ class: "#{'navmenu-fixed-left' if false}" }
+  .row
+    .col-xs-2
+      %button.navbar-toggle{ type: "button", data: { toggle: "offcanvas", target: "#main-nav", canvas: "body" }}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+    .col-xs-10.col-md-10.col-md-offset-2
+      - if content_for?(:header)
+        = yield(:header)
+      -else
+        %h2.text-center
+          = I18n.t('title')

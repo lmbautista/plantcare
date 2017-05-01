@@ -1,0 +1,154 @@
+@import "shared/_variables";
+
+* {
+  &:hover, &:focus {
+    transition: all 500ms ease;
+  }
+}
+
+@mixin active-effect($color){
+  background-color: $color;
+  color: $opposite-color;
+  border-color: $color;
+  &:hover, &:focus {
+    background-color: darken($color,10%);
+    color: darken($opposite-color,10%);
+    border-color: darken($color,10%);
+  }
+}
+
+@mixin hover-effect($color){
+  &:hover, &:focus {
+    @include active-effect($color);
+  }
+}
+
+html,body {
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    font-family: $general-font;
+    font-weight: 400;
+    font-size: 14px;
+    color: $font-color;
+    background-color: $general-color;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $opposite-color;
+      font-weight: 300;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+
+    header {
+      width: 100%;
+      height: 55px;
+      color: $font-color;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+    }
+    footer {
+      width: 100%;
+      height: 50px;
+      color: $opposite-color;
+      background: transparent;
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+    }
+    a {
+      text-decoration: none;
+      color: $opposite-color;
+      &:hover, &:focus {
+        text-decoration: none;
+        color: $general-color;
+      }
+
+    }
+
+    #content {
+      height: 100%;
+      font-weight: 400;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.33);
+      }
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .actions {
+      padding: 15px 0;
+    }
+
+    .plantcare-ico {
+      font-family: $header-font;
+      background: image-url('plantcare_ico') left top no-repeat;
+      padding-left: 45px;
+      background-size: 40px;
+    }
+
+    // Buttons
+    .custom-btn {
+      @extend .btn;
+      border-radius: 0;
+      padding: 9px 12px;
+      border: 2px solid $opposite-color;
+      color: $opposite-color;
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      -o-animation-duration: 2s;
+      animation-duration: 2s;
+      margin-right: 10px;
+
+      &.full-width{
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .custom-btn-primary {
+      background-color: transparent;
+      @include hover-effect($general-color);
+    }
+
+    .custom-btn-secondary {
+      background-color: transparent;
+      @include hover-effect(darken($general-color,10%));
+    }
+
+    .custom-btn-active {
+      @include active-effect($general-color);
+    }
+
+  }
+}

@@ -1,0 +1,19 @@
+@media only screen and (max-width: $screen-sm-max) {
+  html {
+    body {
+      &.users {
+        &.welcome {
+          #content {
+            .welcome-title { margin-top: 100px }
+            .welcome-icon {
+              margin-top: 10px;
+              .explaining {
+                .explain-ico { height: 60px; }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

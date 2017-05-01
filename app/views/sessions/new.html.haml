@@ -1,0 +1,9 @@
+- content_for :header do
+  .row
+    .col-xs-12.col-md-6
+      %h2.plantcare-ico
+        = I18n.t('title')
+    .col-md-4
+      .btn-group.actions
+        .signin
+          = raw I18n.t('users.signin.have_account', signup_link: signin_path)

@@ -1,0 +1,42 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  title: "Plantcare"
+  users:
+    welcome:
+      title: Let's grow up together
+      subtitle: you can make awesome control over your plants
+      explain-ico1: sprout
+      explain-ico2: water
+      explain-ico3: sprout
+      explain-ico4: leaf
+      explain-ico5: sun
+      explain-ico6: growth
+    new:
+      title: Join the crew
+      subtitle: create your account to improve the care of your plants
+      have_account: |
+        Have an account?  <strong><a href="%{signup_link}"> Login </a></strong>
+  sessions:
+    new:
+      title: Sign in

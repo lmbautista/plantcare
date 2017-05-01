@@ -1,0 +1,54 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  &.users {
+    &.welcome {
+      background: image-url('background') top center no-repeat;
+      background-size: cover;
+      #content {
+        .welcome-title {
+          margin-top: 200px;
+
+          h1{
+            margin-bottom: 30px;
+          }
+        }
+        .welcome-icon {
+          margin-top: 100px;
+          .explaining {
+            color: $opposite-color;
+
+            .explain-ico {
+              height: 80px;
+              margin: 0 auto;
+            }
+
+            big {
+              display: block;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    &.new {
+      background: image-url('signup') top center no-repeat;
+      background-size: cover;
+      header {
+        color: $opposite-color;
+      }
+
+      #content {
+        .signup-title {
+          margin-top: 200px;
+
+          h1{
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+development:
+  http://localhost:3001/v1
+preproduction:
+  http://localhost:3001/v1
+production:
+  http://localhost:3001/v1

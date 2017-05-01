@@ -1,0 +1,42 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  &.sessions {
+    &.new {
+      background: image-url('signin') top center no-repeat;
+      background-size: cover;
+
+      #content {
+        &:before {
+          background: transparent;
+        }
+
+        .welcome-title {
+          margin-top: 200px;
+
+          h1{
+            margin-bottom: 30px;
+          }
+        }
+        .welcome-icon {
+          margin-top: 100px;
+          .explaining {
+            color: $opposite-color;
+
+            .explain-ico {
+              height: 80px;
+              margin: 0 auto;
+            }
+
+            big {
+              display: block;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

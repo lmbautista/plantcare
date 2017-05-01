@@ -1,0 +1,33 @@
+.navbar {
+  margin-bottom: 0;
+
+  .navbar-toggle{
+    float: left;
+    margin: 10px;
+    border: none;
+    border-radius: 2px;
+
+    &:hover, &:focus  {
+      background-color: $general-color;
+    }
+
+    .icon-bar {
+      background-color: $opposite-color;
+    }
+  }
+  h1,h2,h3,h4 {
+    margin: 10px;
+    display: inline-block;    
+  }
+}
+
+.navmenu-fixed-left {
+  .navbar-nav {
+    margin: 0;
+  }
+}
+.navbar-default {
+  background: transparent;
+  border: none;
+
+}
