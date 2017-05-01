@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
 
   protected
     def set_user_api_token
-      # RequestStore.store[:wtever_token] = current_user.api_token unless unlogged # or something similar based on `session`
+      RequestStore.store[:wtever_token] = current_user.api_token if logged # or something similar based on `session`
     end
 end
