@@ -1,10 +1,10 @@
 - content_for :header do
   .row
-    .col-xs-12.col-md-6
+    .col-xs-7.col-xs-offset-1.col-md-6
       %h2.plantcare-ico
-        = I18n.t('title')
+        = link_to I18n.t('title'), root_path
 
-    .hidden-xs.col-md-4.col-md-offset-1
+    .hidden-xs.col-xs-4.col-md-4.col-md-offset-1
       .btn-group.actions
         = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
         = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active"
@@ -60,9 +60,9 @@
     .visible-xs.col-xs-12.text-center
       .row
         .col-xs-6
-          = link_to t('users.signin.title'), signin_path, class: "custom-btn custom-btn-primary full-width"
+          = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary full-width"
         .col-xs-6
-          = link_to t('users.signup.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  full-width"
+          = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  full-width"
 
 
 

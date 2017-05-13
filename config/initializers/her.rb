@@ -8,7 +8,7 @@ Her::API.setup url: HER_CONFIG[Rails.env] do |c|
   c.use Faraday::Request::UrlEncoded
 
   # Response
-  c.use Her::Middleware::DefaultParseJSON
+  c.use Her::Middleware::JsonApiParser
 
   # Adapter
   c.use Faraday::Adapter::NetHttp

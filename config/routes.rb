@@ -56,7 +56,7 @@ Rails.application.routes.draw do
 
   root 'users#welcome'
 
-  resources :users, only: %w( welcome show ) do
+  resources :users, only: %w( welcome show new create ) do
   end
 
   get 'signin', to: 'sessions#new'

@@ -33,7 +33,7 @@ body {
         }
       }
     }
-    &.new {
+    &.new, &.create {
       background: image-url('signup') top center no-repeat;
       background-size: cover;
       header {
@@ -47,6 +47,9 @@ body {
           h1{
             margin-bottom: 30px;
           }
+        }
+        .signup-body {
+          margin-top: 50px;
         }
       }
     }

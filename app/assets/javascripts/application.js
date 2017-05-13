@@ -17,3 +17,4 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jasny/jasny-bootstrap.min
+//= require growl/jquery.growl

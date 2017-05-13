@@ -17,7 +17,7 @@
   }
   h1,h2,h3,h4 {
     margin: 10px;
-    display: inline-block;    
+    display: inline-block;
   }
 }
 
@@ -30,4 +30,8 @@
   background: transparent;
   border: none;
 
+}
+
+.form-control {
+  border-radius: 0;
 }

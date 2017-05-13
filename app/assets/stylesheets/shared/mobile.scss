@@ -13,6 +13,12 @@
             }
           }
         }
+        &.new, &.create {
+          #content {
+            .signup-title { margin-top: 100px }
+            .signup-body { margin-top: 20px}
+          }
+        }
       }
     }
   }

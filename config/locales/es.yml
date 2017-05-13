@@ -1,0 +1,31 @@
+es:
+  title: "Plantcare"
+  buttons:
+    submit: "Enviar"
+
+  users:
+    welcome:
+      title: Crezcamos juntos
+      subtitle: te ayudaremos a mejorar el control sobre tu pequeño rincon verde
+      explain-ico1: Plantado
+      explain-ico2: Riego
+      explain-ico3: Transplantado
+      explain-ico4: Fertilizado
+      explain-ico5: Sol
+      explain-ico6: Desarrollo
+    new:
+      title: Unete al equipo
+      subtitle: crea tu cuenta y mejora el cuidado de tus plantas
+      have_account: |
+        ¿Ya tienes una cuenta?  <strong><a href="%{signup_link}"> Login </a></strong>
+    wtever_api:
+      attributes:
+        first_name: Nombre
+        last_name: Apellidos
+        email: Email
+        password: Password
+        password_confirmation: Confirma password
+
+  sessions:
+    new:
+      title: Sign in

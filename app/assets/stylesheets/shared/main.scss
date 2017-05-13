@@ -110,11 +110,16 @@ html {
       padding: 15px 0;
     }
 
+
     .plantcare-ico {
       font-family: $header-font;
       background: image-url('plantcare_ico') left top no-repeat;
       padding-left: 45px;
       background-size: 40px;
+    }
+
+    a {
+      &:hover, &focus { color: $opposite-color; }
     }
 
     // Buttons

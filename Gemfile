@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # REST map
 gem 'her'
+gem 'faraday_middleware'
 # Paginacion
 gem 'kaminari'
 # Bootstrap

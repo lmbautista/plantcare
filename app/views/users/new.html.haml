@@ -1,9 +1,10 @@
 - content_for :header do
   .row
-    .col-xs-12.col-md-6
+    .col-xs-7.col-xs-offset-1.col-md-6
       %h2.plantcare-ico
-        = I18n.t('title')
-    .col-md-4
+        = link_to I18n.t('title'), root_path
+
+    .col-xs-2.col-md-4.hidden-xs
       .btn-group.actions
         .signin
           = raw I18n.t('users.new.have_account', signup_link: signin_path)
@@ -15,13 +16,23 @@
         = I18n.t('users.new.title')
 
       %h4
-        = I18n.t('users.new.subtitle')        
+        = I18n.t('users.new.subtitle')
 
-
+.signup-body
   .row
-    .col-xs-6.col-md-1.col-md-offset-3.text-center
-      -# = form_for @user, url: session_path(@user), method: 'post' do |f|
-      -#   = f.text_field :username, class: 'form-control'
-      -#   = f.password_field :password, class: 'form-control'
-      -#   = f.submit, { class: 'btn btn-primary' }
-      ASEREJE
+    .col-xs-12.col-md-4.col-md-offset-4.text-center
+      = form_for @user, url: users_path, method: 'post' do |f|
+        .form-group
+          = f.text_field :first_name, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.first_name')
+        .form-group
+          = f.text_field :last_name, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.last_name')
+        .form-group
+          = f.text_field :email, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
+        .form-group
+          -# = f.select :country_id, options_for_select(@countries.collect{ |country| [country["id"], country["nicename"]] }), { prompt: I18n.t('users.wtever_api.attributes.email') }, { class: 'form-control' }
+        .form-group
+          = f.password_field :password, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')
+        .form-group
+          = f.password_field :password_confirmation, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password_confirmation')
+        .form-group.text-right
+          = f.submit I18n.t('buttons.submit'), { class: 'custom-btn custom-btn-primary full-width' }
