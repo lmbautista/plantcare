@@ -1,10 +1,10 @@
 - content_for :header do
   .row
-    .col-xs-7.col-xs-offset-1.col-md-6
+    .col-xs-12.col-md-6.col-md-offset-1
       %h2.plantcare-ico
         = link_to I18n.t('title'), root_path
 
-    .hidden-xs.col-xs-4.col-md-4.col-md-offset-1
+    .hidden-xs.col-xs-2.col-md-4.hidden-xs.text-right
       .btn-group.actions
         = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
         = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active"
