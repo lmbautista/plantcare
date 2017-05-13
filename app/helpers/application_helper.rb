@@ -9,11 +9,11 @@ module ApplicationHelper
 
   def growl_message
     growl_message = if flash[:error].present?
-                      "  $.growl.error({ message: '#{flash[:error]}', duration: 10000, title: 'Plantcare says:' });"
+                      "  $.growl.error({ message: '#{flash[:error]}', duration: 100000, title: 'Plantcare says:' });"
                     elsif flash[:notice].present?
-                      "  $.growl.notice({ message: '#{flash[:notice]}', duration: 10000, title: 'Plantcare says:' });"
+                      "  $.growl.notice({ message: '#{flash[:notice]}', duration: 100000, title: 'Plantcare says:' });"
                     elsif flash[:warning].present?
-                      "  $.growl.warning({ message: '#{flash[:warning]}', duration: 10000, title: 'Plantcare says:' });"
+                      "  $.growl.warning({ message: '#{flash[:warning]}', duration: 100000, title: 'Plantcare says:' });"
                     else
                       ""
                     end

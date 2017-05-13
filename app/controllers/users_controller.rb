@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       render 'new'
     else
-      flash[:error] = to_flash(@user.response_errors)
+      flash.now[:error] = to_flash(@user.response_errors)
       render 'new'
     end
   end
