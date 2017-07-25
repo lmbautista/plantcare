@@ -1,4 +1,6 @@
-= form_for @user, url: session_path(@user), method: 'post' do |f|
-  = f.text_field :username, class: 'form-control'
-  = f.password_field :password, class: 'form-control'
-  = f.submit, { class: 'btn btn-primary' }
+= form_for @user, url: sessions_path, method: 'post', id: 'signin_form', remote: (defined?(remote) ? remote : false)  do |f|
+  .form-group
+    = f.email_field :email, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
+    
+  .form-group
+    = f.password_field :password, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')

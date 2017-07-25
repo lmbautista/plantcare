@@ -36,3 +36,7 @@
           = f.password_field :password_confirmation, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password_confirmation')
         .form-group.text-right
           = f.submit I18n.t('buttons.submit'), { class: 'custom-btn custom-btn-primary full-width' }
+
+= modal_for('signup_modal', I18n.t("sessions.new.title"), { close_button: true, form_id: '#signin_form' }) do
+  - capture_haml do
+    = render partial: 'users/signin', locals: { remote: true }

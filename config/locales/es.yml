@@ -2,7 +2,9 @@ es:
   title: "Plantcare"
   buttons:
     submit: "Enviar"
-
+    cancel: "Cancelar"
+    create: "Crear"
+    close: "Cerrar"
   users:
     welcome:
       title: Crezcamos juntos
@@ -17,7 +19,7 @@ es:
       title: Unete al equipo
       subtitle: crea tu cuenta y mejora el cuidado de tus plantas
       have_account: |
-        ¿Ya tienes una cuenta?  <strong><a href="%{signup_link}"> Login </a></strong>
+        ¿Ya tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Login </a></strong>
     wtever_api:
       attributes:
         first_name: Nombre
@@ -28,4 +30,4 @@ es:
 
   sessions:
     new:
-      title: Sign in
+      title: Inicia sesión

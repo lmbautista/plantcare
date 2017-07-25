@@ -59,6 +59,9 @@ Rails.application.routes.draw do
   resources :users, only: %w( welcome show new create ) do
   end
 
+  resources :sessions, only: %w( create destroy ) do
+  end
+
   get 'signin', to: 'sessions#new'
   get 'signup', to: 'users#new'
 end
