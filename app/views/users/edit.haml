@@ -1,0 +1,12 @@
+= render partial: 'shared/title', locals: { title: I18n.t('users.edit.title'), subtitle: I18n.t('users.edit.subtitle') }
+
+.body
+  = form_for @user, url: user_path(@user) do |f|
+    .row
+      .col-xs-12.col-md-4.col-md-offset-2.text-center
+        = render partial: 'users/basic_form_fields',    locals: { f: f }
+
+      .col-xs-12.col-md-4.text-center
+        = render partial: 'users/extended_form_fields', locals: { f: f }
+
+        = render 'shared/form/submit', f: f

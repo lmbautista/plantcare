@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200:300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Pacifico:300,400,500,600,700');
-$general-font: 'Libre Franklin', sans-serif;
+
+$general-font: 'Roboto', sans-serif;
 $header-font:  'Pacifico', cursive;
 
-$general-color:       #3ae092;
-$opposite-color:      #fff;
-$font-color:          #444;
+$general-color:             #18BC9C;
+$general-opossite-color:    #2C3E50;
+$second-color:              darken($general-color, 25%);
+$cancel-color:              #d9534f;
+$opposite-color:            #fff;
+$font-color:                #444;
+$background-color:          $general-color;
+$background-opossite-color: $general-color;

@@ -4,21 +4,14 @@
       %h2.plantcare-ico
         = link_to I18n.t('title'), root_path
 
-    .hidden-xs.col-xs-2.col-md-4.hidden-xs.text-right
+    .col-md-4.hidden-xs.text-right
       .btn-group.actions
         = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
         = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active"
 
-.welcome-title
-  .row
-    .col-xs-12.col-md-4.col-md-offset-4.text-center
-      %h1.uppercase
-        = I18n.t('users.welcome.title')
+= render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
 
-      %h4
-        = I18n.t('users.welcome.subtitle')
-
-.welcome-icon
+.plantcare-icon
   .row
     .col-xs-6.col-md-1.col-md-offset-3.text-center
       .explaining.magictime

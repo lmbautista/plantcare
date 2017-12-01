@@ -1,10 +1,17 @@
 - content_for :header do
   .row
-    .col-xs-12.col-md-6
+    .col-xs-12.col-md-6.col-md-offset-1
       %h2.plantcare-ico
         = link_to I18n.t('title'), root_path
-        
-    .col-md-4
+
+    .col-xs-2.col-md-4.hidden-xs.text-right
       .btn-group.actions
-        .signin
-          = raw I18n.t('users.signin.have_account', signup_link: signin_path)
+        .header-field
+          = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
+
+= render partial: 'shared/title', locals: { title: I18n.t('sessions.new.title'), subtitle: I18n.t('sessions.new.subtitle') }
+
+.body
+  .row
+    .col-xs-12.col-md-4.col-md-offset-4.text-center
+      = render partial: 'sessions/signin'

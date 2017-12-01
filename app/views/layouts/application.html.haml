@@ -10,7 +10,7 @@
 
     = csrf_meta_tags
 
-  %body{class: "#{params[:action]} #{params[:controller]}"}
+  %body{ class: "#{params[:action]} #{params[:controller]} #{ 'logged' if user_logged? }" }
     %header
       = render 'shared/header'
 
@@ -19,6 +19,3 @@
         = yield
 
     = growl_message
-
-    -# %footer
-    -#   = render 'shared/footer'

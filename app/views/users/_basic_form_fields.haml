@@ -1,0 +1,12 @@
+.form-group
+  = f.text_field :first_name, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.first_name')
+.form-group
+  = f.text_field :last_name, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.last_name')
+.form-group
+  = f.email_field :email, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
+.form-group
+  -# = f.select :country_id, options_for_select(@countries.collect{ |country| [country["id"], country["nicename"]] }), { prompt: I18n.t('users.wtever_api.attributes.email') }, { class: 'form-control' }
+.form-group
+  = f.password_field :password, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')
+.form-group
+  = f.password_field :password_confirmation, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password_confirmation')

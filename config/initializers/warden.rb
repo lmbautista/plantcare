@@ -13,7 +13,7 @@ class Warden::SessionSerializer
 
   def deserialize(keys)
     klass, id = keys
-    klass.find(:first, :conditions => { :id => id })
+    eval(klass).find(:first, :conditions => { :id => id })
   end
 end
 

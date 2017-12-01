@@ -1,0 +1,16 @@
+= form_tag sessions_path, id: 'signin_form', method: 'post', remote: (defined?(remote) ? remote : false) do
+  .form-group
+    = email_field_tag :email, nil, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
+
+  .form-group
+    = password_field_tag :password, nil, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')
+
+  .form-group.text-right
+    .row
+      .col-xs-12.col-sm-6
+        .form-group
+          = submit_tag I18n.t('buttons.submit'), { class: "custom-btn custom-btn-primary full-width custom-btn-inline #{'custom-btn-active' if defined?(remote) && remote}" }
+
+      .col-xs-12.col-sm-6
+        .form-group
+          = link_to I18n.t('buttons.cancel'), :back, class: "custom-btn custom-btn-danger full-width custom-btn-inline"

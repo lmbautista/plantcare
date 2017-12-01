@@ -1,0 +1,46 @@
+// Place all the styles related to the Plantcares controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  &.plantcares {
+    #content{
+      // padding-top: 70px;
+
+      .body {
+        // .banner-title {
+        //   background: image-url('plantcares') top center no-repeat;
+        //   background-size: cover;
+        //   height: 360px;
+        //
+        //   .banner-text {
+        //     position: absolute;
+        //     bottom: 110px;
+        //     right: 100px;
+        //
+        //     h1,h4 {
+        //       color: $font-color;
+        //     }
+        //   }
+        // }
+
+        .action {
+          padding: 10px;
+          background: $general-color;
+          color: $opposite-color;
+          height: 120px;
+          width: 120px;
+          display: block;
+          float: left;
+          @extend .custom-btn-active;
+
+          img {
+            height: 80px;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}

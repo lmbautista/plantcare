@@ -1,14 +1,18 @@
 class SessionsController < ApplicationController
     def new
-      @user = WteverApi::User.new(sessions_params)
     end
 
     def create
-
+      @user = WteverApi::User.new(sessions_params)
+      if authenticate!(:basic_auth)
+        redirect_to plantcares_path and return
+      else
+        redirect_to root_path and return
+      end
     end
 
     private
       def sessions_params
-        params.require(:wtever_api_user).permit(:email, :password)
+        params.permit(:email, :password)
       end
 end

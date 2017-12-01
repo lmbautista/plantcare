@@ -1,0 +1,9 @@
+.form-group.text-right
+  .row
+    .col-xs-12.col-sm-6
+      .form-group
+        = f.submit I18n.t('buttons.submit'), { class: 'custom-btn custom-btn-primary full-width custom-btn-inline' }
+
+    .col-xs-12.col-sm-6
+      .form-group
+        = link_to I18n.t('buttons.cancel'), :back, class: "custom-btn custom-btn-danger full-width custom-btn-inline"

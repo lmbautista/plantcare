@@ -5,6 +5,7 @@ es:
     cancel: "Cancelar"
     create: "Crear"
     close: "Cerrar"
+
   users:
     welcome:
       title: Crezcamos juntos
@@ -19,7 +20,14 @@ es:
       title: Unete al equipo
       subtitle: crea tu cuenta y mejora el cuidado de tus plantas
       have_account: |
-        ¿Ya tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Login </a></strong>
+        ¿Ya tienes una cuenta?  <strong><a id="signin_link" data-toggle="modal" data-target="#signin_modal" href="#"> Login </a></strong>
+    confirmation:
+      title: Enhorabuena
+      subtitle: Tu cuenta ha sido creado correctamente y en breves recibirás un email para confirmar tu cuenta de Plantcare
+    edit:
+      title: Perfil
+      subtitle: Edita los datos de tu cuenta
+
     wtever_api:
       attributes:
         first_name: Nombre
@@ -27,7 +35,31 @@ es:
         email: Email
         password: Password
         password_confirmation: Confirma password
+        nif: DNI/NIF
+        pc: Código postal
+        state: Provincia
+        city: Localidad
 
+  plantcares:
+    new:
+      title: Nuevo plantcare
+      subtitle: registra tu nueva planta
+    index:
+      title: Tus Plantcares
+      subtitle: Revisa el estado de tus plantas
+      howto: Crea tu planta, pincha tu placa de control de humedad y la válvula asociada para realizar las mediciones y los riegos oportunos
+
+    wtever_api:
+      attributes:
+        name: Nombre
+        wet: Humedad
+        planted_at: Plantada el
+        watered_at: Regada el
+        user_id: Propietario
+        
   sessions:
     new:
       title: Inicia sesión
+      subtitle:  bienvenido, accede con tu usuario y password
+      create_account: |
+        ¿No tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Únete </a></strong>

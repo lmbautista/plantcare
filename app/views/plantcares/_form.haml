@@ -1,0 +1,6 @@
+.form-group
+  = f.text_field :name, class: 'form-control', placeholder: I18n.t('plantcares.wtever_api.attributes.name')
+.form-group
+  = f.text_field :planted_at, class: 'form-control', placeholder: I18n.t('plantcares.wtever_api.attributes.planted_at')
+
+= render 'shared/form/submit', f: f

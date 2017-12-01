@@ -1,10 +1,10 @@
-class BasicAuth < ::Warden::Strategies::Base
+class BasicAuth < Warden::Strategies::Base
   def valid?
-    params[:username] && params[:password]
+    params[:email].present? && params[:password].present?
   end
 
   def authenticate!
-    u = User.authenticate(params[:username], params[:password])
+    u = WteverApi::User.signin(email: params[:email], password: params[:password])
     u.nil? ? fail!("Could not log in") : success!(u)
   end
 end

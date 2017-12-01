@@ -5,23 +5,17 @@
 body {
   &.sessions {
     &.new {
-      background: image-url('signin') top center no-repeat;
-      background-size: cover;
-
       #content {
-        &:before {
-          background: transparent;
-        }
+        // padding-top: 200px;
 
-        .welcome-title {
-          margin-top: 200px;
-
-          h1{
+        .title {
+          h1 {
             margin-bottom: 30px;
           }
         }
-        .welcome-icon {
-          margin-top: 100px;
+        .plantcare-icon {
+          padding-top: 100px;
+
           .explaining {
             color: $opposite-color;
 
@@ -37,6 +31,10 @@ body {
           }
         }
       }
+    }
+
+    header {
+      color: $opposite-color;
     }
   }
 }

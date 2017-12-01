@@ -1,22 +1,51 @@
 @media only screen and (max-width: $screen-sm-max) {
   html {
     body {
+      .no-padding-mobile {
+        padding: 0;
+      }
+
+      #content {
+          padding-top: 70px;
+      }
+
       &.users {
         &.welcome {
           #content {
-            .welcome-title { margin-top: 100px }
-            .welcome-icon {
-              margin-top: 10px;
+            .plantcare-icon {
+              padding-top: 0;
+
               .explaining {
                 .explain-ico { height: 60px; }
               }
             }
           }
         }
-        &.new, &.create {
+      }
+
+      &.users, &.sessions {
+        #content {
+
+        }
+      }
+
+      &.plantcares {
+        &.index {
           #content {
-            .signup-title { margin-top: 100px }
-            .signup-body { margin-top: 20px}
+            .body {
+              .banner-title {
+                height: 230px;
+                .banner-text {
+                  bottom: 70px;
+                  right: 40px;
+                }
+              }
+
+              .action {
+                width: 33.3%;
+                height: 33.3%;
+              }
+            }
           }
         }
       }

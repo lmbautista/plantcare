@@ -4,39 +4,18 @@
       %h2.plantcare-ico
         = link_to I18n.t('title'), root_path
 
-    .col-xs-2.col-md-4.hidden-xs.text-right
+    .col-md-4.hidden-xs.text-right
       .btn-group.actions
-        .signin
-          = raw I18n.t('users.new.have_account', signup_link: signin_path)
+        .header-field
+          = raw I18n.t('users.new.have_account', signin_link: signin_path)
 
-.signup-title
+= render partial: 'shared/title', locals: { title: I18n.t('users.new.title'), subtitle: I18n.t('users.new.subtitle') }
+
+.body
   .row
     .col-xs-12.col-md-4.col-md-offset-4.text-center
-      %h1.uppercase
-        = I18n.t('users.new.title')
+      = render partial: 'users/signup'
 
-      %h4
-        = I18n.t('users.new.subtitle')
-
-.signup-body
-  .row
-    .col-xs-12.col-md-4.col-md-offset-4.text-center
-      = form_for @user, url: users_path, method: 'post' do |f|
-        .form-group
-          = f.text_field :first_name, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.first_name')
-        .form-group
-          = f.text_field :last_name, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.last_name')
-        .form-group
-          = f.text_field :email, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
-        .form-group
-          -# = f.select :country_id, options_for_select(@countries.collect{ |country| [country["id"], country["nicename"]] }), { prompt: I18n.t('users.wtever_api.attributes.email') }, { class: 'form-control' }
-        .form-group
-          = f.password_field :password, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')
-        .form-group
-          = f.password_field :password_confirmation, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password_confirmation')
-        .form-group.text-right
-          = f.submit I18n.t('buttons.submit'), { class: 'custom-btn custom-btn-primary full-width' }
-
-= modal_for('signup_modal', I18n.t("sessions.new.title"), { close_button: true, form_id: '#signin_form' }) do
+= modal_for('signin_modal', I18n.t("sessions.new.subtitle").humanize, { footer: false }) do
   - capture_haml do
-    = render partial: 'users/signin', locals: { remote: true }
+    = render partial: 'sessions/signin', locals: { remote: true }
