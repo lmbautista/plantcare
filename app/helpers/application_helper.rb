@@ -3,7 +3,7 @@ module ApplicationHelper
     env['warden'].user
   end
 
-  def logged
+  def logged?
     current_user.present?
   end
 

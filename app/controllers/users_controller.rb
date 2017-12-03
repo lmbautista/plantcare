@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+
+  skip_before_action :authenticator, only: %w(welcome new create)
+  
   def welcome
+    # redirect_to plantcares_path if logged?
   end
 
   def show
@@ -29,15 +33,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    p "llego update"
     @user = WteverApi::User.new(user_params)
-    p "user: #{@user.attributes}"
     if @user.save
-      p "user saved"
       flash.now[:error] = I18n.t('users.update.sucessfully')
       redirect_to user_profile_path(@user) and return
     else
-      p "user not saved"
       flash.now[:error] = to_flash(@user.response_errors)
       render 'edit' and return
     end
@@ -45,6 +45,15 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:wtever_api_user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :nif, :city, :state, :pc)
+      params.require(:wtever_api_user).permit(
+        :first_name,
+        :last_name,
+        :email,
+        :password,
+        :password_confirmation,
+        :nif,
+        :city,
+        :state,
+        :pc)
     end
 end

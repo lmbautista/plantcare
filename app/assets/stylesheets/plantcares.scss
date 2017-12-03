@@ -5,40 +5,42 @@
 
 body {
   &.plantcares {
-    #content{
-      // padding-top: 70px;
+    &.index {
+      #content {
+        background: $general-color asset-url('plantcare-bg.jpg') right no-repeat;
+        background-size: auto;
+        position: relative;
 
-      .body {
-        // .banner-title {
-        //   background: image-url('plantcares') top center no-repeat;
-        //   background-size: cover;
-        //   height: 360px;
-        //
-        //   .banner-text {
-        //     position: absolute;
-        //     bottom: 110px;
-        //     right: 100px;
-        //
-        //     h1,h4 {
-        //       color: $font-color;
-        //     }
-        //   }
-        // }
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0,0,0,0.3);
+        }
+      }
+    }
 
-        .action {
-          padding: 10px;
-          background: $general-color;
-          color: $opposite-color;
-          height: 120px;
-          width: 120px;
-          display: block;
-          float: left;
-          @extend .custom-btn-active;
+    #content {
 
-          img {
-            height: 80px;
-            margin: auto;
-          }
+    }
+
+    .body {
+      .action {
+        padding: 10px;
+        background: $general-color;
+        color: $opposite-color;
+        height: 120px;
+        width: 120px;
+        display: block;
+        float: left;
+        @extend .custom-btn-active;
+
+        img {
+          height: 80px;
+          margin: auto;
         }
       }
     }

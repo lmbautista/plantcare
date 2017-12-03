@@ -3,14 +3,21 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
+  before_filter :authenticator
   before_filter :set_user_api_token
-  
+
   rescue_from Her::Errors::ResourceInvalid, with: :resource_invalid_error
 
   protected
+
+    def authenticator
+      puts "llego authenticator: #{env['warden'].user}"
+      redirect_to root_path unless logged?
+    end
+
     def set_user_api_token
-      RequestStore.store[:wtever_token] = current_user.api_token if logged # or something similar based on `session`
+      RequestStore.store[:wtever_token] = current_user.api_token if logged?
+      puts "token: #{RequestStore.store[:wtever_token]}"
     end
 
     def to_flash(errors)

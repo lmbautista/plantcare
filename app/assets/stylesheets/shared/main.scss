@@ -6,6 +6,13 @@
   }
 }
 
+span.inline {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  border-collapse: separate;
+}
+
 @mixin active-effect($color){
   background-color: $color;
   color: $opposite-color;
@@ -41,7 +48,7 @@ html {
     background-color: $background-color;
 
     .bold {
-      font-weight: 400;
+      font-weight: 500;
     }
 
     h1, h2, h3, h4, h5, h6 {
