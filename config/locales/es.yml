@@ -48,7 +48,9 @@ es:
       title: Tus Plantcares
       subtitle: Revisa el estado de tus plantas
       howto: Crea tu planta, pincha tu placa de control de humedad y la válvula asociada para realizar las mediciones y los riegos oportunos
-
+    create:
+      sucessfully: Ya tienes un plantcare más para cuidar.
+      
     wtever_api:
       attributes:
         name: Nombre
@@ -56,7 +58,7 @@ es:
         planted_at: Plantada el
         watered_at: Regada el
         user_id: Propietario
-        
+
   sessions:
     new:
       title: Inicia sesión

@@ -9,55 +9,55 @@
         = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
         = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active"
 
-= render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
+%section.intro
+  .content
+    = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
 
-.plantcare-icon
-  .row
-    .col-xs-6.col-md-1.col-md-offset-3.text-center
-      .explaining.magictime
-        = image_tag ('sprout'), class: "explain-ico img-responsive"
-        %big
-          = I18n.t('users.welcome.explain-ico1')
-
-    .col-xs-6.col-md-1.text-center
-      .explaining.magictime
-        = image_tag ('water'), class: "explain-ico img-responsive"
-        %big
-          = I18n.t('users.welcome.explain-ico2')
-
-    .col-xs-6.col-md-1.text-center
-      .explaining.magictime
-        = image_tag ('leaf'), class: "explain-ico img-responsive"
-        %big
-          = I18n.t('users.welcome.explain-ico3')
-
-    .col-xs-6.col-md-1.text-center
-      .explaining.magictime
-        = image_tag ('fertilizer'), class: "explain-ico img-responsive"
-        %big
-          = I18n.t('users.welcome.explain-ico4')
-
-    .col-xs-6.col-md-1.text-center
-      .explaining.magictime
-        = image_tag ('sun'), class: "explain-ico img-responsive"
-        %big
-          = I18n.t('users.welcome.explain-ico5')
-
-    .col-xs-6.col-md-1.text-center
-      .explaining.magictime
-        = image_tag ('growth'), class: "explain-ico img-responsive"
-        %big
-          = I18n.t('users.welcome.explain-ico6')
-
-  .row
-    .visible-xs.col-xs-12.text-center
+    .plantcare-icon
       .row
-        .col-xs-6
-          = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary full-width"
-        .col-xs-6
-          = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  full-width"
+        .col-xs-6.col-md-1.col-md-offset-3.text-center
+          .explaining.magictime
+            = image_tag ('sprout'), class: "explain-ico img-responsive"
+            %big
+              = I18n.t('users.welcome.explain-ico1')
 
+        .col-xs-6.col-md-1.text-center
+          .explaining.magictime
+            = image_tag ('water'), class: "explain-ico img-responsive"
+            %big
+              = I18n.t('users.welcome.explain-ico2')
 
+        .col-xs-6.col-md-1.text-center
+          .explaining.magictime
+            = image_tag ('leaf'), class: "explain-ico img-responsive"
+            %big
+              = I18n.t('users.welcome.explain-ico3')
+
+        .col-xs-6.col-md-1.text-center
+          .explaining.magictime
+            = image_tag ('fertilizer'), class: "explain-ico img-responsive"
+            %big
+              = I18n.t('users.welcome.explain-ico4')
+
+        .col-xs-6.col-md-1.text-center
+          .explaining.magictime
+            = image_tag ('sun'), class: "explain-ico img-responsive"
+            %big
+              = I18n.t('users.welcome.explain-ico5')
+
+        .col-xs-6.col-md-1.text-center
+          .explaining.magictime
+            = image_tag ('growth'), class: "explain-ico img-responsive"
+            %big
+              = I18n.t('users.welcome.explain-ico6')
+
+      .row
+        .visible-xs.col-xs-12.text-center
+          .row
+            .col-xs-6
+              = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary full-width"
+            .col-xs-6
+              = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  full-width"
 
 
 :javascript

@@ -1,14 +1,15 @@
-= render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.title'), subtitle: I18n.t('plantcares.new.subtitle') }
+%section.intro
+  .content
+    = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.title'), subtitle: I18n.t('plantcares.new.subtitle') }
 
-.body
-  .row
-    .col-xs-12.col-md-4.col-md-offset-4.text-left
-      .input-group
-        %h5.bold
-          = I18n.t('plantcares.index.howto')
+    .row
+      .col-xs-12.col-md-4.col-md-offset-4.text-left
+        .input-group
+          %h5.bold
+            = I18n.t('plantcares.index.howto')
 
-        %span.inline
-          = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
+          %span.inline
+            = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
 
 
     -# .col-xs-12.col-md-10.col-md-offset-1

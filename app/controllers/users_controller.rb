@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
   skip_before_action :authenticator, only: %w(welcome new create)
-  
+
   def welcome
-    # redirect_to plantcares_path if logged?
+    redirect_to plantcares_path if logged?
   end
 
   def show
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def update
     @user = WteverApi::User.new(user_params)
     if @user.save
-      flash.now[:error] = I18n.t('users.update.sucessfully')
+      flash.now[:notice] = I18n.t('users.update.sucessfully')
       redirect_to user_profile_path(@user) and return
     else
       flash.now[:error] = to_flash(@user.response_errors)

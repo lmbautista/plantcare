@@ -23,25 +23,19 @@ body {
       }
     }
 
-    #content {
+    .action {
+      padding: 10px;
+      background: $general-color;
+      color: $opposite-color;
+      height: 120px;
+      width: 120px;
+      display: block;
+      float: left;
+      @extend .custom-btn-active;
 
-    }
-
-    .body {
-      .action {
-        padding: 10px;
-        background: $general-color;
-        color: $opposite-color;
-        height: 120px;
-        width: 120px;
-        display: block;
-        float: left;
-        @extend .custom-btn-active;
-
-        img {
-          height: 80px;
-          margin: auto;
-        }
+      img {
+        height: 80px;
+        margin: auto;
       }
     }
   }

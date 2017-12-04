@@ -5,12 +5,11 @@ class PlantcaresController < ApplicationController
 
   def create
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
-    p 'llego 1'
+
     if @plantcare.save
-      p 'llego 2'
+      flash.now[:notice] = I18n.t('plantcares.create.sucessfully')
       redirect_to plantcares_path
     else
-      p 'llego 3'
       flash.now[:error] = to_flash(@plantcare.response_errors)
       render 'new'
     end

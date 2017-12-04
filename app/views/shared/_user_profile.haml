@@ -2,6 +2,6 @@
   .btn-group.profile
     = link_to profile_user_path(1) do
       %h4
-        Mariano
+        = "#{current_user.first_name} #{current_user.last_name}"
 
       = image_tag ('default-profile')

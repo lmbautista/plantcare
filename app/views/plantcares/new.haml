@@ -1,7 +1,8 @@
-= render partial: 'shared/title', locals: { title: I18n.t('plantcares.new.title'), subtitle: I18n.t('plantcares.new.subtitle') }
+%section.intro
+  .content
+    = render partial: 'shared/title', locals: { title: I18n.t('plantcares.new.title'), subtitle: I18n.t('plantcares.new.subtitle') }
 
-.body
-  .row
-    .col-xs-12.col-md-4.col-md-offset-4.text-center
-      = form_for @plantcare, url: plantcares_path do |f|
-        = render partial: 'form', locals: { f: f }
+    .row
+      .col-xs-12.col-md-4.col-md-offset-4.text-center
+        = form_for @plantcare, url: plantcares_path do |f|
+          = render partial: 'form', locals: { f: f }

@@ -20,6 +20,8 @@ module Plantcare
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :es
 
+    config.cache_store = :memory_store, { size: 1024.megabytes, expires_in: 30.minutes }
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end

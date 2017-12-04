@@ -4,12 +4,15 @@ HER_CONFIG = YAML.load_file(File.join(Rails.root, 'config/her.yml'))
 
 Her::API.setup url: HER_CONFIG[Rails.env] do |c|
   # Request
-  c.use CustomTokenAuthentication
   c.use Faraday::Request::UrlEncoded
+  c.use CustomTokenAuthentication
+  c.use Faraday::Response::Logger
 
   # Response
   c.use Her::Middleware::JsonApiParser
 
   # Adapter
   c.use Faraday::Adapter::NetHttp
+
+
 end

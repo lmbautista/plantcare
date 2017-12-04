@@ -5,6 +5,11 @@ class BasicAuth < Warden::Strategies::Base
 
   def authenticate!
     u = WteverApi::User.signin(email: params[:email], password: params[:password])
-    u.nil? ? fail!("Could not log in") : success!(u)
+    if u.nil?
+      fail!("Could not log in")
+    else
+      session[:current_user_id] = u.id
+      success!(u)
+    end
   end
 end

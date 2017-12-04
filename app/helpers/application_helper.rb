@@ -1,6 +1,8 @@
 module ApplicationHelper
   def current_user
-    env['warden'].user
+    RequestStore.store[:current_user] ||= Rails.cache.fetch("current_user_#{session[:current_user_id]}") do
+      env['warden'].user
+    end
   end
 
   def logged?

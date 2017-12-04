@@ -5,10 +5,6 @@
         padding: 0;
       }
 
-      #content {
-          padding-top: 70px;
-      }
-
       &.users {
         &.welcome {
           #content {
@@ -32,19 +28,17 @@
       &.plantcares {
         &.index {
           #content {
-            .body {
-              .banner-title {
-                height: 230px;
-                .banner-text {
-                  bottom: 70px;
-                  right: 40px;
-                }
+            .banner-title {
+              height: 230px;
+              .banner-text {
+                bottom: 70px;
+                right: 40px;
               }
+            }
 
-              .action {
-                width: 33.3%;
-                height: 33.3%;
-              }
+            .action {
+              width: 33.3%;
+              height: 33.3%;
             }
           }
         }

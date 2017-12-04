@@ -9,13 +9,14 @@
         .header-field
           = raw I18n.t('users.new.have_account', signin_link: signin_path)
 
-= render partial: 'shared/title', locals: { title: I18n.t('users.new.title'), subtitle: I18n.t('users.new.subtitle') }
+%section.intro
+  .content
+    = render partial: 'shared/title', locals: { title: I18n.t('users.new.title'), subtitle: I18n.t('users.new.subtitle') }
 
-.body
-  .row
-    .col-xs-12.col-md-4.col-md-offset-4.text-center
-      = render partial: 'users/signup'
+    .row
+      .col-xs-12.col-md-4.col-md-offset-4.text-center
+        = render partial: 'users/signup'
 
-= modal_for('signin_modal', I18n.t("sessions.new.subtitle").humanize, { footer: false }) do
-  - capture_haml do
-    = render partial: 'sessions/signin', locals: { remote: true }
+  = modal_for('signin_modal', I18n.t("sessions.new.subtitle").humanize, { footer: false }) do
+    - capture_haml do
+      = render partial: 'sessions/signin', locals: { remote: true }
