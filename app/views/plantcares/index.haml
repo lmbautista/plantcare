@@ -3,14 +3,19 @@
     = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.title'), subtitle: I18n.t('plantcares.new.subtitle') }
 
     .row
-      .col-xs-12.col-md-4.col-md-offset-4.text-left
-        .input-group
-          %h5.bold
-            = I18n.t('plantcares.index.howto')
+      .col-xs-12.col-md-8.col-md-offset-2.text-left
+        %h4
+          = I18n.t('plantcares.index.howto')
 
-          %span.inline
-            = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
+        .text-center
+          = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
 
+%section
+  .content
+    = render partial: 'shared/title', locals: { title: nil, subtitle: I18n.t('plantcares.index.show'), dark: true }
+
+    .row
+      = render partial: 'plantcare', collection: @plantcares, as: :plantcare
 
     -# .col-xs-12.col-md-10.col-md-offset-1
     -#   .row

@@ -1,0 +1,59 @@
+@mixin active-effect($color){
+  background-color: $color;
+  color: $opposite-color;
+  border-color: $color;
+  &:hover, &:focus {
+    background-color: darken($color,10%);
+    color: darken($opposite-color,10%);
+    border-color: darken($color,10%);
+  }
+}
+
+@mixin hover-effect($color){
+  &:hover, &:focus {
+    @include active-effect($color);
+  }
+}
+
+.custom-btn {
+  @extend .btn;
+  border-radius: 0;
+  padding: 9px 12px;
+  border: 2px solid $opposite-color;
+  color: $opposite-color;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+  margin-right: 10px;
+
+  &.full-width {
+    width: 100%;
+    display: block;
+  }
+}
+
+.custom-btn-basic {
+  background-color: darken($general-color,10%);
+  @include hover-effect(darken($general-color,20%));
+}
+
+.custom-btn-primary {
+  background-color: transparent;
+  @include hover-effect($general-color);
+}
+
+.custom-btn-secondary {
+  background-color: transparent;
+  @include hover-effect(darken($general-color,10%));
+}
+
+.custom-btn-danger {
+  background-color: $cancel-color;
+  border-color: $cancel-color;
+  @include hover-effect(darken($cancel-color,10%));
+}
+
+.custom-btn-active {
+  @include active-effect($general-color);
+}

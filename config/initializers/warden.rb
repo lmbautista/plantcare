@@ -1,5 +1,7 @@
 require "authenticators/basic_auth"
 
+WARDEN_SESSION_TIMEOUT=60
+
 Rails.configuration.middleware.use RailsWarden::Manager do |manager|
   manager.default_strategies :basic_auth
   manager.failure_app = ->(env){ AuthController.action(:index).call(env) }

@@ -1,0 +1,17 @@
+.col-xs-12.col-md-4
+  = link_to edit_plantcare_path(plantcare) do
+    .plantcare{style: plantcare_picture(plantcare)}
+      %h2
+        = plantcare.name
+
+      %h4
+        = plantcare.wet
+
+      %h4
+        = plantcare.planted_at
+
+      %h4
+        = plantcare.watered_at
+
+      %h4
+        = plantcare.status

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: %w( create destroy )
 
-  resources :plantcares, only: %w( index new create destroy )
+  resources :plantcares, only: %w( index new create edit update destroy )
 
   get 'signin',           to: 'sessions#new'
   get 'signup',           to: 'users#new'

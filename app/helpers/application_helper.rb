@@ -77,4 +77,10 @@ module ApplicationHelper
   def user_logged?
     params[:controller] == 'plantcares'
   end
+
+  def cssgramer
+    filters = %w(_1977 aden brannan brooklyn clarendon earlybird gingham lark reyes rise slumber valencia)
+    i = rand(1..15)
+    filters[i]
+  end
 end

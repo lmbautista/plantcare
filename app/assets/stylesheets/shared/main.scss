@@ -1,32 +1,9 @@
 @import "shared/_variables";
+@import "shared/custom_buttons";
 
 * {
   &:hover, &:focus {
     transition: all 500ms ease;
-  }
-}
-
-span.inline {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-  border-collapse: separate;
-}
-
-@mixin active-effect($color){
-  background-color: $color;
-  color: $opposite-color;
-  border-color: $color;
-  &:hover, &:focus {
-    background-color: darken($color,10%);
-    color: darken($opposite-color,10%);
-    border-color: darken($color,10%);
-  }
-}
-
-@mixin hover-effect($color){
-  &:hover, &:focus {
-    @include active-effect($color);
   }
 }
 
@@ -104,10 +81,38 @@ html {
 
     }
 
+    span.inline {
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      border-collapse: separate;
+    }
+
+    section {
+      width: 100%;
+      padding: 0 7%;
+      display: table;
+      position: relative;
+      margin: 0;
+      max-width: none;
+      height: 100vh;
+
+      &.intro { height: 90vh; }
+
+      .content {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
     #content {
       font-weight: 400;
 
       .title {
+        &.dark {
+         * { color: $font-color; }
+        }
+
         h1 {
           margin-bottom: 30px;
         }
@@ -137,21 +142,6 @@ html {
 
     .bold {
       font-weight: 500;
-    }
-
-    section {
-      width: 100%;
-      padding: 0 7%;
-      display: table;
-      margin: 0;
-      max-width: none;
-
-      &.intro { height: 90vh; }
-
-      .content {
-        display: table-cell;
-        vertical-align: middle;
-      }
     }
 
     &.logged {
@@ -188,49 +178,6 @@ html {
           color: inherit;
         }
       }
-    }
-
-    .custom-btn {
-      @extend .btn;
-      border-radius: 0;
-      padding: 9px 12px;
-      border: 2px solid $opposite-color;
-      color: $opposite-color;
-      -webkit-animation-duration: 2s;
-      -moz-animation-duration: 2s;
-      -o-animation-duration: 2s;
-      animation-duration: 2s;
-      margin-right: 10px;
-
-      &.full-width {
-        width: 100%;
-        display: block;
-      }
-    }
-
-    .custom-btn-basic {
-      background-color: darken($general-color,10%);
-      @include hover-effect(darken($general-color,20%));
-    }
-
-    .custom-btn-primary {
-      background-color: transparent;
-      @include hover-effect($general-color);
-    }
-
-    .custom-btn-secondary {
-      background-color: transparent;
-      @include hover-effect(darken($general-color,10%));
-    }
-
-    .custom-btn-danger {
-      background-color: $cancel-color;
-      border-color: $cancel-color;
-      @include hover-effect(darken($cancel-color,10%));
-    }
-
-    .custom-btn-active {
-      @include active-effect($general-color);
     }
 
     .header-field {

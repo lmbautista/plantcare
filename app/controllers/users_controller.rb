@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   skip_before_action :authenticator, only: %w(welcome new create)
 
   def welcome
