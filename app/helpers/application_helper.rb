@@ -1,7 +1,7 @@
 module ApplicationHelper
   def current_user
     RequestStore.store[:current_user] ||= Rails.cache.fetch("current_user_#{session[:current_user_id]}") do
-      env['warden'].user
+      request.env['warden'].user
     end
   end
 
@@ -10,6 +10,7 @@ module ApplicationHelper
   end
 
   def growl_message
+    puts "paso por growl_message: #{flash.try(:inspect)}"
     growl_message = if flash[:error].present?
                       "  $.growl.error({ message: '#{flash[:error]}', duration: 100000, title: 'Plantcare says:' });"
                     elsif flash[:notice].present?
@@ -72,10 +73,6 @@ module ApplicationHelper
 
       </div>
     </div>".html_safe
-  end
-
-  def user_logged?
-    params[:controller] == 'plantcares'
   end
 
   def cssgramer

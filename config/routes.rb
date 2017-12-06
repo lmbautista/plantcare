@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'users#welcome'
 
-  resources :users, only: %w( show new create ) do
+  resources :users, only: %w( show new create update ) do
     member do
       get 'profile', to: 'users#edit'
     end

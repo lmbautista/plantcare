@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :authenticator
-  before_filter :set_user_api_token, if: :logged?
+  before_action :authenticator
+  before_action :set_user_api_token, if: :logged?
 
   rescue_from Her::Errors::ResourceInvalid, with: :resource_invalid_error
 

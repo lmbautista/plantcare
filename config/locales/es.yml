@@ -27,6 +27,7 @@ es:
     edit:
       title: Perfil
       subtitle: Edita los datos de tu cuenta
+      sucessfully: Has actualizado correctamente tu perfil.
 
     wtever_api:
       attributes:
@@ -51,6 +52,9 @@ es:
       show: Revisa el estado de tu jardín
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
+    edit:
+      title: Edición de plantcare
+      sucessfully: Has actualizado correctamente tu plantcare.
 
     wtever_api:
       attributes:

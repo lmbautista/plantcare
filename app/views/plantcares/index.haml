@@ -17,53 +17,6 @@
     .row
       = render partial: 'plantcare', collection: @plantcares, as: :plantcare
 
-    -# .col-xs-12.col-md-10.col-md-offset-1
-    -#   .row
-    -#     .col-xs-12.no-padding
-    -#       = link_to '#', class: "action magictime" do
-    -#         .text-center
-    -#           .explaining
-    -#             = image_tag ('sprout'), class: "explain-ico img-responsive"
-    -#             %big
-    -#               = I18n.t('users.welcome.explain-ico1')
-    -#
-    -#       = link_to '#', class: "action magictime" do
-    -#         .text-center
-    -#           .explaining
-    -#             = image_tag ('water'), class: "explain-ico img-responsive"
-    -#             %big
-    -#               = I18n.t('users.welcome.explain-ico2')
-    -#
-    -#       = link_to '#', class: "action magictime" do
-    -#         .text-center
-    -#           .explaining
-    -#             = image_tag ('leaf'), class: "explain-ico img-responsive"
-    -#             %big
-    -#               = I18n.t('users.welcome.explain-ico3')
-    -#
-    -#     .col-xs-12.no-padding
-    -#       = link_to '#', class: "action magictime" do
-    -#         .text-center
-    -#           .explaining
-    -#             = image_tag ('fertilizer'), class: "explain-ico img-responsive"
-    -#             %big
-    -#               = I18n.t('users.welcome.explain-ico4')
-    -#
-    -#       = link_to '#', class: "action magictime" do
-    -#         .text-center
-    -#           .explaining
-    -#             = image_tag ('sun'), class: "explain-ico img-responsive"
-    -#             %big
-    -#               = I18n.t('users.welcome.explain-ico5')
-    -#
-    -#     .col-xs-12.no-padding
-    -#       = link_to '#', class: "action magictime" do
-    -#         .text-center
-    -#           .explaining
-    -#             = image_tag ('growth'), class: "explain-ico img-responsive"
-    -#             %big
-    -#               = I18n.t('users.welcome.explain-ico6')
-
 :javascript
   $(document).ready(function(){
     $('.action').each(function(){

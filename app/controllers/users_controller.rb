@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to confirmation_path
     else
-      flash.now[:error] = to_flash(@user.response_errors)
+      flash[:error] = to_flash(@user.response_errors)
       render 'new'
     end
   end
@@ -33,11 +33,12 @@ class UsersController < ApplicationController
 
   def update
     @user = WteverApi::User.new(user_params)
+
     if @user.save
-      flash.now[:notice] = I18n.t('users.update.sucessfully')
-      redirect_to user_profile_path(@user) and return
+      flash[:notice] = I18n.t('users.update.sucessfully')
+      redirect_to profile_user_path(@user) and return
     else
-      flash.now[:error] = to_flash(@user.response_errors)
+      flash[:error] = to_flash(@user.response_errors)
       render 'edit' and return
     end
   end
@@ -45,6 +46,7 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:wtever_api_user).permit(
+        :id,
         :first_name,
         :last_name,
         :email,

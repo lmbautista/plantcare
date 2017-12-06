@@ -7,10 +7,10 @@
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true
     = javascript_include_tag 'application', 'data-turbolinks-track': true
-
+    = Gon::Base.render_data
     = csrf_meta_tags
 
-  %body{ class: "#{params[:action]} #{params[:controller]} #{ 'logged' if user_logged? }" }
+  %body{ class: "#{params[:action]} #{params[:controller]} #{ 'logged' if logged? }" }
     %header
       = render 'shared/header'
 

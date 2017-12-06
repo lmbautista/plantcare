@@ -1,5 +1,5 @@
 class PlantcaresController < ApplicationController
-  before_filter  :set_plantcare, only: %w(edit)
+  before_action  :set_plantcare, only: %w(edit)
 
   def new
     @plantcare = WteverApi::Plantcare.new
@@ -9,10 +9,10 @@ class PlantcaresController < ApplicationController
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
 
     if @plantcare.save
-      flash.now[:notice] = I18n.t('plantcares.create.sucessfully')
+      flash[:notice] = I18n.t('plantcares.create.sucessfully')
       redirect_to plantcares_path
     else
-      flash.now[:error] = to_flash(@plantcare.response_errors)
+      flash[:error] = to_flash(@plantcare.response_errors)
       render 'new'
     end
   end

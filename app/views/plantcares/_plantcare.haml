@@ -1,5 +1,5 @@
 .col-xs-12.col-md-4
-  = link_to edit_plantcare_path(plantcare) do
+  = link_to edit_plantcare_path(plantcare), class: 'magictime action' do
     .plantcare{style: plantcare_picture(plantcare)}
       %h2
         = plantcare.name
@@ -7,11 +7,19 @@
       %h4
         = plantcare.wet
 
-      %h4
-        = plantcare.planted_at
+      - if plantcare.planted_at
+        %div
+          %span.inline
+            %h4
+              = image_tag ('sprout'), class: "explain-ico img-responsive"
+              = plantcare.planted_at
 
-      %h4
-        = plantcare.watered_at
+      - if plantcare.watered_at
+        %div
+          %span.inline
+            %h4
+              = image_tag ('water'), class: "explain-ico img-responsive"
+              = plantcare.watered_at
 
       %h4
         = plantcare.status

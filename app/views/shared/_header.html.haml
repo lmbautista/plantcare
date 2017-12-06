@@ -37,5 +37,5 @@
             %h3.plantcare-ico
               = link_to I18n.t('title'), root_path
 
-          - if user_logged?
+          - if logged?
             = render partial: 'shared/user_profile'

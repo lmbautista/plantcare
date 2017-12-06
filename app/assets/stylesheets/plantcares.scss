@@ -20,7 +20,7 @@ body {
             height: 100%;
             top: 0;
             left: 0;
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgba(0,0,0,0.45);
           }
         }
 
@@ -31,21 +31,6 @@ body {
       }
     }
 
-    .action {
-      padding: 10px;
-      background: $general-color;
-      color: $opposite-color;
-      height: 120px;
-      width: 120px;
-      display: block;
-      float: left;
-      @extend .custom-btn-active;
-
-      img {
-        height: 80px;
-        margin: auto;
-      }
-    }
 
     .plantcare {
       background-repeat: no-repeat;
@@ -76,6 +61,17 @@ body {
       * {
         position: relative;
         color: $opposite-color;
+      }
+
+      h4 {
+       margin-top: 0;
+       margin-bottom: 5px;
+      }
+
+      .explain-ico {
+        display: inline-block;
+        width: 25px;
+        padding-right: 5px;
       }
     }
   }
