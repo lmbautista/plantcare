@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    depends_on:
+      - app
+    ports:
+      - "8081:80"
+  app:
+    env_file: .env
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    volumes:
+      - ".:/var/www/plantcare"
+    environment:
+      RAILS_ENV: $RAILS_ENV
+    depends_on:
+      - db
+  db:
+    image: mysql
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+    ports:
+      - "3301:3306"

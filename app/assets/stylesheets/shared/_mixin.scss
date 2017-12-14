@@ -1,0 +1,52 @@
+@mixin active-effect($color){
+  background-color: $color;
+  color: $opposite-color;
+  border-color: $color;
+  &:hover, &:focus {
+    background-color: darken($color,10%);
+    color: darken($opposite-color,10%);
+    border-color: darken($color,10%);
+  }
+}
+
+@mixin hover-effect($color){
+  &:hover, &:focus {
+    @include active-effect($color);
+  }
+}
+
+@mixin section-styles($section){
+  @if $section == "dark" {
+    color: $opposite-color;
+    background-color: $general-opossite-color;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $opposite-color;
+    }
+    hr {
+      color: $general-color;
+    }
+  } @else if $section == "light" {
+    color: $font-color;
+    background-color: $opposite-color;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $general-opossite-color;
+    }
+
+    hr {
+      color: $general-color;
+    }
+  } @else if $section == "primary" {
+    color: $font-color;
+    background-color: $general-color;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $opposite-color;
+    }
+
+    hr {
+      color: $opposite-color;
+    }
+  }
+}

@@ -39,7 +39,7 @@
 }
 
 .custom-btn-primary {
-  background-color: transparent;
+  background-color: $general-color;
   @include hover-effect($general-color);
 }
 

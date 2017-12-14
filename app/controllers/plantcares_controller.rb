@@ -1,5 +1,5 @@
 class PlantcaresController < ApplicationController
-  before_action  :set_plantcare, only: %w(edit)
+  before_action  :set_plantcare, only: %w(edit update)
 
   def new
     @plantcare = WteverApi::Plantcare.new
@@ -21,7 +21,13 @@ class PlantcaresController < ApplicationController
   end
 
   def update
-
+    if @plantcare.save
+      flash[:notice] = I18n.t('plantcares.update.sucessfully')
+      redirect_to plantcares_path
+    else
+      flash[:error] = to_flash(@plantcare.response_errors)
+      render 'edit'
+    end
   end
 
   def index

@@ -5,9 +5,9 @@
 body {
   &.sessions {
     &.new {
-      #content {
-        // padding-top: 200px;
+      @include section-styles("primary");
 
+      #content {
         .title {
           h1 {
             margin-bottom: 30px;

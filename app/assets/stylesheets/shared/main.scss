@@ -1,3 +1,4 @@
+@import "shared/_mixin";
 @import "shared/_variables";
 @import "shared/custom_buttons";
 
@@ -21,15 +22,9 @@ html {
     font-family: $general-font;
     font-weight: 400;
     font-size: 14px;
-    color: $font-color;
-    background-color: $background-color;
 
     h1, h2, h3, h4, h5, h6 {
-      color: $opposite-color;
       font-weight: 300;
-      &.dark {
-        color: $font-color;
-      }
     }
 
     h1 {
@@ -53,6 +48,11 @@ html {
 
       .profile {
         margin: 5px;
+
+        h5 {
+          color: $opposite-color;
+        }
+
         img {
           width: 54px;
           height: 54px;
@@ -109,11 +109,12 @@ html {
       font-weight: 400;
 
       .title {
-        &.dark {
-         * { color: $font-color; }
-        }
-
         h1 {
+          margin-bottom: 0;
+        }
+        
+        h3 {
+          margin-top: 0;
           margin-bottom: 30px;
         }
       }
