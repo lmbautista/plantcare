@@ -1,6 +1,6 @@
 development:
-  http://localhost:8080/v1
+  http://api:3000/v1
 preproduction:
-  http://localhost:8080/v1
+  http://api:3000/v1
 production:
-  http://localhost:8080/v1
+  http://api:3000/v1

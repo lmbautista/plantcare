@@ -6,7 +6,7 @@
 
 body {
   &.users {
-    &.welcome, &.new, &.create {
+    &.welcome, &.new, &.create, &.confirmation {
       @include section-styles("primary");
 
       header {
@@ -23,10 +23,6 @@ body {
     }
     &.edit {
       @include section-styles("light");
-      
-      #content {
-
-      }
     }
   }
 }

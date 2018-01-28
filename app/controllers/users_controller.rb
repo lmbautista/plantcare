@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticator, only: %w(welcome new create)
+  skip_before_action :authenticator, only: %w(welcome new create confirmation)
 
   def welcome
     redirect_to plantcares_path if logged?
@@ -46,7 +46,6 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:wtever_api_user).permit(
-        :id,
         :first_name,
         :last_name,
         :email,
