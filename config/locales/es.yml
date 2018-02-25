@@ -70,3 +70,9 @@ es:
       subtitle:  bienvenido, accede con tu usuario y password
       create_account: |
         ¿No tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Únete </a></strong>
+
+  errors:
+    not_found: Lo sentimos, ¡pero no hemos encontrado lo que buscas!
+    unauthorized: Lo sentimos, ¡pero necesitas iniciar sesión para realizar esta acción!
+    forbidden: Lo sentimos, ¡pero no puedes realizar esa acción!
+    internal_server_error: Lo sentimos, ¡algo salio mal!

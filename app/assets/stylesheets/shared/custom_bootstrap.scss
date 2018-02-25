@@ -29,6 +29,11 @@ body {
     }
   }
 
+  .navmenu-default {
+    background: $general-opposite-color;
+    border: none;
+  }
+
   .navbar-default {
     background: transparent;
     border: none;

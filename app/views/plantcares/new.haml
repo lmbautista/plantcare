@@ -4,5 +4,5 @@
 
     .row
       .col-xs-12.col-md-4.col-md-offset-4.text-center
-        = form_for @plantcare, url: plantcares_path do |f|
+        = form_for @plantcare, url: plantcares_path, enctype: 'multipart/form-data' do |f|
           = render partial: 'form', locals: { f: f }

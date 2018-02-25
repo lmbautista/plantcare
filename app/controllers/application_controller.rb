@@ -1,4 +1,4 @@
-require 'api_response_handler'
+require 'her/api_response_handler'
 
 class ApplicationController < ActionController::Base
   include ApplicationHelper
@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
   before_action :authenticator
   before_action :set_user_api_token, if: :logged?
 
-  rescue_from ApiResponseHandler::WteverForbiddenError,      with: :forbidden
-  rescue_from ApiResponseHandler::WteverNotFoundError,       with: :not_found
-  rescue_from ApiResponseHandler::WteverInternalServerError, with: :internal_server_error
+  rescue_from Her::WteverForbiddenError,      with: :forbidden
+  rescue_from Her::WteverNotFoundError,       with: :not_found
+  rescue_from Her::WteverInternalServerError, with: :internal_server_error
 
   protected
 
@@ -28,21 +28,22 @@ class ApplicationController < ActionController::Base
     end
 
     def unauthorized
-      flash[:error] = 'unauthorized'
+      flash[:error] = I18n.t('errors.unauthorized')
       redirect_to root_path
     end
 
     def forbidden
-      flash[:error] = 'forbidden'
+      flash[:error] = I18n.t('errors.forbidden')
+      redirect_to root_path
     end
 
     def not_found
-      puts " >>>> entro por not_found"
-      flash[:error] = 'not_found'
+      flash[:error] = I18n.t('errors.not_found')
       redirect_to root_path
     end
 
     def internal_server_error
-      flash[:error] = 'internal_server_error'
+      flash[:error] = I18n.t('errors.internal_server_error')
+      redirect_to root_path
     end
 end

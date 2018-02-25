@@ -42,7 +42,9 @@ class PlantcaresController < ApplicationController
     def plantcare_params
       params.require(:wtever_api_plantcare).permit(
         :name,
-        :planted_at)
+        :planted_at).tap do |whitelist|
+          whitelist[:attachments] = params[:wtever_api_plantcare][:attachments]
+        end
     end
 
     def set_plantcare

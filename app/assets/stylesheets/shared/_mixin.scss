@@ -18,7 +18,7 @@
 @mixin section-styles($section){
   @if $section == "dark" {
     color: $opposite-color;
-    background-color: $general-opossite-color;
+    background-color: $general-opposite-color;
 
     h1, h2, h3, h4, h5, h6 {
       color: $opposite-color;
@@ -26,16 +26,25 @@
     hr {
       color: $general-color;
     }
+    header {
+      * {
+        color: $general-opposite-color;
+      }
+    }
   } @else if $section == "light" {
     color: $font-color;
     background-color: $opposite-color;
 
     h1, h2, h3, h4, h5, h6 {
-      color: $general-opossite-color;
+      color: $general-opposite-color;
     }
-
     hr {
       color: $general-color;
+    }
+    header {
+      * {
+        color: $opposite-color;
+      }
     }
   } @else if $section == "primary" {
     color: $font-color;
@@ -44,9 +53,13 @@
     h1, h2, h3, h4, h5, h6 {
       color: $opposite-color;
     }
-
     hr {
       color: $opposite-color;
+    }
+    header {
+      * {
+        color: $opposite-color;
+      }
     }
   }
 }
