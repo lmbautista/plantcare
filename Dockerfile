@@ -10,15 +10,15 @@ RUN mkdir -p $RAILS_ROOT/tmp/pids
 
 WORKDIR $RAILS_ROOT
 
-COPY ./plantcare/Gemfile Gemfile
+COPY ./Gemfile Gemfile
 
-COPY ./plantcare/Gemfile.lock Gemfile.lock
+COPY ./Gemfile.lock Gemfile.lock
 
 RUN gem install bundler
 
 RUN bundle install
 
-COPY ./plantcare/config/puma.rb config/puma.rb
+COPY ./config/puma.rb config/puma.rb
 
 COPY . .
 
