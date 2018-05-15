@@ -1,4 +1,3 @@
-source 'https://rubygems.org'
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -32,6 +31,7 @@ gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Haml
 gem 'haml', '~> 5.0'
+
 # Cache for Request
 gem 'request_store', '~> 1.3', '>= 1.3.2'
 

@@ -9,13 +9,14 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = WteverApi::User.new
+    @user      = WteverApi::User.new
     @countries = WteverApi::Country.all
   end
 
   def create
-    @user = WteverApi::User.new(user_params)
-    @user.wtever_token = 'plantcare'
+    @user              = WteverApi::User.new(user_params)
+    @user.wtever_token = @user.client_name ='plantcare'
+
     if @user.save
       redirect_to confirmation_path
     else
@@ -36,9 +37,11 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = I18n.t('users.update.sucessfully')
+
       redirect_to profile_user_path(@user) and return
     else
       flash[:error] = to_flash(@user.response_errors)
+      
       render 'edit' and return
     end
   end

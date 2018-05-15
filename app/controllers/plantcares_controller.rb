@@ -10,9 +10,11 @@ class PlantcaresController < ApplicationController
 
     if @plantcare.save
       flash[:notice] = I18n.t('plantcares.create.sucessfully')
+
       redirect_to plantcares_path
     else
       flash[:error] = to_flash(@plantcare.response_errors)
+
       render 'new'
     end
   end
@@ -23,9 +25,11 @@ class PlantcaresController < ApplicationController
   def update
     if @plantcare.save
       flash[:notice] = I18n.t('plantcares.update.sucessfully')
+
       redirect_to plantcares_path
     else
       flash[:error] = to_flash(@plantcare.response_errors)
+
       render 'edit'
     end
   end
@@ -35,7 +39,6 @@ class PlantcaresController < ApplicationController
   end
 
   def tour
-
   end
 
   private

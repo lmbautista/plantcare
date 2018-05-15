@@ -42,7 +42,7 @@ html {
 
     header {
       width: 100%;
-      height: 10vh;
+      height: 8vh;
       color: $font-color;
       background: transparent;
 
@@ -53,10 +53,9 @@ html {
           color: $opposite-color;
         }
 
-        img {
-          width: 54px;
-          height: 54px;
-          border-radius: 50%;
+        .fi {
+          font-size: 30px;
+          vertical-align: middle;
         }
       }
     }
@@ -97,7 +96,7 @@ html {
       max-width: none;
       height: 100vh;
 
-      &.intro { height: 90vh; }
+      &.intro { height: 92vh; }
 
       .content {
         display: table-cell;
@@ -147,7 +146,9 @@ html {
       header {
         .navbar-default {
           background: $general-opposite-color;
-          padding: 10px 0;
+          vertical-align: middle;
+          height: 100%;
+          border-radius: 0;
         }
       }
     }
@@ -183,6 +184,22 @@ html {
       &:hover {
         color: inherit;
       }
+    }
+
+    .general-color {
+      color: $general-color;
+    }
+
+    .general-opposite-color {
+      color: $general-opposite-color;
+    }
+
+    .second-color {
+      color: $second-color;
+    }
+
+    .opposite-color {
+      color: $opposite-color;
     }
 
   }

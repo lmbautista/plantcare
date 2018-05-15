@@ -1,0 +1,139 @@
+/*
+Flaticon icon font: Flaticon
+Creation date: 22/06/2016 15:32
+*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: asset-url("Flaticon.eot");
+  src: asset-url("Flaticon.eot?#iefix") format("embedded-opentype"),
+  asset-url("Flaticon.woff") format("woff"),
+  asset-url("Flaticon.ttf") format("truetype"),
+  asset-url("Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: asset-url("Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fi:before{
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-apple:before { content: "\f100"; }
+.flaticon-barn:before { content: "\f101"; }
+.flaticon-barrow:before { content: "\f102"; }
+.flaticon-basket:before { content: "\f103"; }
+.flaticon-bench:before { content: "\f104"; }
+.flaticon-birdhouse:before { content: "\f105"; }
+.flaticon-boot:before { content: "\f106"; }
+.flaticon-bucket:before { content: "\f107"; }
+.flaticon-cabbage:before { content: "\f108"; }
+.flaticon-carrot:before { content: "\f109"; }
+.flaticon-cultivator:before { content: "\f10a"; }
+.flaticon-fence:before { content: "\f10b"; }
+.flaticon-flower:before { content: "\f10c"; }
+.flaticon-flower-1:before { content: "\f10d"; }
+.flaticon-flowers:before { content: "\f10e"; }
+.flaticon-garden:before { content: "\f10f"; }
+.flaticon-gardener:before { content: "\f110"; }
+.flaticon-gardener-1:before { content: "\f111"; }
+.flaticon-glove:before { content: "\f112"; }
+.flaticon-hat:before { content: "\f113"; }
+.flaticon-hose:before { content: "\f114"; }
+.flaticon-ladder:before { content: "\f115"; }
+.flaticon-lawn-mower:before { content: "\f116"; }
+.flaticon-leaf:before { content: "\f117"; }
+.flaticon-onion:before { content: "\f118"; }
+.flaticon-pear:before { content: "\f119"; }
+.flaticon-pitchfork:before { content: "\f11a"; }
+.flaticon-pot:before { content: "\f11b"; }
+.flaticon-pruning-shears:before { content: "\f11c"; }
+.flaticon-pruning-shears-1:before { content: "\f11d"; }
+.flaticon-radish:before { content: "\f11e"; }
+.flaticon-rain:before { content: "\f11f"; }
+.flaticon-rake:before { content: "\f120"; }
+.flaticon-rake-1:before { content: "\f121"; }
+.flaticon-rake-2:before { content: "\f122"; }
+.flaticon-saw:before { content: "\f123"; }
+.flaticon-scissors:before { content: "\f124"; }
+.flaticon-seeds:before { content: "\f125"; }
+.flaticon-seeds-1:before { content: "\f126"; }
+.flaticon-shovel:before { content: "\f127"; }
+.flaticon-shovel-1:before { content: "\f128"; }
+.flaticon-shovel-2:before { content: "\f129"; }
+.flaticon-shovel-3:before { content: "\f12a"; }
+.flaticon-spray:before { content: "\f12b"; }
+.flaticon-sprout:before { content: "\f12c"; }
+.flaticon-sprout-1:before { content: "\f12d"; }
+.flaticon-sun:before { content: "\f12e"; }
+.flaticon-tree:before { content: "\f12f"; }
+.flaticon-veranda:before { content: "\f130"; }
+.flaticon-watering-can:before { content: "\f131"; }
+
+$font-Flaticon-apple: "\f100";
+$font-Flaticon-barn: "\f101";
+$font-Flaticon-barrow: "\f102";
+$font-Flaticon-basket: "\f103";
+$font-Flaticon-bench: "\f104";
+$font-Flaticon-birdhouse: "\f105";
+$font-Flaticon-boot: "\f106";
+$font-Flaticon-bucket: "\f107";
+$font-Flaticon-cabbage: "\f108";
+$font-Flaticon-carrot: "\f109";
+$font-Flaticon-cultivator: "\f10a";
+$font-Flaticon-fence: "\f10b";
+$font-Flaticon-flower: "\f10c";
+$font-Flaticon-flower-1: "\f10d";
+$font-Flaticon-flowers: "\f10e";
+$font-Flaticon-garden: "\f10f";
+$font-Flaticon-gardener: "\f110";
+$font-Flaticon-gardener-1: "\f111";
+$font-Flaticon-glove: "\f112";
+$font-Flaticon-hat: "\f113";
+$font-Flaticon-hose: "\f114";
+$font-Flaticon-ladder: "\f115";
+$font-Flaticon-lawn-mower: "\f116";
+$font-Flaticon-leaf: "\f117";
+$font-Flaticon-onion: "\f118";
+$font-Flaticon-pear: "\f119";
+$font-Flaticon-pitchfork: "\f11a";
+$font-Flaticon-pot: "\f11b";
+$font-Flaticon-pruning-shears: "\f11c";
+$font-Flaticon-pruning-shears-1: "\f11d";
+$font-Flaticon-radish: "\f11e";
+$font-Flaticon-rain: "\f11f";
+$font-Flaticon-rake: "\f120";
+$font-Flaticon-rake-1: "\f121";
+$font-Flaticon-rake-2: "\f122";
+$font-Flaticon-saw: "\f123";
+$font-Flaticon-scissors: "\f124";
+$font-Flaticon-seeds: "\f125";
+$font-Flaticon-seeds-1: "\f126";
+$font-Flaticon-shovel: "\f127";
+$font-Flaticon-shovel-1: "\f128";
+$font-Flaticon-shovel-2: "\f129";
+$font-Flaticon-shovel-3: "\f12a";
+$font-Flaticon-spray: "\f12b";
+$font-Flaticon-sprout: "\f12c";
+$font-Flaticon-sprout-1: "\f12d";
+$font-Flaticon-sun: "\f12e";
+$font-Flaticon-tree: "\f12f";
+$font-Flaticon-veranda: "\f130";
+$font-Flaticon-watering-can: "\f131";

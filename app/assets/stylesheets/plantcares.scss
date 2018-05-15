@@ -14,7 +14,7 @@ body {
 
         section.intro {
           background: asset-url('plantcare-bg.jpg') top no-repeat;
-          background-size: auto;
+          background-size: cover;
 
           h1, h2, h3, h4, h5, h6 {
             color: $opposite-color;

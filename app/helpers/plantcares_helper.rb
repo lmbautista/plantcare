@@ -1,7 +1,10 @@
 module PlantcaresHelper
-
   def plantcare_picture(plantcare)
-    i = rand(1..6)
-    "background-image: url('#{image_url("plantcares/plantcare-default0#{i}.jpg")}')"
+    if plantcare.picture
+      "background-image: url('#{image_url(plantcare.picture)}"
+    else
+      i = rand(1..6)
+      "background-image: url('#{image_url("plantcares/plantcare-default0#{i}.jpg")}')"
+    end
   end
 end
