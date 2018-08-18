@@ -1,5 +1,3 @@
-= render partial: 'shared/title', locals: { title: I18n.t('users.confirmation.title'), subtitle: I18n.t('users.confirmation.subtitle') }
-
-.body
-  .row
-    .col-xs-12.col-md-4.col-md-offset-4.text-center
+%section.intro
+  .content
+    = render partial: 'shared/title', locals: { title: I18n.t('users.confirmation.title'), subtitle: I18n.t('users.confirmation.subtitle') }
