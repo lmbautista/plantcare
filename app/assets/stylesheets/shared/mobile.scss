@@ -1,9 +1,7 @@
 @media only screen and (max-width: $screen-sm-max) {
   html {
     body {
-      .no-padding-mobile {
-        padding: 0;
-      }
+      .no-padding-mobile { padding: 0; }
 
       &.users {
         &.welcome {
@@ -16,12 +14,6 @@
               }
             }
           }
-        }
-      }
-
-      &.users, &.sessions {
-        #content {
-
         }
       }
 

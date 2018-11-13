@@ -1,0 +1,3 @@
+<% if flash[:error].present? %>
+  $.growl.error({ message: '<%= raw flash[:error] %>', duration: 10000, title: 'Plantcare says:' });
+<% end %>

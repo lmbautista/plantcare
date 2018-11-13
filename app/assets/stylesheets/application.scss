@@ -10,6 +10,9 @@
 @import 'shared/main';
 @import 'shared/custom_bootstrap';
 
+@import 'jquery.fileupload';
+@import 'jquery.fileupload-ui';
+
 @import 'users';
 @import 'sessions';
 @import 'plantcares';

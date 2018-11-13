@@ -1,5 +1,8 @@
+# Tengo que pasar a los tabs el href, el titulo, si esta activo y el content
+# La putada es: lo suyo es configurar todo desde el controller pero el render de
+# la vista desde donde narices lo hago?
 class PlantcaresController < ApplicationController
-  before_action  :set_plantcare, only: %w(edit update)
+  before_action  :set_plantcare, only: %w(edit)
 
   def new
     @plantcare = WteverApi::Plantcare.new
@@ -23,6 +26,8 @@ class PlantcaresController < ApplicationController
   end
 
   def update
+    @plantcare = WteverApi::Plantcare.new(plantcare_params)
+
     if @plantcare.save
       flash[:notice] = I18n.t('plantcares.update.sucessfully')
 
@@ -46,6 +51,7 @@ class PlantcaresController < ApplicationController
       params.require(:wtever_api_plantcare).permit(
         :name,
         :planted_at).tap do |whitelist|
+          whitelist[:id]          = params[:id] if params[:id].present?
           whitelist[:attachments] = params[:wtever_api_plantcare][:attachments]
         end
     end

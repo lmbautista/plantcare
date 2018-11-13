@@ -1,7 +1,7 @@
 .hidden-xs.col-sm-6.col-md-6.text-right
   .btn-group.profile
     = link_to profile_user_path(current_user) do
-      %h5.bold
+      %h5
         = "#{current_user.first_name} #{current_user.last_name}"
 
       %span.fi.flaticon-gardener-1

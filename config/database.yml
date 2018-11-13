@@ -6,10 +6,10 @@
 #
 default: &default
   adapter: mysql2
-  host: db
+  host: 127.0.0.1
   database: wtever
   username: root
-  password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
+  password: 845012
 
 development:
   <<: *default

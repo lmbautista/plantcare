@@ -8,7 +8,6 @@ body {
     @include section-styles("light");
 
     &.index {
-
       #content {
         position: relative;
 
@@ -36,17 +35,23 @@ body {
           color: $font-color;
         }
       }
+
+      .plantcare {
+        border-bottom: 6px solid $general-color;
+        cursor: pointer;
+        &:hover {
+          &:before {
+            background-color: rgba($general-color, 0.4);
+          }
+        }
+      }
     }
 
     .plantcare {
       background-repeat: no-repeat;
       background-size: cover;
-      border-bottom: 6px solid $general-color;
-      padding: 15px;
-      margin: 15px;
       height: 40vh;
       position: relative;
-      cursor: pointer;
 
       &:before {
         content: ' ';
@@ -55,24 +60,10 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.5);
       }
 
-      &:hover {
-        &:before {
-          background-color: rgba($general-color, 0.4);
-        }
-      }
-
-      * {
-        position: relative;
-        color: $opposite-color;
-      }
-
-      h4 {
-       margin-top: 0;
-       margin-bottom: 5px;
-      }
+      * { color: $opposite-color; }
 
       .explain-ico {
         display: inline-block;

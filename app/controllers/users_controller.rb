@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :authenticator, only: %w(welcome new create confirmation)
+  before_action      :set_user,      only: %w(edit)
+
 
   def welcome
     redirect_to plantcares_path if logged?
@@ -21,12 +23,15 @@ class UsersController < ApplicationController
       redirect_to confirmation_path
     else
       flash[:error] = to_flash(@user.response_errors)
-      render 'new'
+
+      respond_to do |format|
+        format.js   { render :new and return }
+        format.html { render :new and return }
+      end
     end
   end
 
   def edit
-    @user = WteverApi::User.find(params[:id])
   end
 
   def confirmation
@@ -41,7 +46,7 @@ class UsersController < ApplicationController
       redirect_to profile_user_path(@user) and return
     else
       flash[:error] = to_flash(@user.response_errors)
-      
+
       render 'edit' and return
     end
   end
@@ -57,6 +62,12 @@ class UsersController < ApplicationController
         :nif,
         :city,
         :state,
-        :pc)
+        :pc).tap do |whitelist|
+          whitelist[:id] = params[:id] if params[:id].present?
+        end
+    end
+
+    def set_user
+      @user = WteverApi::User.find(params[:id]) if params[:id].present?
     end
 end

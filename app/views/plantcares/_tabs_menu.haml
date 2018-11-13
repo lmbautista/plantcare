@@ -1,0 +1,10 @@
+.row
+  .col-md-12
+    %ul.nav.inline-nav-pills.margin-2-top
+      %li.active{ role: "presentation" }
+        %a.font-color.text-uppercase.weight-2{ "aria-controls" => "contact-details-tab", "data-toggle" => "tab",  href: "#info" , "aria-selected" => "true" }
+          = t('plantcares.edit.menu.info')
+
+      %li{ role: "presentation" }
+        %a.font-color.text-uppercase.weight-2{ "aria-controls" => "contact-details-tab", "data-toggle" => "tab",  href: "#attachments" , "aria-selected" => "true" }
+          = t('plantcares.edit.menu.attachments')

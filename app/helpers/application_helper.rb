@@ -9,8 +9,8 @@ module ApplicationHelper
     current_user.present?
   end
 
-  def growl_message
-    growl_message = if flash[:error].present?
+  def prepare_growl_message
+    if flash[:error].present?
                       "  $.growl.error({ message: '#{flash[:error]}', duration: 10000, title: 'Plantcare says:' });"
                     elsif flash[:notice].present?
                       "  $.growl.notice({ message: '#{flash[:notice]}', duration: 10000, title: 'Plantcare says:' });"
@@ -19,6 +19,10 @@ module ApplicationHelper
                     else
                       ""
                     end
+  end
+
+  def growl_message
+    growl_message = prepare_growl_message
 
     return unless growl_message.present?
 
@@ -40,8 +44,7 @@ module ApplicationHelper
 
   def modal_for(modal_id, title, options = {})
     footer = ""
-    p "!options[:footer] || options[:footer].blank?: #{!options[:footer] || options[:footer].blank?}"
-    p "options[:footer]: #{options[:footer]}"
+        
     if options[:footer] || options[:footer].nil?
       footer = "<div class=\"modal-footer\">"
       footer+= "<button type=\"button\" class=\"btn btn-primary\" onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">#{I18n.t("buttons.submit")}</button>" if options[:form_id].present?

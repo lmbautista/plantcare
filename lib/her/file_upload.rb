@@ -13,6 +13,8 @@ module Her
     end
 
     def assign_file_attribute(attribute, files)
+      return unless files.present?
+      
       files = files.collect{ |file| generate_faraday_upload_io(file) }
 
       # Super can't be called with Stack Level Too Deep errors

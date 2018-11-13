@@ -42,6 +42,7 @@ gem 'rails_warden'
 gem 'gon'
 
 gem 'bootstrap-datepicker-rails'
+gem 'jquery-fileupload-rails'
 
 gem 'puma', '~> 3.0'
 

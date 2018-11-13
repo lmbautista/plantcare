@@ -12,10 +12,15 @@
 
 %section
   .content
-    = render partial: 'shared/title', locals: { title: nil, subtitle: I18n.t('plantcares.index.show'), dark: true }
+    - if @plantcares.present?
+      = render partial: 'shared/title', locals: { title: nil, subtitle: I18n.t('plantcares.index.show'), dark: true }
 
-    .row
-      = render partial: 'plantcare', collection: @plantcares, as: :plantcare
+      .row
+        = render partial: 'plantcare', collection: @plantcares, as: :plantcare
+    - else
+      = render partial: 'shared/not_found', locals: { title: I18n.t('plantcares.index.no-plants-title'),
+                                                      subtitle: I18n.t('plantcares.index.no-plants-subtitle', new_plant_link: new_plantcare_path),
+                                                      dark: true }
 
 :javascript
   $(document).ready(function(){

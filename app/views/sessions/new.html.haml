@@ -16,3 +16,8 @@
     .row
       .col-xs-12.col-md-4.col-md-offset-4.text-center
         = render partial: 'sessions/signin'
+
+
+= modal_for('signup_modal', I18n.t("users.new.subtitle").humanize, { footer: false }) do
+  - capture_haml do
+    = render partial: 'users/signup', locals: { remote: true }

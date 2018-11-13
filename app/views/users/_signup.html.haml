@@ -1,3 +1,5 @@
-= form_for @user, url: { action:'create' }, method: :post do |f|
+- remote ||= false
+
+= form_for @user, url: { controller:'users', action:'create' }, method: :post, remote: remote do |f|
   = render partial: 'users/basic_form_fields', locals: { f: f }
-  = render 'shared/form/submit', f: f, submit_class: 'custom-btn-primary'
+  = render 'shared/form/submit', f: f, submit_class: 'custom-btn-primary', remote: remote
