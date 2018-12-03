@@ -1,5 +1,5 @@
 %section.intro
-  .content
+  .content.vline-middle
     = render partial: 'shared/title', locals: { title: I18n.t('users.edit.title'), subtitle: I18n.t('users.edit.subtitle') }
 
     = form_for @user, url: user_path(@user), method: :put do |f|

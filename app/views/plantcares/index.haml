@@ -1,5 +1,5 @@
 %section.intro
-  .content
+  .content.vline-middle
     = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.title'), subtitle: I18n.t('plantcares.new.subtitle') }
 
     .row
@@ -11,7 +11,7 @@
           = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
 
 %section
-  .content
+  .content.vline-middle
     - if @plantcares.present?
       = render partial: 'shared/title', locals: { title: nil, subtitle: I18n.t('plantcares.index.show'), dark: true }
 

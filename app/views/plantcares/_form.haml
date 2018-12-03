@@ -1,10 +1,12 @@
+= f.file_field :picture, class: 'form-control hidden'
+
 .form-group
   = f.text_field :name, class: 'form-control', placeholder: I18n.t('plantcares.wtever_api.attributes.name')
 
 .form-group
   = f.text_field :planted_at, class: 'form-control datepicker', placeholder: I18n.t('plantcares.wtever_api.attributes.planted_at')
 
-.form-group
-  = f.file_field :attachments, class: 'form-control', multiple: true
-
 = render 'shared/form/submit', f: f
+
+:javascript
+  uploader_control($('.plantcare'), $('wtever_api_plantcare_picture'));
