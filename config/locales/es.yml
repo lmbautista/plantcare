@@ -79,6 +79,7 @@ es:
       subtitle:  bienvenido, accede con tu usuario y password
       create_account: |
         ¿No tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Únete </a></strong>
+      not_found: Email y/o password incorrecto, inténtalo de nuevo
 
   errors:
     not_found: Lo sentimos, ¡pero no hemos encontrado lo que buscas!

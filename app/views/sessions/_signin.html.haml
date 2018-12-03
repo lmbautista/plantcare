@@ -2,7 +2,7 @@
 
 = form_tag sessions_path, id: 'signin_form', method: 'post', remote: remote do
   .form-group
-    = email_field_tag :email, nil, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
+    = email_field_tag :email, params[:email], class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
 
   .form-group
     = password_field_tag :password, nil, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')

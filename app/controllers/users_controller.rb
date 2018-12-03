@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to confirmation_path
     else
-      flash[:error] = to_flash(@user.response_errors)
+      flash.now[:error] = to_flash(@user.response_errors)
 
       respond_to do |format|
         format.js   { render :new and return }
@@ -41,11 +41,11 @@ class UsersController < ApplicationController
     @user = WteverApi::User.new(user_params)
 
     if @user.save
-      flash[:notice] = I18n.t('users.update.sucessfully')
+      flash.now[:notice] = I18n.t('users.update.sucessfully')
 
       redirect_to profile_user_path(@user) and return
     else
-      flash[:error] = to_flash(@user.response_errors)
+      flash.now[:error] = to_flash(@user.response_errors)
 
       render 'edit' and return
     end

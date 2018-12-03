@@ -4,7 +4,7 @@
 
 body {
   &.sessions {
-    &.new {
+    &.new, &.create {
       @include section-styles("primary");
 
       #content {
@@ -22,7 +22,7 @@ body {
             .explain-ico {
               height: 80px;
               margin: 0 auto;
-            }            
+            }
           }
         }
       }

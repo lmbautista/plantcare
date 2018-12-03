@@ -1,5 +1,3 @@
-require 'her/api_response_handler'
-
 class ApplicationController < ActionController::Base
   include ApplicationHelper
   # Prevent CSRF attacks by raising an exception.
@@ -9,9 +7,9 @@ class ApplicationController < ActionController::Base
   before_action :authenticator
   before_action :set_user_api_token, if: :logged?
 
-  rescue_from Her::WteverForbiddenError,      with: :forbidden
-  rescue_from Her::WteverNotFoundError,       with: :not_found
-  rescue_from Her::WteverInternalServerError, with: :internal_server_error
+  rescue_from Wtever::ForbiddenError,      with: :forbidden
+  rescue_from Wtever::NotFoundError,       with: :not_found
+  rescue_from Wtever::InternalServerError, with: :internal_server_error
 
   protected
 
@@ -28,22 +26,22 @@ class ApplicationController < ActionController::Base
     end
 
     def unauthorized
-      flash[:error] = I18n.t('errors.unauthorized')
+      flash.now[:error] = I18n.t('errors.unauthorized')
       redirect_to root_path
     end
 
     def forbidden
-      flash[:error] = I18n.t('errors.forbidden')
+      flash.now[:error] = I18n.t('errors.forbidden')
       redirect_to root_path
     end
 
     def not_found
-      flash[:error] = I18n.t('errors.not_found')
+      flash.now[:error] = I18n.t('errors.not_found')
       redirect_to root_path
     end
 
     def internal_server_error
-      flash[:error] = I18n.t('errors.internal_server_error')
+      flash.now[:error] = I18n.t('errors.internal_server_error')
       redirect_to root_path
     end
 end

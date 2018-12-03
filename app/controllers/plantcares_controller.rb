@@ -12,11 +12,11 @@ class PlantcaresController < ApplicationController
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
 
     if @plantcare.save
-      flash[:notice] = I18n.t('plantcares.create.sucessfully')
+      flash.now[:notice] = I18n.t('plantcares.create.sucessfully')
 
       redirect_to plantcares_path
     else
-      flash[:error] = to_flash(@plantcare.response_errors)
+      flash.now[:error] = to_flash(@plantcare.response_errors)
 
       render 'new'
     end
@@ -29,11 +29,11 @@ class PlantcaresController < ApplicationController
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
 
     if @plantcare.save
-      flash[:notice] = I18n.t('plantcares.update.sucessfully')
+      flash.now[:notice] = I18n.t('plantcares.update.sucessfully')
 
       redirect_to plantcares_path
     else
-      flash[:error] = to_flash(@plantcare.response_errors)
+      flash.now[:error] = to_flash(@plantcare.response_errors)
 
       render 'edit'
     end

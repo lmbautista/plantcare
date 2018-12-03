@@ -10,12 +10,12 @@ module ApplicationHelper
   end
 
   def prepare_growl_message
-    if flash[:error].present?
-                      "  $.growl.error({ message: '#{flash[:error]}', duration: 10000, title: 'Plantcare says:' });"
-                    elsif flash[:notice].present?
-                      "  $.growl.notice({ message: '#{flash[:notice]}', duration: 10000, title: 'Plantcare says:' });"
-                    elsif flash[:warning].present?
-                      "  $.growl.warning({ message: '#{flash[:warning]}', duration: 10000, title: 'Plantcare says:' });"
+    if flash.now[:error].present?
+                      "  $.growl.error({ message: '#{flash.now[:error]}', duration: 10000, title: 'Plantcare says:' });"
+                    elsif flash.now[:notice].present?
+                      "  $.growl.notice({ message: '#{flash.now[:notice]}', duration: 10000, title: 'Plantcare says:' });"
+                    elsif flash.now[:warning].present?
+                      "  $.growl.warning({ message: '#{flash.now[:warning]}', duration: 10000, title: 'Plantcare says:' });"
                     else
                       ""
                     end

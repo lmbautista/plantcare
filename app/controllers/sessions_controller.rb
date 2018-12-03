@@ -16,6 +16,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def not_found
+    flash.now[:error] = I18n.t('sessions.new.not_found')
+    render :new
+  end
+
   private
     def sessions_params
       params.permit(:email, :password)
