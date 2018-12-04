@@ -108,6 +108,11 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -224,6 +229,7 @@ DEPENDENCIES
   jquery-fileupload-rails
   jquery-rails
   kaminari
+  lograge
   mysql2
   pry-rails
   puma (~> 3.0)
