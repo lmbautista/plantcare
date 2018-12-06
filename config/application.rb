@@ -21,9 +21,16 @@ module Plantcare
     config.i18n.default_locale = :es
     config.cache_store         = :memory_store, { size: 1024.megabytes, expires_in: 30.minutes }
     # Lograge config
-    config.lograge.enabled     = true
-    config.lograge.formatter   = Lograge::Formatters::Logstash.new
-    config.lograge.logger      = LogStashLogger.new(type: :udp, host: ENV['LOGSTASH_HOST'], port: 5228)
+    config.lograge.enabled        = true
+    config.lograge.formatter      = Lograge::Formatters::Logstash.new
+    config.lograge.logger         = ActiveSupport::Logger.new(STDOUT)
+    config.lograge.custom_options = lambda do |event|
+      {
+        request_ip: event.payload[:request_ip]
+      }
+    end
+    # Allow IPs to render log to STDOUT for logstash
+    config.web_console.whitelisted_ips = '172.19.0.0/16'
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

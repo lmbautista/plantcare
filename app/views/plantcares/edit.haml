@@ -9,4 +9,5 @@
 
             = render partial: 'plantcares/tabs_menu'
 
-        = render partial: 'plantcares/tabs_content'
+        = form_for @plantcare, url: plantcare_path(@plantcare), method: :put, html: { id: 'edit_wtever_api_plantcare' } do |f|
+          = render partial: 'plantcares/tabs_content', locals: { f: f }

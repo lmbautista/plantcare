@@ -1,7 +1,6 @@
-= form_for @plantcare, url: plantcare_path(@plantcare), method: :put, html: { id: 'edit_wtever_api_plantcare' } do |f|
-  .tab-content.margin-1-top
-    #info.tab-pane.active{ role: 'tabpanel' }
-      = render partial: 'form', locals: { f: f, form_id: 'edit_wtever_api_plantcare' }
+.tab-content.margin-1-top
+  #info.tab-pane.active{ role: 'tabpanel' }
+    = render partial: 'form', locals: { f: f, form_id: 'edit_wtever_api_plantcare' }
 
-    #attachments.tab-pane{ role: 'tabpanel' }
-      = render partial: 'shared/uploader', locals: { f: f, uploader_name: :attachments, form_id: 'edit_wtever_api_plantcare', multiple: true }
+  #attachments.tab-pane{ role: 'tabpanel' }
+    = render partial: 'shared/uploader', locals: { f: f, uploader_name: :attachments, form_id: 'edit_wtever_api_plantcare', multiple: true }

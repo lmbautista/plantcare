@@ -48,10 +48,11 @@ body {
     }
 
     .plantcare {
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 40vh;
       position: relative;
+      height: 40vh;
 
       &:before {
         content: ' ';

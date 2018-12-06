@@ -62,9 +62,9 @@ class UsersController < ApplicationController
         :nif,
         :city,
         :state,
-        :pc).tap do |whitelist|
+        :pc).tap { |whitelist|
           whitelist[:id] = params[:id] if params[:id].present?
-        end
+        }.to_h
     end
 
     def set_user

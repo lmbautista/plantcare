@@ -6,6 +6,14 @@ module WteverApi
 
     has_file_upload :attachments
 
-    attributes :name, :kind, :planted_at, :watered_at, :wet, :status, :attachments
+    attributes :name,
+               :kind,
+               :planted_at,
+               :watered_at,
+               :wet,
+               :status,
+               :picture,
+               :attachments
+
   end
 end
