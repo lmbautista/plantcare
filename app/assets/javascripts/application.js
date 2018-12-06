@@ -30,24 +30,33 @@ function uploaderControl($preview, $input){
   });
 }
 
-$(document).ready(function(){
+function datepickerControl(){
   $('.datepicker').attr("autocomplete", "off");
+
   $('.datepicker').datepicker({
     locale: gon.locale,
     format: 'dd/mm/yyyy'
   }).on('changeDate', function(e){
-        var _d = e.date.getDate(),
-            d = _d > 9 ? _d : '0'+_d,
-            _m = e.date.getMonth(),
-            m = _m > 9 ? _m : '0'+_m,
-            formatted = e.date.getFullYear() + '-' + m + '-' + d;
-        $('[name=date]').val(formatted);
-    });
-  // $('form').on('submit', function(){
-  //   $('.datepicker').
-  // })
-  // $('.datepicker').datepicker({
-  //   locale: gon.locale,
-  //   format: 'dd/mm/yyyy'
-  // });
+    var _d = e.date.getDate(),
+    d = _d > 9 ? _d : '0'+_d,
+    _m = e.date.getMonth(),
+    m = _m > 9 ? _m : '0'+_m,
+    formatted = e.date.getFullYear() + '-' + m + '-' + d;
+    $('[name=date]').val(formatted);
+  });
+}
+
+function linkControl(){
+  $('a, button, input[type="submit"]').on('click.spinner', function(){
+    $('.loading-overlay').removeClass('hidden');
+  });
+
+  $(document).ajaxComplete(function() {
+    $('.loading-overlay').addClass('hidden');
+  });
+}
+
+$(document).ready(function(){
+  datepickerControl();
+  linkControl();
 })

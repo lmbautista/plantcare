@@ -54,7 +54,7 @@ es:
         Aún no has registrado ninguna planta.
       no-plants-subtitle: |
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
-      show: Revisa el estado de tu jardín
+      show: Revisa el estado de <br/>tu jardín
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
     edit:

@@ -1,10 +1,10 @@
 - content_for :header do
   .row
-    .col-xs-12.col-md-6.col-md-offset-1
+    .col-xs-12.col-sm-6.col-md-6.col-md-offset-1
       %h2.plantcare-ico
         = link_to I18n.t('title'), root_path
 
-    .col-xs-2.col-md-4.hidden-xs.text-right
+    .col-xs-2.col-sm-6.col-md-4.hidden-xs.text-right
       .btn-group.actions
         .header-field
           = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
