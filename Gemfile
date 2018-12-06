@@ -46,8 +46,10 @@ gem 'jquery-fileupload-rails'
 
 gem 'puma', '~> 3.0'
 
-# Simplifies rails logger
+# EDK logger
 gem 'lograge'
+gem 'logstash-event'
+gem 'logstash-logger'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
