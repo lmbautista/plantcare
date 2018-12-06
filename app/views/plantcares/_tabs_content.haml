@@ -1,6 +1,6 @@
-.tab-content.margin-1-top
+.tab-content.padding-1
   #info.tab-pane.active{ role: 'tabpanel' }
-    = render partial: 'form', locals: { f: f, form_id: 'edit_wtever_api_plantcare' }
+    = render partial: 'form', locals: { f: f, form_id: 'form_wtever_api_plantcare' }
 
   #attachments.tab-pane{ role: 'tabpanel' }
-    = render partial: 'shared/uploader', locals: { f: f, uploader_name: :attachments, form_id: 'edit_wtever_api_plantcare', multiple: true }
+    = render partial: 'shared/uploader', locals: { f: f, uploader_name: :attachments, form_id: 'form_wtever_api_plantcare', multiple: true }

@@ -10,7 +10,7 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require jquery-fileupload
 
-function uploader_control($input, $preview){
+function uploaderControl($preview, $input){
   function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
@@ -22,14 +22,19 @@ function uploader_control($input, $preview){
       reader.readAsDataURL(input.files[0]);
     }
   }
+  // trigger hidden input field
+  $preview.on('click', function() { $input.trigger('click'); })
+  // update hidden input field image
   $input.change(function() {
     readURL(this);
   });
 }
 
 $(document).ready(function(){
+  $('.datepicker').attr("autocomplete", "off");
   $('.datepicker').datepicker({
-    locale: gon.locale
+    locale: gon.locale,
+    format: 'dd/mm/yyyy'
   }).on('changeDate', function(e){
         var _d = e.date.getDate(),
             d = _d > 9 ? _d : '0'+_d,
@@ -38,4 +43,11 @@ $(document).ready(function(){
             formatted = e.date.getFullYear() + '-' + m + '-' + d;
         $('[name=date]').val(formatted);
     });
+  // $('form').on('submit', function(){
+  //   $('.datepicker').
+  // })
+  // $('.datepicker').datepicker({
+  //   locale: gon.locale,
+  //   format: 'dd/mm/yyyy'
+  // });
 })

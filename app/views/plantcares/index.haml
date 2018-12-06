@@ -13,7 +13,7 @@
 %section
   .content.vline-middle
     - if @plantcares.present?
-      = render partial: 'shared/title', locals: { title: nil, subtitle: I18n.t('plantcares.index.show'), dark: true }
+      = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.show'), subtitle: nil , dark: true }
 
       .row
         = render partial: 'plantcare', collection: @plantcares, as: :plantcare

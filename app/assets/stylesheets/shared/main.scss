@@ -23,18 +23,12 @@ html {
     overflow-x: hidden;
     position: relative;
     font-family: $general-font;
-    font-weight: 400;
     font-size: 14px;
 
-    h1, h2, h3, h4, h5, h6 { font-weight: 300; }
-
-    h1 {
-      font-size: 48px;
-      font-weight: 400;
-    }
-
+    h1,h2 { font-weight: 300  }
+    h3,h4,h5,h6 { font-weight: 400 }
+    h1 { font-size: 48px; }
     h2 { font-size: 40px; }
-
     h3 { font-size: 32px; }
 
     header {
@@ -42,17 +36,6 @@ html {
       height: 8vh;
       color: $font-color;
       background: transparent;
-
-      .profile {
-        margin: 5px;
-
-        h5 { color: $opposite-color; }
-
-        .fi {
-          font-size: 30px;
-          vertical-align: middle;
-        }
-      }
     }
 
     footer {
@@ -109,6 +92,7 @@ html {
           }
         }
       }
+      .tab-content { background-color: rgba(24, 188, 156, 0.15); }
     }
 
     &.logged {
@@ -116,7 +100,6 @@ html {
 
       header {
         .navbar-default {
-          background: $general-opposite-color;
           vertical-align: middle;
           height: 100%;
           border-radius: 0;

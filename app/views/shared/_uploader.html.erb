@@ -1,28 +1,36 @@
 <% multiple ||= false %>
+
+<!-- The table listing the files available for upload/download -->
+<table class="table text-center"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
+</table>
+
 <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-<div class="row fileupload-buttonbar margin-1-top">
-  <div class="span7">
-    <!-- The fileinput-button span is used to style the file input field as button -->
-    <span class="custom-btn custom-btn-primary fileinput-button">
-      <span><%= I18n.t('buttons.add') %></span>
-      <%= f.file_field uploader_name, multiple: multiple %>
-    </span>
-    <button type="submit" class="custom-btn custom-btn-primary start">
-      <span><%= I18n.t('buttons.submit') %></span>
-    </button>
-    <button type="reset" class="custom-btn custom-btn-danger cancel">
-      <span><%= I18n.t('buttons.cancel') %></span>
-    </button>
-  </div>
+<div class="form-group">
+  <div class="row fileupload-buttonbar">
+    <div class="col-xs-12 col-sm-4">
+      <!-- The fileinput-button span is used to style the file input field as button -->
+      <span class="custom-btn custom-btn-primary btn-block fileinput-button">
+        <span><%= I18n.t('buttons.add') %></span>
+        <%= f.file_field uploader_name, multiple: multiple %>
+      </span>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= button_tag I18n.t('buttons.submit'),
+          type:  'submit',
+          class: 'custom-btn custom-btn-primary btn-block start' %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= button_tag I18n.t('buttons.cancel'),
+          type: 'reset',
+          class: 'custom-btn custom-btn-danger btn-block cancel' %>
+    </div>
+    </div>
   </div>
 </div>
+
 <!-- The loading indicator is shown during image processing -->
 <div class="fileupload-loading"></div>
 <br>
-<!-- The table listing the files available for upload/download -->
-<table class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
-</table>
-
 
 <script>
   var fileUploadErrors = {
@@ -58,9 +66,9 @@
     <td colspan="2"></td>
     {% } %}
     <td class="cancel">{% if (!i) { %}
-      <button class="btn btn-warning">
+      <button class="custom-btn-danger custom-btn">
         <i class="icon-ban-circle icon-white"></i>
-        <span>{%=locale.fileupload.cancel%}</span>
+        <span><%= I18n.t('buttons.cancel') %></span>
       </button>
       {% } %}</td>
   </tr>

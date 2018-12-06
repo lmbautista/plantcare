@@ -5,11 +5,11 @@
   .row
     .col-xs-12.col-sm-6
       .form-group
-        = submit_tag I18n.t('buttons.submit'), { class: "custom-btn #{submit_class} full-width custom-btn-inline" }
+        = submit_tag I18n.t('buttons.submit'), { class: "custom-btn #{submit_class} btn-block custom-btn-inline" }
 
     .col-xs-12.col-sm-6
       .form-group
         - if remote
-          = link_to I18n.t('buttons.cancel'), '#', class: "custom-btn custom-btn-danger full-width custom-btn-inline", data: { dismiss: "modal" }
+          = link_to I18n.t('buttons.cancel'), '#', class: "custom-btn custom-btn-danger btn-block custom-btn-inline", data: { dismiss: "modal" }
         - else
-          = link_to I18n.t('buttons.cancel'), :back, class: "custom-btn custom-btn-danger full-width custom-btn-inline"
+          = link_to I18n.t('buttons.cancel'), :back, class: "custom-btn custom-btn-danger btn-block custom-btn-inline"

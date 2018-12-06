@@ -1,7 +1,8 @@
 .hidden-xs.col-sm-6.col-md-6.text-right
-  .btn-group.profile
-    = link_to profile_user_path(current_user) do
-      %h5
-        = "#{current_user.first_name} #{current_user.last_name}"
+  .btn-group.profile.margin-2-top
+    = link_to profile_user_path(current_user), class: 'font-color vline-middle' do
+      %h4.no-margin.inline-block
+        = fa_icon "user-circle", class: 'font-color'
 
-      %span.fi.flaticon-gardener-1
+      %h5.font-color.no-margin.inline-block.weight-2
+        = current_user.first_name

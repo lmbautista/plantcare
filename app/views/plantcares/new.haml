@@ -11,5 +11,5 @@
 
             = render partial: 'plantcares/tabs_menu'
 
-        = form_for @plantcare, url: { controller:'plantcares', action:'create' }, method: :post, html: { id: 'edit_wtever_api_plantcare' } do |f|
+        = form_for @plantcare, url: { controller:'plantcares', action:'create' }, method: :post, html: { id: 'form_wtever_api_plantcare' } do |f|
           = render partial: 'plantcares/tabs_content', locals: { f: f }

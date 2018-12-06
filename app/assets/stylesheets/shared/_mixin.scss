@@ -20,46 +20,25 @@
     color: $opposite-color;
     background-color: $general-opposite-color;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $opposite-color;
-    }
-    hr {
-      color: $general-color;
-    }
     header {
-      * {
-        color: $general-opposite-color;
-      }
+      color: $opposite-color;
+      .plantcare-ico > a { color: $opposite-color; }
     }
   } @else if $section == "light" {
     color: $font-color;
     background-color: $opposite-color;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $general-opposite-color;
-    }
-    hr {
-      color: $general-color;
-    }
     header {
-      * {
-        color: $opposite-color;
-      }
+      color: $font-color;
+      .plantcare-ico > a { color: $general-color; }
     }
   } @else if $section == "primary" {
-    color: $font-color;
+    color: $opposite-color;
     background-color: $general-color;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $opposite-color;
-    }
-    hr {
-      color: $opposite-color;
-    }
     header {
-      * {
-        color: $opposite-color;
-      }
+      color: $opposite-color;
+      .plantcare-ico > a  { color: $opposite-color; }
     }
   }
 }

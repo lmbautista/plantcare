@@ -29,6 +29,7 @@ module Plantcare
         request_ip: event.payload[:request_ip]
       }
     end
+
     # Allow IPs to render log to STDOUT for logstash
     config.web_console.whitelisted_ips = '172.19.0.0/16'
 
