@@ -16,6 +16,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    flash.now[:notice] = I18n.t('sessions.destroy.see_you')
+
+    env['warden'].logout and redirect_to root_path and return
+  end
+
   def not_found
     flash.now[:error] = I18n.t('sessions.new.not_found')
     render :new

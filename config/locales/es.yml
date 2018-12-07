@@ -80,7 +80,8 @@ es:
       create_account: |
         ¿No tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Únete </a></strong>
       not_found: Email y/o password incorrecto, inténtalo de nuevo
-
+    destroy:      
+      see_you: ¡Hasta pronto! Cuidaremos de tus plantas en tu ausencia
   errors:
     not_found: Lo sentimos, ¡pero no hemos encontrado lo que buscas!
     unauthorized: Lo sentimos, ¡pero necesitas iniciar sesión para realizar esta acción!

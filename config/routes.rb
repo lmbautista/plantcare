@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'users',            to: redirect('signup')
   get 'signin',           to: 'sessions#new'
+  get 'signout',          to: 'sessions#destroy'
   get 'signup',           to: 'users#new'
   get 'confirmation',     to: 'users#confirmation'
   get 'welcome',          to: 'users#welcome'
