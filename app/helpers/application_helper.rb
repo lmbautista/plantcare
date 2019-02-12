@@ -10,15 +10,15 @@ module ApplicationHelper
   end
 
   def prepare_growl_message
-    if flash.now[:error].present?
-                      "  $.growl.error({ message: '#{flash.now[:error]}', duration: 10000, title: 'Plantcare says:' });"
-                    elsif flash.now[:notice].present?
-                      "  $.growl.notice({ message: '#{flash.now[:notice]}', duration: 10000, title: 'Plantcare says:' });"
-                    elsif flash.now[:warning].present?
-                      "  $.growl.warning({ message: '#{flash.now[:warning]}', duration: 10000, title: 'Plantcare says:' });"
-                    else
-                      ""
-                    end
+    if flash[:error].present?
+      "  $.growl.error({ message: '#{flash[:error]}', duration: 10000, title: 'Plantcare says:' });"
+    elsif flash[:notice].present?
+      "  $.growl.notice({ message: '#{flash[:notice]}', duration: 10000, title: 'Plantcare says:' });"
+    elsif flash[:warning].present?
+      "  $.growl.warning({ message: '#{flash[:warning]}', duration: 10000, title: 'Plantcare says:' });"
+    else
+      ""
+    end
   end
 
   def growl_message
@@ -44,7 +44,7 @@ module ApplicationHelper
 
   def modal_for(modal_id, title, options = {})
     footer = ""
-        
+
     if options[:footer] || options[:footer].nil?
       footer = "<div class=\"modal-footer\">"
       footer+= "<button type=\"button\" class=\"btn btn-primary\" onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">#{I18n.t("buttons.submit")}</button>" if options[:form_id].present?

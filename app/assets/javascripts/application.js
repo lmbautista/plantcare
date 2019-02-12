@@ -10,7 +10,7 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require jquery-fileupload
 
-function uploaderControl($preview, $input){
+function uploaderControl($previewInput, $preview, $input){
   function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
@@ -23,7 +23,7 @@ function uploaderControl($preview, $input){
     }
   }
   // trigger hidden input field
-  $preview.on('click', function() { $input.trigger('click'); })
+  $previewInput.on('click', function() { $input.trigger('click'); })
   // update hidden input field image
   $input.change(function() {
     readURL(this);
@@ -47,12 +47,18 @@ function datepickerControl(){
 }
 
 function linkControl(){
-  $('a, button, input[type="submit"]').on('click.spinner', function(){
+  $(document).ajaxStart(function () {
+    $('.loading-overlay').removeClass('hidden');
+  }).ajaxStop(function () {
+    $('.loading-overlay').addClass('hidden');
+  });
+
+  $('form[remote!="true"]').submit(function(){
     $('.loading-overlay').removeClass('hidden');
   });
 
-  $(document).ajaxComplete(function() {
-    $('.loading-overlay').addClass('hidden');
+  $('a:not([href^="#"]), button, input[type="submit"]').click(function(e){
+    if (! e.shiftKey) { $('.loading-overlay').removeClass('hidden'); }
   });
 }
 

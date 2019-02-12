@@ -1,6 +1,16 @@
 @import "shared/_variables";
 
 body {
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .navbar {
     margin-bottom: 0;
 
@@ -17,7 +27,7 @@ body {
       .icon-bar {
         background-color: $opposite-color;
       }
-    }  
+    }
   }
 
   .navmenu-fixed-left {
@@ -83,5 +93,5 @@ body {
     padding: 4px;
     line-height: initial;
     vertical-align: middle;
-}
+  }
 }

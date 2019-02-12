@@ -28,6 +28,7 @@ es:
     edit:
       title: Perfil
       subtitle: Edita los datos de tu cuenta
+    update:
       sucessfully: Has actualizado correctamente tu perfil.
 
     wtever_api:
@@ -80,7 +81,7 @@ es:
       create_account: |
         ¿No tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Únete </a></strong>
       not_found: Email y/o password incorrecto, inténtalo de nuevo
-    destroy:      
+    destroy:
       see_you: ¡Hasta pronto! Cuidaremos de tus plantas en tu ausencia
   errors:
     not_found: Lo sentimos, ¡pero no hemos encontrado lo que buscas!
