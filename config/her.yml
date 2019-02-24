@@ -1,6 +1,6 @@
 development:
-  http://127.0.0.1:3000/v1
+  http://api:3000/v1
 preproduction:
-  http://127.0.0.1:3000/v1
+  http://api:3000/v1
 production:
-  http://127.0.0.1:3000/v1
+  http://api:3000/v1
