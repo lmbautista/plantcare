@@ -17,8 +17,7 @@
 /tmp
 
 # Ignore config files
-config/her.yml
-config/database.yml
+
 
 # Docker
 .env
