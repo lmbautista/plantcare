@@ -2,7 +2,7 @@
 # La putada es: lo suyo es configurar todo desde el controller pero el render de
 # la vista desde donde narices lo hago?
 class PlantcaresController < ApplicationController
-  before_action  :set_plantcare, only: %w(edit)
+  before_action :set_plantcare, only: %w(edit)
 
   def new
     @plantcare = WteverApi::Plantcare.new
@@ -10,7 +10,7 @@ class PlantcaresController < ApplicationController
 
   def create
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
-    binding.pry
+
     if @plantcare.save
       flash[:notice] = I18n.t('plantcares.create.sucessfully')
 
@@ -26,7 +26,6 @@ class PlantcaresController < ApplicationController
   end
 
   def update
-    binding.pry
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
 
     if @plantcare.save
@@ -48,17 +47,18 @@ class PlantcaresController < ApplicationController
   end
 
   private
-    def plantcare_params
-      params.require(:wtever_api_plantcare).permit(
-        :name,
-        :planted_at).tap { |whitelist|
-          whitelist[:id]          = params[:id] if params[:id].present?
-          whitelist[:attachments] = params[:wtever_api_plantcare][:attachments]
-        }.to_h
-    end
 
-    def set_plantcare
-      @plantcare = WteverApi::Plantcare.find(params[:id])
-    end
+  def plantcare_params
+    params.require(:wtever_api_plantcare).permit(
+      :name,
+      :planted_at
+    ).tap do |whitelist|
+      whitelist[:id] = params[:id] if params[:id].present?
+      whitelist[:attachments] = params[:wtever_api_plantcare][:attachments]
+    end.to_h
+  end
 
+  def set_plantcare
+    @plantcare = WteverApi::Plantcare.find(params[:id])
+  end
 end
