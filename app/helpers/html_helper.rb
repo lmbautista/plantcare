@@ -16,14 +16,15 @@ module HtmlHelper
   end
 
   def datepickerfield_for(form_helper, attribute)
+    datepicker_id = SecureRandom.hex(4)
     content_tag(:div, class: "input-group") do
       safe_join(
         [content_tag(
           :span,
           fa_icon("fal fa-calendar-alt"),
-          class: "input-group-addon", onclick: '$(this).next(".datepicker").trigger("click")'
+          class: "input-group-addon", onclick: "$('[data-id=\"#{datepicker_id}\"]').trigger('focus')"
         ),
-         form_helper.text_field(attribute, class: "form-control datepicker")]
+         form_helper.text_field(attribute, "class" => "form-control datepicker", "data-id" => datepicker_id)]
       )
     end
   end
