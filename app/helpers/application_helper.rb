@@ -1,4 +1,7 @@
+# Application helper
 module ApplicationHelper
+  include HtmlHelper
+
   def current_user
     RequestStore.store[:current_user] ||= Rails.cache.fetch("current_user_#{session[:current_user_id]}") do
       request.env['warden'].user
@@ -47,16 +50,16 @@ module ApplicationHelper
 
     if options[:footer] || options[:footer].nil?
       footer = "<div class=\"modal-footer\">"
-      footer+= "<button type=\"button\" class=\"btn btn-primary\" onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">#{I18n.t("buttons.submit")}</button>" if options[:form_id].present?
-      footer+= "<button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">#{I18n.t("buttons.close")}</button>" if options[:close_button].present? && options[:close_button]
+      footer += "<button type=\"button\" class=\"btn btn-primary\" onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">#{I18n.t('buttons.submit')}</button>" if options[:form_id].present?
+      footer += "<button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">#{I18n.t('buttons.close')}</button>" if options[:close_button].present? && options[:close_button]
 
       if options[:footer_buttons].present?
         options[:footer_buttons].each do |button|
-          footer+= "<button type=\"button\" id=\"#{button[:id] if button.has_key?(:id)}\" class=\"btn btn-default #{button[:class] if button.has_key?(:class)}\ data-dismiss=\"modal\">#{button[:text] if button.has_key?(:text)}</button>" if options[:footer_button].present?
+          footer += "<button type=\"button\" id=\"#{button[:id] if button.key?(:id)}\" class=\"btn btn-default #{button[:class] if button.key?(:class)}\ data-dismiss=\"modal\">#{button[:text] if button.key?(:text)}</button>" if options[:footer_button].present?
         end
       end
 
-      footer+="</div>"
+      footer += "</div>"
     end
 
     "<div id=\"#{modal_id}\" class=\"modal fade\" role=\"dialog\">

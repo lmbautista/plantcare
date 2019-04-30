@@ -1,26 +1,26 @@
 .col-xs-6.col-sm-4.col-md-3
   = link_to edit_plantcare_path(plantcare), class: 'magictime action' do
-    .plantcare.padding-2{style: plantcare_picture(plantcare)}
+    .plantcare.p-2{style: plantcare_picture(plantcare)}
       %h2.opposite-color.relative
         = plantcare.name
 
       - if plantcare.wet
-        %h4.no-margin-top.margin-1-bottom.weight-2
+        %h4.mt-0.mb-1.weight-2
           = plantcare.wet
 
       - if plantcare.planted_at
         %div
           %span.inline
-            %h4.no-margin-top.margin-1-bottom.weight-2
+            %h4.mt-0.mb-1.weight-2
               = image_tag ('sprout'), class: "explain-ico img-responsive"
               = plantcare.planted_at
 
       - if plantcare.watered_at
         %div
           %span.inline
-            %h4.no-margin-top.margin-1-bottom.weight-2
+            %h4.mt-0.mb-1.weight-2
               = image_tag ('water'), class: "explain-ico img-responsive"
               = plantcare.watered_at
 
-      %h4.no-margin-top.margin-1-bottom
+      %h4.mt-0.mb-1
         = plantcare.status

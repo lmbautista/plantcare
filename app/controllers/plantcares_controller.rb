@@ -9,6 +9,7 @@ class PlantcaresController < ApplicationController
   end
 
   def create
+    binding.pry
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
 
     if @plantcare.save

@@ -34,8 +34,6 @@ gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Haml
 gem 'haml', '~> 5.0'
-# FontAwesome
-gem 'font-awesome-rails'
 
 # Cache for Request
 gem 'request_store', '~> 1.3', '>= 1.3.2'
@@ -62,6 +60,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'pry-nav'
+  gem 'minitest', '~> 5.10', '!= 5.10.2'
 end
 
 group :development do

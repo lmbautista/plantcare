@@ -3,7 +3,7 @@ module Her
     extend ActiveSupport::Concern
 
     module ClassMethods
-      def has_file_upload(attribute)
+      def file_upload(attribute)
         attributes attribute
 
         define_method(:"#{ attribute }=") do |files|
@@ -14,25 +14,23 @@ module Her
 
     def assign_file_attribute(attribute, files)
       return unless files.present?
-      
-      files = files.collect{ |file| generate_faraday_upload_io(file) }
+
+      files = files.collect { |file| generate_faraday_upload_io(file) }
 
       # Super can't be called with Stack Level Too Deep errors
-      if @attributes[attribute] != files
-        self.send(:"#{ attribute }_will_change!")
-      end
+      send(:"#{ attribute }_will_change!") if @attributes[attribute] != files
 
       @attributes[attribute] = files
     end
 
     def generate_faraday_upload_io(file)
-      if file.is_a?(ActionDispatch::Http::UploadedFile)
-        file = Faraday::UploadIO.new(
-          file.tempfile.path,
-          file.content_type,
-          file.original_filename
-        )
-      end
+      return unless file.is_a?(ActionDispatch::Http::UploadedFile)
+
+      Faraday::UploadIO.new(
+        file.tempfile.path,
+        file.content_type,
+        file.original_filename
+      )
     end
   end
 end

@@ -1,12 +1,12 @@
 .hidden-xs.col-sm-6.col-md-6.text-right
-  .btn-group.profile.margin-2-top
-    = link_to profile_user_path(current_user), class: 'font-color inline-block margin-1-right' do
-      %h3.no-margin.inline-block.vline-middle
-        = fa_icon "user-circle", class: 'font-color'
+  .btn-group.profile.mt-2
+    = link_to profile_user_path(current_user), class: 'font-color inline-block mr-1' do
+      %h3.m-0.inline-block.vline-middle
+        = fa_icon 'fal fa-user-circle font-color'
 
-      %h5.font-color.no-margin.inline-block.weight-2
+      %h5.font-color.m-0.inline-block.weight-2
         = current_user.first_name
 
     = link_to signout_path, class: 'font-color inline-block' do
-      %h3.no-margin.inline-block.vline-middle
-        = fa_icon "sign-out", class: 'font-color'
+      %h4.m-0.inline-block.vline-middle
+        = fa_icon 'fal fa-sign-out-alt font-color'

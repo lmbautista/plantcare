@@ -17,7 +17,7 @@
 /tmp
 
 # Ignore config files
-
+.history
 
 # Docker
 .env

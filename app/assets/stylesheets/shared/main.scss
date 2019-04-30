@@ -107,7 +107,7 @@ html {
       }
     }
 
-    .actions { @extend .padding-2-top; @extend .padding-2-bottom; }
+    .actions { @extend .pt-2; @extend .pb-2; }
     .plantcare-ico {
       font-family: $header-font;
       padding-left: 45px;

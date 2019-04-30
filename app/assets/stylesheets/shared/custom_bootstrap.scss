@@ -1,6 +1,12 @@
 @import "shared/_variables";
 
 body {
+  label { 
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
   .row {
     margin-left: -5px;
     margin-right: -5px;

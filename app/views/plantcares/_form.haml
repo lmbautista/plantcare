@@ -1,10 +1,12 @@
 = f.file_field :picture, class: 'form-control hidden'
 
 .form-group
-  = f.text_field :name, class: 'form-control', placeholder: I18n.t('plantcares.wtever_api.attributes.name')
+  = label_for(f.object, :name)
+  = f.text_field :name, class: 'form-control'
 
 .form-group
-  = f.text_field :planted_at, class: 'form-control datepicker', placeholder: I18n.t('plantcares.wtever_api.attributes.planted_at')
+  = label_for(f.object, :planted_at)
+  = datepickerfield_for(f, :planted_at)
 
 = render 'shared/form/submit', f: f
 

@@ -1,4 +1,4 @@
-%section.intro.padding-1
+%section.intro.p-1
   .content.vline-middle
     = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.title'), subtitle: I18n.t('plantcares.new.subtitle') }
 
@@ -10,7 +10,7 @@
         .text-center
           = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
 
-%section.padding-1
+%section.p-1
   .content.vline-middle
     - if @plantcares.present?
       = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.show').html_safe, subtitle: nil , dark: true }

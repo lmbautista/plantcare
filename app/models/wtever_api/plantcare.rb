@@ -4,7 +4,8 @@ module WteverApi
   class Plantcare < WteverApi::Base
     include Her::FileUpload
 
-    has_file_upload :attachments
+    file_upload :attachments
+    file_upload :picture
 
     attributes :name,
                :kind,
