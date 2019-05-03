@@ -1,18 +1,33 @@
 %section.intro
-  .content.vline-top
+  .content.vline-top.pt-2
     .row
       .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-        #plantcare-panel.plantcare.p-2{ style: plantcare_picture(@plantcare) }
+        #plantcare-panel.plantcare.p-2{style: plantcare_picture(@plantcare)}
           .to-top
-            .pull-right
-              %h4#edit-picture.m-0.p-1
-                = fa_icon 'fal fa-edit opposite-color'
+            .pull-right.p-2.text-right
+              = render partial: 'plantcares/common_details', locals: { plantcare: @plantcare }
 
-          .to-bottom
-            %h2.p-1
-              = @plantcare.name
+          .title.text-center
+            %h3.text-uppercase.mb-0.weight-1
+              = I18n.t('plantcares.edit.title')
+            %h4.m-0.weight-2
+              = I18n.t('plantcares.edit.subtitle')      
+            %h4#edit-picture.m-0.p-1
+              = fa_icon 'fal fa-camera-retro opposite-color'              
 
-            = render partial: 'plantcares/tabs_menu'
+      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3        
+        .p-2
+          = form_for @plantcare, url: plantcare_path(@plantcare), method: :put, html: { id: 'form_wtever_api_plantcare' } do |f|
+            = render partial: 'form', locals: { f: f, form_id: 'form_wtever_api_plantcare' }          
 
-        = form_for @plantcare, url: plantcare_path(@plantcare), method: :put, html: { id: 'form_wtever_api_plantcare' } do |f|
-          = render partial: 'plantcares/tabs_content', locals: { f: f }
+            - if @plantcare.wet_sensor_name      
+              .pt-4.pb-4
+                %h5.m-0.p-1.weight-1
+                  = I18n.t("plantcares.edit.explaining_token")
+                %h4.weight-2.text-center
+                  = fa_icon "fal fa-microchip vline-bottom"
+                  .inline-block.vline-bottom.weight-2
+                    = @plantcare.wet_sensor_access_token
+  
+            .pt-2
+              = render 'shared/form/submit', f: f          

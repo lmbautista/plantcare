@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   resources :sessions, only: %w( new create destroy )
 
-  resources :plantcares, only: %w( index new create edit update destroy )
+  resources :plantcares
 end

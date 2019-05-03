@@ -1,0 +1,14 @@
+%section.intro
+  .content.vline-top.pt-2
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+        = render partial: 'plantcares/details', locals: { plantcare: @plantcare }
+
+        - if @plantcare.wet_sensor_name
+          .pt-4.pb-4
+            %h5.m-0.p-1.weight-1
+              = I18n.t("plantcares.edit.explaining_token")
+            %h4.weight-2.text-center
+              = fa_icon "fal fa-microchip vline-bottom"
+              .inline-block.vline-bottom.weight-2
+                = @plantcare.wet_sensor_access_token

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Her
   module FileUpload
     extend ActiveSupport::Concern
@@ -13,14 +15,14 @@ module Her
     end
 
     def assign_file_attribute(attribute, files)
-      return unless files.present?
+      return if files.blank?
 
-      files = files.collect { |file| generate_faraday_upload_io(file) }
+      files = Array(files).map {|file| generate_faraday_upload_io(file) }
 
       # Super can't be called with Stack Level Too Deep errors
       send(:"#{ attribute }_will_change!") if @attributes[attribute] != files
 
-      @attributes[attribute] = files
+      @attributes[attribute] = files.size > 1 ? files : files.first
     end
 
     def generate_faraday_upload_io(file)

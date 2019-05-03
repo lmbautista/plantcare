@@ -47,10 +47,17 @@ es:
     new:
       title: Nuevo plantcare
       subtitle: registra tu nueva planta
+      explaining_text: |
+        A continuación puedes registrar tu nueva planta indicando su nombre, antigüedad, y una fotito.
+        Posteriormente deberás vincular el sensor de humedad a través de la placa Plantcare.
     index:
       title: Tus Plantcares
       subtitle: Revisa el estado de tus plantas
-      howto: Crea tu planta, pincha tu placa de control de humedad y la válvula asociada para realizar las mediciones y los riegos oportunos
+      howto-1: Crea tu planta
+      howto-2: Pincha en tu planta el sensor de humedad y vinculalo a tu Plantcare
+      howto-3: Crea o vincula una bomba de agua a tu planta
+      howto-4: Controla y riega tu jardín desde Plantcare
+      
       no-plants-title: |
         Aún no has registrado ninguna planta.
       no-plants-subtitle: |
@@ -60,6 +67,10 @@ es:
       sucessfully: Ya tienes un plantcare más para cuidar.
     edit:
       title: Edición de plantcare
+      subtitle: Revisa el estado de tus plantas
+      explaining_token: |
+        Este es el token de acceso que necesita configurar en tu sensor de humedad para que se comunique con nosotros. Configúralo actualizando
+        tu placa Plantcare para que pueda enviar el estado de tu planta
       menu:
         info: Info básica
         attachments: Evolución
@@ -72,7 +83,13 @@ es:
         wet: Humedad
         planted_at: Plantada el
         watered_at: Regada el
+        status: Estado
         user_id: Propietario
+    status:
+      healthy: Sana
+      sick: Malita
+      lifeless: Pocha
+    wet_status: "%{wet} de humedad"
 
   sessions:
     new:

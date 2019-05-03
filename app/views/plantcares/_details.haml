@@ -1,0 +1,14 @@
+.plantcare{ style: plantcare_picture(plantcare) }
+  .to-top.p-2
+    .pull-right.text-right
+      - if plantcare.planted_at
+        %h5.m-0.pb-1.weight-1{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
+          = fa_icon "fal fa-hand-holding-seedling vline-bottom"
+          .inline-block.vline-bottom
+            = plantcare.planted_at            
+
+      = render partial: 'plantcares/common_details', locals: { plantcare: plantcare }
+  .title.p-2.text-center
+    %h3.opposite-color.weight-1.cut-text-3
+      = plantcare.name
+      

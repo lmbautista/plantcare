@@ -1,4 +1,7 @@
-require 'her/file_upload'
+# frozen_string_literal: true
+
+# ERM plantcare model
+require "her/file_upload"
 
 module WteverApi
   class Plantcare < WteverApi::Base
@@ -10,11 +13,11 @@ module WteverApi
     attributes :name,
                :kind,
                :planted_at,
-               :watered_at,
                :wet,
                :status,
                :picture,
                :attachments
 
+    has_one :wet_sensor
   end
 end

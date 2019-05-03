@@ -258,7 +258,6 @@ DEPENDENCIES
   lograge
   logstash-event
   logstash-logger
-  minitest (~> 5.10, != 5.10.2)
   mysql2
   pry-nav
   pry-rails

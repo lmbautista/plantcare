@@ -3,7 +3,7 @@
     = render partial: 'shared/title', locals: { title: I18n.t('users.edit.title'), subtitle: I18n.t('users.edit.subtitle') }
 
     = form_for @user, url: user_path(@user), method: :put do |f|
-      .row
+      .row.plantcare-fields
         .col-xs-12.col-md-4.col-md-offset-2.text-center
           = render partial: 'users/basic_form_fields',    locals: { f: f }
 

@@ -52,7 +52,7 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      height: 32vh;
+      height: 40vh;
 
       &:before {
         content: ' ';
@@ -70,6 +70,14 @@ body {
         display: inline-block;
         width: 25px;
         padding-right: 5px;
+      }
+
+      .title {
+        position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%, -50%);
+      	width: 100% ;
       }
     }
   }

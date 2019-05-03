@@ -1,14 +1,14 @@
 = f.file_field :picture, class: 'form-control hidden'
-
-.form-group
-  = label_for(f.object, :name)
-  = f.text_field :name, class: 'form-control'
-
-.form-group
-  = label_for(f.object, :planted_at)
-  = datepickerfield_for(f, :planted_at)
-
-= render 'shared/form/submit', f: f
+.row.plantcare-fields
+  .col-xs-12.col-sm-6
+    .form-group
+      = label_for(f.object, :name)
+      = f.text_field :name, class: 'form-control'
+      
+  .col-xs-12.col-sm-6
+    .form-group
+      = label_for(f.object, :planted_at)
+      = datepickerfield_for(f, :planted_at)
 
 :javascript
   uploaderControl($('#edit-picture'), $('#plantcare-panel'), $('#wtever_api_plantcare_picture'));
