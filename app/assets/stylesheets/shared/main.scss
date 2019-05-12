@@ -29,7 +29,7 @@ html {
     header {
       width: 100%;
       height: auto;
-      color: $font-color;
+      color: $opposite-color;
       background: transparent;
     }
     footer {
@@ -65,10 +65,9 @@ html {
 
     #content {
       font-weight: 400;
-      background-color: rgba(24, 188, 156, 0.15);
 
       .plantcare-icon {
-        padding-top: 100px;
+        padding-top: 100px;        
         .explaining {
           color: $opposite-color;
 
@@ -114,9 +113,8 @@ html {
       background-size: 40px;
 
       a {
-        &:hover {
-          color: inherit;
-        }
+        color: $opposite-color;
+        &:hover { color: inherit; }
       }
     }
     .header-field {

@@ -1,9 +1,7 @@
 require 'custom_token_authentication'
 require 'her/api_response_handler'
 
-HER_CONFIG = YAML.load_file(File.join(Rails.root, 'config/her.yml'))
-
-Her::API.setup url: HER_CONFIG[Rails.env] do |c|
+Her::API.setup url: Rails.application.secrets.api_url do |c|
   # Request
   c.use Faraday::Request::Multipart
   c.use Faraday::Request::UrlEncoded

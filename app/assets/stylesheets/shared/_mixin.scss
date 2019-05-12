@@ -20,26 +20,13 @@
     color: $opposite-color;
     background-color: $general-opposite-color;
 
-    header {
-      color: $opposite-color;
-      .plantcare-ico > a { color: $opposite-color; }
-    }
   } @else if $section == "light" {
     color: $font-color;
     background-color: $opposite-color;
 
-    header {
-      color: $font-color;
-      .plantcare-ico > a { color: $general-color; }
-    }
   } @else if $section == "primary" {
     color: $opposite-color;
     background-color: $general-color;
-
-    header {
-      color: $opposite-color;
-      .plantcare-ico > a  { color: $opposite-color; }
-    }
   }
 }
 

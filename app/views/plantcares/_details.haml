@@ -1,8 +1,8 @@
 .plantcare{ style: plantcare_picture(plantcare) }
-  .to-top.p-2
+  .to-top.p-4
     .pull-right.text-right
       - if plantcare.planted_at
-        %h5.m-0.pb-1.weight-1{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
+        %h5.m-0.pb-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
           = fa_icon "fal fa-hand-holding-seedling vline-bottom"
           .inline-block.vline-bottom
             = plantcare.planted_at            

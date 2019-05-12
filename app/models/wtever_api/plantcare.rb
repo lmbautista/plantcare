@@ -14,9 +14,7 @@ module WteverApi
                :kind,
                :planted_at,
                :wet,
-               :status,
-               :picture,
-               :attachments
+               :status
 
     has_one :wet_sensor
   end

@@ -26,7 +26,7 @@ module Her
     end
 
     def generate_faraday_upload_io(file)
-      return unless file.is_a?(ActionDispatch::Http::UploadedFile)
+      return file unless file.is_a?(ActionDispatch::Http::UploadedFile)
 
       Faraday::UploadIO.new(
         file.tempfile.path,

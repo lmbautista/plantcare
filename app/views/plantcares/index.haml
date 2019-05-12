@@ -6,35 +6,33 @@
       .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
         .row.pt-5.pb-5
           .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-4 opposite-color bg-general-color rounded fal fa-hand-holding-seedling'
-            %h5.opposite-color.weight-1
+            = fa_icon 'bigger-2 p-4 general-color bg-opposite-color rounded fal fa-hand-holding-seedling'
+            %h5.opposite-color.weight-2
               = I18n.t('plantcares.index.howto-1')
             
           .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-4 opposite-color bg-general-color rounded fal fa-microchip'
-            %h5.opposite-color.weight-1
+            = fa_icon 'bigger-2 p-4 general-color bg-opposite-color rounded fal fa-microchip'
+            %h5.opposite-color.weight-2
               = I18n.t('plantcares.index.howto-2')
 
           .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-4 opposite-color bg-general-color rounded fal fa-water-rise'              
-            %h5.opposite-color.weight-1
+            = fa_icon 'bigger-2 p-4 general-color bg-opposite-color rounded fal fa-water-rise'              
+            %h5.opposite-color.weight-2
               = I18n.t('plantcares.index.howto-3')
 
           .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-4 opposite-color bg-general-color rounded fal fa-smile-beam'                          
-            %h5.opposite-color.weight-1
+            = fa_icon 'bigger-2 p-4 general-color bg-opposite-color rounded fal fa-smile-beam'                          
+            %h5.opposite-color.weight-2
               = I18n.t('plantcares.index.howto-4')        
 
         .text-center.pt-3
-          = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-primary custom-btn-active'
+          = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-secondary'
 
 %section.p-1
   .content.vline-middle
     - if @plantcares.present?
       = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.show').html_safe, subtitle: nil , dark: true }
-
-      .row
-        = render partial: 'link_details', collection: @plantcares, as: :plantcare
+      = render partial: 'link_details', collection: @plantcares, as: :plantcare
     - else
       = render partial: 'shared/not_found', locals: { title: I18n.t('plantcares.index.no-plants-title'),
                                                       subtitle: I18n.t('plantcares.index.no-plants-subtitle', new_plant_link: new_plantcare_path),

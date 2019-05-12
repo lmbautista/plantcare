@@ -34,7 +34,7 @@ class PlantcaresController < ApplicationController
 
   def update
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
-
+    
     if @plantcare.save
       flash[:notice] = I18n.t("plantcares.update.sucessfully")
 
