@@ -34,7 +34,7 @@ class PlantcaresController < ApplicationController
 
   def update
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
-    
+
     if @plantcare.save
       flash[:notice] = I18n.t("plantcares.update.sucessfully")
 
@@ -57,7 +57,8 @@ class PlantcaresController < ApplicationController
       :attachments,
       :planted_at
     ).tap {|whitelist|
-      whitelist[:id] = params[:id] if params[:id].present?
+      whitelist[:id] = params[:id]
+      whitelist[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)
     }.to_h
   end
 

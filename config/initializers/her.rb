@@ -1,5 +1,7 @@
-require 'custom_token_authentication'
-require 'her/api_response_handler'
+# frozen_string_literal: true
+
+require "custom_token_authentication"
+require "her/api_response_handler"
 
 Her::API.setup url: Rails.application.secrets.api_url do |c|
   # Request
@@ -13,6 +15,4 @@ Her::API.setup url: Rails.application.secrets.api_url do |c|
   c.use Her::ApiResponseHandler
   # Adapter
   c.use Faraday::Adapter::NetHttp
-
-
 end

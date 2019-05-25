@@ -11,8 +11,8 @@ module HtmlHelper
     I18n.t("#{klass_name}.wtever_api.attributes.#{attribute}")
   end
 
-  def label_for(instance, attribute)
-    label_tag(attribute, model_name(instance, attribute))
+  def label_for(instance, attribute, options={})
+    label_tag(attribute, model_name(instance, attribute), options)
   end
 
   def datepickerfield_for(form_helper, attribute)

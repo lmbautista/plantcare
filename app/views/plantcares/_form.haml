@@ -1,14 +1,27 @@
 = f.file_field :picture, class: 'form-control hidden'
-.row.plantcare-fields
+.row.plantcare-fields.pt-2
   .col-xs-12.col-sm-6
     .form-group
-      = label_for(f.object, :name)
+      = label_for(f.object, :name, class: "m-0")
       = f.text_field :name, class: 'form-control'
-      
+                        
   .col-xs-12.col-sm-6
     .form-group
-      = label_for(f.object, :planted_at)
-      = datepickerfield_for(f, :planted_at)
+      = label_for(f.object, :planted_at, class: "m-0")
+      = f.text_field :planted_at, class: 'form-control'  
 
+  .col-xs-12
+    .form-group.pt-4.pb-4      
+      .well
+        = label_for(f.object, :wet_sensor_field)
+
+        %h5.m-0.weight-1
+          = I18n.t("plantcares.edit.explaining_token")
+
+        %h4.weight-2.text-center
+          = fa_icon "fal fa-microchip vline-middle p-1"
+          .inline-block.vline-bottom.weight-2
+            = f.text_field :wet_sensor_field, class: 'form-control'
+      
 :javascript
   uploaderControl($('#edit-picture'), $('#plantcare-panel'), $('#wtever_api_plantcare_picture'));

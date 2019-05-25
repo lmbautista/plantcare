@@ -16,6 +16,8 @@ COPY ./Gemfile Gemfile
 
 COPY ./Gemfile.lock Gemfile.lock
 
+ENV BUNDLER_VERSION 2.0.1
+
 RUN gem install bundler
 
 RUN bundle install

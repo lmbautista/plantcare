@@ -20,15 +20,6 @@
           .p-2
             = form_for @plantcare, url: plantcare_path(@plantcare), method: :put, html: { id: 'form_wtever_api_plantcare' } do |f|
               = render partial: 'form', locals: { f: f, form_id: 'form_wtever_api_plantcare' }          
-
-              - if @plantcare.wet_sensor_name      
-                .pt-4.pb-4
-                  %h5.m-0.p-1.weight-1
-                    = I18n.t("plantcares.edit.explaining_token")
-                  %h4.weight-2.text-center.well
-                    = fa_icon "fal fa-microchip vline-bottom"
-                    .inline-block.vline-bottom.weight-2
-                      = @plantcare.wet_sensor_access_token
     
               .pt-2
                 = render 'shared/form/submit', f: f          
