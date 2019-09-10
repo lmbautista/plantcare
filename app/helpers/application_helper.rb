@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def logged?
-    current_user.present?
+    session[:current_user_id]
   end
 
   def prepare_growl_message

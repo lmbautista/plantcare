@@ -10,6 +10,7 @@ class BasicAuth < Warden::Strategies::Base
       fail!("Could not log in")
     else
       session[:current_user_id] = u.id
+      session[:api_token] = u.api_token
       success!(u)
     end
   end

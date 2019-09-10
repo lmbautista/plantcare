@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_user_api_token
-    RequestStore.store[:wtever_token] ||= current_user.api_token
+    RequestStore.store[:wtever_token] ||= session[:api_token]
   end
 
   def to_flash(errors)
