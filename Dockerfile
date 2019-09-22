@@ -12,21 +12,19 @@ RUN mkdir -p $RAILS_ROOT/tmp/pids
 
 WORKDIR $RAILS_ROOT
 
-COPY ./Gemfile Gemfile
+COPY Gemfile Gemfile
 
-COPY ./Gemfile.lock Gemfile.lock
+COPY Gemfile.lock Gemfile.lock
+
+COPY . /var/www/plantcare/
 
 ENV BUNDLER_VERSION 2.0.1
 
-# RUN gem install bundler
 RUN gem install bundler -v '2.0.1'
 
 RUN bundle install
 
-COPY ./config/puma.rb config/puma.rb
+EXPOSE 8080
 
-COPY . .
-
-EXPOSE 3001
-
-CMD bundle exec puma -C config/puma.rb
+ENTRYPOINT ["bundle", "exec"]
+CMD ["puma", "-C", "config/puma.rb"]

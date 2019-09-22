@@ -15,6 +15,7 @@ module WteverApi
                :planted_at,
                :wet,
                :status,
+               :watered_at,
                :wet_sensor_field
 
     has_one :wet_sensor
