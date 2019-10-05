@@ -21,8 +21,14 @@ class ApplicationController < ActionController::Base
     RequestStore.store[:wtever_token] ||= session[:api_token]
   end
 
+  # { wet_sensor: { field: ["no está incluido en la lista"] } }
   def to_flash(errors)
-    errors.collect{|key,value| "#{key.to_s.humanize}: #{value.join("; ").humanize}" }.join("<br/>").html_safe
+    html_errors = errors.map do |model, attributes|
+      attributes.map do |name, descriptions|
+        "#{model}_#{name}: #{descriptions.map(&:humanize).join(", ")}"
+      end
+    end
+    html_errors.join("<br/>")
   end
 
   def unauthorized

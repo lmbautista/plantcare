@@ -41,7 +41,7 @@ es:
         nif: DNI/NIF
         pc: Código postal
         state: Provincia
-        city: Localidad        
+        city: Localidad
 
   plantcares:
     new:
@@ -57,7 +57,7 @@ es:
       howto-2: Pincha en tu planta el sensor de humedad y vinculalo a tu Plantcare
       howto-3: Crea o vincula una bomba de agua a tu planta
       howto-4: Controla y riega tu jardín desde Plantcare
-      
+
       no-plants-title: |
         Aún no has registrado ninguna planta.
       no-plants-subtitle: |
@@ -69,8 +69,8 @@ es:
       title: Edición de plantcare
       subtitle: Revisa el estado de tus plantas
       explaining_token: |
-        Indica donde vas a conectar el sensor de humedad en tu Plantcare.
-        De esta manera tu Plantcare podrá comunicar el estado de tu nueva planta.        
+        Indica el pin de conexión del sensor de humedad en tu Plantcare.
+        De esta manera tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
       menu:
         info: Info básica
         attachments: Evolución
@@ -86,10 +86,19 @@ es:
         status: Estado
         user_id: Propietario
         wet_sensor_field: Detector de humedad
+        water_pump_field: Bomba de agua
+        water_pump_status: Estado
     status:
       healthy: Sana
       sick: Malita
       lifeless: Pocha
+    hardware:
+      wet_sensor_text: |
+        Indica el pin de conexión del sensor de humedad en tu Plantcare.
+        De esta manera tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
+      water_pump_text: |
+        Indica el pin de conexión del motor de agua en tu Plantcare.
+        De esta manera podrás regar tu Plantcare a demanda.
     wet_status: "%{wet} de humedad"
 
   sessions:

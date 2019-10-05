@@ -59,6 +59,7 @@ class PlantcaresController < ApplicationController
     ).tap {|whitelist|
       whitelist[:id] = params[:id]
       whitelist[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)
+      whitelist[:water_pump_field] = params.dig(:wtever_api_plantcare, :water_pump_field)
     }.to_h
   end
 
