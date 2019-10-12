@@ -39,11 +39,6 @@ body {
       .plantcare {
         border-bottom: 6px solid $general-color;
         cursor: pointer;
-        &:hover {
-          &:before {
-            background-color: rgba($general-color, 0.4);
-          }
-        }
       }
     }
 
@@ -52,7 +47,7 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      height: 35vh;
+      height: 40vh;
 
       &:before {
         content: ' ';
@@ -63,8 +58,6 @@ body {
         left: 0;
         background-color: rgba(0,0,0,0.5);
       }
-
-      * { color: $opposite-color; }
 
       .explain-ico {
         display: inline-block;

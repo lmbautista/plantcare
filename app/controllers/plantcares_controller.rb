@@ -1,16 +1,14 @@
 # frozen_string_literal: true
 
-# Tengo que pasar a los tabs el href, el titulo, si esta activo y el content
-# La putada es: lo suyo es configurar todo desde el controller pero el render de
-# la vista desde donde narices lo hago?
 class PlantcaresController < ApplicationController
-  before_action :set_plantcare, only: %w[show edit]
+  before_action :set_plantcare, only: %w(show edit)
 
   def index
     @plantcares = WteverApi::Plantcare.all
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @plantcare  = WteverApi::Plantcare.new
@@ -30,7 +28,8 @@ class PlantcaresController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
     @plantcare = WteverApi::Plantcare.new(plantcare_params)
@@ -46,7 +45,8 @@ class PlantcaresController < ApplicationController
     end
   end
 
-  def tour; end
+  def tour
+  end
 
   private
 
@@ -56,11 +56,11 @@ class PlantcaresController < ApplicationController
       :picture,
       :attachments,
       :planted_at
-    ).tap {|whitelist|
+    ).tap do |whitelist|
       whitelist[:id] = params[:id]
       whitelist[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)
       whitelist[:water_pump_field] = params.dig(:wtever_api_plantcare, :water_pump_field)
-    }.to_h
+    end
   end
 
   def set_plantcare

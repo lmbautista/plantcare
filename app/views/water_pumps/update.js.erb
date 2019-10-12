@@ -1,0 +1,6 @@
+<% if flash[:error].present? %>
+  $.growl.error({ message: '<%= raw flash[:error] %>', duration: 10000, title: 'Plantcare says:' });
+<% else %>
+  $.growl.notice({ message: '<%= raw flash[:notice] %>', duration: 10000, title: 'Plantcare says:' });
+  $("#edit_water_pump").modal();
+<% end %>

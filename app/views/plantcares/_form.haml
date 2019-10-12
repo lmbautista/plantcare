@@ -23,6 +23,9 @@
           .inline-block.vline-bottom.weight-2
             = f.text_field :wet_sensor_field, class: 'form-control'
 
+        %h6.mt-4.mb-0.weight-1.text-uppercase.text-center
+          = I18n.t("plantcares.hardware.wet_sensor_fields")
+
   .col-xs-12
     .pb-4
       .well
@@ -32,9 +35,12 @@
           = I18n.t("plantcares.hardware.water_pump_text")
 
         %h4.weight-2.text-center
-          = fa_icon "fal fa-gas-pump vline-middle p-1"
+          = fa_icon "fal fa-dewpoint vline-middle p-1"
           .inline-block.vline-bottom.weight-2
             = f.text_field :water_pump_field, class: 'form-control'
+
+        %h6.mt-4.mb-0.weight-1.text-uppercase.text-center
+          = I18n.t("plantcares.hardware.water_pump_fields")
 
 :javascript
   uploaderControl($('#edit-picture'), $('#plantcare-panel'), $('#wtever_api_plantcare_picture'));

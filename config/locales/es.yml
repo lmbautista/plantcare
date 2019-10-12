@@ -53,16 +53,22 @@ es:
     index:
       title: Tus Plantcares
       subtitle: Revisa el estado de tus plantas
-      howto-1: Crea tu planta
-      howto-2: Pincha en tu planta el sensor de humedad y vinculalo a tu Plantcare
-      howto-3: Crea o vincula una bomba de agua a tu planta
+      howto-1: |
+        Registra tu planta.
+      howto-2: |
+        Inserta el sensor de humedad cerca de la base del tronco, conectando el otro estremo en UNO
+        en uno de sus pines disponibles.
+      howto-3: |
+        Introduce la bomba de agua en tu depósito y conéctalo a uno de los interruptores
+        disponibles.
       howto-4: Controla y riega tu jardín desde Plantcare
-
       no-plants-title: |
         Aún no has registrado ninguna planta.
       no-plants-subtitle: |
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
       show: Revisa el estado de <br/>tu jardín
+      water_pump_need: ¿Necesitas regar tu plantcare?
+      enable_water_pump: Activar riego
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
     edit:
@@ -94,13 +100,28 @@ es:
       lifeless: Pocha
     hardware:
       wet_sensor_text: |
-        Indica el pin de conexión del sensor de humedad en tu Plantcare.
-        De esta manera tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
+        Indica el pin donde has conectado en UNO el sensor de humedad en tu Plantcare. De esta manera
+        tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
+      wet_sensor_fields: |
+        pines disponibles: A0, A1, A2, A3, A4, A5
       water_pump_text: |
-        Indica el pin de conexión del motor de agua en tu Plantcare.
-        De esta manera podrás regar tu Plantcare a demanda.
+        Indica el número del interruptor del motor de agua en tu Plantcare. De esta manera podrás regar
+        tu Plantcare a demanda.
+      water_pump_fields: |
+        interruptores disponibles: IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8
     wet_status: "%{wet} de humedad"
 
+  waterpumps:
+    edit:
+      explaining: |
+        Habilita el riego para habilitar la bomba de agua %{water_pump_field}. No olvides deshabilitarlo.
+      spoiler: |
+        ¡Pronto dispondremos de programación de riego!
+    update:
+      sucessfully: ¡Riego en camino!
+    wtever_api:
+      attributes:
+        status: Activar riego
   sessions:
     new:
       title: Inicia sesión
@@ -110,7 +131,8 @@ es:
       not_found: Email y/o password incorrecto, inténtalo de nuevo
     destroy:
       see_you: ¡Hasta pronto! Cuidaremos de tus plantas en tu ausencia
-  errors:
+
+      errors:
     not_found: Lo sentimos, ¡pero no hemos encontrado lo que buscas!
     unauthorized: Lo sentimos, ¡pero necesitas iniciar sesión para realizar esta acción!
     forbidden: Lo sentimos, ¡pero no puedes realizar esa acción!

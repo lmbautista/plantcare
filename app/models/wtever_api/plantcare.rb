@@ -18,7 +18,5 @@ module WteverApi
                :watered_at,
                :wet_sensor_field,
                :water_pump_field
-
-    has_one :wet_sensor
   end
 end

@@ -1,0 +1,16 @@
+= modal_for('edit_water_pump', nil, { footer: false }) do
+  - capture_haml do
+    = form_for @water_pump, url: { controller: 'water_pumps', action: 'update' }, method: :patch, remote: true do |f|
+      .row.p-3
+        .col-xs-4.text-right.mb-2
+          = switch_for(f, :status)
+
+        .col-xs-6.mb-2
+          %h4.weight-2.m-2.text-center
+            = model_name(f.object, :status)
+
+        .col-xs-12.text-center
+          .small= I18n.t("waterpumps.edit.explaining", water_pump_field: @water_pump.field)
+          .small= I18n.t("waterpumps.edit.spoiler", water_pump_field: @water_pump.field)
+
+      = render partial: 'shared/form/submit', locals: { submit_class: 'custom-btn-primary', remote: true }

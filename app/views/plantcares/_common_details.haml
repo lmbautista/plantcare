@@ -1,17 +1,11 @@
-- if plantcare.wet
-  %h5.m-0.pb-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.wet") }
-    = fa_icon "fal fa-water-rise vline-bottom"
-    .inline-block.vline-bottom.pl-1
-      = I18n.t("plantcares.wet_status", wet: plantcare_wet(plantcare))
-
 - if plantcare.watered_at
-  %h5.m-0.pb-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+  %h4.m-0.pb-1.weight-1{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
     = fa_icon "fal fa-hand-holding-water vline-bottom"
     .inline-block.vline-bottom
       = plantcare.watered_at
 
 - if plantcare.status
-  %h5.m-0.pb-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.status") }
+  %h4.m-0.pb-1.weight-1{ alt: I18n.t("plantcares.wtever_api.attributes.status") }
     = plantcare_status_icon(plantcare)
     .inline-block.vline-bottom.pl-1
       = plantcare_status_text(plantcare)
