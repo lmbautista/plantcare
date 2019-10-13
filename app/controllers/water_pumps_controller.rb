@@ -10,7 +10,7 @@ class WaterPumpsController < ApplicationController
   end
 
   def update
-    if water_pump.assign_attributes(water_pump_attributes)
+    if water_pump.update_with_attributes(water_pump_attributes)
       flash[:notice] = I18n.t("waterpumps.update.sucessfully")
     else
       flash[:error] = to_flash(@water_pump.response_errors)
@@ -24,11 +24,9 @@ class WaterPumpsController < ApplicationController
   private
 
   def water_pump_attributes
-    params.require(:wtever_api_water_pump).permit(
-      :status
-    ).tap do |p|
-      p[:status] = p[:status] == 1
-    end
+    params
+      .require(:wtever_api_water_pump)
+      .permit(:status)
   end
 
   def water_pump

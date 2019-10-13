@@ -13,13 +13,9 @@ module HtmlHelper
   #
   #   Example: [{text: 'text_button', class: 'class_button', id: 'id_button'}]
 
-  def modal_for(modal_id, title = nil, options = {})
+  def modal_for(modal_id, title, options = {})
     footer = ""
-    header = "
-          <div class=\"modal-header\">
-            <h4 class=\"modal-title\">#{title}</h4>
-          </div>" if title.present?
-
+    header = ""
     if options[:footer] || options[:footer].nil?
       footer = "<div class=\"modal-footer\">"
       footer += "<button type=\"button\" class=\"btn btn-primary\" onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">#{I18n.t('buttons.submit')}</button>" if options[:form_id].present?
@@ -34,17 +30,24 @@ module HtmlHelper
       footer += "</div>"
     end
 
+    if options.fetch(:header, true)
+      header = "
+      <div class=\"modal-header\">
+        <h4 class=\"modal-title\">#{title}</h4>
+      </div>
+      "
+    end
+
     "<div id=\"#{modal_id}\" class=\"modal fade\" role=\"dialog\">
       <div class=\"modal-dialog\">
-        #{header}
         <!-- Modal content-->
         <div class=\"modal-content\">
+          #{header}
           <div class=\"modal-body\">
             #{yield}
           </div>
           #{footer}
         </div>
-
       </div>
     </div>".html_safe
   end

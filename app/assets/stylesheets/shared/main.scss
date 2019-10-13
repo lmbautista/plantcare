@@ -11,7 +11,7 @@ html, body {
   height: 100%;
 }
 
-html {  
+html {
   overflow: hidden;
 
   body {
@@ -66,8 +66,8 @@ html {
     #content {
       font-weight: 400;
 
-      .plantcare-icon {
-        padding-top: 100px;        
+      .plantcare-welcome-icons {
+        padding-top: 100px;
         .explaining {
           color: $opposite-color;
 
@@ -106,11 +106,10 @@ html {
       }
     }
 
-    .actions { @extend .pt-2; @extend .pb-2; }
-    .plantcare-ico {
+    .actions { @extend .pt-3; }
+    .plantcare-icon {
       font-family: $header-font;
-      padding-left: 45px;
-      background-size: 40px;
+      background-size: 30px;
 
       a {
         color: $opposite-color;

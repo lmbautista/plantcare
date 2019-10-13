@@ -4,16 +4,16 @@
 require "her/file_upload"
 
 module WteverApi
-  class WaterPump < WteverApi::Base
+  class WteverApi::WaterPump < WteverApi::Base
     include Her::FileUpload
 
     attributes :status,
                :water_for
 
-    ENABLED_STATUSES = [
-      ENABLED = "enabled",
-      DISABLED = "disabled"
-    ].freeze
+    STATUSES = {
+      "1" => "enabled",
+      "0" => "disabled"
+    }.freeze
 
     ARDUINO_FIELDS = [
       FIELD_IN1 = "IN1",
@@ -26,13 +26,12 @@ module WteverApi
       FIELD_IN8 = "IN8"
     ].freeze
 
-    def status_to_attribute
-      status == 1 ? ENABLED : DISABLED
+    def status
+      STATUSES.key(super) || super
     end
 
     def attributes
-      byebug
-      super.merge!(status: status_to_attribute)
+      super.merge(status: STATUSES[status])
     end
   end
 end

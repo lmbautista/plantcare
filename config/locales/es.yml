@@ -56,8 +56,8 @@ es:
       howto-1: |
         Registra tu planta.
       howto-2: |
-        Inserta el sensor de humedad cerca de la base del tronco, conectando el otro estremo en UNO
-        en uno de sus pines disponibles.
+        Inserta el sensor de humedad cerca de la base del tronco, conectando el otro estremo en la
+        placa UNO en los pines disponibles.
       howto-3: |
         Introduce la bomba de agua en tu depósito y conéctalo a uno de los interruptores
         disponibles.
@@ -68,7 +68,7 @@ es:
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
       show: Revisa el estado de <br/>tu jardín
       water_pump_need: ¿Necesitas regar tu plantcare?
-      enable_water_pump: Activar riego
+      enable_water_pump: ¿Te regamos?
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
     edit:
@@ -113,15 +113,16 @@ es:
 
   waterpumps:
     edit:
+      title: Habilita o deshabilita tu riego
       explaining: |
-        Habilita el riego para habilitar la bomba de agua %{water_pump_field}. No olvides deshabilitarlo.
+        Habilita el riego para que la bomba de agua %{water_pump_field} comience a regar tu plantcare. No olvides deshabilitarlo.
       spoiler: |
         ¡Pronto dispondremos de programación de riego!
     update:
       sucessfully: ¡Riego en camino!
     wtever_api:
       attributes:
-        status: Activar riego
+        status: Estado
   sessions:
     new:
       title: Inicia sesión

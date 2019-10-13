@@ -1,21 +1,23 @@
 - content_for :header do
   .row
-    .col-xs-12.col-sm-6.col-md-6.col-md-offset-1
-      %h2.plantcare-ico
+    .col-xs-12.col-sm-4.col-md-4.col-md-offset-1.text-center
+      %h2.plantcare-icon.mb-2.mt-2
         = link_to I18n.t('title'), root_path
 
-    .col-xs-2.col-sm-6.col-md-4.hidden-xs.text-right
-      .btn-group.actions
-        .header-field
-          = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
+    .col-sm-6.col-md-5.hidden-xs.text-right
+      .btn-group.actions.mt-2
+        = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
 
 %section.intro
   .content.vline-middle
-    = render partial: 'shared/title', locals: { title: I18n.t('sessions.new.title'), subtitle: I18n.t('sessions.new.subtitle') }
-
     .row
-      .col-xs-12.col-md-4.col-md-offset-4.text-center
-        = render partial: 'sessions/signin'
+      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+        .p-2
+          = render partial: 'shared/title', locals: { title: I18n.t('sessions.new.title'), subtitle: I18n.t('sessions.new.subtitle') }
+          = render partial: 'sessions/signin'
+          .row
+            .visible-xs.col-xs-12.text-center
+              = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
 
 
 = modal_for('signup_modal', I18n.t("users.new.subtitle").humanize, { footer: false }) do

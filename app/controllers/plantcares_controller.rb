@@ -12,7 +12,6 @@ class PlantcaresController < ApplicationController
 
   def new
     @plantcare  = WteverApi::Plantcare.new
-    @wet_sensor = @plantcare.wet_sensor.build
   end
 
   def create
