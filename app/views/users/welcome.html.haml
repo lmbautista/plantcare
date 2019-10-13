@@ -11,53 +11,54 @@
 
 %section.intro
   .content.vline-middle
-    = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
+    .p2
+      = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
 
-    .plantcare-welcome-icons
-      .row
-        .col-xs-6.col-md-2.col-md-offset-3.text-center
-          .explaining
-            = image_tag ('sprout'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico1')
+      .plantcare-welcome-icons
+        .row
+          .col-xs-6.col-md-2.col-md-offset-3.text-center
+            .explaining
+              = image_tag ('sprout'), class: "explain-ico img-responsive"
+              %p
+                = I18n.t('users.welcome.explain-ico1')
 
-        .col-xs-6.col-md-2.text-center
-          .explaining
-            = image_tag ('water'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico2')
+          .col-xs-6.col-md-2.text-center
+            .explaining
+              = image_tag ('water'), class: "explain-ico img-responsive"
+              %p
+                = I18n.t('users.welcome.explain-ico2')
 
-        .col-xs-6.col-md-2.text-center
-          .explaining
-            = image_tag ('leaf'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico3')
+          .col-xs-6.col-md-2.text-center
+            .explaining
+              = image_tag ('leaf'), class: "explain-ico img-responsive"
+              %p
+                = I18n.t('users.welcome.explain-ico3')
 
-        .col-xs-6.col-md-2.col-md-offset-3.text-center
-          .explaining
-            = image_tag ('fertilizer'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico4')
+          .col-xs-6.col-md-2.col-md-offset-3.text-center
+            .explaining
+              = image_tag ('fertilizer'), class: "explain-ico img-responsive"
+              %p
+                = I18n.t('users.welcome.explain-ico4')
 
-        .col-xs-6.col-md-2.text-center
-          .explaining
-            = image_tag ('sun'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico5')
+          .col-xs-6.col-md-2.text-center
+            .explaining
+              = image_tag ('sun'), class: "explain-ico img-responsive"
+              %p
+                = I18n.t('users.welcome.explain-ico5')
 
-        .col-xs-6.col-md-2.text-center
-          .explaining
-            = image_tag ('growth'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico6')
+          .col-xs-6.col-md-2.text-center
+            .explaining
+              = image_tag ('growth'), class: "explain-ico img-responsive"
+              %p
+                = I18n.t('users.welcome.explain-ico6')
 
-      .row
-        .visible-xs.col-xs-12.text-center
-          .row
-            .col-xs-6
-              = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
-            .col-xs-6
-              = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  btn-block"
+        .row
+          .visible-xs.col-xs-12.text-center
+            .row
+              .col-xs-6
+                = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
+              .col-xs-6
+                = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  btn-block"
 
 
 :javascript
