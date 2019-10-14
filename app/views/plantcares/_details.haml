@@ -1,32 +1,7 @@
 .col-xs-12.col-sm-6.col-md-4
   .plantcare{ style: plantcare_picture(plantcare) }
-    .to-top.p-2.opposite-color
-      - if plantcare.wet
-        = circular_chart(plantcare.wet, class: "#{plantcare.status} inline-block") do
-          = number_to_percentage(plantcare.wet, precision: 0)
-
-      %span.vline-top.text-left.inline-block
-        %h5.m-1.weight-2
-          = I18n.t('plantcares.index.of_wet')
-
-        - if plantcare.watered_at
-          %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
-            = fa_icon "fal fa-hand-holding-water vline-bottom"
-            %span.vline-bottom
-              = plantcare.watered_at
-
-        - if plantcare.planted_at
-          %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
-            = fa_icon "fal fa-hand-holding-seedling vline-bottom"
-            %span.vline-bottom
-              = plantcare.planted_at
-
-      .mt-4.inline-block.pull-right
-        - if plantcare.water_pump_id
-          = link_to edit_water_pump_path(plantcare.water_pump_id), remote: true do
-            %h5.m-1.weight-2.opposite-color
-              = fa_icon "fal fa-dewpoint vline-bottom inline-block"
-              = I18n.t('plantcares.index.enable_water_pump')
+    = render partial: 'plantcares/common_details',
+            locals: { plantcare: plantcare, show_watering: true }
 
     .title.text-center
       = link_to edit_plantcare_path(plantcare.id) do

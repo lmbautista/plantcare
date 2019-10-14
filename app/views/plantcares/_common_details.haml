@@ -6,8 +6,9 @@
       = number_to_percentage(plantcare.wet, precision: 0)
 
   %span.vline-top.text-left.inline-block
-    %h4.m-1.weight-2
-      = I18n.t('plantcares.index.of_wet')
+    - if plantcare.wet
+      %h4.m-1.weight-2
+        = I18n.t('plantcares.index.of_wet')
 
     - if plantcare.watered_at
       %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
