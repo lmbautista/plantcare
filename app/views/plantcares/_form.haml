@@ -15,7 +15,7 @@
       .well
         = label_for(f.object, :wet_sensor_field)
 
-        %h5.m-0.weight-1
+        %h5.m-0
           = I18n.t("plantcares.hardware.wet_sensor_text")
 
         %h4.weight-2.text-center
@@ -23,7 +23,7 @@
           .inline-block.vline-bottom.weight-2
             = f.text_field :wet_sensor_field, class: 'form-control'
 
-        %h6.mt-4.mb-0.weight-1.text-uppercase.text-center
+        %h6.mt-4.mb-0.text-uppercase.text-center
           = I18n.t("plantcares.hardware.wet_sensor_fields")
 
   .col-xs-12
@@ -31,7 +31,7 @@
       .well
         = label_for(f.object, :water_pump_field)
 
-        %h5.m-0.weight-1
+        %h5.m-0
           = I18n.t("plantcares.hardware.water_pump_text")
 
         %h4.weight-2.text-center
@@ -39,7 +39,7 @@
           .inline-block.vline-bottom.weight-2
             = f.text_field :water_pump_field, class: 'form-control'
 
-        %h6.mt-4.mb-0.weight-1.text-uppercase.text-center
+        %h6.mt-4.mb-0.text-uppercase.text-center
           = I18n.t("plantcares.hardware.water_pump_fields")
 
 :javascript

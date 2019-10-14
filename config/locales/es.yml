@@ -68,6 +68,7 @@ es:
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
       show: Revisa el estado de <br/>tu jardín
       water_pump_need: ¿Necesitas regar tu plantcare?
+      of_wet: de humedad
       enable_water_pump: ¿Te regamos?
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
@@ -86,7 +87,7 @@ es:
     wtever_api:
       attributes:
         name: Nombre
-        wet: Humedad
+        wet: Nivel de humedad
         planted_at: Plantada el
         watered_at: Regada el
         status: Estado

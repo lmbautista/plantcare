@@ -12,7 +12,6 @@ module HtmlHelper
   #   and class for each button
   #
   #   Example: [{text: 'text_button', class: 'class_button', id: 'id_button'}]
-
   def modal_for(modal_id, title, options = {})
     footer = ""
     header = ""
@@ -85,6 +84,25 @@ module HtmlHelper
         concat(form_instance.check_box(attribute))
         concat(content_tag(:span, nil, class: "slider round"))
       end
+    end
+  end
+
+  def circular_chart(value, options = {})
+    content_tag :svg, viewBox: "0 0 36 36", class: "circular-chart" do
+      safe_join(
+        [
+          content_tag(:path,
+                      nil,
+                      "class" => "circle #{options[:class]}",
+                      "stroke-dasharray" => "#{value}, 100",
+                      "d" => "M18 2.0845 "\
+                            "a 15.9155 15.9155 0 0 1 0 31.831"\
+                            "a 15.9155 15.9155 0 0 1 0 -31.831"),
+          content_tag(:text, class: "percentage", x: "18", y: "21.35") do
+            yield
+          end
+        ]
+      )
     end
   end
 end

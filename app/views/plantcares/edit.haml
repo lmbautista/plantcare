@@ -3,9 +3,7 @@
     #plantcare-panel.plantcare.opposite-color.p-2{style: plantcare_picture(@plantcare)}
       .row
         .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-          .to-top
-            .pull-right.p-2.text-right
-              = render partial: 'plantcares/common_details', locals: { plantcare: @plantcare }
+          = render partial: 'plantcares/common_details', locals: { plantcare: @plantcare, show_watering: false }
 
       .title.text-center
         %h3.text-uppercase.mb-0.weight-1

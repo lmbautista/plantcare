@@ -4,11 +4,15 @@
 $general-font: 'Roboto', sans-serif;
 $header-font:  'Pacifico', cursive;
 
-$general-color:             #18BC9C;
-$general-opposite-color:    #555;
+$general-color:             darken(#18BC9C, 12%);
+$general-opposite-color:    darken(#18BC9C, 12%);
 $second-color:              darken($general-color, 25%);
 $cancel-color:              #d9534f;
 $opposite-color:            #fff;
 $font-color:                #444;
 $background-color:          $general-color;
 $background-opossite-color: $general-color;
+
+$healthy-color: #4CC790;
+$sick-color: #ff9f00;
+$lifeless-color: $cancel-color ;
