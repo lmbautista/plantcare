@@ -3,6 +3,15 @@
 module PlantcaresHelper
   def plantcare_picture(plantcare)
     if plantcare.picture
+      plantcare.picture
+    else
+      i = plantcare.id.to_i % 6
+      image_url("plantcares/plantcare-default0#{i}.jpg")
+    end
+  end
+
+  def plantcare_background(plantcare)
+    if plantcare.picture
       "background-image: url('#{asset_path(plantcare.picture)}')"
     else
       i = plantcare.id.to_i % 6

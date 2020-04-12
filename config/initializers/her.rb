@@ -11,8 +11,14 @@ Her::API.setup url: Rails.application.secrets.api_url do |c|
   c.use Faraday::Response::Logger
 
   # Response
-  # c.use Her::Middleware::JsonApiParser
   c.use Her::ApiResponseHandler
+
   # Adapter
   c.use Faraday::Adapter::NetHttp
+end
+
+Her::Model.class_eval do
+  def as_json(options = nil)
+    attributes.as_json(options)
+  end
 end

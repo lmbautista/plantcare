@@ -1,12 +1,7 @@
 # frozen_string_literal: true
 
-# ERM plantcare model
-require "her/file_upload"
-
 module WteverApi
-  class WteverApi::WaterPump < WteverApi::Base
-    include Her::FileUpload
-
+  class WaterPump < WteverApi::Base
     attributes :status,
                :water_for
 

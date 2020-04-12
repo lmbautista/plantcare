@@ -3,14 +3,19 @@ require 'wtever/internal_server_error'
 require 'wtever/not_found_error'
 
 module Her
-  class ApiResponseHandler < Her::Middleware::ParseJSON
+  class ApiResponseHandler < Her::Middleware::DefaultParseJSON
     def parse(body)
       json = parse_json(body)
-
+      errors = json.delete(:errors) || []
+      metadata = json.delete(:meta) || {}
+      puts " >>>>> ApiResponseHandler"
+      pp json
+      pp errors
+      pp metadata
       {
-        :data => json[:data] || {},
-        :errors => json[:errors] || [],
-        :metadata => json[:meta] || {},
+        :data => json,
+        :errors => errors,
+        :metadata => metadata,
       }
     end
 
