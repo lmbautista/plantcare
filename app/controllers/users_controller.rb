@@ -11,8 +11,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user      = WteverApi::User.new
-    @countries = WteverApi::Country.all
+    @user = WteverApi::User.new
   end
 
   def create

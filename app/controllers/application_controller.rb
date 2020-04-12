@@ -21,7 +21,6 @@ class ApplicationController < ActionController::Base
     RequestStore.store[:wtever_token] ||= session[:api_token]
   end
 
-  # { wet_sensor: { field: ["no está incluido en la lista"] } }
   def to_flash(errors)
     html_errors = errors.map do |model, attributes|
       attributes.map do |name, descriptions|
