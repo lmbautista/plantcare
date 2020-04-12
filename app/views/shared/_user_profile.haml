@@ -1,9 +1,9 @@
 .col-xs-5.col-sm-6.col-md-5.text-right
-  .btn-group.actions.mt-2
+  .actions
     = link_to profile_user_path(current_user), class: 'inline-block pr-3' do
       %h5.m-0.inline-block.vline-middle.opposite-color
         = fa_icon 'fal fa-user-circle opposite-color pr-1 bigger-1 vline-middle'
-        %span.font-weight-2
+        %span.weight-2
           = current_user.first_name
 
     = link_to signout_path, class: 'inline-block pr-3' do

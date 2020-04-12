@@ -52,27 +52,29 @@ es:
         Posteriormente deberás vincular el sensor de humedad a través de la placa Plantcare.
     index:
       title: Tus Plantcares
+      how-it-works: ¿Como funciona?
       subtitle: Revisa el estado de tus plantas
       howto-1: |
-        Registra tu planta.
+        Registra tu plantcare
       howto-2: |
-        Inserta el sensor de humedad cerca de la base del tronco, conectando el otro estremo en la
-        placa UNO en los pines disponibles.
+        Inserta el sensor de humedad cerca de la base del tronco y selecciona su número en tu plantcare
       howto-3: |
-        Introduce la bomba de agua en tu depósito y conéctalo a uno de los interruptores
-        disponibles.
-      howto-4: Controla y riega tu jardín desde Plantcare
+        Introduce la bomba de agua en tu depósito y selecciona su número en tu plantcare
+      howto-4: Controla y riega remótamente tu plantcare
       no-plants-title: |
         Aún no has registrado ninguna planta.
       no-plants-subtitle: |
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
-      show: Revisa el estado de <br/>tu jardín
-      water_pump_need: ¿Necesitas regar tu plantcare?
-      of_wet: de humedad
-      enable_water_pump: ¿Te regamos?
+      show: Revisa el estado de tu jardín
+      plantcare:
+        planted_at: Plantada el %{planted_at}
+        watered_at: Regada el %{watered_at}
+        water_pump_need: ¿Necesitas regar tu plantcare?
+        of_wet: de humedad
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
     edit:
+      goto-title: Editar
       title: Edición de plantcare
       subtitle: Revisa el estado de tus plantas
       explaining_token: |
@@ -103,22 +105,20 @@ es:
       wet_sensor_text: |
         Indica el pin donde has conectado en UNO el sensor de humedad en tu Plantcare. De esta manera
         tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
-      wet_sensor_fields: |
-        pines disponibles: A0, A1, A2, A3, A4, A5
       water_pump_text: |
         Indica el número del interruptor del motor de agua en tu Plantcare. De esta manera podrás regar
         tu Plantcare a demanda.
-      water_pump_fields: |
-        interruptores disponibles: IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8
     wet_status: "%{wet} de humedad"
 
   waterpumps:
     edit:
-      title: Habilita o deshabilita tu riego
+      title: Modo ráfaga
       explaining: |
-        Habilita el riego para que la bomba de agua %{water_pump_field} comience a regar tu plantcare. No olvides deshabilitarlo.
-      spoiler: |
-        ¡Pronto dispondremos de programación de riego!
+        Habilita riego por ráfagas de 2s.<br/>
+        <b>No olvides deshabilitarlo.</b>
+      unconfigured: |
+        Aún no has configurado tu plantcare. Accede a su ficha y configura su sensor y bomba
+        de agua para poder realizar riegos.
     update:
       sucessfully: ¡Riego en camino!
     wtever_api:
@@ -129,7 +129,8 @@ es:
       title: Inicia sesión
       subtitle:  bienvenido, accede con tu usuario y password
       create_account: |
-        ¿No tienes una cuenta?  <strong><a id="signup_link" data-toggle="modal" data-target="#signup_modal" href="#"> Únete </a></strong>
+        ¿No tienes una cuenta?  <strong><a class="opposite-color" id="signup_link" data-toggle="modal"
+        data-target="#signup_modal" href="#"> Únete </a></strong>
       not_found: Email y/o password incorrecto, inténtalo de nuevo
     destroy:
       see_you: ¡Hasta pronto! Cuidaremos de tus plantas en tu ausencia

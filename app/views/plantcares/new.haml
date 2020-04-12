@@ -1,26 +1,26 @@
 %section.intro
   .content.vline-top
-    #plantcare-panel.plantcare.opposite-color.p-2{style: plantcare_picture(@plantcare)}
+    #plantcare-panel.plantcare.opposite-color.p-2{style: plantcare_background(@plantcare)}
       .row
         .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
           .to-top
             .pull-right.p-2.text-right
-              = render partial: 'plantcares/common_details',
+              = render partial: "plantcares/common_details",
                        locals: { plantcare: @plantcare, show_watering: false }
 
       .title.text-center
         %h3.text-uppercase.mb-0.weight-1
-          = I18n.t('plantcares.new.title')
+          = I18n.t("plantcares.new.title")
         %h4.m-0.weight-2
-          = I18n.t('plantcares.new.subtitle')
+          = I18n.t("plantcares.new.subtitle")
         %h4#edit-picture.m-0.p-1
-          = fa_icon 'fal fa-camera-retro opposite-color'
+          = fa_icon "fal fa-camera-retro opposite-color"
 
     .row
       .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
         .p-2
-          = form_for @plantcare, url: { controller: 'plantcares', action: 'create' }, method: :post, html: { id: 'form_wtever_api_plantcare' } do |f|
-            = render partial: 'form', locals: { f: f, form_id: 'form_wtever_api_plantcare' }
-            -# = render partial: 'shared/uploader', locals: { f: f, uploader_name: :attachments, form_id: 'form_wtever_api_plantcare', multiple: true }
+          = form_for @plantcare, url: { controller: "plantcares", action: "create" }, method: :post, html: { id: "form_wtever_api_plantcare" } do |f|
+            = render partial: "form", locals: { f: f, form_id: "form_wtever_api_plantcare" }
+            -# = render partial: "shared/uploader", locals: { f: f, uploader_name: :attachments, form_id: "form_wtever_api_plantcare", multiple: true }
             .pt-2
-              = render 'shared/form/submit', f: f
+              = render "shared/form/submit", f: f

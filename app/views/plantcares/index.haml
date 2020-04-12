@@ -1,48 +1,39 @@
-%section.intro.p-1
-  .content.vline-middle.opposite-color
-    = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.title'), subtitle: I18n.t('plantcares.new.subtitle') }
+- if @plantcares.present?
+  %section
+    .content.vline-middle
+      .text-center
+        = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.show").html_safe, subtitle: nil }
 
-    .row
-      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-        .row.pt-5.pb-5
-          .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-3 opposite-color rounded fal fa-hand-holding-seedling'
-            %h5.opposite-color.weight-2
-              = I18n.t('plantcares.index.howto-1')
+      .plantcare-cards.pt-3.pb-4
+        = render partial: "details", collection: @plantcares, as: :plantcare
+        .new-plantcare.p-2
+          = link_to new_plantcare_path, class: "custom-btn opposite-color custom-btn-primary rounded", alt: I18n.t("plantcares.new.title") do
+            = fa_icon "bigger-1 opposite-color fas fa-plus vline-middle"
 
-          .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-3 opposite-color rounded fal fa-microchip'
-            %h5.opposite-color.weight-2
-              = I18n.t('plantcares.index.howto-2')
+      = link_to "#instructions", class: "goto-instructions opposite-color pb-4 pt-4", data: { target: "#instructions", toggle: "modal" } do
+        = fa_icon "bigger-2 far fa-question-circle vline-middle pr-2"
+        %h4.weight-2.text-uppercase= I18n.t("plantcares.index.how-it-works")
 
-          .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-3 opposite-color rounded fal fa-dewpoint'
-            %h5.opposite-color.weight-2
-              = I18n.t('plantcares.index.howto-3')
+  = modal_for("instructions", nil, { footer: false, header: false }) do
+    - capture_haml do
+      = render partial: "instructions"
 
-          .col-xs-6.col-sm-6.col-md-3.text-center
-            = fa_icon 'bigger-2 p-3 opposite-color rounded fal fa-leaf-heart'
-            %h5.opposite-color.weight-2
-              = I18n.t('plantcares.index.howto-4')
+- else
+  %section.intro.p-1
+    .content.vline-middle.opposite-color
+      = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.title"), subtitle: I18n.t("plantcares.new.subtitle") }
 
-        .text-center.pt-3
-          = link_to I18n.t('plantcares.new.title'), new_plantcare_path, class: 'custom-btn custom-btn-secondary'
+      .row
+        .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+          = render partial: "instructions"
 
-%section.p-1
-  .content.vline-middle
-    - if @plantcares.present?
-      #edit_water_pump_modal
-      = render partial: 'shared/title', locals: { title: I18n.t('plantcares.index.show').html_safe, subtitle: nil , dark: true }
-      = render partial: 'details', collection: @plantcares, as: :plantcare
-    - else
-      = render partial: 'shared/not_found', locals: { title: I18n.t('plantcares.index.no-plants-title'),
-                                                      subtitle: I18n.t('plantcares.index.no-plants-subtitle', new_plant_link: new_plantcare_path),
-                                                      dark: true }
+          .text-center.pt-3
+            = link_to I18n.t("plantcares.new.title"), new_plantcare_path, class: "custom-btn custom-btn-secondary"
 
 
 :javascript
   $(document).ready(function(){
-    $('.action').each(function(){
-      $(this).addClass('swashIn');
+    $(".action").each(function(){
+      $(this).addClass("swashIn");
     });
   })
