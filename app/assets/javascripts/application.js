@@ -61,7 +61,10 @@ function linkControl() {
   });
 }
 
+function bindTooltips(){ $('[data-toggle="tooltip"]').tooltip(); }
+
 $(document).ready(function () {
+  bindTooltips();
   datepickerControl();
   linkControl();
 })

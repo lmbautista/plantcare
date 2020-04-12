@@ -8,10 +8,7 @@ body {
   &.users {
     &.welcome, &.new, &.create, &.confirmation {
       @include section-styles("primary");
-
-      header {
-        color: $opposite-color;
-      }
+      header { color: $opposite-color;}
 
       #content {
         .title {
@@ -20,9 +17,6 @@ body {
           }
         }
       }
-    }
-    &.edit {
-      @include section-styles("light");
     }
   }
 }

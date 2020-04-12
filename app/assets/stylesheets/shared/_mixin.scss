@@ -18,7 +18,7 @@
 @mixin section-styles($section){
   @if $section == "dark" {
     color: $opposite-color;
-    background-color: $general-opposite-color;
+    background-color: $general-color;
 
   } @else if $section == "light" {
     color: $font-color;

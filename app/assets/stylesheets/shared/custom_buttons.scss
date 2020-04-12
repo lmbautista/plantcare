@@ -1,6 +1,4 @@
 .custom-btn {
-  @extend .btn;
-  border-radius: 0;
   padding: 9px 12px;
   border: 2px solid $opposite-color;
   color: $opposite-color;
@@ -9,6 +7,7 @@
   -o-animation-duration: 2s;
   animation-duration: 2s;
   margin-right: 10px;
+  text-align: center;
 }
 
 .custom-btn-basic {
