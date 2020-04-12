@@ -17,12 +17,17 @@ module HtmlHelper
     header = ""
     if options[:footer] || options[:footer].nil?
       footer = "<div class=\"modal-footer\">"
-      footer += "<button type=\"button\" class=\"btn btn-primary\" onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">#{I18n.t('buttons.submit')}</button>" if options[:form_id].present?
-      footer += "<button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">#{I18n.t('buttons.close')}</button>" if options[:close_button].present? && options[:close_button]
+      footer += "<button type=\"button\" class=\"btn btn-primary\" "\
+        "onClick=\"$('#{options[:form_id]}').submit();$('##{modal_id}').modal('toggle');\">"\
+        "#{I18n.t('buttons.submit')}</button>" if options[:form_id].present?
+      footer += "<button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">"\
+        "#{I18n.t('buttons.close')}</button>" if options[:close_button].present? && options[:close_button]
 
       if options[:footer_buttons].present?
         options[:footer_buttons].each do |button|
-          footer += "<button type=\"button\" id=\"#{button[:id] if button.key?(:id)}\" class=\"btn btn-default #{button[:class] if button.key?(:class)}\ data-dismiss=\"modal\">#{button[:text] if button.key?(:text)}</button>" if options[:footer_button].present?
+          footer += "<button type=\"button\" id=\"#{button[:id] if button.key?(:id)}\" "\
+            "class=\"btn btn-default #{button[:class] if button.key?(:class)}\ "\
+            "data-dismiss=\"modal\">#{button[:text] if button.key?(:text)}</button>" if options[:footer_button].present?
         end
       end
 
@@ -80,7 +85,7 @@ module HtmlHelper
 
   def switch_for(form_instance, attribute, options = {})
     content_tag :div, class: options[:class].to_s do
-      content_tag :label, class: "switch" do
+      content_tag :label, class: "switch vline-middle" do
         concat(form_instance.check_box(attribute))
         concat(content_tag(:span, nil, class: "slider round"))
       end
@@ -88,12 +93,12 @@ module HtmlHelper
   end
 
   def circular_chart(value, options = {})
-    content_tag :svg, viewBox: "0 0 36 36", class: "circular-chart" do
+    content_tag :svg, viewBox: "0 0 36 36", class: "circular-chart #{options[:class]}" do
       safe_join(
         [
           content_tag(:path,
                       nil,
-                      "class" => "circle #{options[:class]}",
+                      "class" => "circle #{options[:status_class]}",
                       "stroke-dasharray" => "#{value}, 100",
                       "d" => "M18 2.0845 "\
                             "a 15.9155 15.9155 0 0 1 0 31.831"\
