@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   resources :sessions, only: %w(new create destroy)
   resources :plantcares
   resources :water_pumps, only: %w(edit update)
+  resources :watering_schedules, only: %w(new create)
 end
