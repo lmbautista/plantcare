@@ -37,7 +37,7 @@ module HtmlHelper
     if options.fetch(:header, true)
       header = "
       <div class=\"modal-header\">
-        <h4 class=\"modal-title\">#{title}</h4>
+        <h4 class=\"modal-title text-center\">#{title}</h4>
       </div>
       "
     end

@@ -4,14 +4,13 @@
 body {
   &.plantcares {
     &.index {
-      @include section-styles("primary");
       #content {
         position: relative;
         section.intro, #instructions {
           h1, h2, h3, h4, h5, h6 { color: $opposite-color; position: relative; }
         }
 
-        section, #instructions .modal-content  {
+        section{
           background-color: $general-color;
           color: $font-color;
         }
@@ -66,7 +65,7 @@ body {
         }
         .plantcare-body {
           width: 22rem;
-          height: 25rem;
+          height: 26rem;
 
           .explain-ico {
             display: inline-block;
@@ -101,6 +100,23 @@ body {
       	width: 100% ;
       }
     }
+
+    .watering-schedule-panel {
+      display: flex;
+      justify-content: center;
+
+      .watering-schedule-left-panel {
+        display: inline-flex;
+        align-items: center;
+        width: 22rem;
+      }
+      .watering-schedule-right-panel {
+        display: inline-flex;
+        flex-direction: column;
+        width: 30rem;
+      }
+    }
+
     .goto-instructions { display: flex; }
     .new-plantcare { display: inline-flex; }
     .new-plantcare, .goto-instructions {

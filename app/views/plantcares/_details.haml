@@ -13,25 +13,44 @@
   .plantcare-body.pt-4.pb-4.pl-2.pr-2
     - if plantcare.planted_at
       %h6.weight-2.mb-1.mt-1{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
-        = fa_icon "fal fa-hand-holding-seedling vline-bottom"
+        = fa_icon "fal fa-hand-holding-seedling general-color vline-bottom"
         %span.vline-bottom
           = I18n.t("plantcares.index.plantcare.planted_at", planted_at: plantcare.planted_at)
 
     - if plantcare.watered_at
       %h6.weight-2.mb-1.mt-1{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
-        = fa_icon "fal fa-hand-holding-water vline-bottom"
+        = fa_icon "fal fa-hand-holding-water general-color vline-bottom"
         %span.vline-bottom
           = I18n.t("plantcares.index.plantcare.watered_at", watered_at: plantcare.watered_at)
 
     %h3.weight-2= plantcare.name
     - if plantcare.water_pump.present?
-      %h4.m-0.weight-2.flex-inline= I18n.t("waterpumps.edit.title")
-      .flex-inline.pl-1
+      = fa_icon "fal fa-dewpoint general-color vline-middle flex-inline"
+      %h5.weight-2.flex-inline.m-0= I18n.t("waterpumps.edit.title")
+      .flex-inline.pl-4
         = form_for plantcare.water_pump, url: water_pump_path(plantcare.water_pump.id),
                    method: :patch, remote: true do |f|
           = switch_for(f, :status)
-      .small
+
+      .small.mb-2
         = I18n.t("waterpumps.edit.explaining", water_pump_field: plantcare.water_pump.field).html_safe
+
+      = link_to new_watering_schedule_path(plantcare_id: plantcare.id), remote: true, class: "font-color" do
+        = fa_icon "far fa-calendar-alt vline-middle flex-inline"
+        %h5.weight-2.flex-inline.m-0
+          = I18n.t("watering_schedules.new.title")
+
+      - if plantcare.waterings.present?
+        %h6.weight-2.mb-1.mt-1{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+          = fa_icon "far fa-clock vline-middle flex-inline"
+          %span.vline-bottom
+            - next_watering = plantcare.waterings.last
+            = I18n.t("watering.next_title")
+            = I18n.t("watering.next", programmed_at: next_watering.programmed_at,
+                                      duration_amount: next_watering.duration_amount,
+                                      duration_unit: next_watering.short_duration_unit).html_safe
+
+
     - else
       %h6.weight-2= I18n.t("waterpumps.edit.unconfigured")
 

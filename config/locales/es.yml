@@ -120,10 +120,30 @@ es:
         Aún no has configurado tu plantcare. Accede a su ficha y configura su sensor y bomba
         de agua para poder realizar riegos.
     update:
-      sucessfully: ¡Riego en camino!
+      sucessfully: Bomba de agua actualizada
     wtever_api:
       attributes:
         status: Estado
+
+  watering_schedules:
+    new:
+      title: Programar riego
+      explaining: Especifica la fecha de validez del programa, la duración y la frecuencia del riego
+    create:
+      sucessfully: Riego programado correctamente
+    edit:
+      title: Modificar riego
+    wtever_api:
+      attributes:
+        starts_on: Fecha inicio
+        ends_on: Fecha fin
+        status: Estado
+        duration_amount: Duración
+        frequency_amount: Frecuencia
+
+  watering:
+    next_title: "Programado:"
+    next: "%{programmed_at} <b>(%{duration_amount}%{duration_unit})</b>"
   sessions:
     new:
       title: Inicia sesión

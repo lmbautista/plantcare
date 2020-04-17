@@ -14,9 +14,11 @@
         = fa_icon "bigger-2 far fa-question-circle vline-middle pr-2"
         %h4.weight-2.text-uppercase= I18n.t("plantcares.index.how-it-works")
 
-  = modal_for("instructions", nil, { footer: false, header: false }) do
+  = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false }) do
     - capture_haml do
       = render partial: "instructions"
+
+  #new_watering_schedule_modal
 
 - else
   %section.intro.p-1

@@ -79,14 +79,43 @@ body {
     }
   }
 
+  .plantcare-fields-dark {
+    .form-control,
+    .input-group-addon,
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      color: #fff;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      box-shadow: none;
+      padding: 6px 3px;
+      height: 30px;
+    }
+    ::placeholder { color: #ccc; }
+  }
+
   .modal-dialog {
     .modal-header {
+      border-bottom: none;
       h1,h2,h3,h4,h5 {
-        color: $font-color !important;
+        color: $opposite-color !important;
         font-weight: 400 !important;
       }
     }
-    .modal-content { border-radius: 0; }
+    .modal-content {
+      border-radius: 0;
+      color: $opposite-color;
+      background-color: $general-color
+    }
   }
 
   .btn { border-radius: 0; }
