@@ -10,16 +10,16 @@ module WteverApi
       "0" => "disabled"
     }.freeze
 
-    ARDUINO_FIELDS = [
-      FIELD_IN1 = "IN1",
-      FIELD_IN2 = "IN2",
-      FIELD_IN3 = "IN3",
-      FIELD_IN4 = "IN4",
-      FIELD_IN5 = "IN5",
-      FIELD_IN6 = "IN6",
-      FIELD_IN7 = "IN7",
-      FIELD_IN8 = "IN8"
-    ].freeze
+    ARDUINO_FIELDS = {
+      "BOMBA 1" => "IN1",
+      "BOMBA 2" => "IN2",
+      "BOMBA 3" => "IN3",
+      "BOMBA 4" => "IN4",
+      "BOMBA 5" => "IN5",
+      "BOMBA 6" => "IN6",
+      "BOMBA 7" => "IN7",
+      "BOMBA 8" => "IN8"
+    }.freeze
 
     def status
       STATUSES.key(super) || super

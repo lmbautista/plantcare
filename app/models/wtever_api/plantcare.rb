@@ -7,14 +7,14 @@ module WteverApi
   class Plantcare < WteverApi::Base
     include Her::FileUpload
 
-    WET_SENSOR_ARDUINO_FIELDS = [
-      FIELD_A0 = "A0",
-      FIELD_A1 = "A1",
-      FIELD_A2 = "A2",
-      FIELD_A3 = "A3",
-      FIELD_A4 = "A4",
-      FIELD_A5 = "A5"
-    ].freeze
+    WET_SENSOR_ARDUINO_FIELDS = {
+      "SENSOR 1" => "A0",
+      "SENSOR 2" => "A1",
+      "SENSOR 3" => "A2",
+      "SENSOR 4" => "A3",
+      "SENSOR 5" => "A4",
+      "SENSOR 6" => "A5"
+    }.freeze
 
     file_upload :attachments
     file_upload :picture

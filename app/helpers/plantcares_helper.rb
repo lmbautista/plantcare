@@ -44,4 +44,12 @@ module PlantcaresHelper
   def plantcare_wet(plantcare)
     number_to_percentage(plantcare.wet, strip_insignificant_zeros: true)
   end
+
+  def wet_sensors_collection
+    WteverApi::Plantcare::WET_SENSOR_ARDUINO_FIELDS.to_a
+  end
+
+  def water_pumps_collection
+    WteverApi::WaterPump::ARDUINO_FIELDS.to_a
+  end
 end

@@ -21,7 +21,7 @@
         %h4.weight-2.text-center
           = fa_icon "fal fa-microchip vline-middle p-1"
           .inline-block.vline-bottom.weight-2
-            = f.select :wet_sensor_field, WteverApi::Plantcare::WET_SENSOR_ARDUINO_FIELDS, { prompt: true }, { class: "form-control" }
+            = f.select :wet_sensor_field, wet_sensors_collection, { prompt: true }, { class: "form-control" }
 
   .col-xs-12
     .pb-4
@@ -34,7 +34,7 @@
         %h4.weight-2.text-center
           = fa_icon "fal fa-dewpoint vline-middle p-1"
           .inline-block.vline-bottom.weight-2
-            = f.select :water_pump_field, WteverApi::WaterPump::ARDUINO_FIELDS, { prompt: true }, { class: "form-control" }
+            = f.select :water_pump_field, water_pumps_collection, { prompt: true }, { class: "form-control" }
 
 :javascript
   uploaderControl($("#edit-picture"), $("#plantcare-panel"), $("#wtever_api_plantcare_picture"));
