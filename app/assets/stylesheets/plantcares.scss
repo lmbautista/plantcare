@@ -19,17 +19,14 @@ body {
     }
     .plantcare-cards {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      overflow-x: auto;
 
       .plantcare-card {
-        display: inline-flex;
-        width: 36rem;
         box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4);
         background: $opposite-color;
 
         .image-card {
-          width: 16rem;
+          width: 26rem;
           position: relative;
 
           .wet-percentage {
@@ -65,8 +62,10 @@ body {
           }
         }
         .plantcare-body {
-          width: 22rem;
+          width: 26rem;
           height: 26rem;
+          display: flex;
+          justify-content: center;
 
           .explain-ico {
             display: inline-block;
