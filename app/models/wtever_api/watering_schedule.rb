@@ -8,7 +8,8 @@ module WteverApi
                :duration_unit,
                :duration_amount,
                :frequency_unit,
-               :frequency_amount
+               :frequency_amount,
+               :plantcare_id
 
     DURATION_UNITS = [
       DURATION_IN_SECONDS = "seconds",

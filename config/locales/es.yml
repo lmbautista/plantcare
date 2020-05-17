@@ -132,7 +132,9 @@ es:
     create:
       sucessfully: Riego programado correctamente
     edit:
-      title: Modificar riego
+      title: Riego programado
+    update:
+      sucessfully: Riego actualizado correctamente
     wtever_api:
       attributes:
         starts_on: Fecha inicio
@@ -142,7 +144,7 @@ es:
         frequency_amount: Frecuencia
 
   watering:
-    next_title: "Programado:"
+    next_title: "Riego:"
     next: "%{programmed_at} <b>(%{duration_amount}%{duration_unit})</b>"
   sessions:
     new:

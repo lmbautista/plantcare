@@ -1,0 +1,5 @@
+= modal_for("edit_watering_schedule",  I18n.t("watering_schedules.edit.title"), { footer: false }) do
+  - capture_haml do
+    = form_for @watering_schedule, url: watering_schedule_path(@watering_schedule), method: :put, remote: true do |f|
+      = f.hidden_field :id
+      = render partial: "form", locals: { f: f }

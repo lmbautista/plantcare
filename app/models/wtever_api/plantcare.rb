@@ -30,6 +30,7 @@ module WteverApi
                :water_pump_id
 
     has_one :water_pump
+    has_one :watering_schedule
     has_many :waterings
   end
 end

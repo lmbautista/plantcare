@@ -35,10 +35,16 @@
       .small.mb-2
         = I18n.t("waterpumps.edit.explaining", water_pump_field: plantcare.water_pump.field).html_safe
 
-      = link_to new_watering_schedule_path(plantcare_id: plantcare.id), remote: true, class: "font-color" do
-        = fa_icon "far fa-calendar-alt vline-middle flex-inline"
-        %h5.weight-2.flex-inline.m-0
-          = I18n.t("watering_schedules.new.title")
+      - if plantcare.watering_schedule.present?
+        = link_to edit_watering_schedule_path(id: plantcare.watering_schedule.id), remote: true, class: "font-color" do
+          = fa_icon "far fa-calendar-alt vline-middle flex-inline"
+          %h5.weight-2.flex-inline.m-0
+            = I18n.t("watering_schedules.edit.title")
+      - else
+        = link_to new_watering_schedule_path(plantcare_id: plantcare.id), remote: true, class: "font-color" do
+          = fa_icon "far fa-calendar-alt vline-middle flex-inline"
+          %h5.weight-2.flex-inline.m-0
+            = I18n.t("watering_schedules.new.title")
 
       - if plantcare.waterings.present?
         %h6.weight-2.mb-1.mt-1{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
