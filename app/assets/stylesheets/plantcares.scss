@@ -4,6 +4,7 @@
 body {
   &.plantcares {
     &.index {
+      background-color: $general-color;
       #content {
         position: relative;
         section.intro, #instructions {
