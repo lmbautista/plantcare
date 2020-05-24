@@ -6,7 +6,6 @@ body {
     &.index {
       background-color: $general-color;
       #content {
-        position: relative;
         section.intro, #instructions {
           h1, h2, h3, h4, h5, h6 { color: $opposite-color; position: relative; }
         }

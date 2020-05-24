@@ -14,7 +14,7 @@ module PlantcaresHelper
     if plantcare.picture
       "background-image: url('#{asset_path(plantcare.picture)}')"
     else
-      i = plantcare.id.to_i % 6
+      i = plantcare.id.to_i % 6 + 1
       "background-image: url('#{image_url("plantcares/plantcare-default0#{i}.jpg")}')"
     end
   end

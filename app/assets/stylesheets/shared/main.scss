@@ -46,19 +46,8 @@ html {
       position: relative;
       border-collapse: separate;
     }
-    section {
-      width: 100%;
-      height: 100%;
-      .content { width: 100%; }
-    }
 
     #content {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: column;
-      font-weight: 400;
-
       .plantcare-welcome-icons {
         padding-top: 100px;
         .explaining {
