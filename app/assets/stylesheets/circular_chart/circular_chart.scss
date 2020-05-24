@@ -17,9 +17,10 @@
 }
 
 .circle {
-  &.healthy { stroke: $healthy-color; }
-  &.sick { stroke: $sick-color; }
-  &.lifeless { stroke: $cancel-color; }
+  &.full_wetness { stroke: $full-wetness-color; }
+  &.bit_wetness { stroke: $bit-wetness-color; }
+  &.bit_dryness { stroke: $bit-dryness-color; }
+  &.full_dryness { stroke: $full-dryness-color; }
 
   position: relative;
   fill: none;

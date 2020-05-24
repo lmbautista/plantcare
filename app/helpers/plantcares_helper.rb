@@ -19,28 +19,6 @@ module PlantcaresHelper
     end
   end
 
-  def plantcare_status_icon(plantcare)
-    case plantcare.status
-    when "healthy"
-      fa_icon "fal fa-thermometer-full vline-bottom"
-    when "sick"
-      fa_icon "fal fa-thermometer-half vline-bottom"
-    when "lifeless"
-      fa_icon "fal fa-thermometer-quarter vline-bottom"
-    end
-  end
-
-  def plantcare_status_text(plantcare)
-    case plantcare.status
-    when "healthy"
-      I18n.t("plantcares.status.healthy")
-    when "sick"
-      I18n.t("plantcares.status.sick")
-    when "lifeless"
-      I18n.t("plantcares.status.lifeless")
-    end
-  end
-
   def plantcare_wet(plantcare)
     number_to_percentage(plantcare.wet, strip_insignificant_zeros: true)
   end
