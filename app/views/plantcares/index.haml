@@ -6,11 +6,12 @@
       = fa_icon "bigger-1 far fa-question-circle vline-middle pr-2"
       %h5.weight-2.text-uppercase.m-0= I18n.t("plantcares.index.how-it-works")
 
-    .plantcare-cards.pt-3.pb-4
-      = render partial: "details", collection: @plantcares, as: :plantcare
-      .new-plantcare.p-2
-        = link_to new_plantcare_path, class: "custom-btn opposite-color custom-btn-primary rounded", alt: I18n.t("plantcares.new.title") do
-          = fa_icon "bigger-1 opposite-color fas fa-plus vline-middle"
+    .plantcares-container
+      .plantcare-cards.pt-3.pb-4
+        = render partial: "details", collection: @plantcares, as: :plantcare
+        .new-plantcare.p-2
+          = link_to new_plantcare_path, class: "custom-btn opposite-color custom-btn-primary rounded", alt: I18n.t("plantcares.new.title") do
+            = fa_icon "bigger-1 opposite-color fas fa-plus vline-middle"
 
   = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false }) do
     - capture_haml do

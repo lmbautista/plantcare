@@ -16,6 +16,10 @@ body {
         }
       }
     }
+    .plantcares-container {
+      display: flex;
+      justify-content: center;
+    }
     .plantcare-cards {
       display: flex;
       overflow-x: auto;

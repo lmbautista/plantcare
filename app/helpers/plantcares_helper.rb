@@ -5,7 +5,7 @@ module PlantcaresHelper
     if plantcare.picture
       plantcare.picture
     else
-      i = plantcare.id.to_i % 6
+      i = plantcare.id.to_i % 6 +1
       image_url("plantcares/plantcare-default0#{i}.jpg")
     end
   end
