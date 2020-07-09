@@ -6,7 +6,7 @@ module WteverApi
                :duration_amount,
                :status,
                :programmed_at,
-               :done_at,
+               :consumed_at,
                :water_pump_field
 
     DURATION_UNITS = [
