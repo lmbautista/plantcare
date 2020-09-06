@@ -3,27 +3,29 @@
     = image_tag plantcare_picture(plantcare)
     = link_to edit_plantcare_path(plantcare), class: "opposite-color goto-edit" do
       %h5.text-uppercase.weight-2= I18n.t("plantcares.edit.goto-title")
-    - if plantcare.wet
-      .wet-percentage.text-center.vline-middle.inline-block
+
+
+    .plantcare-info.text-center.vline-middle.inline-block
+      - if plantcare.wet
         = circular_chart(plantcare.wet, status_class: plantcare.status, class: "vline-middle inline-block") do
           = number_to_percentage(plantcare.wet, precision: 0)
         %h5.ml-1.weight-2.inline-block.opposite-color.vline-middle
           = I18n.t("plantcares.index.plantcare.of_wet")
+      .mt-4
+        - if plantcare.planted_at
+          %h5.weight-2.mb-1.mt-1.opposite-color{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
+            = fa_icon "fal fa-hand-holding-seedling vline-bottom"
+            %span.vline-bottom.opposite-color
+              = I18n.t("plantcares.index.plantcare.planted_at", planted_at: plantcare.planted_at)
+
+        - if plantcare.watered_at
+          %h5.weight-2.mb-1.mt-1.opposite-color{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+            = fa_icon "fal fa-hand-holding-water vline-bottom"
+            %span.vline-bottom.opposite-color
+              = I18n.t("plantcares.index.plantcare.watered_at", watered_at: plantcare.watered_at)
 
   .plantcare-body.pt-2.pb-2
     %div
-      - if plantcare.planted_at
-        %h6.weight-2.mb-1.mt-1{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
-          = fa_icon "fal fa-hand-holding-seedling general-color vline-bottom"
-          %span.vline-bottom
-            = I18n.t("plantcares.index.plantcare.planted_at", planted_at: plantcare.planted_at)
-
-      - if plantcare.watered_at
-        %h6.weight-2.mb-1.mt-1{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
-          = fa_icon "fal fa-hand-holding-water general-color vline-bottom"
-          %span.vline-bottom
-            = I18n.t("plantcares.index.plantcare.watered_at", watered_at: plantcare.watered_at)
-
       %h3.weight-2= plantcare.name
       - if plantcare.water_pump.present?
         = fa_icon "fal fa-dewpoint general-color vline-middle flex-inline"

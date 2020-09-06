@@ -32,7 +32,7 @@ body {
           width: 26rem;
           position: relative;
 
-          .wet-percentage {
+          .plantcare-info {
             z-index: 99;
             position: absolute;
             top: 50%;
@@ -61,7 +61,7 @@ body {
             height: 100%;
             top: 0;
             left: 0;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.64);
           }
         }
         .plantcare-body {
@@ -126,6 +126,12 @@ body {
       justify-content: center;
       flex-wrap: wrap;
       align-items: center;
+    }
+    .plantcare-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }
