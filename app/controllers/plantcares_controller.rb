@@ -44,7 +44,16 @@ class PlantcaresController < ApplicationController
     end
   end
 
-  def tour
+  def destroy
+    plantcare = WteverApi::Plantcare.find(params[:id])
+
+    if plantcare.destroy
+      flash[:notice] = I18n.t("plantcares.destroy.sucessfully")
+    else
+      flash[:error] = to_flash(@plantcare.response_errors)
+    end
+
+    redirect_to plantcares_path
   end
 
   private

@@ -7,6 +7,7 @@ es:
     create: "Crear"
     close: "Cerrar"
 
+  confirmation: "¿Estas seguro?"
   users:
     welcome:
       title: Crezcamos juntos
@@ -83,9 +84,11 @@ es:
       menu:
         info: Info básica
         attachments: Evolución
-      sucessfully: Has actualizado correctamente tu plantcare.
+      remove: Eliminar
     update:
       sucessfully: Has actualizado tu plantcare correctamente.
+    destroy:
+      sucessfully: Has borrado tu plantcare correctamente.
     wtever_api:
       attributes:
         name: Nombre

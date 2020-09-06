@@ -1,30 +1,37 @@
 - show_watering ||= false
 
-.to-top.p-2.opposite-color
-  - if plantcare.wet
-    = circular_chart(plantcare.wet, status_class: "#{plantcare.status} inline-block") do
-      = number_to_percentage(plantcare.wet, precision: 0)
-
-  %span.vline-top.text-left.inline-block
+.plantcare-details
+  .detail.p-2.opposite-color
     - if plantcare.wet
-      %h4.m-1.weight-2
-        = I18n.t('plantcares.index.plantcare.of_wet')
+      = circular_chart(plantcare.wet, status_class: "#{plantcare.status} inline-block") do
+        = number_to_percentage(plantcare.wet, precision: 0)
 
-    - if plantcare.watered_at
-      %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
-        = fa_icon "fal fa-hand-holding-water vline-bottom"
-        %span.vline-bottom
-          = plantcare.watered_at
+    %span.vline-top.text-left.inline-block
+      - if plantcare.wet
+        %h4.m-1.weight-2
+          = I18n.t('plantcares.index.plantcare.of_wet')
 
-    - if plantcare.planted_at
-      %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
-        = fa_icon "fal fa-hand-holding-seedling vline-bottom"
-        %span.vline-bottom
-          = plantcare.planted_at
+      - if plantcare.watered_at
+        %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+          = fa_icon "fal fa-hand-holding-water vline-bottom"
+          %span.vline-bottom
+            = plantcare.watered_at
 
-  .mt-4.inline-block.pull-right
-    - if show_watering && plantcare.water_pump
-      = link_to edit_water_pump_path(plantcare.water_pump_id), remote: true do
-        %h4.m-1.weight-2.opposite-color
-          = fa_icon "fal fa-dewpoint vline-bottom inline-block"
-          = I18n.t("plantcares.index.enable_water_pump")
+      - if plantcare.planted_at
+        %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
+          = fa_icon "fal fa-hand-holding-seedling vline-bottom"
+          %span.vline-bottom
+            = plantcare.planted_at
+
+    .mt-4.inline-block.pull-left
+      - if show_watering && plantcare.water_pump
+        = link_to edit_water_pump_path(plantcare.water_pump_id), remote: true do
+          %h4.m-1.weight-2.opposite-color
+            = fa_icon "fal fa-dewpoint vline-bottom inline-block"
+            = I18n.t("plantcares.index.enable_water_pump")
+
+  .detail.p-2.opposite-color
+    = link_to plantcare_path(plantcare), method: :delete, data: { confirm: I18n.t("confirmation") } do
+      %h5.m-1.weight-2.opposite-color.text-uppercase
+        = fa_icon "fa fa-trash vline-bottom inline-block"
+        = I18n.t("plantcares.edit.remove")
