@@ -47,7 +47,6 @@ es:
   plantcares:
     new:
       title: Nuevo plantcare
-      subtitle: registra tu nueva planta
       explaining_text: |
         A continuación puedes registrar tu nueva planta indicando su nombre, antigüedad, y una fotito.
         Posteriormente deberás vincular el sensor de humedad a través de la placa Plantcare.
@@ -68,16 +67,15 @@ es:
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
       show: Revisa el estado de tu jardín
       plantcare:
-        planted_at: Plantada el %{planted_at}
-        watered_at: Regada el %{watered_at}
+        planted_at: Plantada el
+        watered_at: Regada el
         water_pump_need: ¿Necesitas regar tu plantcare?
-        of_wet: de humedad
+        wet: Humedad actual
     create:
       sucessfully: Ya tienes un plantcare más para cuidar.
     edit:
       goto-title: Editar
       title: Edición de plantcare
-      subtitle: Revisa el estado de tus plantas
       explaining_token: |
         Indica el pin de conexión del sensor de humedad en tu Plantcare.
         De esta manera tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
@@ -136,12 +134,12 @@ es:
 
   watering_schedules:
     new:
-      title: Programar riego
-      explaining: Especifica la fecha de validez del programa, la duración y la frecuencia del riego
+      title: Añadir programación
+      explaining: Te permite programar y repetir los riegos para tu plantcare. Especifica la fecha de validez del programa, la duración y la frecuencia del riego
     create:
       sucessfully: Riego programado correctamente
     edit:
-      title: Riego programado
+      title: Editar programación
     update:
       sucessfully: Riego actualizado correctamente
     wtever_api:

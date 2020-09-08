@@ -1,37 +1,14 @@
-- show_watering ||= false
-
-.plantcare-details
-  .detail.p-2.opposite-color
+.flex.flex-direction-row.flex-justify-space-between.p-2
+  .flex.flex-direction-column
     - if plantcare.wet
-      = circular_chart(plantcare.wet, status_class: "#{plantcare.status} inline-block") do
-        = number_to_percentage(plantcare.wet, precision: 0)
+      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
+    - if plantcare.planted_at
+      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }
+    - if plantcare.watered_at
+      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-water", attribute: :watered_at, value: plantcare.watered_at }
 
-    %span.vline-top.text-left.inline-block
-      - if plantcare.wet
-        %h4.m-1.weight-2
-          = I18n.t('plantcares.index.plantcare.of_wet')
-
-      - if plantcare.watered_at
-        %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
-          = fa_icon "fal fa-hand-holding-water vline-bottom"
-          %span.vline-bottom
-            = plantcare.watered_at
-
-      - if plantcare.planted_at
-        %h5.m-1.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.planted_at") }
-          = fa_icon "fal fa-hand-holding-seedling vline-bottom"
-          %span.vline-bottom
-            = plantcare.planted_at
-
-    .mt-4.inline-block.pull-left
-      - if show_watering && plantcare.water_pump
-        = link_to edit_water_pump_path(plantcare.water_pump_id), remote: true do
-          %h4.m-1.weight-2.opposite-color
-            = fa_icon "fal fa-dewpoint vline-bottom inline-block"
-            = I18n.t("plantcares.index.enable_water_pump")
-
-  .detail.p-2.opposite-color
+  .flex
     = link_to plantcare_path(plantcare), method: :delete, data: { confirm: I18n.t("confirmation") } do
-      %h5.m-1.weight-2.opposite-color.text-uppercase
-        = fa_icon "fa fa-trash vline-bottom inline-block"
+      %h5.bigger-1.m-1.opposite-color.text-uppercase
+        = fa_icon "fal fa-trash-alt vline-bottom"
         = I18n.t("plantcares.edit.remove")

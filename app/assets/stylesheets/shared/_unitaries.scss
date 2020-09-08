@@ -1,6 +1,9 @@
 .flex { display: flex; }
 .flex-inline { display: inline-flex; }
 .flex-justify-center { justify-content: center; }
+.flex-justify-space-between { justify-content: space-between; }
+.flex-direction-row { flex-direction: row; }
+.flex-direction-column { flex-direction: column; }
 .smaller-1 { font-size: 80%; }
 .smaller-2 { font-size: 40%; }
 
@@ -90,6 +93,8 @@
 .border-radius-0, .btn.border-radius-0 { border-radius: 0 }
 .rounded{ border-radius: 50%; }
 
+
+.block { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 .table { display: table; width: 100%; }

@@ -1,0 +1,48 @@
+.plantcare-card.m-1{ data: { plantcare: plantcare.id } }
+  .image-card
+    = image_tag plantcare_picture(plantcare)
+    .plantcare-info.text-center.p-3
+      = link_to edit_plantcare_path(plantcare), class: "opposite-color text-uppercase goto-edit" do
+        = I18n.t("plantcares.edit.goto-title")
+
+      - if plantcare.wet
+        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
+      - if plantcare.planted_at
+        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }
+      - if plantcare.watered_at
+        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-water", attribute: :watered_at, value: plantcare.watered_at }
+
+  .plantcare-body.pt-2.pb-2
+    .plantcare-body-wrapper
+      %h3.weight-2= plantcare.name
+      - if plantcare.water_pump.present?
+        = link_to new_watering_path(water_pump_id: plantcare.water_pump_id), remote: true, class: "font-color block mt-1 mb-0" do
+          = fa_icon "fal fa-dewpoint vline-middle flex-inline"
+          %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+            = I18n.t("waterings.new.title")
+
+        - if plantcare.watering_schedule.present?
+          = link_to edit_watering_schedule_path(id: plantcare.watering_schedule.id), remote: true, class: "font-color block mt-1 mb-0" do
+            = fa_icon "far fa-calendar-alt vline-middle flex-inline"
+            %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+              = I18n.t("watering_schedules.edit.title")
+        - else
+          = link_to new_watering_schedule_path(plantcare_id: plantcare.id), remote: true, class: "font-color block mt-1 mb-0" do
+            = fa_icon "far fa-calendar-alt vline-middle flex-inline"
+            %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+              = I18n.t("watering_schedules.new.title")
+
+        - if plantcare.waterings.present?
+          %h6.text-uppercase.weight-3.mb-0.mt-4{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+            = I18n.t("watering.next_title")
+
+          = render partial: "waterings/info", collection: plantcare.waterings.last(4), as: :watering
+
+
+      - else
+        %h6.weight-2= I18n.t("waterpumps.edit.unconfigured")
+
+:javascript
+  $('[data-plantcare="#{plantcare.id}"]').change(function(){
+    $(this).find('form').submit();
+  });

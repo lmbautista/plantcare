@@ -8,7 +8,7 @@
 
     .plantcares-container
       .plantcare-cards.pt-3.pb-4
-        = render partial: "details", collection: @plantcares, as: :plantcare
+        = render partial: "card", collection: @plantcares, as: :plantcare
         .new-plantcare.p-2
           = link_to new_plantcare_path, class: "custom-btn opposite-color custom-btn-primary rounded", alt: I18n.t("plantcares.new.title") do
             = fa_icon "bigger-1 opposite-color fas fa-plus vline-middle"
@@ -17,6 +17,9 @@
     - capture_haml do
       = render partial: "instructions"
 
+  #new_watering_modal
+  #edit_watering_modal
+  #list_waterings_modal
   #new_watering_schedule_modal
   #edit_watering_schedule_modal
 

@@ -41,11 +41,8 @@ body {
             width: 100% ;
           }
           .goto-edit {
-            z-index: 99;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 100% ;
+            display: flex;
+            justify-content: flex-end;
           }
           img {
             width: 100%;
@@ -69,7 +66,7 @@ body {
           height: 26rem;
           display: flex;
           justify-content: center;
-
+          .plantcare-body-wrapper { width: 75%; }
           .explain-ico {
             display: inline-block;
             width: 25px;
@@ -97,23 +94,35 @@ body {
 
       .title {
         position: absolute;
-      	top: 50%;
+      	top: 68%;
       	left: 50%;
       	transform: translate(-50%, -50%);
       	width: 100% ;
       }
     }
 
-    .watering-schedule-panel {
+    .detail {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      .full_wetness { color: $full-wetness-color; }
+      .bit_wetness { color: $bit-wetness-color; }
+      .bit_dryness { color: $bit-dryness-color; }
+      .full_dryness { color: $full-dryness-color; }
+    }
+
+    .watering-schedule-panel, .watering-panel {
       display: flex;
       justify-content: center;
 
-      .watering-schedule-left-panel {
+      .watering-schedule-left-panel, .watering-left-panel {
         display: inline-flex;
         align-items: center;
         width: 22rem;
       }
-      .watering-schedule-right-panel {
+      .watering-schedule-right-panel, .watering-right-panel {
         display: inline-flex;
         flex-direction: column;
         width: 30rem;

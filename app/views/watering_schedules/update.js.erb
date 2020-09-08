@@ -4,3 +4,4 @@
   $.growl.notice({ message: '<%= raw flash[:notice] %>', duration: 10000, title: 'Plantcare says:' });
 <% end %>
 $("#edit_watering_schedule").modal('hide')
+window.location.replace("<%= plantcares_path %>");
