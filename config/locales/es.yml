@@ -113,20 +113,26 @@ es:
         tu Plantcare a demanda.
     wet_status: "%{wet} de humedad"
 
-  waterpumps:
+  waterings:
+    new:
+      title:
+        Añadir riego
+      explaining: Te permite programar un riego de manera puntual para tu plantcare
+    create:
+      sucessfully: Riego programado correctamente
     edit:
-      title: Modo ráfaga
-      explaining: |
-        Habilita riego por ráfagas de 2s.<br/>
-        <b>No olvides deshabilitarlo.</b>
-      unconfigured: |
-        Aún no has configurado tu plantcare. Accede a su ficha y configura su sensor y bomba
-        de agua para poder realizar riegos.
+      title:
+        Editar riego
     update:
-      sucessfully: Bomba de agua actualizada
+      sucessfully: Riego actualizado correctamente
+    destroy:
+      sucessfully: Riego eliminado correctamente
     wtever_api:
       attributes:
         status: Estado
+        programmed_at: Fecha programación
+        duration_amount: Duración
+        frequency_amount: Frecuencia
 
   watering_schedules:
     new:
@@ -147,8 +153,8 @@ es:
         frequency_amount: Frecuencia
 
   watering:
-    next_title: "Riego:"
-    next: "%{programmed_at} <b>(%{duration_amount}%{duration_unit})</b>"
+    next_title: "Próximos riegos:"
+    next: "<span>%{programmed_at}<span> <b>(%{duration_amount}%{duration_unit})</b>"
   sessions:
     new:
       title: Inicia sesión

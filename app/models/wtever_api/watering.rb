@@ -7,7 +7,9 @@ module WteverApi
                :status,
                :programmed_at,
                :consumed_at,
-               :water_pump_field
+               :water_pump_field,
+               :water_pump_id,
+               :watering_schedule_id
 
     DURATION_UNITS = [
       DURATION_IN_SECONDS = "seconds",

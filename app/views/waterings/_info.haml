@@ -1,0 +1,14 @@
+.mt-1.flex.flex-justify-space-between
+  - if watering.watering_schedule_id.present?
+    = fa_icon "far fa-calendar-alt general-color vline-middle flex-inline"
+  - else
+    = fa_icon "far fa-dewpoint general-color vline-middle flex-inline"
+
+  %h5.weight-2.m-0.vline-middle.flex-inline{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+    = I18n.t("watering.next", programmed_at: watering.programmed_at,
+                              duration_amount: watering.duration_amount,
+                              duration_unit: watering.short_duration_unit).html_safe
+
+  = link_to watering_path(watering), method: :delete, data: { confirm: I18n.t("confirmation") },
+            class: "danger-color flex-inline mr-2 bigger-1 vline-middle" do
+    = fa_icon "far fa-times-circle"

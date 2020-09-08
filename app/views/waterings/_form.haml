@@ -1,0 +1,17 @@
+.plantcare-fields-dark.watering-schedule-panel
+  .watering-left-panel.vline-middle.text-center
+    .mr-2.ml-2.opposite-color
+      = fa_icon "bigger-3 fal fa-dewpoint vline-middle weight-2"
+      %h5.weight-2= I18n.t("waterings.new.explaining")
+
+  .watering-right-panel.vline-middle
+    = f.hidden_field :water_pump_id
+    .flex
+      = f.number_field :duration_amount, class: "form-control", placeholder: I18n.t("waterings.wtever_api.attributes.duration_amount")
+      = f.select :duration_unit, WteverApi::WateringSchedule::DURATION_UNITS, { prompt: true }, { class: "form-control" }
+
+    .flex
+      = f.text_field :programmed_at, class: "form-control datepicker flex-inline", placeholder: I18n.t("waterings.wtever_api.attributes.programmed_at")
+
+    .mt-4
+      = render partial: "shared/form/submit", locals: { submit_class: "custom-btn-primary", remote: true }
