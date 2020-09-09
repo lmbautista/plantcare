@@ -7,8 +7,9 @@
     - if plantcare.watered_at
       = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-water", attribute: :watered_at, value: plantcare.watered_at }
 
-  .flex
-    = link_to plantcare_path(plantcare), method: :delete, data: { confirm: I18n.t("confirmation") } do
-      %h5.bigger-1.m-1.opposite-color.text-uppercase
-        = fa_icon "fal fa-trash-alt vline-bottom"
-        = I18n.t("plantcares.edit.remove")
+  - if plantcare.id.present?
+    .flex
+      = link_to plantcare_path(plantcare), method: :delete, data: { confirm: I18n.t("confirmation") } do
+        %h5.bigger-1.m-1.opposite-color.text-uppercase
+          = fa_icon "fal fa-trash-alt vline-bottom"
+          = I18n.t("plantcares.edit.remove")
