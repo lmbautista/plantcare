@@ -2,15 +2,18 @@
   .image-card
     = image_tag plantcare_picture(plantcare)
     .plantcare-info.text-center.p-3
-      = link_to edit_plantcare_path(plantcare), class: "opposite-color text-uppercase goto-edit" do
+      = link_to edit_plantcare_path(plantcare), class: "opposite-color text-uppercase goto-edit pb-3" do
         = I18n.t("plantcares.edit.goto-title")
 
       - if plantcare.wet
-        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
+        .pl-1
+          = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
       - if plantcare.planted_at
-        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }
+        .pl-3
+          = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }
       - if plantcare.watered_at
-        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-water", attribute: :watered_at, value: plantcare.watered_at }
+        .pl-3
+          = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-water", attribute: :watered_at, value: plantcare.watered_at }
 
   .plantcare-body.pt-2.pb-2
     .plantcare-body-wrapper
