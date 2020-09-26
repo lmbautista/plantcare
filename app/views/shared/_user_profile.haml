@@ -1,11 +1,9 @@
-.col-xs-5.col-sm-6.col-md-5.text-right
+.col-xs-6.col-sm-6.col-md-5.text-right
   .actions
-    = link_to profile_user_path(current_user), class: 'inline-block pr-3' do
-      %h5.m-0.inline-block.vline-middle.opposite-color
-        = fa_icon 'fal fa-user-circle opposite-color pr-1 bigger-1 vline-middle'
-        %span.weight-2
-          = current_user.first_name
+    = link_to profile_user_path(current_user), class: 'inline-block pr-3 vline-middle' do
+      = fa_icon 'fal fa-user-circle opposite-color pr-1 bigger-2 vline-middle'
+      %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
+        = current_user.first_name
 
-    = link_to signout_path, class: 'inline-block pr-3' do
-      %h4.m-0.inline-block.vline-middle.opposite-color
-        = fa_icon 'fal fa-sign-out-alt opposite-color'
+    = link_to signout_path, class: 'inline-block pr-3 vline-middle' do
+      = fa_icon 'fal fa-sign-out-alt bigger-2 opposite-color'
