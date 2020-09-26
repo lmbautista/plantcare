@@ -21,12 +21,19 @@ module WteverApi
       FREQUENCY_DAYS = "days"
     ].freeze
 
+    STATUS_PROGRAMMED = "programmed"
+    STATUS_DONE = "done"
+
     def short_duration_unit
       case duration_unit
       when DURATION_IN_SECONDS then "s"
       when DURATION_IN_MINUTES then "m"
       else ""
       end
+    end
+
+    def programmed?
+      status == STATUS_PROGRAMMED
     end
   end
 end
