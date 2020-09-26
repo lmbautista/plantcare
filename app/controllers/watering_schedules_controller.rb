@@ -21,8 +21,6 @@ class WateringSchedulesController < ApplicationController
 
   def edit
     @watering_schedule = WteverApi::WateringSchedule.find(params[:id])
-    puts " >>>>> watering_schedule edit"
-    pp watering_schedule
   end
 
   def update
