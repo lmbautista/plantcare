@@ -2,6 +2,6 @@
   $.growl.error({ message: '<%= raw flash[:error] %>', duration: 10000, title: 'Plantcare says:' });
 <% else %>
   $.growl.notice({ message: '<%= raw flash[:notice] %>', duration: 10000, title: 'Plantcare says:' });
+  $("#new_watering_schedule").modal('hide');
+  window.location.replace("<%= plantcares_path %>");
 <% end %>
-$("#new_watering_schedule").modal('hide');
-window.location.replace("<%= plantcares_path %>");
