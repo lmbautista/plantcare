@@ -5,8 +5,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require growl/jquery.growl
-//= require bootstrap-datepicker/core
-//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+//= require moment
+//= require bootstrap-datetimepicker
 //= require jquery-fileupload
 
 function uploaderControl($previewInput, $preview, $input) {
@@ -32,9 +32,9 @@ function uploaderControl($previewInput, $preview, $input) {
 function datepickerControl() {
   $('.datepicker').attr("autocomplete", "off");
 
-  $('.datepicker').datepicker({
+  $('.datepicker').datetimepicker({
     locale: gon.locale,
-    format: 'dd/mm/yyyy'
+    format: 'DD/MM/YYYY HH:mm'
   }).on('changeDate', function (e) {
     var _d = e.date.getDate(),
       d = _d > 9 ? _d : '0' + _d,
