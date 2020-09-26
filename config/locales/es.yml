@@ -82,7 +82,6 @@ es:
       menu:
         info: Info básica
         attachments: Evolución
-      remove: Eliminar
     update:
       sucessfully: Has actualizado tu plantcare correctamente.
     destroy:

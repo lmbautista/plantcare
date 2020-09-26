@@ -1,7 +1,7 @@
 .flex.flex-direction-row.flex-justify-space-between.p-2
   .flex.flex-direction-column
     - if plantcare.wet
-      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
+      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", value_classes: plantcare.status }
     - if plantcare.planted_at
       = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }
     - if plantcare.watered_at
@@ -10,6 +10,4 @@
   - if plantcare.id.present?
     .flex
       = link_to plantcare_path(plantcare), method: :delete, data: { confirm: I18n.t("confirmation") } do
-        %h5.bigger-1.m-1.opposite-color.text-uppercase
-          = fa_icon "fal fa-trash-alt vline-bottom"
-          = I18n.t("plantcares.edit.remove")
+        = fa_icon "fal fa-trash-alt bigger-2 pr-1 opposite-color vline-bottom"
