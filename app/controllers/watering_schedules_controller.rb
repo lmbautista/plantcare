@@ -11,7 +11,7 @@ class WateringSchedulesController < ApplicationController
     if watering_schedule.save
       flash[:notice] = I18n.t("watering_schedules.create.sucessfully")
     else
-      flash[:error] = to_flash(@watering_schedule.response_errors)
+      flash[:error] = to_flash(watering_schedule.response_errors)
     end
 
     respond_to do |format|
@@ -21,6 +21,8 @@ class WateringSchedulesController < ApplicationController
 
   def edit
     @watering_schedule = WteverApi::WateringSchedule.find(params[:id])
+    puts " >>>>> watering_schedule edit"
+    pp watering_schedule
   end
 
   def update
