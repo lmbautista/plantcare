@@ -151,7 +151,8 @@ es:
 
   watering:
     next_title: "Próximos riegos:"
-    next: "<span>%{programmed_at}<span> <b>(%{duration_amount}%{duration_unit})</b>"
+    next: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
+    no_pending_title: "No hay riegos pendientes"
   sessions:
     new:
       title: Inicia sesión
