@@ -1,7 +1,7 @@
 @import "shared/_variables";
 
 body {
-  a:hover, a:focus { color: inherit }
+  a:hover, a:focus { color: $link-hover-color; }
   label {
     font-weight: 500;
     font-size: 12px;
@@ -113,7 +113,6 @@ body {
     }
     .modal-content {
       border-radius: 0;
-      color: $opposite-color;
       background-color: $general-color
     }
   }
