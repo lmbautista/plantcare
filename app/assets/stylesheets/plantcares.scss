@@ -131,9 +131,8 @@ body {
       }
     }
 
-    .goto-instructions { display: flex; }
-    .new-plantcare { display: inline-flex; }
-    .new-plantcare, .goto-instructions {
+    .goto-instructions, .new-plantcare {
+      display: flex;
       justify-content: center;
       flex-wrap: wrap;
       align-items: center;

@@ -10,7 +10,7 @@ $second-color:              darken($general-color, 5%);
 $cancel-color:              #d9534f;
 $opposite-color:            #fff;
 $font-color:                #444;
-$link-hover-color:          lighten($font-color, 30%);
+$link-hover-color:          lighten($general-color, 30%);
 $background-color:          $general-color;
 $background-opossite-color: $general-color;
 

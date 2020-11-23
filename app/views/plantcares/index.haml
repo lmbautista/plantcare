@@ -1,6 +1,9 @@
 - if @plantcares.present?
   .vline-middle
-    = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.show").html_safe, subtitle: nil }
+    = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.title"), subtitle: I18n.t("plantcares.index.subtitle") }
+
+    .text-center.mt-3.mb-3.new-plantcare
+      = link_to I18n.t("plantcares.new.title"), new_plantcare_path, class: "custom-btn custom-btn-secondary"
 
     = link_to "#instructions", class: "goto-instructions opposite-color", data: { target: "#instructions", toggle: "modal" } do
       = fa_icon "bigger-1 far fa-question-circle vline-middle pr-2"
@@ -9,9 +12,6 @@
     .plantcares-container
       .plantcare-cards.pt-3.pb-4
         = render partial: "card", collection: @plantcares, as: :plantcare
-        .new-plantcare.p-2
-          = link_to new_plantcare_path, class: "custom-btn opposite-color custom-btn-primary rounded", alt: I18n.t("plantcares.new.title") do
-            = fa_icon "bigger-1 opposite-color fas fa-plus vline-middle"
 
   = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false }) do
     - capture_haml do
@@ -25,14 +25,16 @@
 
 - else
   .intro.p-1.content.vline-middle.opposite-color
-    = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.title"), subtitle: I18n.t("plantcares.new.subtitle") }
+    = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.title"), subtitle: I18n.t("plantcares.index.subtitle") }
 
-    .row
-      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-        = render partial: "instructions"
+    .mt-4
+      .row
+        .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+          .mt-4.mb-4
+            = render partial: "instructions"
 
-        .text-center.pt-3
-          = link_to I18n.t("plantcares.new.title"), new_plantcare_path, class: "custom-btn custom-btn-secondary"
+          .text-center.pt-3
+            = link_to I18n.t("plantcares.new.title"), new_plantcare_path, class: "custom-btn custom-btn-secondary"
 
 
 :javascript

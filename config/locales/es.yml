@@ -22,7 +22,7 @@ es:
         ¿Ya tienes una cuenta?  <strong><a id="signin_link" data-toggle="modal" data-target="#signin_modal" href="#"> Login </a></strong>
     confirmation:
       title: Enhorabuena
-      subtitle: Tu cuenta ha sido creado correctamente y en breves recibirás un email para confirmar tu cuenta de Plantcare
+      subtitle: Tu cuenta ha sido creado correctamente. Accede con tu usuario <a href="%{signin_link}">aqui</a>
     edit:
       title: Perfil
       subtitle: Edita los datos de tu cuenta
@@ -49,8 +49,8 @@ es:
         Posteriormente deberás vincular el sensor de humedad a través de la placa Plantcare.
     index:
       title: Tus Plantcares
+      subtitle: Revisa y gestiona el estado de tus plantas
       how-it-works: ¿Como funciona?
-      subtitle: Revisa el estado de tus plantas
       howto-1: |
         Registra tu plantcare
       howto-2: |
@@ -62,7 +62,6 @@ es:
         Aún no has registrado ninguna planta.
       no-plants-subtitle: |
         ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
-      show: Revisa el estado de tu jardín
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el

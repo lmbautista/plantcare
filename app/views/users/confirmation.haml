@@ -1,3 +1,2 @@
-
-  .intro.content.vline-middle
-    = render partial: 'shared/title', locals: { title: I18n.t('users.confirmation.title'), subtitle: I18n.t('users.confirmation.subtitle') }
+.intro.content.vline-middle
+  = render partial: 'shared/title', locals: { title: I18n.t('users.confirmation.title'), subtitle: I18n.t('users.confirmation.subtitle', signin_link: signin_path) }
