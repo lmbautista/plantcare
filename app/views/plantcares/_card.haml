@@ -5,9 +5,8 @@
       = link_to edit_plantcare_path(plantcare), class: "opposite-color text-uppercase goto-edit pb-3" do
         = I18n.t("plantcares.edit.goto-title")
 
-      - if plantcare.wet
-        .pl-1
-          = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
+      .pl-1
+        = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
       - if plantcare.planted_at
         .pl-3
           = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }

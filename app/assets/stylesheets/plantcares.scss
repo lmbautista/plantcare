@@ -81,6 +81,7 @@ body {
       background-size: cover;
       position: relative;
       height: 40vh;
+      width: 100%;
 
       &:before {
         content: ' ';
@@ -111,6 +112,7 @@ body {
       .bit_wetness { color: $bit-wetness-color; }
       .bit_dryness { color: $bit-dryness-color; }
       .full_dryness { color: $full-dryness-color; }
+      .non_data { color: $non-data-color; }
     }
 
     .watering-schedule-panel, .watering-panel {

@@ -32,5 +32,13 @@ module WteverApi
     has_one :water_pump
     has_one :watering_schedule
     has_many :waterings
+
+    def wet
+      super || 0.0
+    end
+
+    def status
+      wet == 0.0 ? "non_data" : super
+    end
   end
 end
