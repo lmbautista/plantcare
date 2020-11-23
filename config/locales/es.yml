@@ -11,13 +11,10 @@ es:
   users:
     welcome:
       title: Crezcamos juntos
-      subtitle: te ayudaremos a mejorar el control sobre tu pequeño rincon verde
-      explain-ico1: Plantado
-      explain-ico2: Riego
-      explain-ico3: Transplantado
-      explain-ico4: Fertilizado
-      explain-ico5: Sol
-      explain-ico6: Desarrollo
+      subtitle: te ayudamos a mantener y mejorar tu pequeño rincón verde
+      explain-ico1: Gestión de plantado y transplantado
+      explain-ico2: Riego remoto
+      explain-ico6: Fertilizado y desarrollo
     new:
       title: Unete al equipo
       subtitle: crea tu cuenta y mejora el cuidado de tus plantas

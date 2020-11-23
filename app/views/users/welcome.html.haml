@@ -1,9 +1,6 @@
 - content_for :header do
   .row
-    .col-xs-12.col-sm-4.col-md-4.col-md-offset-1.text-center
-      %h3.plantcare-icon.mb-2.mt-3
-        = link_to I18n.t('title'), root_path
-
+    .col-xs-12.col-sm-4.col-md-4.col-md-offset-2.text-center
     .col-sm-6.col-md-5.hidden-xs.text-right
       .btn-group.actions
         = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
@@ -11,53 +8,38 @@
 
 .intro.content.vline-middle
   .p2
+    %h1.biggest.plantcare-icon.mb-4.mt-0.text-center
+      = link_to I18n.t('title'), root_path
+
     = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
 
-    .plantcare-welcome-icons
+    .plantcare-welcome-icons.m-4
       .row
-        .col-xs-6.col-md-2.col-md-offset-3.text-center
-          .explaining
-            = image_tag ('sprout'), class: "explain-ico img-responsive"
-            %p
+        .col-xs-6.col-xs-offset-3.col-sm-2.text-center
+          .explaining.mt-1.mb-1
+            = image_tag ('leaf'), class: "explain-ico img-responsive"
+            %h4
               = I18n.t('users.welcome.explain-ico1')
 
-        .col-xs-6.col-md-2.text-center
-          .explaining
+        .col-xs-6.col-xs-offset-3.col-sm-offset-0.col-sm-2.text-center
+          .explaining.mt-1.mb-1
             = image_tag ('water'), class: "explain-ico img-responsive"
-            %p
+            %h4
               = I18n.t('users.welcome.explain-ico2')
 
-        .col-xs-6.col-md-2.text-center
-          .explaining
-            = image_tag ('leaf'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico3')
-
-        .col-xs-6.col-md-2.col-md-offset-3.text-center
-          .explaining
-            = image_tag ('fertilizer'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico4')
-
-        .col-xs-6.col-md-2.text-center
-          .explaining
-            = image_tag ('sun'), class: "explain-ico img-responsive"
-            %p
-              = I18n.t('users.welcome.explain-ico5')
-
-        .col-xs-6.col-md-2.text-center
-          .explaining
+        .col-xs-6.col-xs-offset-3.col-sm-offset-0.col-sm-2.text-center
+          .explaining.mt-1.mb-1
             = image_tag ('growth'), class: "explain-ico img-responsive"
-            %p
+            %h4
               = I18n.t('users.welcome.explain-ico6')
 
-      .row
-        .visible-xs.col-xs-12.text-center
-          .row
-            .col-xs-6
-              = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
-            .col-xs-6
-              = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  btn-block"
+    .row
+      .visible-xs.col-xs-12.text-center
+        .row
+          .col-xs-6
+            = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
+          .col-xs-6
+            = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  btn-block"
 
 
 :javascript

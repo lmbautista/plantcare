@@ -1,6 +1,7 @@
 @import "shared/_variables";
 
 body {
+  a { color: $font-color };
   a:hover, a:focus { color: $link-hover-color; }
   label {
     font-weight: 500;

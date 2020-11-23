@@ -8,12 +8,15 @@ body {
   &.users {
     &.welcome, &.new, &.create, &.confirmation {
       @include section-styles("primary");
-      header { color: $opposite-color;}
+      header { color: $opposite-color; }
 
-      #content {
-        .title {
-          h1 {
-            margin-bottom: 30px;
+      .plantcare-welcome-icons {
+        .explaining {
+          color: $opposite-color;
+
+          .explain-ico {
+            height: 50px;
+            margin: 0 auto;
           }
         }
       }

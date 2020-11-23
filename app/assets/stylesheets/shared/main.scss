@@ -48,18 +48,14 @@ html {
     }
 
     #content {
-      .plantcare-welcome-icons {
-        padding-top: 100px;
-        .explaining {
-          color: $opposite-color;
+      min-height: 90%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
-          .explain-ico {
-            height: 80px;
-            margin: 0 auto;
-          }
-        }
-      }
       .tab-content { background-color: $opposite-color; }
+      .content { width: 100%; }
     }
     #growls.default {
       top: 0;

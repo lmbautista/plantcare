@@ -2,7 +2,7 @@
 - subtitle ||= ''
 - dark ||= false
 
-.title.pt-3.pb-3.text-center.opposite-color
+.title.mt-0.mb-4.pt-3.pb-3.text-center.opposite-color
   - if title.present?
     %h1.text-uppercase.mb-0{ class: "#{dark ? "font-color" : "" }" }
       = raw title
