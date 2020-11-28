@@ -109,7 +109,7 @@ es:
   waterings:
     new:
       title:
-        Añadir riego
+        Riego
       explaining: Te permite programar un riego de manera puntual para tu plantcare
     create:
       sucessfully: Riego programado correctamente
@@ -129,7 +129,7 @@ es:
 
   watering_schedules:
     new:
-      title: Añadir programación
+      title: Programación
       explaining: Te permite programar y repetir los riegos para tu plantcare. Especifica la fecha de validez del programa, la duración y la frecuencia del riego
     create:
       sucessfully: Riego programado correctamente

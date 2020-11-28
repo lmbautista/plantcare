@@ -16,20 +16,19 @@ body {
         }
       }
     }
-    .plantcares-container {
-      display: flex;
-      justify-content: center;
-    }
     .plantcare-cards {
       display: flex;
-      overflow-x: auto;
+      flex-wrap: wrap;
+      justify-content: center;
 
       .plantcare-card {
+        display: flex;
         box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4);
         background: $opposite-color;
 
         .image-card {
-          width: 26rem;
+          width: 19rem;
+          height: 25rem;
           position: relative;
 
           .plantcare-info {
@@ -62,15 +61,19 @@ body {
           }
         }
         .plantcare-body {
-          width: 26rem;
-          height: 22rem;
+          width: 18rem;
           display: flex;
           justify-content: center;
-          .plantcare-body-wrapper { width: 75%; }
+          flex-direction: column;
           .explain-ico {
             display: inline-block;
             width: 25px;
             padding-right: 5px;
+          }
+          .watering-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
           }
         }
       }

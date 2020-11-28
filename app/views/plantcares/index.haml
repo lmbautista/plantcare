@@ -9,9 +9,8 @@
       = fa_icon "bigger-1 far fa-question-circle vline-middle pr-2"
       %h5.weight-2.text-uppercase.m-0= I18n.t("plantcares.index.how-it-works")
 
-    .plantcares-container
-      .plantcare-cards.pt-3.pb-4
-        = render partial: "card", collection: @plantcares, as: :plantcare
+    .plantcare-cards.pt-3.pb-4
+      = render partial: "card", collection: @plantcares, as: :plantcare
 
   = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false }) do
     - capture_haml do
