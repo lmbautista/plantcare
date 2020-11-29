@@ -41,6 +41,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = I18n.t('users.update.sucessfully')
+      session[:lang] = @user.lang
 
       redirect_to profile_user_path(@user) and return
     else

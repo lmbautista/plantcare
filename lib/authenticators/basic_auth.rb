@@ -11,6 +11,8 @@ class BasicAuth < Warden::Strategies::Base
     else
       session[:current_user_id] = u.id
       session[:api_token] = u.api_token
+      session[:lang] = u.lang
+
       success!(u)
     end
   end

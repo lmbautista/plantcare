@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticator
   before_action :set_user_api_token, if: :logged?
+  before_action :set_locale
 
   rescue_from Wtever::ForbiddenError,      with: :forbidden
   rescue_from Wtever::NotFoundError,       with: :not_found
@@ -19,6 +20,10 @@ class ApplicationController < ActionController::Base
 
   def set_user_api_token
     RequestStore.store[:wtever_token] ||= session[:api_token]
+  end
+
+  def set_locale
+    I18n.locale = (session[:lang].presence || I18n.default_locale) if current_user.present?
   end
 
   def to_flash(errors)
