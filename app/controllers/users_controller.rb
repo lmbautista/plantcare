@@ -58,10 +58,9 @@ class UsersController < ApplicationController
         :email,
         :password,
         :password_confirmation,
-        :nif,
-        :city,
-        :state,
-        :pc).tap { |whitelist|
+        :country_code,
+        :timezone,
+        :lang).tap { |whitelist|
           whitelist[:id] = params[:id] if params[:id].present?
         }.to_h
     end

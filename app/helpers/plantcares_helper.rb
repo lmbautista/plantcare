@@ -30,4 +30,16 @@ module PlantcaresHelper
   def water_pumps_collection
     WteverApi::WaterPump::ARDUINO_FIELDS.to_a
   end
+
+  def countries_collection
+    WteverApi::Country.all.map { |country| [country.name.humanize, country.code] }
+  end
+
+  def timezones_collection
+    ActiveSupport::TimeZone.all.map(&:name)
+  end
+
+  def lang_collection
+    I18n.available_locales
+  end
 end
