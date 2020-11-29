@@ -8,10 +8,7 @@ module Her
       json = parse_json(body)
       errors = json.delete(:errors) || []
       metadata = json.delete(:meta) || {}
-      puts " >>>>> ApiResponseHandler"
-      pp json
-      pp errors
-      pp metadata
+
       {
         :data => json,
         :errors => errors,
