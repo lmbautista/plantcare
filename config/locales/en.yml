@@ -1,53 +1,150 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
   title: "Plantcare"
   buttons:
+    add: "Add"
     submit: "Submit"
+    cancel: "Cancel"
+    create: "Create"
+    close: "Close"
 
+  confirmation: "Are you sure?"
   users:
     welcome:
-      title: Let's grow up together
-      subtitle: you can make awesome control over your plants
-      explain-ico1: sprout
-      explain-ico2: water
-      explain-ico3: transplanted
-      explain-ico4: fertilize
-      explain-ico5: sun
-      explain-ico6: growth
+      title: Lets grow up together
+      subtitle: helping to maintain and to improve your cute green place
+      explain-ico1: Planting and transplanting management
+      explain-ico2: Remote watering
+      explain-ico6: Fertilized and development
     new:
-      title: Join the crew
-      subtitle: create your account to improve the care of your plants
+      title: Join the team
+      subtitle: create your account and improve the care of your plants
       have_account: |
-        Have an account?  <strong><a href="%{signup_link}"> Login </a></strong>
+        Already signed?  <strong><a id="signin_link" data-toggle="modal" data-target="#signin_modal" href="#"> Sing in </a></strong>
+    confirmation:
+      title: Congrats
+      subtitle: Your account has been created successfully. Sing in with your username <a href="%{signin_link}">here</a>
+    edit:
+      title: Profile
+      subtitle: Edit and check your personal stuff
+    update:
+      sucessfully: You have successfully updated your profile
+
     wtever_api:
       attributes:
-        first_name: First name
+        first_name: Name
         last_name: Last name
         email: Email
         password: Password
         password_confirmation: Confirm password
+        country_code: Country
+        timezone: Timezone
+        lang: Lang
 
+  plantcares:
+    new:
+      title: New plantcare
+    index:
+      title: Your Plantcares
+      subtitle: Check and manage the status of your plants
+      how-it-works: How it works?
+      howto-1: |
+        Register your plantcare
+      howto-2: |
+        Insert the humidity sensor near the base of the trunk and configure its number in your plantcare
+      howto-3: |
+        Insert the water pump in your tank and select its number in your plantcare
+      howto-4: Now you can control and water your plantcare remotely
+      plantcare:
+        wet: Humidity
+        planted_at: Planted on
+        watered_at: Watered on
+    create:
+      sucessfully: You already have one more plantcare to take care of
+    edit:
+      goto-title: Edit
+      title: Plantcare edition
+    update:
+      sucessfully: You have updated your plantcare successfully
+    destroy:
+      sucessfully: You have deleted your plantcare successfully
+    wtever_api:
+      attributes:
+        name: Name
+        wet: Humidity
+        planted_at: Planted on
+        watered_at: Watered on
+        status: Status
+        wet_sensor_field: Humidity field
+        water_pump_field: Water pump field
+        water_pump_status: Water pump status
+    status:
+      healthy: Healthy
+      sick: Sick
+      lifeless: Lifeless
+    hardware:
+      wet_sensor_text: |
+        Set the humidity sensor that you have connected to your Plantcare.
+        Doing that your Plantcare will be able to communicate the humidity
+      water_pump_text: |
+        Set the water pump that you have connected to your Plantcare.
+        Doing that your Plantcare will be able to be watered remotely on demand.
+
+  waterings:
+    new:
+      title: Watering
+      explaining: It allows to schedule a watering once for your plantcare
+    create:
+      sucessfully: Watering successfully
+    edit:
+      title: Edit watering
+    update:
+      sucessfully: Watering updated successfully
+    destroy:
+      sucessfully: Watering removed successfully
+    wtever_api:
+      attributes:
+        status: Status
+        programmed_at: Scheduled at
+        duration_amount: Duration
+        frequency_amount: Frequency
+
+  watering_schedules:
+    new:
+      title: Schedule
+      explaining: It allows to schedule a watering for your plantcare during a certain period of time
+    create:
+      sucessfully: Watering scheduled successfully
+    edit:
+      title: Edit schedule
+    update:
+      sucessfully: Watering updated successfully
+    destroy:
+      sucessfully: Watering removed successfully
+    wtever_api:
+      attributes:
+        starts_on: Starts on
+        ends_on: Ends on
+        status: Status
+        duration_amount: Duration
+        frequency_amount: Frequency
+
+  watering:
+    next_title: "Nex waterings:"
+    next: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
+    no_pending_title: "No pending waterings"
   sessions:
     new:
       title: Sign in
+      subtitle:  Welcome, join us with your user and password
+      create_account: |
+        Not registered yet?  <strong><a class="opposite-color" id="signup_link" data-toggle="modal"
+        data-target="#signup_modal" href="#"> Join us </a></strong>
+      not_found: Email/password wrong, try it again
+    destroy:
+      see_you: See you! We'll take care of your plants by you
+
+      errors:
+    not_found: Sorry, but we were not able to find what you looked for
+    unauthorized: Sorry, but you need to signup to do that
+    forbidden: Sorry, but you cannot do that
+    internal_server_error: Sorry, something went wrong

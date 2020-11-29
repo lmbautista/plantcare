@@ -27,7 +27,7 @@ es:
       title: Perfil
       subtitle: Edita los datos de tu cuenta
     update:
-      sucessfully: Has actualizado correctamente tu perfil.
+      sucessfully: Has actualizado correctamente tu perfil
 
     wtever_api:
       attributes:
@@ -36,17 +36,13 @@ es:
         email: Email
         password: Password
         password_confirmation: Confirma password
-        nif: DNI/NIF
-        pc: Código postal
-        state: Provincia
-        city: Localidad
+        country_code: Pais
+        timezone: Zona horaria
+        lang: Idioma
 
   plantcares:
     new:
       title: Nuevo plantcare
-      explaining_text: |
-        A continuación puedes registrar tu nueva planta indicando su nombre, antigüedad, y una fotito.
-        Posteriormente deberás vincular el sensor de humedad a través de la placa Plantcare.
     index:
       title: Tus Plantcares
       subtitle: Revisa y gestiona el estado de tus plantas
@@ -54,34 +50,23 @@ es:
       howto-1: |
         Registra tu plantcare
       howto-2: |
-        Inserta el sensor de humedad cerca de la base del tronco y selecciona su número en tu plantcare
+        Inserta el sensor de humedad cerca de la base del tronco y configura su número en tu plantcare
       howto-3: |
         Introduce la bomba de agua en tu depósito y selecciona su número en tu plantcare
       howto-4: Controla y riega remótamente tu plantcare
-      no-plants-title: |
-        Aún no has registrado ninguna planta.
-      no-plants-subtitle: |
-        ¿A qué estas esperando? Haz click <a href="%{new_plant_link}">aquí</a> para estrenarte.
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el
-        water_pump_need: ¿Necesitas regar tu plantcare?
         wet: Humedad actual
     create:
-      sucessfully: Ya tienes un plantcare más para cuidar.
+      sucessfully: Ya tienes un plantcare más para cuidar
     edit:
       goto-title: Editar
       title: Edición de plantcare
-      explaining_token: |
-        Indica el pin de conexión del sensor de humedad en tu Plantcare.
-        De esta manera tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
-      menu:
-        info: Info básica
-        attachments: Evolución
     update:
-      sucessfully: Has actualizado tu plantcare correctamente.
+      sucessfully: Has actualizado tu plantcare correctamente
     destroy:
-      sucessfully: Has borrado tu plantcare correctamente.
+      sucessfully: Has borrado tu plantcare correctamente
     wtever_api:
       attributes:
         name: Nombre
@@ -89,7 +74,6 @@ es:
         planted_at: Plantada el
         watered_at: Regada el
         status: Estado
-        user_id: Propietario
         wet_sensor_field: Detector de humedad
         water_pump_field: Bomba de agua
         water_pump_status: Estado
@@ -99,23 +83,20 @@ es:
       lifeless: Pocha
     hardware:
       wet_sensor_text: |
-        Indica el pin donde has conectado en UNO el sensor de humedad en tu Plantcare. De esta manera
-        tu Plantcare podrá comunicar el nivel de humedad de tu nueva planta.
+        Indica el sensor de humedad que has conectado a tu Plantcare.
+        De esta manera tu Plantcare podrá comunicar el nivel de humedad.
       water_pump_text: |
-        Indica el número del interruptor del motor de agua en tu Plantcare. De esta manera podrás regar
-        tu Plantcare a demanda.
-    wet_status: "%{wet} de humedad"
+        Indica la bomba de agua que has conectado a tu Plantcare.
+        De esta manera tu Plantcare podrá ser regada remotamente bajo demanda.
 
   waterings:
     new:
-      title:
-        Riego
+      title: Riego
       explaining: Te permite programar un riego de manera puntual para tu plantcare
     create:
       sucessfully: Riego programado correctamente
     edit:
-      title:
-        Editar riego
+      title: Editar riego
     update:
       sucessfully: Riego actualizado correctamente
     destroy:
@@ -161,7 +142,7 @@ es:
       see_you: ¡Hasta pronto! Cuidaremos de tus plantas en tu ausencia
 
       errors:
-    not_found: Lo sentimos, ¡pero no hemos encontrado lo que buscas!
-    unauthorized: Lo sentimos, ¡pero necesitas iniciar sesión para realizar esta acción!
-    forbidden: Lo sentimos, ¡pero no puedes realizar esa acción!
-    internal_server_error: Lo sentimos, ¡algo salio mal!
+    not_found: Lo sentimos, pero no hemos encontrado lo que buscas
+    unauthorized: Lo sentimos, pero necesitas iniciar sesión para realizar esta acción
+    forbidden: Lo sentimos, pero no puedes realizar esa acción
+    internal_server_error: Lo sentimos, algo salio mal
