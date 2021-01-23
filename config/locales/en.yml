@@ -18,6 +18,7 @@ en:
     status_explanation: "Last connection at %{board_connection_at}.\n
       Check the status of the connection of your board"
     status_details: Check the latest connections of your board
+    no_board_connections: No board connection notifications
     sign_out: Sign out
     board_status: Board status
   confirmation: "Are you sure?"

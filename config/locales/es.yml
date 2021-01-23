@@ -18,6 +18,7 @@ es:
     status_explanation: "Última conexión: %{board_connection_at}.\r\n
       Haz click para ver el detalle de las últimas conexiones de tu placa"
     status_details: Comprueba las últimas conexiones de tu placa
+    no_board_connections: No hay notificaciones de conexión de la placa
     sign_out: Salir
     board_status: Estado de placa
   confirmation: "¿Estas seguro?"

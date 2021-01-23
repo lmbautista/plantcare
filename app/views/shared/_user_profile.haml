@@ -8,10 +8,8 @@
       %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
         = current_user.first_name
   %li.vline-middle
-    .block.pt-3.pb-3{ 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => I18n.t('menu.status_explanation', board_connection_at: I18n.localize(@board_connection_at)) }
-      = link_to "#last-connections",
-        'data-placement' => 'bottom', 'title' => I18n.t('menu.status_explanation', board_connection_at: I18n.localize(@board_connection_at)),
-        'data-target' => '#last-connections', 'data-toggle' => 'modal' do
+    .block.pt-3.pb-3{ 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => I18n.t('menu.status_explanation', board_connection_at: (@board_connection_at.present? ? I18n.localize(@board_connection_at) : '-')) }
+      = link_to "#last-connections", 'data-target' => '#last-connections', 'data-toggle' => 'modal' do
         = fa_icon 'fal fa-microchip opposite-color pr-1 bigger-2 vline-middle'
         %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
           = I18n.t('menu.status')

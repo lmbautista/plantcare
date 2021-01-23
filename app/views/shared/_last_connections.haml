@@ -7,6 +7,8 @@
           %h5.weight-2= I18n.t("menu.status_details")
 
       .last-connections-right-panel.vline-middle.text-center
+        - if current_user.board_connections.blank?
+          = I18n.t("menu.no_board_connections")
         - current_user.board_connections.each do |board_connection_at|
           .pb-2
             = fa_icon 'far fa-clock opposite-color pr-1 bigger-1 vline-middle'
