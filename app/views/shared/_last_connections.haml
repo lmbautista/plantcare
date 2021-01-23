@@ -6,10 +6,10 @@
           = fa_icon "bigger-3 far fa-microchip vline-middle weight-2"
           %h5.weight-2= I18n.t("menu.status_details")
 
-      .last-connections-right-panel.vline-middle
+      .last-connections-right-panel.vline-middle.text-center
         - current_user.board_connections.each do |board_connection_at|
           %div
             = connection_tag_for(@board_connection_at)
-            %h5.m-0.pl-2.vline-middle.inline-block.weight-2
+            %h4.m-0.pl-2.pb-1.vline-middle.inline-block.weight-2
               = I18n.localize(board_connection_at)
 

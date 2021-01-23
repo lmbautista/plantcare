@@ -25,7 +25,11 @@ body {
 
   .navbar {
     margin-bottom: 0;
-
+    .navbar-brand {
+      float: none;
+      text-align: center;
+      margin-left: -25px;
+    }
     .navbar-toggle{
       float: left;
       margin: 10px;
