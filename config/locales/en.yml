@@ -39,6 +39,7 @@ en:
     edit:
       title: Profile
       subtitle: Edit and check your personal stuff
+      token_text: Here you can check the needed token to configure the connectivity of your board
     update:
       sucessfully: You have successfully updated your profile
 
@@ -52,6 +53,7 @@ en:
         country_code: Country
         timezone: Timezone
         lang: Lang
+        api_token: Authentication token
 
   plantcares:
     new:

@@ -39,6 +39,7 @@ es:
     edit:
       title: Perfil
       subtitle: Edita los datos de tu cuenta
+      token_text: Aquí puedes ver el token necesario para configurar la conexión de tu placa
     update:
       sucessfully: Has actualizado correctamente tu perfil
 
@@ -52,6 +53,7 @@ es:
         country_code: Pais
         timezone: Zona horaria
         lang: Idioma
+        api_token: Token de autenticación
 
   plantcares:
     new:
