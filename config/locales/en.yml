@@ -19,7 +19,7 @@ en:
       Check the status of the connection of your board"
     status_details: Check the latest connections of your board
     sign_out: Sign out
-    last_connections: Last connections
+    board_status: Board status
   confirmation: "Are you sure?"
   users:
     welcome:

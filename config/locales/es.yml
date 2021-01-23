@@ -19,7 +19,7 @@ es:
       Haz click para ver el detalle de las últimas conexiones de tu placa"
     status_details: Comprueba las últimas conexiones de tu placa
     sign_out: Salir
-    last_connections: Últimas conexiones
+    board_status: Estado de placa
   confirmation: "¿Estas seguro?"
   users:
     welcome:

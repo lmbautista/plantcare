@@ -1,4 +1,4 @@
-= modal_for("last-connections", I18n.t('menu.last_connections'), { footer: false }) do
+= modal_for("last-connections", I18n.t('menu.board_status'), { footer: false }) do
   - capture_haml do
     .last-connections-panel
       .last-connections-left-panel.vline-middle.text-center
@@ -8,8 +8,9 @@
 
       .last-connections-right-panel.vline-middle.text-center
         - current_user.board_connections.each do |board_connection_at|
-          %div
-            = connection_tag_for(@board_connection_at)
-            %h4.m-0.pl-2.pb-1.vline-middle.inline-block.weight-2
+          .pb-2
+            = fa_icon 'far fa-clock opposite-color pr-1 bigger-2 vline-middle'
+            %h4.m-0.vline-middle.inline-block.weight-1
               = I18n.localize(board_connection_at)
+            = connection_tag_for(@board_connection_at)
 
