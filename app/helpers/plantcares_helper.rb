@@ -42,4 +42,16 @@ module PlantcaresHelper
   def lang_collection
     I18n.available_locales
   end
+
+  def last_connection_status_class(healthy_check)
+    return "connection-non-data" if healthy_check.blank?
+
+    healthy_check_offset = Time.current - healthy_check
+
+    return "connection-less-than-5" if healthy_check_offset < 5.minutes
+    return "connection-less-than-10" if healthy_check_offset < 10.minutes
+    return "connection-less-than-15" if healthy_check_offset < 15.minutes
+
+    "connection-less-than-20"
+  end
 end

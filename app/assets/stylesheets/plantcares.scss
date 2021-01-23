@@ -146,5 +146,11 @@ body {
       align-items: center;
       justify-content: space-between;
     }
+
+    .connection-less-than-5 { color: $connection-less-than-5-color; }
+    .connection-less-than-10 { color: $connection-less-than-10-color; }
+    .connection-less-than-15 { color: $connection-less-than-15-color; }
+    .connection-less-than-20 { color: $connection-less-than-20-color; }
+    .connection-non-data { color: $non-data-color; }
   }
 }

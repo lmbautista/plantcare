@@ -15,7 +15,13 @@ $background-color:          $general-color;
 $background-opossite-color: $general-color;
 
 $non-data-color: lighten($font-color, 35%);
+
 $full-wetness-color: rgb(96, 199, 76);
 $bit-wetness-color: rgb(146, 199, 76);
 $bit-dryness-color: rgb(199, 191, 76);
 $full-dryness-color: rgb(199, 135, 76);
+
+$connection-less-than-5-color: rgb(96, 199, 76);
+$connection-less-than-10-color: rgb(146, 199, 76);
+$connection-less-than-15-color: rgb(199, 191, 76);
+$connection-less-than-20-color: rgb(199, 135, 76);

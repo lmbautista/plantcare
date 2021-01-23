@@ -83,6 +83,12 @@ module HtmlHelper
     end
   end
 
+  def connection_tag_for(board_connection_at)
+    last_connection_status_class = last_connection_status_class(board_connection_at)
+
+    fa_icon "fas fa-wifi opposite-color pl-1 bigger-1 vline-middle #{last_connection_status_class}"
+  end
+
   def switch_for(form_instance, attribute, options = {})
     content_tag :div, class: options[:class].to_s do
       content_tag :label, class: "switch vline-middle" do
