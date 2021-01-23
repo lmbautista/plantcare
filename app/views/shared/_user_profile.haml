@@ -1,9 +1,26 @@
+- @board_connection_at = current_user.last_board_connection
+
 .col-xs-6.col-sm-6.col-md-5.text-right
   .actions
-    = link_to profile_user_path(current_user), class: 'inline-block pr-3 vline-middle' do
-      = fa_icon 'fal fa-user-circle opposite-color pr-1 bigger-2 vline-middle'
+    = link_to profile_user_path(current_user), class: 'inline-block pr-3 vline-middle',
+      'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => I18n.t('menu.profile_explanation') do
+      = fa_icon 'fal fa-seedling opposite-color pr-1 bigger-2 vline-middle'
       %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
         = current_user.first_name
 
+    .inline-block{ 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => I18n.t('menu.status_explanation', board_connection_at: I18n.localize(@board_connection_at)) }
+      = link_to "#last-connections", class: 'inline-block pr-3 vline-middle',
+        'data-placement' => 'bottom', 'title' => I18n.t('menu.status_explanation', board_connection_at: I18n.localize(@board_connection_at)),
+        'data-target' => '#last-connections', 'data-toggle' => 'modal' do
+        = fa_icon 'fal fa-microchip opposite-color pr-1 bigger-2 vline-middle'
+        %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
+          = I18n.t('menu.status')
+        = connection_tag_for(@board_connection_at)
+
     = link_to signout_path, class: 'inline-block pr-3 vline-middle' do
-      = fa_icon 'fal fa-sign-out-alt bigger-2 opposite-color'
+      = fa_icon 'fal fa-power-off opposite-color pr-1 bigger-2 vline-middle'
+      %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
+        = I18n.t('menu.sign_out')
+
+
+= render partial: "shared/last_connections"

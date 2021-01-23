@@ -1,4 +1,10 @@
 es:
+  time:
+    formats:
+      default: '%d/%m/%y %H:%M'
+  date:
+    formats:
+      default: '%d/%m/%y'
   title: "Plantcare"
   buttons:
     add: "Añadir"
@@ -6,7 +12,14 @@ es:
     cancel: "Cancelar"
     create: "Crear"
     close: "Cerrar"
-
+  menu:
+    profile_explanation: Edita tu perfil
+    status: Estado de placa
+    status_explanation: "Última conexión: %{board_connection_at}.\r\n
+      Haz click para ver el detalle de las últimas conexiones de tu placa"
+    status_details: Comprueba las últimas conexiones de tu placa
+    sign_out: Salir
+    last_connections: Últimas conexiones
   confirmation: "¿Estas seguro?"
   users:
     welcome:
