@@ -146,23 +146,5 @@ body {
       align-items: center;
       justify-content: space-between;
     }
-
-    .last-connections-panel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .last-connections-right-panel, .last-connections-right-panel {
-        display: inline-flex;
-        flex-direction: column;
-        width: 30rem;
-      }
-    }
-
-    .connection-less-than-5 { color: $connection-less-than-5-color; }
-    .connection-less-than-10 { color: $connection-less-than-10-color; }
-    .connection-less-than-15 { color: $connection-less-than-15-color; }
-    .connection-less-than-20 { color: $connection-less-than-20-color; }
-    .connection-non-data { color: $non-data-color; }
   }
 }
