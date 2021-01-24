@@ -40,7 +40,10 @@ module PlantcaresHelper
   end
 
   def lang_collection
-    I18n.available_locales
+    [
+      ["🇪🇸", :es],
+      ["🇬🇧", :en]
+    ]
   end
 
   def last_connection_status_class(board_connection_at)
