@@ -21,13 +21,14 @@ html {
     font-size: 14px;
 
     h1,h2,h3,h4,h5,h6 { font-weight: 300  }
+    header.logged { box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2); }
     header {
       width: 100%;
       height: auto;
       color: $opposite-color;
       background: transparent;
-      box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
     }
+
     footer {
       width: 100%;
       height: 50px;

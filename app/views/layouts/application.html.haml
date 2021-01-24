@@ -11,7 +11,7 @@
     = csrf_meta_tags
 
   %body{ class: "#{params[:action]} #{params[:controller]} #{ 'logged' if logged? }" }
-    %header
+    %header{ class: "#{logged? ? "logged" : ""}" }
       = render 'shared/header'
 
     #content
