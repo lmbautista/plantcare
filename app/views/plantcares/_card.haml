@@ -6,7 +6,10 @@
         = I18n.t("plantcares.edit.goto-title")
 
       .pl-1
+        .smaller-1.weight-2.opposite-color.text-left
+          = I18n.t("plantcares.index.plantcare.wet_synced_at", wet_synced_at: plantcare.wet_synced_at || "-")
         = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", custom_classes: "bigger-2", value_classes: plantcare.status }
+
       - if plantcare.planted_at
         .pl-3
           = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }

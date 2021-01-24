@@ -26,6 +26,7 @@ module WteverApi
                :wet,
                :wet_sensor_field,
                :watered_at,
+               :wet_synced_at,
                :water_pump_field,
                :water_pump_id
 

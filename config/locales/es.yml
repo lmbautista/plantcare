@@ -73,6 +73,7 @@ es:
         planted_at: Plantada el
         watered_at: Regada el
         wet: Humedad actual
+        wet_synced_at: Sincronizado el %{wet_synced_at}
     create:
       sucessfully: Ya tienes un plantcare más para cuidar
     edit:
