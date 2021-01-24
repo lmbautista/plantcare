@@ -23,6 +23,10 @@ body {
     padding-right: 5px;
   }
 
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+  }
+  .navbar-collapse { border-color: transparent; }
   .navbar {
     margin-bottom: 0;
     .navbar-brand {
@@ -103,6 +107,7 @@ body {
     ::placeholder { color: #ccc; }
   }
 
+  .modal { z-index: 9999 };
   .modal-dialog {
     .modal-header {
       border-bottom: none;
