@@ -38,6 +38,9 @@ module HtmlHelper
       header = "
       <div class=\"modal-header\">
         <h4 class=\"modal-title text-center\">#{title}</h4>
+        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+          #{fa_icon "opposite-color far fa-times-circle"}
+        </button>
       </div>
       "
     end

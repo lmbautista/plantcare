@@ -12,7 +12,7 @@
     .plantcare-cards.pt-3.pb-4
       = render partial: "card", collection: @plantcares, as: :plantcare
 
-  = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false }) do
+  = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false, close_button: true }) do
     - capture_haml do
       = render partial: "instructions"
 

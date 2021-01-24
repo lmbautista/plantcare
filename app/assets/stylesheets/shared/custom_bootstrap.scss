@@ -23,6 +23,14 @@ body {
     padding-right: 5px;
   }
 
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $opposite-color;
+    margin: 0;
+    opacity: 0.8;
+  }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: transparent;
   }
