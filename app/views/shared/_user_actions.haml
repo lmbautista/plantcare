@@ -2,18 +2,20 @@
 
 %ul.nav.navbar-nav.navbar-right
   %li.vline-middle
-    = link_to profile_user_path(current_user),
-      'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => I18n.t('menu.profile_explanation') do
+    = link_to profile_user_path(current_user), title: I18n.t('menu.profile_explanation') do
       = fa_icon 'fal fa-seedling opposite-color pr-1 bigger-2 vline-middle'
       %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
-        = current_user.first_name
+        = [current_user.first_name, current_user.last_name].join(" ")
   %li.vline-middle
-    .block.p-3{ 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => I18n.t('menu.status_explanation', board_connection_at: (@board_connection_at.present? ? I18n.localize(@board_connection_at) : '-')) }
-      = link_to "#last-connections", 'data-target' => '#last-connections', 'data-toggle' => 'modal' do
-        = fa_icon 'fal fa-microchip opposite-color pr-1 bigger-2 vline-middle'
-        %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
-          = I18n.t('menu.status')
-        = connection_tag_for(@board_connection_at)
+    = link_to "#last-connections", 'data-target' => '#last-connections', 'data-toggle' => 'modal',
+      title: I18n.t('menu.status_details') do
+      = fa_icon 'fal fa-microchip opposite-color pr-1 bigger-2 vline-middle'
+      %h5.m-0.opposite-color.vline-middle.inline-block.weight-2
+        = I18n.t('menu.status')
+        .smaller-1
+          = last_connection_tag(@board_connection_at)
+
+      = connection_tag_for(@board_connection_at)
   %li.vline-middle
     = link_to signout_path do
       = fa_icon 'fal fa-power-off opposite-color pr-1 bigger-2 vline-middle'

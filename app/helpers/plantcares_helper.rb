@@ -43,15 +43,22 @@ module PlantcaresHelper
     I18n.available_locales
   end
 
-  def last_connection_status_class(healthy_check)
-    return "connection-non-data" if healthy_check.blank?
+  def last_connection_status_class(board_connection_at)
+    return "connection-non-data" if board_connection_at.blank?
 
-    healthy_check_offset = Time.current - healthy_check
+    healthy_check_offset = Time.current - board_connection_at
 
     return "connection-less-than-5" if healthy_check_offset < 5.minutes
     return "connection-less-than-10" if healthy_check_offset < 10.minutes
     return "connection-less-than-15" if healthy_check_offset < 15.minutes
 
     "connection-less-than-20"
+  end
+
+  def last_connection_tag(board_connection_at)
+    board_connection_at_copy =
+      board_connection_at.present? ? I18n.localize(board_connection_at) : "-"
+
+    I18n.t("menu.status_explanation", board_connection_at: board_connection_at_copy)
   end
 end
