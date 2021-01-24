@@ -28,10 +28,10 @@ body {
     .navbar-brand {
       float: none;
       text-align: center;
-      margin-left: -25px;
+      height: auto;
     }
-    .navbar-toggle{
-      float: left;
+    .navbar-toggle {
+      position: absolute;
       margin: 10px;
       border: none;
       border-radius: 2px;
@@ -46,11 +46,6 @@ body {
     }
   }
 
-  .navmenu-fixed-left {
-    .navbar-nav {
-      margin: 0;
-    }
-  }
 
   .navmenu-default {
     background: $general-color;
