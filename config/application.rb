@@ -20,7 +20,7 @@ module Plantcare
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :es
     config.i18n.available_locales = %i(en es)
-    config.cache_store         = :memory_store, { size: 1024.megabytes, expires_in: 30.minutes }
+    config.cache_store         = :memory_store, { size: 64.megabytes, expires_in: 5.minutes }
     # Lograge config
     # config.lograge.enabled        = true
     # config.lograge.formatter      = Lograge::Formatters::Logstash.new
