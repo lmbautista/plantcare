@@ -9,9 +9,7 @@ module WteverApi
     def board_connections
       return [] if last_healthy_checks.blank?
 
-      last_healthy_checks.map do |healthy_check|
-        healthy_check["created_at"].to_time
-      end
+      last_healthy_checks.map(&:to_time)
     end
 
     def last_board_connection
