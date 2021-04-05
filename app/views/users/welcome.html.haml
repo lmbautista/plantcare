@@ -15,23 +15,12 @@
 
   .pt-2.pb-2.plantcare-welcome-icons
     .row
-      .col-xs-6.col-xs-offset-3.col-sm-2.text-center
+      .col-xs-8.col-xs-offset-2.col-sm-8.text-center
         .explaining.mt-1.mb-1
-          = image_tag ('leaf'), class: "explain-ico img-responsive"
+          = image_tag ("icons/plant-#{rand(1..3)}"), class: "explain-ico img-responsive"
+
           %h4
             = I18n.t('users.welcome.explain-ico1')
-
-      .col-xs-6.col-xs-offset-3.col-sm-offset-0.col-sm-2.text-center
-        .explaining.mt-1.mb-1
-          = image_tag ('water'), class: "explain-ico img-responsive"
-          %h4
-            = I18n.t('users.welcome.explain-ico2')
-
-      .col-xs-6.col-xs-offset-3.col-sm-offset-0.col-sm-2.text-center
-        .explaining.mt-1.mb-1
-          = image_tag ('growth'), class: "explain-ico img-responsive"
-          %h4
-            = I18n.t('users.welcome.explain-ico6')
 
   .row
     .visible-xs.col-xs-12.text-center
