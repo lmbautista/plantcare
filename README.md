@@ -11,8 +11,8 @@
 The setup steps expect following tools installed on the system.
 
 - Github
-- Ruby [2.3.1](https://github.com/lmbautista/plantcare/blob/master/.ruby-version#L1)
-- Rails [5.0.0](https://github.com/lmbautista/plantcare/blob/master/Gemfile#L6)
+- Ruby [2.7.4](https://github.com/lmbautista/plantcare/blob/master/.ruby-version#L1)
+- Rails [6.1.3.2](https://github.com/lmbautista/plantcare/blob/master/Gemfile#L6)
 
 ### 1. Clone the repository
 
