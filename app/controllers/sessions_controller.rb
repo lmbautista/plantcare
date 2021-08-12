@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
-  skip_before_action :authenticator, only: %w[new create]
+  skip_before_action :authenticator, only: %w(new create)
 
   def new
     @user = WteverApi::User.new

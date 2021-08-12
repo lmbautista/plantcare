@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # Application helper
 module ApplicationHelper
   include HtmlHelper
 
   def current_user
     Rails.cache.fetch("current_user_#{session[:current_user_id]}") do
-      request.env['warden'].user
+      request.env["warden"].user
     end
   end
 

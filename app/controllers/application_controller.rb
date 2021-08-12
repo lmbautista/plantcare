@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   include ApplicationHelper
   # Prevent CSRF attacks by raising an exception.
@@ -36,22 +38,22 @@ class ApplicationController < ActionController::Base
   end
 
   def unauthorized
-    flash[:error] = I18n.t('errors.unauthorized')
+    flash[:error] = I18n.t("errors.unauthorized")
     redirect_to root_path
   end
 
   def forbidden
-    flash[:error] = I18n.t('errors.forbidden')
+    flash[:error] = I18n.t("errors.forbidden")
     redirect_to root_path
   end
 
   def not_found
-    flash[:error] = I18n.t('errors.not_found')
+    flash[:error] = I18n.t("errors.not_found")
     redirect_to root_path
   end
 
   def internal_server_error
-    flash[:error] = I18n.t('errors.internal_server_error')
+    flash[:error] = I18n.t("errors.internal_server_error")
     redirect_to root_path
   end
 end

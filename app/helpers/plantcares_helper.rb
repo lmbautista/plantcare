@@ -5,7 +5,7 @@ module PlantcaresHelper
     if plantcare.picture
       plantcare.picture
     else
-      i = plantcare.id.to_i % 6 +1
+      i = plantcare.id.to_i % 6 + 1
       image_url("plantcares/plantcare-default0#{i}.jpg")
     end
   end
@@ -60,7 +60,7 @@ module PlantcaresHelper
 
   def last_connection_tag(board_connection_at)
     board_connection_at_copy =
-      board_connection_at.present? ? I18n.localize(board_connection_at) : "-"
+      board_connection_at.present? ? I18n.l(board_connection_at) : "-"
 
     I18n.t("menu.status_explanation", board_connection_at: board_connection_at_copy)
   end

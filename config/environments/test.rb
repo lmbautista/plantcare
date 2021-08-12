@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "active_support/core_ext/integer/time"
 
 # The test environment is used exclusively to run your application's
@@ -17,12 +19,12 @@ Rails.application.configure do
   config.eager_load = false
 
   config.serve_static_files   = true
-  config.static_cache_control = 'public, max-age=3600'
+  config.static_cache_control = "public, max-age=3600"
 
   # Configure public file server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
-    'Cache-Control' => "public, max-age=#{1.hour.to_i}"
+    "Cache-Control" => "public, max-age=#{1.hour.to_i}"
   }
 
   # Show full error reports and disable caching.

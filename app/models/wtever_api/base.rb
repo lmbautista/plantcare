@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module WteverApi
   class Base
     include Her::Model

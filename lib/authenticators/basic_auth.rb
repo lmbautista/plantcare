@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BasicAuth < Warden::Strategies::Base
   def valid?
     params[:email].present? && params[:password].present?

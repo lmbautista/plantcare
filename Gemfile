@@ -50,9 +50,9 @@ gem "warden"
 
 gem "gon"
 
-gem "momentjs-rails", ">= 2.9.0"
 gem "bootstrap3-datetimepicker-rails", "~> 4.14.30"
 gem "jquery-fileupload-rails"
+gem "momentjs-rails", ">= 2.9.0"
 
 gem "puma", "~> 4.3"
 
@@ -63,8 +63,8 @@ gem "logstash-logger"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem "listen"
   gem "byebug"
+  gem "listen"
   gem "pry-nav"
   gem "pry-rails"
   gem "pry-remote"

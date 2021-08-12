@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module WteverApi
   class User < WteverApi::Base
-
     attributes :first_name, :last_name, :email, :country_code,
                :timezone, :lang, :password_confirmation, :password, :api_token, :last_healthy_checks
 
@@ -9,7 +10,7 @@ module WteverApi
     def board_connections
       return [] if last_healthy_checks.blank?
 
-      last_healthy_checks.map { |hc| DateTime.strptime(hc, "%d/%m/%y %H:%M")  }
+      last_healthy_checks.map { |hc| DateTime.strptime(hc, "%d/%m/%y %H:%M") }
     end
 
     def last_board_connection
