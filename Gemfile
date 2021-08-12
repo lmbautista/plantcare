@@ -29,6 +29,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 
 # Code review
 gem "rubocop", require: false
+gem "rubocop-rails"
 
 # REST map
 gem "faraday_middleware"
