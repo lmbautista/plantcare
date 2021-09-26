@@ -1,6 +1,8 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
 
-require 'rails/all'
+require_relative "boot"
+
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -20,7 +22,11 @@ module Plantcare
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :es
     config.i18n.available_locales = %i(en es)
-    config.cache_store         = :memory_store, { size: 64.megabytes, expires_in: 5.minutes }
+    config.cache_store = :memory_store, { size: 64.megabytes, expires_in: 5.minutes }
+
+    config.hosts << "dev.yourplantcare.com"
+    config.hosts << "yourplantcare.com"
+    config.hosts << "www.yourplantcare.com"
     # Lograge config
     # config.lograge.enabled        = true
     # config.lograge.formatter      = Lograge::Formatters::Logstash.new
@@ -35,6 +41,6 @@ module Plantcare
     # config.web_console.whitelisted_ips = '172.19.0.0/16'
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # config.active_record.raise_in_transactional_callbacks = true
   end
 end

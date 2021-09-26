@@ -2,16 +2,19 @@
 
 source "http://rubygems.org"
 
+ruby "2.7.4"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 5.0.0", ">= 5.0.0.1"
+gem "rails", "6.1.3.2"
 # Use sqlite3 as the database for Active Record
 gem "mysql2"
 # Use SCSS for stylesheets
-gem "sass-rails", "~> 5.0"
+gem "sass-rails"
+gem "sprockets", "<4"
 # Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 1.3.0"
+gem "uglifier"
 # Use CoffeeScript for .coffee assets and views
-gem "coffee-rails", "~> 4.1.0"
+gem "coffee-rails"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -59,6 +62,7 @@ gem "logstash-logger"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "listen"
   gem "byebug"
   gem "pry-nav"
   gem "pry-rails"

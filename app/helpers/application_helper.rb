@@ -26,12 +26,8 @@ module ApplicationHelper
 
   def growl_message
     growl_message = prepare_growl_message
+    return if growl_message.blank?
 
-    return unless growl_message.present?
-
-    errors = '<script type="text/javascript">'
-    errors << growl_message
-    errors << '</script>'
-    raw errors
+    "<script type=\"text/javascript\"#{growl_message}</script>".html_safe
   end
 end

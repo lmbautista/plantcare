@@ -1,8 +1,8 @@
-FROM ruby:2.3.1
+FROM ruby:2.7.4
 
 RUN sed -i '/jessie-updates/d' /etc/apt/sources.list
 
-RUN apt-get update -qq && apt-get install -y --force-yes build-essential libpq-dev mysql-client vim nodejs
+RUN apt-get update -qq && apt-get install -y --force-yes build-essential libpq-dev default-mysql-client vim nodejs
 
 RUN mkdir -p /var/www/plantcare
 

@@ -14,7 +14,7 @@ Her::API.setup url: Rails.application.secrets.api_url do |c|
   c.use Her::ApiResponseHandler
 
   # Adapter
-  c.use Faraday::Adapter::NetHttp
+  c.adapter Faraday::Adapter::NetHttp
 end
 
 Her::Model.class_eval do

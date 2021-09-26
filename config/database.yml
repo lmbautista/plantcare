@@ -7,7 +7,7 @@
 default: &default
   adapter: mysql2
   host: <%= ENV["MYSQL_HOST"] %>
-  database: plantcare
+  database: plantcares
   username: <%= ENV["MYSQL_USER"] %>
   password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
 
@@ -19,7 +19,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: plantcare_test
+  database: plantcares_test
 
 
 production:
