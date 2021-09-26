@@ -10,7 +10,7 @@ module WteverApi
     def board_connections
       return [] if last_healthy_checks.blank?
 
-      last_healthy_checks.map { |hc| DateTime.strptime(hc, "%d/%m/%y %H:%M") }
+      last_healthy_checks
     end
 
     def last_board_connection

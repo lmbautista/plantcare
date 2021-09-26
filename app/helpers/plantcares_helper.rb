@@ -49,7 +49,7 @@ module PlantcaresHelper
   def last_connection_status_class(board_connection_at)
     return "connection-non-data" if board_connection_at.blank?
 
-    healthy_check_offset = Time.current - board_connection_at
+    healthy_check_offset = Time.current - DateTime.strptime(board_connection_at, "%d/%m/%y %H:%M")
 
     return "connection-less-than-5" if healthy_check_offset < 5.minutes
     return "connection-less-than-10" if healthy_check_offset < 10.minutes
@@ -59,9 +59,8 @@ module PlantcaresHelper
   end
 
   def last_connection_tag(board_connection_at)
-    board_connection_at_copy =
-      board_connection_at.present? ? I18n.l(board_connection_at) : "-"
+    return "" if board_connection_at.blank?
 
-    I18n.t("menu.status_explanation", board_connection_at: board_connection_at_copy)
+    I18n.t("menu.status_explanation", board_connection_at: board_connection_at)
   end
 end
