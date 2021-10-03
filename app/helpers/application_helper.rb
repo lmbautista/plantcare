@@ -16,11 +16,14 @@ module ApplicationHelper
 
   def prepare_growl_message
     if flash[:error].present?
-      "  $.growl.error({ message: '#{flash[:error]}', duration: 10000, title: 'Plantcare says:' });"
+      "  $.growl.error({ message: '#{flash[:error]}', duration: 10000, "\
+        "title: 'Plantcare says:' });"
     elsif flash[:notice].present?
-      "  $.growl.notice({ message: '#{flash[:notice]}', duration: 10000, title: 'Plantcare says:' });"
+      "  $.growl.notice({ message: '#{flash[:notice]}', duration: 10000, "\
+        "title: 'Plantcare says:' });"
     elsif flash[:warning].present?
-      "  $.growl.warning({ message: '#{flash[:warning]}', duration: 10000, title: 'Plantcare says:' });"
+      "  $.growl.warning({ message: '#{flash[:warning]}', duration: 10000, "\
+        "title: 'Plantcare says:' });"
     else
       ""
     end
@@ -30,6 +33,6 @@ module ApplicationHelper
     growl_message = prepare_growl_message
     return if growl_message.blank?
 
-    "<script type=\"text/javascript\"#{growl_message}</script>".html_safe
+    "<script type=\"text/javascript\"#{growl_message}</script>".html_safe # rubocop:disable Rails/OutputSafety
   end
 end

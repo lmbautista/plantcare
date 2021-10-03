@@ -17,7 +17,7 @@ class Warden::SessionSerializer
 
   def deserialize(keys)
     klass, id = keys
-    eval(klass).find(id)
+    eval(klass).find(id) # rubocop:disable Security/Eval
   end
 end
 

@@ -64,8 +64,8 @@ class UsersController < ApplicationController
       :country_code,
       :timezone,
       :lang
-    ).tap do |whitelist|
-      whitelist[:id] = params[:id] if params[:id].present?
+    ).tap do |permitted_params|
+      permitted_params[:id] = params[:id] if params[:id].present?
     end.to_h
   end
 

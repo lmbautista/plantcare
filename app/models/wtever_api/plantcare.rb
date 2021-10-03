@@ -39,7 +39,7 @@ module WteverApi
     end
 
     def status
-      wet == 0.0 ? "non_data" : super
+      BigDecimal(wet.to_s) == BigDecimal("0.0") ? "non_data" : super
     end
   end
 end

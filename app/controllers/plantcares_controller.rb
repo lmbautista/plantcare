@@ -64,10 +64,10 @@ class PlantcaresController < ApplicationController
       :picture,
       :attachments,
       :planted_at
-    ).tap do |whitelist|
-      whitelist[:id] = params[:id]
-      whitelist[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)
-      whitelist[:water_pump_field] = params.dig(:wtever_api_plantcare, :water_pump_field)
+    ).tap do |permitted_params|
+      permitted_params[:id] = params[:id]
+      permitted_params[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)
+      permitted_params[:water_pump_field] = params.dig(:wtever_api_plantcare, :water_pump_field)
     end
   end
 

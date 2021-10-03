@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-  def not_found
+  def not_found # rubocop:disable Naming/PredicateName
     flash[:error] = I18n.t("errors.not_found")
     redirect_to root_path
   end

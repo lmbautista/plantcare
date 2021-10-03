@@ -9,12 +9,9 @@ class SessionsController < ApplicationController
 
   def create
     @user = WteverApi::User.new(sessions_params)
+    redirect_to(plantcares_path) && return if authenticate!(:basic_auth)
 
-    if authenticate!(:basic_auth)
-      redirect_to(plantcares_path) && return
-    else
-      redirect_to(root_path) && return
-    end
+    redirect_to(root_path) && return
   end
 
   def destroy
@@ -23,7 +20,7 @@ class SessionsController < ApplicationController
     env["warden"].logout && redirect_to(root_path) && return
   end
 
-  def not_found
+  def not_found # rubocop:disable Naming/PredicateName
     flash[:error] = I18n.t("sessions.new.not_found")
     render :new
   end
