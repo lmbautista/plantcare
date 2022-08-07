@@ -27,6 +27,7 @@ module Plantcare
     config.hosts << "dev.yourplantcare.com"
     config.hosts << "yourplantcare.com"
     config.hosts << "www.yourplantcare.com"
+    config.hosts << "0.0.0.0"
     # Lograge config
     # config.lograge.enabled        = true
     # config.lograge.formatter      = Lograge::Formatters::Logstash.new

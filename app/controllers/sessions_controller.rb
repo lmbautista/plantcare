@@ -17,7 +17,9 @@ class SessionsController < ApplicationController
   def destroy
     flash[:notice] = I18n.t("sessions.destroy.see_you")
 
-    env["warden"].logout && redirect_to(root_path) && return
+    request.env["warden"].logout
+    Rails.logger.debug ">>>>> destroy session"
+    redirect_to(root_path) && return
   end
 
   def not_found # rubocop:disable Naming/PredicateName
