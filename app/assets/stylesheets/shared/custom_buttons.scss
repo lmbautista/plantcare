@@ -27,6 +27,13 @@
   @include hover-effect(darken($general-color,10%));
 }
 
+.custom-btn-tertiary {
+  background-color: transparent;
+  color: darken($third-color, 10%);
+  border: 2px solid $third-color;
+  @include hover-effect(darken($third-color,10%));
+}
+
 .custom-btn-danger {
   background-color: $cancel-color;
   border-color: $cancel-color;

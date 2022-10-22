@@ -149,7 +149,7 @@ es:
       title: Inicia sesión
       subtitle:  bienvenido, accede con tu usuario y password
       create_account: |
-        ¿No tienes una cuenta?  <strong><a class="opposite-color" id="signup_link" data-toggle="modal"
+        ¿No tienes una cuenta?  <strong><a class="third-color" id="signup_link" data-toggle="modal"
         data-target="#signup_modal" href="#"> Únete </a></strong>
       not_found: Email y/o password incorrecto, inténtalo de nuevo
     destroy:

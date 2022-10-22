@@ -151,7 +151,7 @@ en:
       title: Sign in
       subtitle:  Welcome, join us with your user and password
       create_account: |
-        Not registered yet?  <strong><a class="opposite-color" id="signup_link" data-toggle="modal"
+        Not registered yet?  <strong><a class="third-color" id="signup_link" data-toggle="modal"
         data-target="#signup_modal" href="#"> Join us </a></strong>
       not_found: Email/password wrong, try it again
     destroy:

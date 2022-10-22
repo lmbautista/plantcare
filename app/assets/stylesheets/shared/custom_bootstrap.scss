@@ -35,12 +35,14 @@ body {
     border-color: transparent;
   }
   .navbar-collapse { border-color: transparent; }
+  .navbar-nav > li >a { padding-top: 20px; }
   .navbar {
     margin-bottom: 0;
     .navbar-brand {
       float: none;
       text-align: center;
       height: auto;
+      padding: 7px 15px 12px;
     }
     .navbar-toggle {
       position: absolute;
@@ -65,8 +67,9 @@ body {
   }
 
   .navbar-default {
-    background: $general-opposite-color;
+    background: $opposite-color;
     border: none;
+    box-shadow: 0 2px 4px 0 $general-color;
   }
 
   .plantcare-fields {
