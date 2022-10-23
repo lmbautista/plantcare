@@ -6,7 +6,7 @@
           = image_tag "logo.png", height: 40
 
     .col-sm-6.col-md-5.hidden-xs.text-right
-      .btn-group.actions.mt-2
+      .btn-group.actions.mt-2.third-color
         = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
 
 .intro.content.vline-middle
@@ -16,7 +16,7 @@
         = render partial: 'shared/title', locals: { title: I18n.t('sessions.new.title'), subtitle: I18n.t('sessions.new.subtitle') }
         = render partial: 'sessions/signin'
         .row
-          .visible-xs.col-xs-12.text-center
+          .visible-xs.col-xs-12.text-center.primary-color
             = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
 
 

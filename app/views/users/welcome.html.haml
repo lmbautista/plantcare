@@ -1,10 +1,10 @@
 - content_for :header do
-  .row
+  .row.hidden-xs
     .col-xs-12.col-sm-4.col-md-4.col-md-offset-2.text-center
-    .col-sm-6.col-md-5.hidden-xs.text-right
+    .col-sm-6.col-md-5.text-right
       .btn-group.actions
-        = link_to t('sessions.new.title'), signin_path, class: "third-color p-2 weight-3"
-        = link_to t('users.new.title'), signup_path, class: "third-color p-2 weight-3"
+        = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
+        = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary"
 
 .intro.content.vline-middle
   %h1.biggest.plantcare-icon.m-0.pb-3.text-center

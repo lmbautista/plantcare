@@ -8,7 +8,6 @@ body {
   &.users {
     &.welcome, &.new, &.create, &.confirmation {
       @include section-styles("primary");
-      header { color: $opposite-color; }
 
       .plantcare-welcome-icons {
         .explaining {
@@ -21,5 +20,18 @@ body {
         }
       }
     }
+        &.welcome {
+          .navbar-default {
+            background-color: $general-color;
+          }
+        }
+
+        &.new,
+        &.create,
+        &.confirmation {
+          header {
+            background-color: $opposite-color;
+          }
+        }
   }
 }

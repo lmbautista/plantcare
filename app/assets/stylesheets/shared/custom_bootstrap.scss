@@ -49,9 +49,10 @@ body {
       margin: 10px;
       border: none;
       border-radius: 2px;
+      background-color: $general-color;
 
       &:hover, &:focus  {
-        background-color: $general-color;
+        background-color: darken($general-color, 10%);
       }
 
       .icon-bar {
@@ -69,7 +70,6 @@ body {
   .navbar-default {
     background: $opposite-color;
     border: none;
-    box-shadow: 0 2px 4px 0 $general-color;
   }
 
   .plantcare-fields {

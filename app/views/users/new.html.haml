@@ -6,7 +6,7 @@
           = image_tag "logo.png", height: 40
 
     .col-sm-6.col-md-5.hidden-xs.text-right
-      .btn-group.actions.mt-2
+      .btn-group.actions.mt-2.third-color
         = raw I18n.t('users.new.have_account', signin_link: signin_path)
 
 
@@ -17,7 +17,7 @@
         = render partial: 'shared/title', locals: { title: I18n.t('users.new.title'), subtitle: I18n.t('users.new.subtitle') }
         = render partial: 'users/signup'
         .row
-          .visible-xs.col-xs-12.text-center
+          .visible-xs.col-xs-12.text-center.primary-color
             = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
 
   = modal_for('signin_modal', I18n.t("sessions.new.subtitle").humanize, { footer: false }) do

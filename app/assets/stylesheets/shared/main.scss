@@ -42,6 +42,13 @@ html {
       text-decoration: none;
       &:hover, &:focus { text-decoration: none; }
     }
+    header a, a.third-color {
+      text-decoration: none;
+      &:hover, &:focus {
+        color: darken($third-color, 10%);
+        text-decoration: none;
+      }
+    }
     span.inline {
       display: table-cell;
       vertical-align: middle;
