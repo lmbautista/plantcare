@@ -2,7 +2,7 @@
 
 ![Plantcare][logo-plantcare]
 
-**LETS GROW UP TOGETHER**. Helping to maintain and to improve your cute green place taking care of your plants remotely.
+💚 🪴 &nbsp; We help you to maintain and to improve your cute green place taking care of your plants remotely 💧 💚
 
 ## Getting started
 
@@ -45,4 +45,4 @@ bundle exec rake db:setup
 # Currently private
 ```
 
-[logo-plantcare]: https://user-images.githubusercontent.com/6224703/100526618-de707980-31ca-11eb-9d4a-41606bb73709.png "Plantcare"
+[logo-plantcare]: https://user-images.githubusercontent.com/6224703/164746432-e9455e68-b65e-4eeb-87df-27627ca8cdf7.png "Plantcare"
