@@ -53,6 +53,10 @@ es:
         lang: Idioma
         api_token: Token de autenticación
 
+  form:
+    boolean_collection:
+      true_text: "Si"
+      false_text: "No"
   plantcares:
     new:
       title: Nuevo plantcare
@@ -81,6 +85,47 @@ es:
       sucessfully: Has actualizado tu plantcare correctamente
     destroy:
       sucessfully: Has borrado tu plantcare correctamente
+    show:
+      plantcare:
+        configuration:
+          wet_sensor:
+            title: "Sensor de humedad"
+            description: |
+              Indica el sensor de humedad que has conectado a tu Plantcare para comunicar los valores
+              desde tu placa
+          water_pump:
+            title: "Bomba de agua"
+            description: |
+              Indica la bomba de agua que has conectado a tu Plantcare para regar remotamente
+              cuando lo necesites
+          watering_interval:
+            title: "Intervalo de riego"
+            description: |
+              Limita el tiempo de riego en intervalos de milisegundos
+          watering_interval_delay:
+            title: "Demora entre intervalos de riego"
+            description: |
+              Define el tiempo de demora en milisegundos entre intervalos de riego
+          sleep_time:
+            title: "Tiempo de hibernación"
+            description: |
+              Tiempo en milisegundos donde la placa Plantcare estará en hibernación entre cada ciclo
+              de trabajo, donde obtendrá los estados de humedad y aplicará riegos si procede
+          auto_calculation:
+            title: "Autocálculo de umbrales de humedad"
+            description: |
+              Permite autocalcular el umbral de humedad de tierra de tu Plantcare (valor de
+              tierra húmeda y seca). <b>Es altamente recomendado mantener esta opción habilitada</b>
+          max_dried_value:
+            title: "Valor de tierra seca"
+            description: |
+              Máximo valor de sequedad de tierra para determinar el umbral de humedad de tierra (se
+              recomienda configurar como autocalculado)
+          max_wet_value:
+            title: "Valor de tierra húmeda"
+            description: |
+              Máximo valor de humedad de tierra para determinar el umbral de humedad de tierra (se
+              recomienda configurar como autocalculado)
     wtever_api:
       attributes:
         name: Nombre
@@ -91,18 +136,22 @@ es:
         wet_sensor_field: Detector de humedad
         water_pump_field: Bomba de agua
         water_pump_status: Estado
+        max_dried_value: Valor de tierra seca
+        max_wet_value: "Valor de tierra húmeda"
+        calculated_max_dried_value: Valor calculado de tierra seca
+        calculated_max_wet_value: "Valor calculado de tierra húmeda"
+        watering_interval: Intervalo de riego (msec)
+        watering_interval_delay: Demora en intervalo de riego (msec)
+        auto_calculation: Auto cálculo de umbrales de humedad
+        sleep_time: "Tiempo de hibernación de placa (msec)"
     status:
       healthy: Sana
       sick: Malita
       lifeless: Pocha
-    hardware:
-      wet_sensor_text: |
-        Indica el sensor de humedad que has conectado a tu Plantcare.
-        De esta manera tu Plantcare podrá comunicar el nivel de humedad.
-      water_pump_text: |
-        Indica la bomba de agua que has conectado a tu Plantcare.
-        De esta manera tu Plantcare podrá ser regada remotamente bajo demanda.
-
+    form:
+      configuration_title: Configuración
+      configuration_text: |
+        Aquí mostramos los parametros de configuración de tu Plantcare
   waterings:
     new:
       title: Riego

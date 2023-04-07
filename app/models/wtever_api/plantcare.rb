@@ -30,9 +30,22 @@ module WteverApi
                :water_pump_field,
                :water_pump_id
 
+
+    has_one :configuration
     has_one :water_pump
     has_one :watering_schedule
     has_many :waterings
+
+    delegate :max_dried_value,
+             :max_wet_value,
+             :calculated_max_dried_value,
+             :calculated_max_wet_value,
+             :watering_interval,
+             :watering_interval_delay,
+             :sleep_time,
+             :auto_calculation,
+             to: :configuration,
+             allow_nil: true
 
     def wet
       super || 0.0

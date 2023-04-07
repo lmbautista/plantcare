@@ -53,6 +53,11 @@ en:
         lang: Lang
         api_token: Authentication token
 
+  form:
+    boolean_collection:
+      true_text: "Yes"
+      false_text: "No"
+
   plantcares:
     new:
       title: New plantcare
@@ -81,6 +86,48 @@ en:
       sucessfully: You have updated your plantcare successfully
     destroy:
       sucessfully: You have deleted your plantcare successfully
+    show:
+      plantcare:
+        configuration:
+          wet_sensor:
+            title: "Wet sensor"
+            description: |
+              Set the wet sensor connected to your Plantcare to communicate the values
+              from your board
+          water_pump:
+            title: "Water pump"
+            description: |
+              Set the water pump that you have connected to your Plantcare to water
+              remotely when needed
+          watering_interval:
+            title: "Watering interval"
+            description: |
+              It limits the watering time in a millisecond interval
+          watering_interval_delay:
+            title: "Watering interval delay"
+            description: |
+              It defines the delay in milliseconds between the watering intervals
+          sleep_time:
+            title: "Sleeping time"
+            description: |
+              The time the board will be sleeping between each cycle of work where it will
+              take the wet statuses and applies watering if needed
+          auto_calculation:
+            title: "Threshold auto calculation"
+            description: |
+              It allows to autocalculate the wet threshold of your Plantcare (max dried
+              and wet soil values). <b>It's highly recommented to keep it enabled</b>
+          max_dried_value:
+            title: "Dried soil value"
+            description: |
+              Max dried value of given wet status threshold (it's recommended to set it
+              as autocalculated)
+          max_wet_value:
+            title: "Wet soil value"
+            description: |
+              Max wet value of given wet status threshold (it's recommended to set it
+              as autocalculated)
+
     wtever_api:
       attributes:
         name: Name
@@ -88,20 +135,25 @@ en:
         planted_at: Planted on
         watered_at: Watered on
         status: Status
-        wet_sensor_field: Humidity field
+        wet_sensor_field: Wet sensor field
         water_pump_field: Water pump field
         water_pump_status: Water pump status
+        max_dried_value: Dried soil value
+        max_wet_value: Wet soil value
+        calculated_max_dried_value: Calculated dried soil value
+        calculated_max_wet_value: Calculated wet soil value
+        watering_interval: Watering interval (msec)
+        watering_interval_delay: Watering interval delay (msec)
+        auto_calculation: Threshold auto calculation
+        sleep_time: Board sleeping time (msec)
     status:
       healthy: Healthy
       sick: Sick
       lifeless: Lifeless
-    hardware:
-      wet_sensor_text: |
-        Set the humidity sensor that you have connected to your Plantcare.
-        Doing that your Plantcare will be able to communicate the humidity
-      water_pump_text: |
-        Set the water pump that you have connected to your Plantcare.
-        Doing that your Plantcare will be able to be watered remotely on demand.
+    form:
+      configuration_title: Configuration
+      configuration_text: |
+        Here we display the configuration parameters for your Plantcare
 
   waterings:
     new:

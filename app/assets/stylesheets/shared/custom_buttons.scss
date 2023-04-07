@@ -12,6 +12,12 @@
   &.btn-sm { padding: 5px 7px; }
 }
 
+.custom-btn-transparent {
+  color: $font-color;
+  border: none;
+  background-color: transparent;
+}
+
 .custom-btn-basic {
   background-color: darken($general-color,10%);
   @include hover-effect(darken($general-color,20%));
@@ -21,6 +27,7 @@
   background-color: $general-color;
   @include hover-effect($general-color);
 }
+
 
 .custom-btn-secondary {
   background-color: transparent;

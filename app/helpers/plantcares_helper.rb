@@ -23,6 +23,13 @@ module PlantcaresHelper
     number_to_percentage(plantcare.wet, strip_insignificant_zeros: true)
   end
 
+  def boolean_collection
+    [
+      [I18n.t("form.boolean_collection.true_text"), true],
+      [I18n.t("form.boolean_collection.false_text"), false]
+    ]
+  end
+
   def wet_sensors_collection
     WteverApi::Plantcare::WET_SENSOR_ARDUINO_FIELDS.to_a
   end
