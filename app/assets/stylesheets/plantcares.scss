@@ -4,18 +4,8 @@
 body {
   &.plantcares {
     &.index {
-      background-color: $general-color;
-      #content {
-        section.intro, #instructions {
-          h1, h2, h3, h4, h5, h6 { color: $font-color; position: relative; }
-        }
-
-        section {
-          background-color: $general-color;
-          color: $font-color;
-        }
-        .instruction { height: 178px; }
-      }
+      background-color: transparent;
+      .the-garden, .the-instructions { min-height: 100vh; }
     }
     .plantcare-cards {
       display: flex;
@@ -79,6 +69,7 @@ body {
         }
       }
     }
+
     .plantcare {
       background-position: center;
       background-repeat: no-repeat;
@@ -135,12 +126,6 @@ body {
       }
     }
 
-    .goto-instructions, .new-plantcare {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-    }
     .plantcare-details {
       display: flex;
       flex-direction: row;

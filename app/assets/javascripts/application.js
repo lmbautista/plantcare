@@ -56,12 +56,27 @@ function linkControl() {
     $('.loading-overlay').removeClass('hidden');
   });
 
-  $('a:not([href^="#"]), button:not([data-dismiss], [data-toggle]), input[type="submit"]').click(function (e) {
+  $('a:not([href^="#"]), button:not([data-dismiss], [data-toggle]), input[type="submit"]').not('.ref').click(function (e) {
     if (!e.shiftKey) { $('.loading-overlay').removeClass('hidden'); }
   });
+
+  $('a.ref').click(function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    let currentId = $(this).attr("href");
+    document.querySelector(currentId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
 }
 
 function bindTooltips(){ $('[data-toggle="tooltip"]').tooltip(); }
+function smoothScrollTo (id) {
+  document.querySelector(id).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
 
 $(document).ready(function () {
   bindTooltips();

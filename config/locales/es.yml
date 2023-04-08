@@ -25,7 +25,9 @@ es:
     welcome:
       title: Crezcamos juntos
       subtitle: te ayudamos a mantener y mejorar tu pequeño rincón verde
-      explain-ico1: Controla tus plantas y gestiona sus riegos remótamente
+      explanation:  |
+        Te ayudamos a mantener y mejorar tu pequeño rincón verde gracias a nuestro sistema de
+        cuidado y riego para plantas remoto
     new:
       title: Unete al equipo
       subtitle: crea tu cuenta y mejora el cuidado de tus plantas
@@ -64,35 +66,38 @@ es:
     index:
       title: Tus Plantcares
       subtitle: Revisa y gestiona el estado de tus plantas
-      how-it-works: ¿Como funciona?
-      instructions-step-1:
-        title: Solicita tu prototipo
-        description: |
-          Ahora que tienes una cuenta, el primer paso es contactar con el autor (%{link})
-          para solicitar tu prototipo. Una vez lo recibas, podrás pasar al siguiente paso
-      instructions-step-2:
-        title: Registra tu plantcare
-        description: |
-          El prototipo proporciona detalles sobre los IDs del sensor de humedad y bomba de agua.
-          Dichos IDs serán necesarios para registrar %{link} tu plantcare
-      instructions-step-3:
-        title: Coloca los dispositivos físicos
-        description: |
-          Estas son las instrucciones:
-          <ul class="pl-4">
-          <li>
-            El prototipo: se carga a través del sol, <b><i>que recomendamos colocar en el exterior</i></b>.
-            También puedes conectarlo a la red eléctrica a través de alimentador con USB micro
-          </li>
-          <li>El sensor de humedad: colócalo cerca del tronco y de la zona de riego</li>
-          <li>La bomba de agua: colócala tu tanque de agua</li>
-          </ul>
-      instructions-step-4:
-        title: Plantcare lista
-        description: |
-          Una vez coloques todos los elementos, empezarás a recibir información actualizada de manera
-          puntual sobre el estado de tu plantcare (asegúrate que tu placa está sincronizada correctamente
-          comprobando las últimas conexiones en los detalles de tu plantcare)
+      how-it-works: Cómo funciona?
+      instructions:
+        title: Configura tu plantcare
+        subtitle: Aquí podrás encontrar detalles para configurar paso a paso tu Plantcare
+        step-1:
+          title: Solicita tu prototipo
+          description: |
+            Ahora que tienes una cuenta, el primer paso es contactar con el autor (%{link})
+            para solicitar tu prototipo. Una vez lo recibas, podrás pasar al siguiente paso
+        step-2:
+          title: Registra tu plantcare
+          description: |
+            El prototipo proporciona detalles sobre los IDs del sensor de humedad y bomba de agua.
+            Dichos IDs serán necesarios para registrar %{link} tu plantcare
+        step-3:
+          title: Coloca los dispositivos físicos
+          description: |
+            Estas son las instrucciones:
+            <ul class="pl-4">
+            <li>
+              El prototipo: se carga a través del sol, <b><i>que recomendamos colocar en el exterior</i></b>.
+              También puedes conectarlo a la red eléctrica a través de alimentador con USB micro
+            </li>
+            <li>El sensor de humedad: colócalo cerca del tronco y de la zona de riego</li>
+            <li>La bomba de agua: colócala tu tanque de agua</li>
+            </ul>
+        step-4:
+          title: Plantcare lista
+          description: |
+            Una vez coloques todos los elementos, empezarás a recibir información actualizada de manera
+            puntual sobre el estado de tu plantcare (asegúrate que tu placa está sincronizada correctamente
+            comprobando las últimas conexiones en los detalles de tu plantcare)
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el

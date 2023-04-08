@@ -5,13 +5,7 @@
 
       &.users {
         &.welcome {
-          #content {
-            .plantcare-welcome-icons {
-              .explaining {
-                .explain-ico { height: 250px; }
-              }
-            }
-          }
+          header { display: none; }
         }
       }
 

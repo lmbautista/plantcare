@@ -6,6 +6,7 @@ body {
   &.sessions {
     &.new, &.create {
       @include section-styles("primary");
+      .form { min-height: 90vh; width: 100%; }
     }
 
     header {

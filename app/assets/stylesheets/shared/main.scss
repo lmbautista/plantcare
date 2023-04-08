@@ -10,8 +10,8 @@
 html, body {
   height: 100%;
 }
-
 html {
+  scroll-behavior: smooth;
   overflow: hidden;
 
   body {
@@ -21,6 +21,7 @@ html {
     font-size: 14px;
 
     h1,h2,h3,h4,h5,h6 { font-weight: 300  }
+    h1,h2,h3 { font-family: $header-font; }
     header.logged { box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2); }
     header {
       width: 100%;
@@ -56,16 +57,6 @@ html {
       border-collapse: separate;
     }
 
-    #content {
-      min-height: 77vh;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-
-      .tab-content { background-color: $opposite-color; }
-      .content { width: 100%; }
-    }
     #growls.default {
       top: 0;
 

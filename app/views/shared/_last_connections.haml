@@ -2,7 +2,7 @@
   - capture_haml do
     .last-connections-panel
       .last-connections-left-panel.vline-middle.text-center
-        .mr-2.ml-2.opposite-color
+        .mr-2.ml-2.font-color
           = fa_icon "bigger-3 far fa-microchip vline-middle weight-2"
           %h5.weight-2= I18n.t("menu.status_details")
 
@@ -11,7 +11,7 @@
           = I18n.t("menu.no_board_connections")
         - current_user.board_connections.each do |board_connection_at|
           .pb-2
-            = fa_icon 'far fa-clock opposite-color pr-1 bigger-1 vline-middle'
-            %h4.m-0.vline-middle.inline-block.opposite-color.weight-1
+            = fa_icon 'far fa-clock font-color pr-1 bigger-1 vline-middle'
+            %h4.m-0.vline-middle.inline-block.font-color.weight-2
               = board_connection_at
 

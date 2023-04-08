@@ -6,13 +6,13 @@
 
 body {
   &.users {
-    &.welcome, &.new, &.create, &.confirmation {
+    &.welcome, &.new, &.create, &.confirmation, &.edit {
       @include section-styles("primary");
-
+      .form { min-height: 90vh; width: 100%; }
+    }
+    &.welcome, &.new, &.create, &.confirmation {
       .plantcare-welcome-icons {
         .explaining {
-          color: $opposite-color;
-
           .explain-ico {
             height: 275px;
             margin: 0 auto;
@@ -20,18 +20,15 @@ body {
         }
       }
     }
-        &.welcome {
-          .navbar-default {
-            background-color: $general-color;
-          }
-        }
+    &.welcome {
+      .intro { min-height: 90vh; }
+      .navbar-default { background-color: $opposite-color; }
+    }
 
-        &.new,
-        &.create,
-        &.confirmation {
-          header {
-            background-color: $opposite-color;
-          }
-        }
+    &.new,
+    &.create,
+    &.confirmation {
+      header { background-color: $opposite-color; }
+    }
   }
 }

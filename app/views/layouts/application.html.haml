@@ -15,8 +15,7 @@
       = render 'shared/header'
     = render partial: "shared/last_connections" if logged?
 
-    #content
-      = yield
+    = yield
 
     = render 'shared/spinner'
 

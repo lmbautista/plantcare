@@ -1,23 +1,23 @@
 .flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-one.png", width: 120, class: "pr-4"
+  = image_tag "instructions/step-one.png", width: 140, class: "pr-4"
   .flex.flex-direction-column
-    %h3.weight-2= I18n.t("plantcares.index.instructions-step-1.title")
-    %h5= I18n.t("plantcares.index.instructions-step-1.description", link: mail_to("lmiguelbautista@gmail.com", "@lmbautista", class: "general-color")).html_safe
+    %h3.weight-3= I18n.t("plantcares.index.instructions.step-1.title")
+    %h5.weight-2= I18n.t("plantcares.index.instructions.step-1.description", link: mail_to("lmiguelbautista@gmail.com", "@lmbautista", class: "general-color")).html_safe
 
 .flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-two.png", width: 120, class: "pr-4"
+  = image_tag "instructions/step-two.png", width: 140, class: "pr-4"
   .flex.flex-direction-column
-    %h3.weight-2= I18n.t("plantcares.index.instructions-step-2.title")
-    %h5= I18n.t("plantcares.index.instructions-step-2.description", link: link_to(I18n.t("plantcares.new.here"), new_plantcare_path, class: "general-color")).html_safe
+    %h3.weight-3= I18n.t("plantcares.index.instructions.step-2.title")
+    %h5.weight-2= I18n.t("plantcares.index.instructions.step-2.description", link: link_to(I18n.t("plantcares.new.here"), new_plantcare_path, class: "general-color")).html_safe
 
 .flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-three.png", width: 120, class: "pr-4"
+  = image_tag "instructions/step-three.png", width: 140, class: "pr-4"
   .flex.flex-direction-column
-    %h3.weight-2= I18n.t("plantcares.index.instructions-step-3.title")
-    %h5= I18n.t("plantcares.index.instructions-step-3.description").html_safe
+    %h3.weight-3= I18n.t("plantcares.index.instructions.step-3.title")
+    %h5.weight-2= I18n.t("plantcares.index.instructions.step-3.description").html_safe
 
 .flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-four.png", width: 120, class: "pr-4"
+  = image_tag "instructions/step-four.png", width: 140, class: "pr-4"
   .flex.flex-direction-column
-    %h3.weight-2= I18n.t("plantcares.index.instructions-step-4.title")
-    %h5= I18n.t("plantcares.index.instructions-step-4.description")
+    %h3.weight-3= I18n.t("plantcares.index.instructions.step-4.title")
+    %h5.weight-2= I18n.t("plantcares.index.instructions.step-4.description")

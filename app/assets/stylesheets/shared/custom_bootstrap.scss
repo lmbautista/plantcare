@@ -106,16 +106,16 @@ body {
     select:-webkit-autofill,
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus {
-      color: #fff;
+      color: $font-color;
       border-radius: 0;
       border: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid $font-color;
       background: transparent;
       box-shadow: none;
       padding: 6px 3px;
       height: 30px;
     }
-    ::placeholder { color: #ccc; }
+    ::placeholder { color: $third-color; }
   }
 
   .modal-dialog {

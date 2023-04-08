@@ -1,20 +1,13 @@
 - if @plantcares.present?
-  .vline-middle
+  .vline-middle.the-garden.flex.flex-direction-column.flex-justify-center.align-center.bg-one-color
     = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.title"), subtitle: I18n.t("plantcares.index.subtitle") }
 
     .text-center.mt-3.mb-3.new-plantcare
       = link_to I18n.t("plantcares.new.title"), new_plantcare_path, class: "custom-btn custom-btn-secondary"
-
-    = link_to "#instructions", class: "goto-instructions opposite-color", data: { target: "#instructions", toggle: "modal" } do
-      = fa_icon "bigger-1 far fa-question-circle vline-middle pr-2"
-      %h5.weight-2.text-uppercase.m-0= I18n.t("plantcares.index.how-it-works")
+      = link_to I18n.t("plantcares.index.how-it-works"), '#instructions', class: "ref custom-btn custom-btn-secondary"
 
     .plantcare-cards.pt-3.pb-4
       = render partial: "card", collection: @plantcares, as: :plantcare
-
-  = modal_for("instructions", I18n.t("plantcares.index.how-it-works"), { footer: false, close_button: true }) do
-    - capture_haml do
-      = render partial: "instructions"
 
   #new_watering_modal
   #edit_watering_modal
@@ -23,18 +16,22 @@
   #edit_watering_schedule_modal
 
 - else
-  .intro.p-1.content.vline-middle.opposite-color
+  .intro.p-1.content.vline-middle.bg-one-color
     = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.title"), subtitle: I18n.t("plantcares.index.subtitle") }
 
     .mt-4
       .row
         .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-          .mt-4.mb-4
-            = render partial: "instructions"
-
           .text-center.pt-3
             = link_to I18n.t("plantcares.new.title"), new_plantcare_path, class: "custom-btn custom-btn-secondary"
+            = link_to I18n.t("plantcares.index.how-it-works"), '#instructions', class: "ref custom-btn custom-btn-secondary"
 
+.vline-middle.the-instructions.flex.flex-direction-column.flex-justify-center.align-center.pb-4.bg-two-color{id:"instructions"}
+  = render partial: "shared/title", locals: { title: I18n.t("plantcares.index.instructions.title"), subtitle: I18n.t("plantcares.index.instructions.subtitle") }
+  %section.mt-4.pt-3.pl-1.pr-1
+    .row
+      .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+        = render partial: "instructions"
 
 :javascript
   $(document).ready(function(){

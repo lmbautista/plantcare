@@ -10,13 +10,13 @@
         = raw I18n.t('users.new.have_account', signin_link: signin_path)
 
 
-.intro.content.vline-middle
-  .row
+.form.content.vline-middle.flex.flex-direction-column.flex-justify-center.align-center.pb-4
+  .row.full-width
     .col-xs-12.col-sm-8.col-sm-offset-2.col-md-4.col-md-offset-4
       .p-2
         = render partial: 'shared/title', locals: { title: I18n.t('users.new.title'), subtitle: I18n.t('users.new.subtitle') }
         = render partial: 'users/signup'
-        .row
+        .row.full-width
           .visible-xs.col-xs-12.text-center.primary-color
             = raw I18n.t('sessions.new.create_account', signup_link: signup_path)
 

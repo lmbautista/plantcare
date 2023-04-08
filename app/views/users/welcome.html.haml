@@ -6,24 +6,24 @@
         = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
         = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary"
 
-.intro.content.vline-middle
+.intro.flex.flex-direction-column.flex-justify-center.align-center
   %h1.biggest.plantcare-icon.m-0.pb-3.text-center
     = link_to root_path do
-      = image_tag "logo-inverse.png", height: 80
+      = image_tag "logo.png", height: 80
 
   .pt-3.pb-3.pl-1-pr-1
     = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
 
   .pt-2.pb-2.plantcare-welcome-icons
-    .row
+    .row.full-width
       .col-xs-8.col-xs-offset-2.col-sm-8.text-center
         .explaining
           = image_tag ("icons/plant-#{rand(1..3)}"), class: "explain-ico img-responsive"
 
           %h4.m-0.weight-2
-            = I18n.t('users.welcome.explain-ico1')
+            = I18n.t('users.welcome.explanation')
 
-  .row
+  .row.full-width
     .visible-xs.col-xs-12.text-center
       .row
         .col-xs-6
