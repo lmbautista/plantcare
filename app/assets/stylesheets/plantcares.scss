@@ -7,13 +7,14 @@ body {
       background-color: $general-color;
       #content {
         section.intro, #instructions {
-          h1, h2, h3, h4, h5, h6 { color: $opposite-color; position: relative; }
+          h1, h2, h3, h4, h5, h6 { color: $font-color; position: relative; }
         }
 
-        section{
+        section {
           background-color: $general-color;
           color: $font-color;
         }
+        .instruction { height: 178px; }
       }
     }
     .plantcare-cards {

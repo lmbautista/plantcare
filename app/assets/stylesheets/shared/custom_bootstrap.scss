@@ -122,13 +122,13 @@ body {
     .modal-header {
       border-bottom: none;
       h1,h2,h3,h4,h5 {
-        color: $opposite-color !important;
+        color: $font-color !important;
         font-weight: 400 !important;
       }
     }
     .modal-content {
       border-radius: 0;
-      background-color: $general-color
+      background-color: #DADFDF;
     }
   }
 

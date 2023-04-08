@@ -1,20 +1,23 @@
-.row
-  .col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3.text-center
-    = fa_icon "bigger-3 p-2 opposite-color fal fa-hand-holding-seedling"
-    %h5.opposite-color.weight-2
-      = I18n.t("plantcares.index.howto-1")
+.flex.align-center.pt-2.pb-2
+  = image_tag "instructions/step-one.png", width: 120, class: "pr-4"
+  .flex.flex-direction-column
+    %h3.weight-2= I18n.t("plantcares.index.instructions-step-1.title")
+    %h5= I18n.t("plantcares.index.instructions-step-1.description", link: mail_to("lmiguelbautista@gmail.com", "@lmbautista", class: "general-color")).html_safe
 
-  .col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3.text-center
-    = fa_icon "bigger-3 p-2 opposite-color fal fa-microchip"
-    %h5.opposite-color.weight-2
-      = I18n.t("plantcares.index.howto-2")
+.flex.align-center.pt-2.pb-2
+  = image_tag "instructions/step-two.png", width: 120, class: "pr-4"
+  .flex.flex-direction-column
+    %h3.weight-2= I18n.t("plantcares.index.instructions-step-2.title")
+    %h5= I18n.t("plantcares.index.instructions-step-2.description", link: link_to(I18n.t("plantcares.new.here"), new_plantcare_path, class: "general-color")).html_safe
 
-  .col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3.text-center
-    = fa_icon "bigger-3 p-2 opposite-color fal fa-dewpoint"
-    %h5.opposite-color.weight-2
-      = I18n.t("plantcares.index.howto-3")
+.flex.align-center.pt-2.pb-2
+  = image_tag "instructions/step-three.png", width: 120, class: "pr-4"
+  .flex.flex-direction-column
+    %h3.weight-2= I18n.t("plantcares.index.instructions-step-3.title")
+    %h5= I18n.t("plantcares.index.instructions-step-3.description").html_safe
 
-  .col-xs-8.col-xs-offset-2.col-sm-offset-0.col-sm-6.col-md-3.text-center
-    = fa_icon "bigger-3 p-2 opposite-color fal fa-leaf-heart"
-    %h5.opposite-color.weight-2
-      = I18n.t("plantcares.index.howto-4")
+.flex.align-center.pt-2.pb-2
+  = image_tag "instructions/step-four.png", width: 120, class: "pr-4"
+  .flex.flex-direction-column
+    %h3.weight-2= I18n.t("plantcares.index.instructions-step-4.title")
+    %h5= I18n.t("plantcares.index.instructions-step-4.description")

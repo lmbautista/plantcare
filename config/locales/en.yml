@@ -61,17 +61,38 @@ en:
   plantcares:
     new:
       title: New plantcare
+      here: here
     index:
       title: Your Plantcares
       subtitle: Check and manage the status of your plants
       how-it-works: How it works?
-      howto-1: |
-        Register your plantcare
-      howto-2: |
-        Insert the humidity sensor near the base of the trunk and configure its number in your plantcare
-      howto-3: |
-        Insert the water pump in your tank and select its number in your plantcare
-      howto-4: Now you can control and water your plantcare remotely
+      instructions-step-1:
+        title: Request your prototype
+        description: |
+          Now you got an existing account, the first step is to contact the Author (%{link})
+          to get your prototype. Once you got it you could jump into the next step
+      instructions-step-2:
+        title: Register a new plantcare
+        description: |
+          The prototype will have a sticker with the IDs of the wet sensor and the water pump.
+          Those IDs will be needed to register %{link} your Plantcare.
+      instructions-step-3:
+        title: Place the physical devices
+        description: |
+          Here are the resources to place:
+          <ul class="pl-4">
+          <li>
+            The prototype: as it's charged by the sun, <b><i>we recommended placing it outside</i></b>.
+            If not, you can also plug it into any common electric outlet via USB micro
+          </li>
+          <li>The wet sensor: place it near to the trunk and the watered zones</li>
+          <li>The water pump: place it in a water tank</li>
+          </ul>
+      instructions-step-4:
+        title: Plantcare ready
+        description: |
+          Once you placed all the devices, you'll start receiving fresh information from your plantcare's status
+          (ensure the board is synced with your account with the wifi icon of the plantcare's card).
       plantcare:
         wet: Humidity
         planted_at: Planted on

@@ -60,17 +60,39 @@ es:
   plantcares:
     new:
       title: Nuevo plantcare
+      here: aquí
     index:
       title: Tus Plantcares
       subtitle: Revisa y gestiona el estado de tus plantas
       how-it-works: ¿Como funciona?
-      howto-1: |
-        Registra tu plantcare
-      howto-2: |
-        Inserta el sensor de humedad cerca de la base del tronco y configura su número en tu plantcare
-      howto-3: |
-        Introduce la bomba de agua en tu depósito y selecciona su número en tu plantcare
-      howto-4: Controla y riega remótamente tu plantcare
+      instructions-step-1:
+        title: Solicita tu prototipo
+        description: |
+          Ahora que tienes una cuenta, el primer paso es contactar con el autor (%{link})
+          para solicitar tu prototipo. Una vez lo recibas, podrás pasar al siguiente paso
+      instructions-step-2:
+        title: Registra tu plantcare
+        description: |
+          El prototipo proporciona detalles sobre los IDs del sensor de humedad y bomba de agua.
+          Dichos IDs serán necesarios para registrar %{link} tu plantcare
+      instructions-step-3:
+        title: Coloca los dispositivos físicos
+        description: |
+          Estas son las instrucciones:
+          <ul class="pl-4">
+          <li>
+            El prototipo: se carga a través del sol, <b><i>que recomendamos colocar en el exterior</i></b>.
+            También puedes conectarlo a la red eléctrica a través de alimentador con USB micro
+          </li>
+          <li>El sensor de humedad: colócalo cerca del tronco y de la zona de riego</li>
+          <li>La bomba de agua: colócala tu tanque de agua</li>
+          </ul>
+      instructions-step-4:
+        title: Plantcare lista
+        description: |
+          Una vez coloques todos los elementos, empezarás a recibir información actualizada de manera
+          puntual sobre el estado de tu plantcare (asegúrate que tu placa está sincronizada correctamente
+          comprobando las últimas conexiones en los detalles de tu plantcare)
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el
