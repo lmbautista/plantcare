@@ -18,11 +18,10 @@ module Her
       return if files.blank?
 
       files = Array(files).map { |file| generate_faraday_upload_io(file) }
-
       # Super can't be called with Stack Level Too Deep errors
-      send(:"#{attribute}_will_change!") if @attributes[attribute] != files
+      send(:"#{attribute}_will_change!") if attributes[attribute] != files
 
-      @attributes[attribute] = files.size > 1 ? files : files.first
+      attributes[attribute] = files.size > 1 ? files : files.first
     end
 
     def generate_faraday_upload_io(file)
