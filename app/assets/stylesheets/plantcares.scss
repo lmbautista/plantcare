@@ -111,18 +111,15 @@ body {
     }
 
     .watering-schedule-panel, .watering-panel {
-      display: flex;
-      justify-content: center;
-
       .watering-schedule-left-panel, .watering-left-panel {
         display: inline-flex;
         align-items: center;
-        width: 22rem;
       }
       .watering-schedule-right-panel, .watering-right-panel {
         display: inline-flex;
         flex-direction: column;
-        width: 30rem;
+        width: 100%;
+        margin: 5px;
       }
     }
 

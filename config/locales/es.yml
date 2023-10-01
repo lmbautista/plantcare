@@ -184,8 +184,11 @@ es:
         Aquí mostramos los parametros de configuración de tu Plantcare
   waterings:
     new:
-      title: Riego
-      explaining: Te permite programar un riego de manera puntual para tu plantcare
+      title: Regar
+      explaining: |
+        Te permite regar de manera puntual tu plantcare.
+        INFO: Ten en cuenta que puede existir una demora desde la creación de la petición de riego y
+        su aplicación, ya que dependará del ciclo de sueño de tu plantcare
     create:
       sucessfully: Riego programado correctamente
     edit:

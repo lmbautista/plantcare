@@ -185,8 +185,11 @@ en:
         Here we display the configuration parameters for your Plantcare
   waterings:
     new:
-      title: Watering
-      explaining: It allows to schedule a watering once for your plantcare
+      title: Water
+      explaining: |
+        It allows to schedule a single watering for your plantcare.
+        INFO: Take into account it may be a delay between the creation of the watering and when
+        applies since it depends on your plantcare sleep cycle
     create:
       sucessfully: Watering successfully
     edit:
