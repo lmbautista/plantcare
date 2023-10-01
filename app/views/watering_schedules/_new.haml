@@ -1,4 +1,4 @@
-= modal_for("new_watering_schedule",  I18n.t("watering_schedules.new.title"), { footer: false }) do
+= modal_for("new_watering_schedule", nil, { footer: false }) do
   - capture_haml do
     = form_for @watering_schedule, url: { controller: "watering_schedules", action: "create" }, method: :post, remote: true do |f|
-      = render partial: 'form', locals: { f: f }
+      = render partial: "form", locals: { f: f, title: I18n.t("watering_schedules.new.title") }

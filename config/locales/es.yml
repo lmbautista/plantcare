@@ -205,7 +205,7 @@ es:
         frequency_amount: Frecuencia
   watering_schedules:
     new:
-      title: Programación
+      title: Progamar
       explaining: Te permite programar y repetir los riegos para tu plantcare. Especifica la fecha de validez del programa, la duración y la frecuencia del riego
     create:
       sucessfully: Riego programado correctamente

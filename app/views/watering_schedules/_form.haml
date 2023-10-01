@@ -1,7 +1,8 @@
 .plantcare-fields-dark.watering-schedule-panel
-  .watering-schedule-left-panel.vline-middle.text-center
+  .watering-schedule-left-panel.vline-middle
     .mr-2.ml-2.font-color
-      = fa_icon "bigger-3 far fa-calendar-alt vline-middle weight-2"
+      = image_tag "schedule.png", width: "100%"
+      %h1.weight-2=title
       %h5.weight-2= I18n.t("watering_schedules.new.explaining")
 
   .watering-schedule-right-panel.vline-middle
