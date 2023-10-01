@@ -21,6 +21,10 @@ es:
     sign_out: Salir
     board_status: Estado de placa
   confirmation: "¿Estas seguro?"
+  flash_message:
+    notify: "Plantcare dice: "
+    warning: "CUIDADO, Plantcare dice:"
+    error: "Plantcare encontró un problema:"
   users:
     welcome:
       title: Crezcamos juntos
@@ -54,7 +58,6 @@ es:
         timezone: Zona horaria
         lang: Idioma
         api_token: Token de autenticación
-
   form:
     boolean_collection:
       true_text: "Si"
@@ -197,7 +200,6 @@ es:
         programmed_at: Fecha programación
         duration_amount: Duración
         frequency_amount: Frecuencia
-
   watering_schedules:
     new:
       title: Programación
@@ -215,7 +217,6 @@ es:
         status: Estado
         duration_amount: Duración
         frequency_amount: Frecuencia
-
   watering:
     next_title: "Próximos riegos:"
     next: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
@@ -228,6 +229,8 @@ es:
         ¿No tienes una cuenta?  <strong><a class="third-color" id="signup_link" data-toggle="modal"
         data-target="#signup_modal" href="#"> Únete </a></strong>
       not_found: Email y/o password incorrecto, inténtalo de nuevo
+    create:
+      welcome: Bienvenido
     destroy:
       see_you: ¡Hasta pronto! Cuidaremos de tus plantas en tu ausencia
 

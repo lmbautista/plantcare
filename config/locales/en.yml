@@ -21,6 +21,11 @@ en:
     sign_out: Sign out
     board_status: Board status
   confirmation: "Are you sure?"
+  flash_message:
+    notify: "Plantcare says: "
+    warning: "WARNING, Plantcare says:"
+    error: "Plantcare found a problem:"
+  flash_message_title: "Plantcare says: "
   users:
     welcome:
       title: Lets grow up together
@@ -54,12 +59,10 @@ en:
         timezone: Timezone
         lang: Lang
         api_token: Authentication token
-
   form:
     boolean_collection:
       true_text: "Yes"
       false_text: "No"
-
   plantcares:
     new:
       title: New plantcare
@@ -180,7 +183,6 @@ en:
       configuration_title: Configuration
       configuration_text: |
         Here we display the configuration parameters for your Plantcare
-
   waterings:
     new:
       title: Watering
@@ -199,7 +201,6 @@ en:
         programmed_at: Scheduled at
         duration_amount: Duration
         frequency_amount: Frequency
-
   watering_schedules:
     new:
       title: Schedule
@@ -219,7 +220,6 @@ en:
         status: Status
         duration_amount: Duration
         frequency_amount: Frequency
-
   watering:
     next_title: "Nex waterings:"
     next: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
