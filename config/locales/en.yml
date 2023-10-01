@@ -211,7 +211,7 @@ en:
     create:
       sucessfully: Watering scheduled successfully
     edit:
-      title: Edit schedule
+      title: Schedule
     update:
       sucessfully: Watering updated successfully
     destroy:

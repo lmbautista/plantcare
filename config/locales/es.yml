@@ -210,7 +210,7 @@ es:
     create:
       sucessfully: Riego programado correctamente
     edit:
-      title: Editar programación
+      title: Programación
     update:
       sucessfully: Riego actualizado correctamente
     wtever_api:
