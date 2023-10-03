@@ -14,15 +14,17 @@ en:
     close: "Close"
   menu:
     profile_explanation: Edit your profile
-    status: Board status
+    status: Last connections
     status_explanation: "Last connection at %{board_connection_at}"
-    status_details: Check the latest connections of your board
+    status_details: |
+      In this section you could check the status of the lastest connection of your plantcare
+      INFO: Take into account the connection time will depends on your plantcare sleep cycle
     no_board_connections: No board connection notifications
     sign_out: Sign out
-    board_status: Board status
+    board_status: Last connections
   confirmation: "Are you sure?"
   flash_message:
-    notify: "Plantcare says: "
+    notice: "Plantcare says: "
     warning: "WARNING, Plantcare says:"
     error: "Plantcare found a problem:"
   flash_message_title: "Plantcare says: "

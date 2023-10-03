@@ -14,15 +14,17 @@ es:
     close: "Cerrar"
   menu:
     profile_explanation: Edita tu perfil
-    status: Estado de placa
-    status_explanation: "Última conexión: %{board_connection_at}"
-    status_details: Comprueba las últimas conexiones de tu placa
+    status: Últimas conexiones
+    status_explanation: "Última conexión recibida: %{board_connection_at}"
+    status_details: |
+      En esta sección podrás comprobar el estado de las últimas conexiones de tu plantcare
+      INFO: Ten en cuenta que los tiempos de conexión dependarán del ciclo de sueño de tu plantcare
     no_board_connections: No hay notificaciones de conexión de la placa
     sign_out: Salir
-    board_status: Estado de placa
+    board_status: Últimas conexiones
   confirmation: "¿Estas seguro?"
   flash_message:
-    notify: "Plantcare dice: "
+    notice: "Plantcare dice: "
     warning: "CUIDADO, Plantcare dice:"
     error: "Plantcare encontró un problema:"
   users:
