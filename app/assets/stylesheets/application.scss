@@ -23,14 +23,12 @@
 
 
 .last-connections-panel {
-  display: flex;
   justify-content: center;
   align-items: center;
 
   .last-connections-right-panel, .last-connections-right-panel {
     display: inline-flex;
     flex-direction: column;
-    width: 30rem;
   }
 }
 
