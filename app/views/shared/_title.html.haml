@@ -1,8 +1,9 @@
 - title    ||= ''
 - subtitle ||= ''
 - dark ||= false
+- classes ||= "text-center"
 
-.title.p-2.text-center.third-color
+.title.p-2.third-color{ class: classes }
   - if title.present?
     %h1.biggest.mb-3{ class: "#{dark ? "font-color" : "" }" }= raw title
 

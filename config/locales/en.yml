@@ -34,6 +34,37 @@ en:
       explanation: |
         We help you to maintain and to improve your cute green place thanks to our system to
         watering and taking care of your plants remotely
+      features:
+        title: What is Plantcare?
+        feature-1:
+          title: Irrigation scheduling system
+          description: |
+            Have you ever had a mess with your plants' watering during holidays? That won't happen anymore with Plantcare.
+            You will be able to schedule either seasonal or punctual irrigation for each of your plants via our board, which
+            can be easily configured to access our app through your WIFI connection at home.
+        feature-2:
+          title: Remote status supervision
+          description: |
+            Thanks to our system, you could have real-time information about the status of your plants at home.
+            Our board will has periodic communication with Plantcare, so you could check at any time what your plants need.
+            From now on you won't need to delegate the irrigation of your plant to other people
+        feature-3:
+          title: Self-sufficient system
+          description: |
+            As plant lovers, we couldn't forget about helping our planet with green energies.
+            Our board is built with biodegradable plastics. Also, you have the option to assemble in our board a solar panel so,
+            you won't need to take care of the electric maintenance. Your Plantcare will be alive for ever!
+        feature-4:
+          title: Long-life duration system
+          description: |
+            Even if the solar panel on your plantcare is not an option, our board is designed to be
+            a long-life battery device that will allow you to control your garden for long periods of time out of home.
+            Currently we provide more than 20 days of autonomy that could be configured to be even longer
+        feature-5:
+          title: OFFLINE mode
+          description: |
+            Do you have problems with your WIFI at home? It's not a problem as your plantcare will be able to deal with
+            emergency watering in case it detects there's no internet connectivity based on a configurable period.
     new:
       title: Sign up
       subtitle: Join the team

@@ -20,7 +20,8 @@ body {
       }
     }
     &.welcome {
-      .intro { min-height: 90vh; }
+      .intro, .features { min-height: 90vh; }
+      .features { background-color: #FBF1E4; }
       .navbar-default { background-color: $opposite-color; }
     }
 
