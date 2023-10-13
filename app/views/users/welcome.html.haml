@@ -8,9 +8,8 @@
 .intro.flex.flex.flex-direction-column.align-center.pb-2.visible-xs
   = flex_image_div image_url: "home-#{current_user ? current_user.lang : I18n.default_locale}.png", mobile: true
   = flex_panel_div mobile: true, classes: "flex-direction-column" do
-    .pb-4
-      = render partial: 'shared/title',
-                locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.explanation') }
+    = render partial: 'shared/title',
+             locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.explanation') }
     .full-width.p-2.pt-4
       = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
       = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active btn-block"
