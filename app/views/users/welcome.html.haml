@@ -1,33 +1,25 @@
 - content_for :header do
-  .row.hidden-xs
-    .col-xs-12.col-sm-4.col-md-4.col-md-offset-2.text-center
-    .col-sm-6.col-md-5.text-right
-      .btn-group.actions
-        = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary"
-        = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary"
+  .row
+    .col-xs-12.col-sm-4.col-md-4.col-md-offset-1
+      %h3.plantcare-icon.mb-3.mt-2
+        = link_to root_path do
+          = image_tag "logo.png", height: 65
 
-.intro.flex.flex-direction-column.flex-justify-center.align-center
-  %h1.biggest.plantcare-icon.m-0.pb-3.text-center
-    = link_to root_path do
-      = image_tag "logo.png", height: 80
+.intro.flex.flex.flex-direction-column.align-center.pb-2.visible-xs
+  = flex_image_div image_url: "home-#{current_user ? current_user.lang : I18n.default_locale}.png", mobile: true
+  = flex_panel_div mobile: true, classes: "flex-direction-column" do
+    .pb-4
+      = render partial: 'shared/title',
+                locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.explanation') }
+    .full-width.p-2.pt-4
+      = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
+      = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active btn-block"
 
-  .pt-3.pb-3.pl-1-pr-1
-    = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.subtitle') }
-
-  .pt-2.pb-2.plantcare-welcome-icons
-    .row.full-width
-      .col-xs-8.col-xs-offset-2.col-sm-8.text-center
-        .explaining
-          = image_tag ("icons/plant-#{rand(1..3)}"), class: "explain-ico img-responsive"
-
-          %h4.m-0.weight-2
-            = I18n.t('users.welcome.explanation')
-
-  .row.full-width
-    .visible-xs.col-xs-12.text-center
-      .row
-        .col-xs-6
-          = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
-        .col-xs-6
-          = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active  btn-block"
-
+.intro.flex.align-center.pt-2.pb-2.hidden-xs
+  = flex_panel_div classes: "flex-direction-column" do
+    = render partial: 'shared/title',
+              locals: { title: I18n.t('users.welcome.title'), subtitle: I18n.t('users.welcome.explanation') }
+    .full-width.p-2.pt-4{ style: 'width: 40%' }
+      = link_to t('sessions.new.title'), signin_path, class: "custom-btn custom-btn-primary btn-block"
+      = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-primary custom-btn-active btn-block"
+  = flex_image_div image_url: "home-#{current_user ? current_user.lang : I18n.default_locale}.png"

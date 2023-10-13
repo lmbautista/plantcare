@@ -30,7 +30,6 @@ module WteverApi
                :water_pump_field,
                :water_pump_id
 
-
     has_one :configuration
     has_one :water_pump
     has_one :watering_schedule

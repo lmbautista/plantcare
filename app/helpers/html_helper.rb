@@ -125,4 +125,28 @@ module HtmlHelper
       )
     end
   end
+
+  def flex_image_div(image_url:, classes: nil, styles: nil, mobile: false)
+    styles = [
+      styles,
+      "flex: 1",
+      "background: url('#{asset_path(image_url)}') no-repeat center center",
+      "background-size: contain",
+      (mobile ? "height: 35vh" : "height: 70vh")
+    ].compact.join(";")
+
+    tag.div(class: classes, style: styles) { yield if defined?(yield) }.html_safe
+  end
+
+  def flex_panel_div(classes: nil, mobile: false)
+    styles = [
+      "flex: 1",
+      "display: flex",
+      "justify-content: center",
+      "align-items: center",
+      (mobile ? "min-height: 40vh" : "height: 90vh")
+    ].compact.join(";")
+
+    tag.div(class: classes, style: styles) { yield if defined?(yield) }.html_safe
+  end
 end

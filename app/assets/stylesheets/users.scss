@@ -7,7 +7,7 @@
 body {
   &.users {
     &.welcome, &.new, &.create, &.confirmation, &.edit {
-      @include section-styles("primary");
+      @include section-styles("light");
       .form { min-height: 90vh; width: 100%; }
     }
     &.welcome, &.new, &.create, &.confirmation {
