@@ -35,8 +35,8 @@ en:
         We help you to maintain and to improve your cute green place thanks to our system to
         watering and taking care of your plants remotely
     new:
-      title: Join the team
-      subtitle: create your account and improve the care of your plants
+      title: Sign up
+      subtitle: Join the team
       have_account: |
         Already signed?  <strong><a id="signin_link" data-toggle="modal" data-target="#signin_modal" href="#"> Sing in </a></strong>
     confirmation:

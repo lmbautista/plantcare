@@ -8,7 +8,6 @@ body {
   &.users {
     &.welcome, &.new, &.create, &.confirmation, &.edit {
       @include section-styles("light");
-      .form { min-height: 90vh; }
     }
     &.welcome, &.new, &.create, &.confirmation {
       .plantcare-welcome-icons {

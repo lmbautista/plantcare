@@ -34,8 +34,8 @@ es:
         Te ayudamos a mantener y mejorar tu pequeño rincón verde gracias a nuestro sistema de
         cuidado y riego para plantas remoto
     new:
-      title: Unete al equipo
-      subtitle: crea tu cuenta y mejora el cuidado de tus plantas
+      title: Crear cuenta
+      subtitle: Unete al equipo
       have_account: |
         ¿Ya tienes una cuenta?  <strong><a id="signin_link" data-toggle="modal" data-target="#signin_modal" href="#"> Login </a></strong>
     confirmation:
