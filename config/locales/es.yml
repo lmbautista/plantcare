@@ -228,7 +228,7 @@ es:
   sessions:
     new:
       title: Inicia sesión
-      subtitle:  bienvenido, accede con tu usuario y password
+      subtitle:  Nos encanta verte de vuelta
       create_account: |
         ¿No tienes una cuenta?  <strong><a class="third-color" id="signup_link" data-toggle="modal"
         data-target="#signup_modal" href="#"> Únete </a></strong>

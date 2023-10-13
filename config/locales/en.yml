@@ -231,7 +231,7 @@ en:
   sessions:
     new:
       title: Sign in
-      subtitle:  Welcome, join us with your user and password
+      subtitle:  Glad to see you back
       create_account: |
         Not registered yet?  <strong><a class="third-color" id="signup_link" data-toggle="modal"
         data-target="#signup_modal" href="#"> Join us </a></strong>
