@@ -133,7 +133,7 @@ module HtmlHelper
       "background: url('#{asset_path(image_url)}') no-repeat center center",
       "background-size: contain",
       "margin: 10px",
-      (mobile ? "height: 35vh" : "height: 65vh")
+      (mobile ? "height: 35vh" : "height: 55vh")
     ].compact.join(";")
 
     tag.div(class: classes, style: styles) { yield if defined?(yield) }.html_safe
