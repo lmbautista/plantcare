@@ -20,9 +20,8 @@ body {
       }
     }
     &.welcome {
-      .intro, .features { min-height: 90vh; }
+      .intro, .features { min-height: 100vh; }
       .features { background-color: #FBF1E4; }
-      .navbar-default { background-color: $opposite-color; }
     }
 
     &.new,

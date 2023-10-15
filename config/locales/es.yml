@@ -12,6 +12,7 @@ es:
     cancel: "Cancelar"
     create: "Crear"
     close: "Cerrar"
+    back: "Volver"
   menu:
     profile_explanation: Edita tu perfil
     status: Últimas conexiones
@@ -32,39 +33,34 @@ es:
       title: Crezcamos juntos
       explanation:  |
         Bienvenido a Plantcare, donde te ayudamos a mantener y mejorar tu pequeño rincón verde gracias
-        a nuestro sistema remoto y autosostenible orientado al cuidado y riego de plantas domésticas
+        a nuestro sistema remoto autosostenible para el riego y cuidado de plantas domésticas
       need_more: ¿Quieres saber más?
       features:
-        title: Características
+        title: ¿Qué es Plantcare?
         feature-1:
-          title: ¿Qué es Plantcare?
           description: |
-            ¿Alguna vez perdiste alguna planta durante las vacaciones?<br\>
-            ¿Y si te decimos que no volverá a suceder gracias a Plantcare?<br\>
-            Plantcare es un dispositivo físico que dispone de conexión WIFI. Tras realizar unos breves pasos de configuración para su conexión,
-            serás capaz de programar riegos estacionales o puntuales de manera remota a través de nuestra app.
-            Plantcare se comunica periódicamente para ejecutar riegos y enviar información sobre el estado de tu planta,
-            por lo que podrás comprobar en cualquier momento lo que tus plantas necesitan.
-            <br\>
-            De ahora en adelante no tendrás que delegar el riego de tus plantas a otras personas
+            <p>Plantcare es un dispositivo físico que dispone de conexión WIFI, con el cual serás capaz
+            de programar riegos estacionales o puntuales de manera remota a través de nuestra app.</p>
+            <p>Se comunica periódicamente para ejecutar riegos y enviar información sobre el estado de tu planta,
+            por lo que podrás comprobar en cualquier momento lo que tus plantas necesitan.</p>
+            <p>Ya no necesitarás delegar el riego de tus plantas a otras personas y podrás garantizar el
+            cuidado óptimo de tus plantas en todo momento.</p>
         feature-2:
           title: Autosostenible y ECO
           description: |
-            Como buenos amantes de las plantas, no podíamos olvidarnos de ayudar a nuestro planeta con energías verdes:
-            Plantcare está construida con plasticos biodegradables, pero además, dispondrás de la opción de incluir un panel solar,
-            por lo que no deberás preocuparte nunca del mantenimiento eléctrico.
-            <br\><br\>
-            ¡Tu Plantcare nunca se agotará!
+            <p>Plantcare está construida con plasticos biodegradables, y dispondrás de la opción de incluir un panel solar,
+            por lo que no deberás preocuparte nunca del mantenimiento eléctrico.</p>
+            <p>¡Tu Plantcare nunca se agotará!</p>
         feature-3:
-          title: Sistema de larga duración
+          title: Gran autonomía
           description: |
-            Incluso si la opción de incluir panel solar en tu Plantcare no es posible, nuestra placa está diseñada para
-            garantizar una gran autonomía (+30 días) por cada ciclo de batería, lo que te permitirá controlar tu jardín por largos periodos de tiempo fuera de casa.
+            <p>Incluso si la opción de incluir panel solar en tu Plantcare no es posible, nuestra placa está diseñada para
+            garantizar una gran autonomía (+30 días) por cada ciclo de batería, lo que te permitirá controlar tu jardín por largos periodos de tiempo fuera de casa.</p>
         feature-4:
           title: Modo OFFLINE
           description: |
-            ¿Tienes problemas con la conexión WIFI en casa? No es un problema ya que tu Plantcare dispondrá de riegos de emergencia en caso
-            de que se detecten periodos de ausencia de connectividad a internet
+            <p>¿Tienes problemas con la conexión WIFI en casa? No es un problema ya que tu Plantcare dispondrá de riegos de emergencia en caso
+            de que se detecten periodos de ausencia de connectividad a internet</p>
     new:
       title: Crear cuenta
       subtitle: Unete al equipo

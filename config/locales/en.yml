@@ -12,6 +12,7 @@ en:
     cancel: "Cancel"
     create: "Create"
     close: "Close"
+    back: "Back"
   menu:
     profile_explanation: Edit your profile
     status: Last connections
@@ -40,34 +41,28 @@ en:
         feature-1:
           title: What is Plancare?
           description: |
-            Have you ever had a mess with your plants' watering during holidays?<br\>
-            That won't happen anymore with Plantcare.<br\>
-            Plantcare is a physical device that includes WIFI connectivity. After following a one-step
-            configuration process to access your WIFI connection, you'll be able to schedule either
-            seasonal or punctual irrigation remotelly through our app.
-            Plantcare has periodic communication to perform waterings and send information about the status of your plant,
-            so you could check anytime/anywhere what your plant needs.
-
-            From now on you won't need to delegate the irrigation of your plant to other people
+            <p>Plantcare is a physical device that includes WIFI connectivity. It will allow you
+            to schedule either seasonal or punctual irrigation remotelly through our app.</p>
+            <p>It has periodic communication to perform waterings and send information about the status of your plant,
+            so you could check anytime/anywhere what your plant needs.</p>
+            <p>From now on you won't need to delegate the irrigation of your plant to other people. You'll have full control
+            over your plants everytime you need</p>
         feature-2:
           title: Self-sustainable & ECO system
           description: |
-            As plant lovers, we couldn't forget about helping our planet with green energies:
-            Plantcare is built with biodegradable plastics, but also, you have the option to assemble a solar panel.
-            By doind that you won't need to take care of the electric maintenance.
-            <br\><br\>
-            Your Plantcare will be alive for ever!
+            <p>Plantcare is built with biodegradable plastics, but also, you have the option to assemble a solar panel.
+            By doind that you won't need to take care of the electric maintenance.</p>
+            <p>Your Plantcare will be alive for ever!</p>
         feature-3:
           title: Long-life duration system
           description: |
-            Even if the solar panel on your Plantcare is not an option, our board is designed to be
-            a long-life battery device that will allow you to control your garden for long periods of time out of home.
-            Currently we provide more than 20 days of autonomy that could be configured to be even longer
+            <p>Even if the solar panel on your Plantcare is not an option, our board is designed to be
+            a long-life battery device (+30 days) that will allow you to control your garden for long periods of time out of home.</p>
         feature-4:
           title: OFFLINE mode
           description: |
-            Do you have problems with your WIFI at home? It's not a problem as your Plantcare will be able to deal with
-            emergency watering in case it detects there's no internet connectivity based on a configurable period.
+            <p>Do you have problems with your WIFI at home? It's not a problem as your Plantcare will be able to deal with
+            emergency watering in case it detects there's no internet connectivity based on a configurable period.</p>
     new:
       title: Sign up
       subtitle: Join the team

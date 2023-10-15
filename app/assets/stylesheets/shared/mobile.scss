@@ -28,6 +28,14 @@
       width: 95%;
     }
   }
+  body {
+    &.users {
+      &.welcome {
+        .navbar { display: none; }
+        padding-top: 20px;
+      }
+    }
+  }
 
   .bigger-1 { font-size: 105%; }
   .bigger-2 { font-size: 150%; }
