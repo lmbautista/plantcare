@@ -20,6 +20,7 @@
         %h4.weight-2= I18n.t("users.welcome.features.feature-4.description").html_safe
 
 .row.full-width
-  .col-xs-12.col-md-4.col-md-offset-4.text-center.primary-color
+  .col-xs-12.col-sm-6.col-md-4.col-md-offset-1.pt-2
     = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-tertiary btn-block"
+  .col-xs-12.col-sm-6.col-md-4.pt-2
     = link_to t('buttons.back'), '#intro', class: "custom-btn custom-btn-secondary btn-block rf"
