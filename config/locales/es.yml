@@ -17,8 +17,8 @@ es:
     status: Últimas conexiones
     status_explanation: "Última conexión recibida: %{board_connection_at}"
     status_details: |
-      En esta sección podrás comprobar el estado de las últimas conexiones de tu plantcare
-      INFO: Ten en cuenta que los tiempos de conexión dependarán del ciclo de sueño de tu plantcare
+      En esta sección podrás comprobar el estado de las últimas conexiones de tu Plantcare
+      INFO: Ten en cuenta que los tiempos de conexión dependarán del ciclo de sueño de tu Plantcare
     no_board_connections: No hay notificaciones de conexión de la placa
     sign_out: Salir
     board_status: Últimas conexiones
@@ -31,40 +31,40 @@ es:
     welcome:
       title: Crezcamos juntos
       explanation:  |
-        Te ayudamos a mantener y mejorar tu pequeño rincón verde gracias a nuestro sistema de
-        cuidado y riego para plantas remoto
+        Bienvenido a Plantcare, donde te ayudamos a mantener y mejorar tu pequeño rincón verde gracias
+        a nuestro sistema remoto y autosostenible orientado al cuidado y riego de plantas domésticas
+      need_more: ¿Quieres saber más?
       features:
-        title: ¿Qué es Plantcare?
+        title: Características
         feature-1:
-          title: Sistema de riego remoto
+          title: ¿Qué es Plantcare?
           description: |
-            ¿Alguna vez perdiste alguna planta durante las vacaciones? ¿Y si te decimos que no volverá a suceder gracias a Plantcare?
-            Con nuestra placa, serás capaz de programar riegos estacionales o puntuales de manera remota,
-            con tan solo configurar en un simple paso tu Plantcare para tener acceso a nuestra aplicación usando la conexión WIFI de tu domicilio o punto de acceso
-        feature-2:
-          title: Control de estado remoto
-          description: |
-            Gracias a nuestra placa, dispondrás de información en tiempo real sobre el estado de tus plantas en casa.
-            Nuestra placa realizará comunicaciones periódicas a Plantcare, por lo que podras comprobar en cualquier momento lo que
-            tus plantas necesitan.
+            ¿Alguna vez perdiste alguna planta durante las vacaciones?<br\>
+            ¿Y si te decimos que no volverá a suceder gracias a Plantcare?<br\>
+            Plantcare es un dispositivo físico que dispone de conexión WIFI. Tras realizar unos breves pasos de configuración para su conexión,
+            serás capaz de programar riegos estacionales o puntuales de manera remota a través de nuestra app.
+            Plantcare se comunica periódicamente para ejecutar riegos y enviar información sobre el estado de tu planta,
+            por lo que podrás comprobar en cualquier momento lo que tus plantas necesitan.
+            <br\>
             De ahora en adelante no tendrás que delegar el riego de tus plantas a otras personas
-        feature-3:
-          title: Sistema autosostenible
+        feature-2:
+          title: Autosostenible y ECO
           description: |
-            Como buenos amantes de las plantas, no podíamos olvidarnos de ayudar a nuestro planeta con energías verdes
-            Nuestra placa está construida con plasticos biodegradables. Además dispondrás de la opción de incluir paneles solares en cada placa,
-            por lo que no deberás preocuparte nunca del mantenimiento eléctrico. ¡Tu Plantcare nunca se agotará!
-        feature-4:
+            Como buenos amantes de las plantas, no podíamos olvidarnos de ayudar a nuestro planeta con energías verdes:
+            Plantcare está construida con plasticos biodegradables, pero además, dispondrás de la opción de incluir un panel solar,
+            por lo que no deberás preocuparte nunca del mantenimiento eléctrico.
+            <br\><br\>
+            ¡Tu Plantcare nunca se agotará!
+        feature-3:
           title: Sistema de larga duración
           description: |
-            Incluso si la opción de incluir paneles solares en tu Plantcare no es posible, nuestra placa está diseñada para
-            disfrutar de una larga vida por cada ciclo de batería, lo que te permitirá controlar tu jardín por largos periodos de tiempo fuera de casa.
-            Actualmente nuestra placa garantiza una autonomía de más de 20 días de uso continuado, que podría ser incluso mejorado a través de configuración adicional
-        feature-5:
+            Incluso si la opción de incluir panel solar en tu Plantcare no es posible, nuestra placa está diseñada para
+            garantizar una gran autonomía (+30 días) por cada ciclo de batería, lo que te permitirá controlar tu jardín por largos periodos de tiempo fuera de casa.
+        feature-4:
           title: Modo OFFLINE
           description: |
             ¿Tienes problemas con la conexión WIFI en casa? No es un problema ya que tu Plantcare dispondrá de riegos de emergencia en caso
-            de que se detected periodos de ausencia de connectividad a internet basados en un periodo de tiempo configurable
+            de que se detecten periodos de ausencia de connectividad a internet
     new:
       title: Crear cuenta
       subtitle: Unete al equipo

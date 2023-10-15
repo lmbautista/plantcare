@@ -59,16 +59,6 @@ function linkControl() {
   $('a:not([href^="#"]), button:not([data-dismiss], [data-toggle]), input[type="submit"]').not('.ref').click(function (e) {
     if (!e.shiftKey) { $('.loading-overlay').removeClass('hidden'); }
   });
-
-  $('a.ref').click(function(event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    let currentId = $(this).attr("href");
-    document.querySelector(currentId).scrollIntoView({
-      behavior: 'smooth'
-    });
-  })
 }
 
 function bindTooltips(){ $('[data-toggle="tooltip"]').tooltip(); }
@@ -83,3 +73,22 @@ $(document).ready(function () {
   datepickerControl();
   linkControl();
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
