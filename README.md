@@ -45,4 +45,4 @@ bundle exec rake db:setup
 # Currently private
 ```
 
-[logo-plantcare]: https://user-images.githubusercontent.com/6224703/164746432-e9455e68-b65e-4eeb-87df-27627ca8cdf7.png "Plantcare"
+[logo-plantcare]: https://github.com/lmbautista/api-plantcare/assets/6224703/f11b5480-be14-49e6-ab58-d576ff537afb "Plantcare"
