@@ -16,6 +16,11 @@ module WteverApi
       "SENSOR 6" => "A5"
     }.freeze
 
+    KINDS = [
+      SINGLE_KIND = "single",
+      MULTIPLEX_KIND = "multiplex"
+    ].freeze
+
     file_upload :attachments
     file_upload :picture
 
@@ -31,6 +36,7 @@ module WteverApi
                :water_pump_id
 
     has_one :configuration
+    has_one :board
     has_one :water_pump
     has_one :watering_schedule
     has_many :waterings
@@ -46,12 +52,24 @@ module WteverApi
              to: :configuration,
              allow_nil: true
 
+    delegate :auth_token,
+             to: :board,
+             prefix: true
+
     def wet
       super || 0.0
     end
 
     def status
       BigDecimal(wet.to_s) == BigDecimal("0.0") ? "non_data" : super
+    end
+
+    def single?
+      kind == SINGLE_KIND
+    end
+
+    def multiplex?
+      kind == MULTIPLEX_KIND
     end
   end
 end

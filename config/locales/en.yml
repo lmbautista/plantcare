@@ -205,11 +205,15 @@ en:
         watering_interval_delay: Watering interval delay (msec)
         auto_calculation: Threshold auto calculation
         sleep_time: Board sleeping time (msec)
+        board_auth_token: Board auth token
     status:
       healthy: Healthy
       sick: Sick
       lifeless: Lifeless
     form:
+      auth_token_text: |
+        This token serves as the means to identify the physical Plantcare within the application.
+        You will need to use it during the board configuration phase to establish communication via Wi-Fi with our app
       configuration_title: Configuration
       configuration_text: |
         Here we display the configuration parameters for your Plantcare

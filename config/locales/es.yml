@@ -203,11 +203,15 @@ es:
         watering_interval_delay: Demora en intervalo de riego (msec)
         auto_calculation: Auto cálculo de umbrales de humedad
         sleep_time: "Tiempo de hibernación de placa (msec)"
+        board_auth_token: Token de autenticación de placa
     status:
       healthy: Sana
       sick: Malita
       lifeless: Pocha
     form:
+      auth_token_text: |
+        Este token sirve para identificar físicamanete tu Plantcare dentro de la aplicación.
+        Deberás usarlo durante su fase de configuración para establecer la comunicación a través de Wi-Fi con nuestra aplicación
       configuration_title: Configuración
       configuration_text: |
         Aquí mostramos los parametros de configuración de tu Plantcare
