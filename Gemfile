@@ -29,6 +29,8 @@ gem "jbuilder", "~> 2.0"
 # Code review
 gem "rubocop", require: false
 gem "rubocop-rails"
+# SVG images
+gem "inline_svg"
 
 # REST map
 gem "faraday_middleware"
