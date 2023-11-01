@@ -55,7 +55,7 @@ gem "bootstrap3-datetimepicker-rails", "~> 4.14.30"
 gem "jquery-fileupload-rails"
 gem "momentjs-rails", ">= 2.9.0"
 
-gem "puma", "~> 4.3"
+gem "puma", "~> 5.6"
 
 # EDK logger
 gem "lograge"
