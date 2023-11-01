@@ -1,7 +1,11 @@
+@import "shared/_variables";
+
+.icon { height: 35px; width: 35px; }
 .flex { display: flex; }
 .flex-inline { display: inline-flex; }
 .flex-justify-center { justify-content: center; }
 .flex-justify-space-between { justify-content: space-between; }
+.flex-justify-end { justify-content: flex-end; }
 .flex-direction-row { flex-direction: row; }
 .flex-direction-column { flex-direction: column; }
 .smaller-1 { font-size: 80%; }

@@ -136,7 +136,7 @@ module HtmlHelper
       (mobile ? "height: 35vh" : "height: 55vh")
     ].compact.join(";")
 
-    tag.div(class: classes, style: styles) { yield if defined?(yield) }.html_safe
+    raw tag.div(class: classes, style: styles) { yield if defined?(yield) }
   end
 
   def flex_panel_div(classes: nil, mobile: false)
@@ -148,6 +148,17 @@ module HtmlHelper
       (mobile ? "min-height: 40vh" : "height: 90vh")
     ].compact.join(";")
 
-    tag.div(class: classes, style: styles) { yield if defined?(yield) }.html_safe
+    raw tag.div(class: classes, style: styles) { yield if defined?(yield) }
+  end
+
+  def svg_icon_tag(name, options = {})
+    options[:title] ||= name.underscore.humanize
+    options[:aria] = true
+    options[:nocomment] = true
+    options[:variant] ||= :outline
+    options[:class] = options.fetch(:classes, nil)
+    icon = options.fetch(:path, "icons/#{name}.svg")
+
+    inline_svg_tag(icon, options)
   end
 end

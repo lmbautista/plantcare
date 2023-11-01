@@ -37,9 +37,14 @@
     }
   }
 
-  .bigger-1 { font-size: 105%; }
-  .bigger-2 { font-size: 150%; }
-  .bigger-3 { font-size: 250%; }
-  .biggest  { font-size: 350%; }
+  body {
+    &.users, &.sessions {
+      .bigger-1 { font-size: 105%; }
+      .bigger-2 { font-size: 150%; }
+      .bigger-3 { font-size: 250%; }
+      .biggest  { font-size: 350%; }
+    }
+  }
+
   .plantcare-icon { text-align: center; }
 }

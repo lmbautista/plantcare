@@ -7,7 +7,7 @@
         %h5.m-0
           = I18n.t("plantcares.form.auth_token_text")
         %h4.weight-2.text-center
-          = fa_icon "fal fa-microchip vline-middle p-1"
+          = svg_icon_tag("board-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
           .inline-block.vline-middle.weight-2
             = current_user.api_token
 
@@ -18,7 +18,7 @@
         %h5.m-0
           = I18n.t("plantcares.form.auth_token_text")
         %h4.weight-2.text-center
-          = fa_icon "fal fa-microchip vline-middle p-1"
+          = svg_icon_tag("board-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
           .inline-block.vline-middle.weight-2
             = @plantcare.board.auth_token
 

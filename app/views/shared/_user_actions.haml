@@ -3,13 +3,13 @@
 %ul.nav.navbar-nav.navbar-right
   %li.vline-middle
     = link_to profile_user_path(current_user), title: I18n.t('menu.profile_explanation') do
-      = fa_icon 'fal fa-seedling general-color pr-1 bigger-2 vline-middle'
+      = svg_icon_tag("plant-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
       %h5.m-0.third-color.vline-middle.inline-block.weight-2
         = [current_user.first_name, current_user.last_name].join(" ")
   %li.vline-middle
     = link_to "#last-connections", 'data-target' => '#last-connections', 'data-toggle' => 'modal',
       title: I18n.t('menu.status_details') do
-      = fa_icon 'fal fa-microchip general-color pr-1 bigger-2 vline-middle'
+      = svg_icon_tag("board-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
       %h5.m-0.third-color.vline-middle.inline-block.weight-2
         = I18n.t('menu.status')
         .smaller-1
@@ -18,6 +18,6 @@
       = connection_tag_for(@board_connection_at)
   %li.vline-middle
     = link_to signout_path do
-      = fa_icon 'fal fa-power-off general-color pr-1 bigger-2 vline-middle'
+      = svg_icon_tag("logout-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
       %h5.m-0.third-color.vline-middle.inline-block.weight-2
         = I18n.t('menu.sign_out')

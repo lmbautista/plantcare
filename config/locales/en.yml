@@ -135,7 +135,8 @@ en:
         wet: Humidity
         planted_at: Planted on
         watered_at: Watered on
-        wet_synced_at: Synced at %{wet_synced_at}
+        wet_synced_at: Sync at %{wet_synced_at}
+        last_connection_at: "Last connection at"
     create:
       sucessfully: You already have one more plantcare to take care of
     edit:

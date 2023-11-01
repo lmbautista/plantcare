@@ -12,3 +12,11 @@
 .bg-opposite-color         { background-color: $opposite-color; }
 .bg-one-color              { background-color: $bg-one-color; }
 .bg-two-color              { background-color: $bg-two-color; }
+
+.svg-general-color path            { fill: $general-color; stroke: $general-color; }
+.svg-general-opposite-pathcolor    { fill: $general-opposite-color; stroke: $general-opposite-color; }
+.svg-second-color path             { fill: $second-color; stroke: $second-color; }
+.svg-third-color path              { fill: $third-color; stroke: $third-color; }
+.svg-font-color path               { fill: $font-color; stroke: $font-color; }
+.svg-opposite-color path           { fill: $opposite-color; stroke: $opposite-color; }
+.svg-danger-color path             { fill: $cancel-color; stroke: $cancel-color; }
