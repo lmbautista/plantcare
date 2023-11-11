@@ -13,15 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Login in Docker
-      env:
-        SERVICE_NAME: ${{secrets.SERVICE_NAME}}
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag lmbautista/plantcare:latest
-    - name: Push the Docker image
-      run: docker push lmbautista/plantcare:latest
+    - uses: actions/checkout@v3
+    - name: Login in Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{secrets.DOCKER_USER}}
+        password: ${{secrets.DOCKER_PASSWORD}}
+    - name: Build and push
+      uses: docker/build-push-action@v3
+      with:
+        context: .
+        push: true
+        tags: lmbautista/plantcare:latest
 
