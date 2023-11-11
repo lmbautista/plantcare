@@ -1,14 +1,9 @@
 .watering-info
-  - if watering.watering_schedule_id.present?
-    = fa_icon "far fa-calendar-alt general-color"
-  - else
-    = fa_icon "far fa-dewpoint general-color"
-
-  %h6.weight-2.m-0.vline-middle{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+  %h6.weight-2.m-0.vline-middle.opposite-color
     = I18n.t("watering.next", programmed_at: watering.programmed_at,
                               duration_amount: watering.duration_amount,
                               duration_unit: watering.short_duration_unit).html_safe
 
   = link_to watering_path(watering), method: :delete, data: { confirm: I18n.t("confirmation") },
-            class: "danger-color pl-1 bigger-1" do
+            class: "opposite-color pl-1 bigger-1" do
     = fa_icon "far fa-times-circle"

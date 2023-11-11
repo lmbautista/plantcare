@@ -161,4 +161,17 @@ module HtmlHelper
 
     inline_svg_tag(icon, options)
   end
+
+  def board_status_tag(value)
+    color = case value
+            when "wet_sensor_error"
+              "label-warning"
+            when "server_error"
+               "label-danger"
+            else
+              "label-success"
+            end
+
+    raw tag.span(class: "label #{color}") { value.humanize.downcase }
+  end
 end

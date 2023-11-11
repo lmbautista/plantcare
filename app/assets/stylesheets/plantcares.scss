@@ -31,6 +31,12 @@ body {
             width: 100% ;
           }
 
+          .watering-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
           .goto-edit {
             display: flex;
             justify-content: flex-end;
@@ -61,11 +67,6 @@ body {
             display: inline-block;
             width: 25px;
             padding-right: 5px;
-          }
-          .watering-info {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
           }
         }
       }

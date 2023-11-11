@@ -8,6 +8,8 @@ body {
     font-size: 12px;
     color: #444;
   }
+    .label-success {background-color: $general-color; }
+    .label-danger {background-color: $danger-color; }
   select {
     -webkit-appearance: none;
     -webkit-border-radius: 0px;

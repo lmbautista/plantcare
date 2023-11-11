@@ -43,10 +43,10 @@
 }
 
 .custom-btn-danger {
-  background-color: $cancel-color;
+  background-color: $danger-color;
   color: $opposite-color;
-  border-color: $cancel-color;
-  @include hover-effect(darken($cancel-color,10%));
+  border-color: $danger-color;
+  @include hover-effect(darken($danger-color,10%));
 }
 
 .custom-btn-active {
