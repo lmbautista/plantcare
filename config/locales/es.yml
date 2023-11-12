@@ -158,34 +158,29 @@ es:
             description: |
               Indica la bomba de agua que has conectado a tu Plantcare para regar remotamente
               cuando lo necesites
-          watering_interval:
+          board_watering_interval:
             title: "Intervalo de riego"
             description: |
               Limita el tiempo de riego en intervalos de milisegundos
-          watering_interval_delay:
+          board_watering_interval_delay:
             title: "Demora entre intervalos de riego"
             description: |
               Define el tiempo de demora en milisegundos entre intervalos de riego
-          sleep_time:
+          board_sleep_time:
             title: "Tiempo de hibernación"
             description: |
               Tiempo en milisegundos donde la placa Plantcare estará en hibernación entre cada ciclo
               de trabajo, donde obtendrá los estados de humedad y aplicará riegos si procede
-          auto_calculation:
-            title: "Autocálculo de umbrales de humedad"
+          calibrate_board:
+            title: "Modo calibración"
             description: |
-              Permite autocalcular el umbral de humedad de tierra de tu Plantcare (valor de
-              tierra húmeda y seca). <b>Es altamente recomendado mantener esta opción habilitada</b>
-          max_dried_value:
-            title: "Valor de tierra seca"
+              Habilita el modo calibración en tu Plantcare, por lo que podrá tomar mediciónes de la humedad
+              de la tierra de tu maceta para establecer los umbrales de riego
+          configure_board:
+            title: "Modo configuración"
             description: |
-              Máximo valor de sequedad de tierra para determinar el umbral de humedad de tierra (se
-              recomienda configurar como autocalculado)
-          max_wet_value:
-            title: "Valor de tierra húmeda"
-            description: |
-              Máximo valor de humedad de tierra para determinar el umbral de humedad de tierra (se
-              recomienda configurar como autocalculado)
+              Habilita el modo calibración en tu Plantcare, por lo que podrás ajustar su configuración
+              WIFI y de acceso a la aplicación web (token de autenticación y URL)
     wtever_api:
       attributes:
         name: Nombre
@@ -205,6 +200,11 @@ es:
         auto_calculation: Auto cálculo de umbrales de humedad
         sleep_time: "Tiempo de hibernación de placa (msec)"
         board_auth_token: Token de autenticación de placa
+        board_sleep_time: "Tiempo de hibernación de placa (msec)"
+        board_watering_interval: Intervalo de riego (msec)
+        board_watering_interval_delay: Demora entre intervalos de riego (msec)
+        calibrate_board: "Modo calibración"
+        configure_board: "Modo configuración"
     status:
       healthy: Sana
       sick: Malita

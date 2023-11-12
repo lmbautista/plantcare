@@ -1,5 +1,21 @@
 = f.file_field :picture, class: "form-control hidden"
 .row.plantcare-fields.pt-2
+  .col-xs-12
+    .flex.align-center
+      = fa_icon 'fal fa-sliders-v-square first-color pr-2 bigger-2 vline-middle'
+      %h3.m-0.vline-middle.weight-1
+        = I18n.t("plantcares.form.configuration_title")
+      %button{"class" => "custom-btn custom-btn-transparent", "aria-expanded" => "false", "data-target" => "#info", "data-toggle" => "collapse", "type" => "button", "style" => "margin-left: auto;" }
+        = fa_icon "fal fa-info-square bigger-1 vline-middle"
+    %h5.mt-1.third-color.weight-1
+      = I18n.t("plantcares.form.configuration_text")
+
+    #info.collapse
+      - if @plantcare.multiplex?
+        = render "multiplex_config_help"
+      - if @plantcare.single?
+        = render "single_config_help"
+
   - if @plantcare.multiplex?
     .col-xs-12.pt-4
       .well
@@ -29,22 +45,28 @@
 
   .col-xs-12.col-sm-6
     .form-group
-      = label_for(f.object, :planted_at, class: "m-0")
-      = f.text_field :planted_at, class: "form-control datepicker"
+      = label_for(f.object, :board_watering_interval, class: "m-0")
+      = f.number_field :board_watering_interval, class: "form-control"
 
-.row.plantcare-fields.pt-2
-  .col-xs-12.pb-4
-    .flex.align-center
-      = fa_icon 'fal fa-sliders-v-square first-color pr-2 bigger-2 vline-middle'
-      %h3.m-0.vline-middle.weight-1
-        = I18n.t("plantcares.form.configuration_title")
-      %button{"class" => "custom-btn custom-btn-transparent", "aria-expanded" => "false", "data-target" => "#info", "data-toggle" => "collapse", "type" => "button", "style" => "margin-left: auto;" }
-        = fa_icon "fal fa-info-square bigger-1 vline-middle"
-    %h5.mt-1.third-color.weight-1
-      = I18n.t("plantcares.form.configuration_text")
+  .col-xs-12.col-sm-6
+    .form-group
+      = label_for(f.object, :board_watering_interval_delay, class: "m-0")
+      = f.number_field :board_watering_interval_delay, class: "form-control"
 
-    #info.collapse
-      = render "config_help"
+  .col-xs-12.col-sm-6
+    .form-group
+      = label_for(f.object, :board_sleep_time, class: "m-0")
+      = f.number_field :board_sleep_time, class: "form-control"
+
+  .col-xs-12.col-sm-6
+    .form-group
+      = label_for(f.object, :calibrate_board, class: "m-0")
+      = switch_for(f, :calibrate_board)
+
+  .col-xs-12.col-sm-6
+    .form-group
+      = label_for(f.object, :configure_board, class: "m-0")
+      = switch_for(f, :configure_board)
 
   - if @plantcare.multiplex?
     .col-xs-12.col-sm-6
@@ -56,46 +78,6 @@
       .form-group
         = label_for(f.object, :water_pump_field)
         = f.select :water_pump_field, water_pumps_collection, { prompt: true }, { class: "form-control" }
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :watering_interval, class: "m-0")
-      = f.number_field :watering_interval, class: "form-control", disabled: "disabled"
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :watering_interval_delay, class: "m-0")
-      = f.number_field :watering_interval_delay, class: "form-control", disabled: "disabled"
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :sleep_time, class: "m-0")
-      = f.number_field :sleep_time, class: "form-control", disabled: "disabled"
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :auto_calculation, class: "m-0")
-      = f.select :auto_calculation, boolean_collection, { prompt: true }, { class: "form-control", disabled: "disabled" }
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :max_dried_value, class: "m-0")
-      = f.number_field :max_dried_value, class: "form-control", disabled: "disabled"
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :max_wet_value, class: "m-0")
-      = f.number_field :max_wet_value, class: "form-control", disabled: "disabled"
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :calculated_max_dried_value, class: "m-0")
-      = f.number_field :calculated_max_dried_value, class: "form-control", disabled: "disabled"
-
-  .col-xs-12.col-sm-6
-    .form-group
-      = label_for(f.object, :calculated_max_wet_value, class: "m-0")
-      = f.number_field :calculated_max_wet_value, class: "form-control", disabled: "disabled"
 
 :javascript
   uploaderControl($("#edit-picture"), $("#plantcare-panel"), $("#wtever_api_plantcare_picture"));

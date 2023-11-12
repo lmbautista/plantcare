@@ -43,25 +43,24 @@
     %h3.weight-2= plantcare.name
     = link_to edit_plantcare_path(plantcare), class: "font-color block mt-1 mb-0" do
       = fa_icon "fal fa-pen-square vline-middle flex-inline"
-      %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+      %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
         = I18n.t("plantcares.edit.goto-title")
-
 
     - if plantcare.water_pump.present?
       = link_to new_watering_path(water_pump_id: plantcare.water_pump_id), remote: true, class: "font-color block mt-1 mb-0" do
         = fa_icon "fal fa-dewpoint vline-middle flex-inline"
-        %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+        %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
           = I18n.t("waterings.new.title")
 
       - if plantcare.watering_schedule.present?
         = link_to edit_watering_schedule_path(id: plantcare.watering_schedule.id), remote: true, class: "font-color block mt-1 mb-0" do
           = fa_icon "far fa-calendar-alt vline-middle flex-inline"
-          %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+          %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
             = I18n.t("watering_schedules.edit.title")
       - else
         = link_to new_watering_schedule_path(plantcare_id: plantcare.id), remote: true, class: "font-color block mt-1 mb-0" do
           = fa_icon "far fa-calendar-alt vline-middle flex-inline"
-          %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
+          %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
             = I18n.t("watering_schedules.new.title")
 
     - else

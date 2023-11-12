@@ -63,7 +63,12 @@ class PlantcaresController < ApplicationController
       :name,
       :picture,
       :attachments,
-      :planted_at
+      :planted_at,
+      :board_sleep_time,
+      :board_watering_interval,
+      :board_watering_interval_delay,
+      :calibrate_board,
+      :configure_board
     ).tap do |permitted_params|
       permitted_params[:id] = params[:id]
       permitted_params[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)

@@ -33,24 +33,17 @@ module WteverApi
                :watered_at,
                :wet_synced_at,
                :water_pump_field,
-               :water_pump_id
+               :water_pump_id,
+               :board_sleep_time,
+               :board_watering_interval,
+               :board_watering_interval_delay,
+               :calibrate_board,
+               :configure_board
 
-    has_one :configuration
     has_one :board
     has_one :water_pump
     has_one :watering_schedule
     has_many :waterings
-
-    delegate :max_dried_value,
-             :max_wet_value,
-             :calculated_max_dried_value,
-             :calculated_max_wet_value,
-             :watering_interval,
-             :watering_interval_delay,
-             :sleep_time,
-             :auto_calculation,
-             to: :configuration,
-             allow_nil: true
 
     delegate :auth_token,
              to: :board,

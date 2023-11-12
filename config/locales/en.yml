@@ -159,34 +159,29 @@ en:
             description: |
               Set the water pump that you have connected to your Plantcare to water
               remotely when needed
-          watering_interval:
+          board_watering_interval:
             title: "Watering interval"
             description: |
               It limits the watering time in a millisecond interval
-          watering_interval_delay:
+          board_watering_interval_delay:
             title: "Watering interval delay"
             description: |
               It defines the delay in milliseconds between the watering intervals
-          sleep_time:
+          board_sleep_time:
             title: "Sleeping time"
             description: |
               The time the board will be sleeping between each cycle of work where it will
               take the wet statuses and applies watering if needed
-          auto_calculation:
-            title: "Threshold auto calculation"
+          calibrate_board:
+            title: "Calibration mode"
             description: |
-              It allows to autocalculate the wet threshold of your Plantcare (max dried
-              and wet soil values). <b>It's highly recommented to keep it enabled</b>
-          max_dried_value:
-            title: "Dried soil value"
+              It will enable the calibration mode in your Plantcare, so it could take soil moisture
+              measures to calibrate the irrigation threshold of your pot
+          configure_board:
+            title: "Configuration mode"
             description: |
-              Max dried value of given wet status threshold (it's recommended to set it
-              as autocalculated)
-          max_wet_value:
-            title: "Wet soil value"
-            description: |
-              Max wet value of given wet status threshold (it's recommended to set it
-              as autocalculated)
+              It will enable the configuration mode in your Plantcare, so it could set the configuration
+              adjustments such as your WIFI credentials and the web app configuration (the authentication token and web URL)
 
     wtever_api:
       attributes:
@@ -207,6 +202,11 @@ en:
         auto_calculation: Threshold auto calculation
         sleep_time: Board sleeping time (msec)
         board_auth_token: Board auth token
+        board_sleep_time: Board sleeping time (msec)
+        board_watering_interval: Watering interval (msec)
+        board_watering_interval_delay: Delay between watering interval (msec)
+        calibrate_board: Calibration mode
+        configure_board: Configuration mode
     status:
       healthy: Healthy
       sick: Sick

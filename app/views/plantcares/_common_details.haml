@@ -1,11 +1,26 @@
 .flex.flex-direction-row.flex-justify-space-between.p-2
+
   .flex.flex-direction-column
+    .pb-2= board_status_tag(plantcare.board.status)
     - if plantcare.wet
-      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", value_classes: plantcare.status }
-    - if plantcare.planted_at
-      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-seedling", attribute: :planted_at,  value: plantcare.planted_at }
-    - if plantcare.watered_at
-      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-hand-holding-water", attribute: :watered_at, value: plantcare.watered_at }
+      = render partial: "detail", locals: { plantcare: plantcare, icon_classes: "fal fa-heartbeat", attribute: :wet, value: "#{plantcare.wet}%", value_classes: plantcare.status, custom_classes: "bigger-2" }
+
+    .detail.text-left.opposite-color.pt-1
+      = svg_icon_tag("watering-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
+
+      .inline-flex.pl-1
+        %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+          = I18n.t("plantcares.index.plantcare.watered_at")
+        %h6.weight-2.opposite-color.m-0
+          = plantcare.watered_at.presence || "-"
+
+    .detail.text-left.opposite-color.pt-1
+      = svg_icon_tag("board-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
+      .inline-flex.pl-1
+        %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.last_connection_at") }
+          = I18n.t("plantcares.index.plantcare.last_connection_at")
+        %h6.weight-2.opposite-color.m-0
+          = plantcare.board.last_connection_at.presence || "-"
 
   - if plantcare.id.present?
     .flex
