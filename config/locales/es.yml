@@ -103,33 +103,37 @@ es:
         title: Configura tu plantcare
         subtitle: Aquí podrás encontrar detalles para configurar paso a paso tu Plantcare
         step-1:
-          title: Solicita tu prototipo
+          title: Registrar tu planta
           description: |
-            Ahora que tienes una cuenta, el primer paso es contactar con el autor (%{link})
-            para solicitar tu prototipo. Una vez lo recibas, podrás pasar al siguiente paso
+            Ahora que tienes una cuenta existente y un placa de Plantcare, registremos tu planta en la aplicación.
+            Toma nota del token de autenticación proporcionado y de las credenciales WIFI donde conectarás tu placa.
         step-2:
-          title: Registra tu plantcare
+          title: Configurar tu placa
           description: |
-            El prototipo proporciona detalles sobre los IDs del sensor de humedad y bomba de agua.
-            Dichos IDs serán necesarios para registrar %{link} tu plantcare
+            Coloca la placa de Plantcare dentro de la maceta y enciéndela.
+            <i>La maceta debe estar tan seca como sueles tenerla, para que el proceso de calibración pueda calcular los umbrales de humedad</i>.<br/>
+            La placa iniciará el <b>Modo de configuración</b> parpadeando una luz azul:
+            <ul class="pl-3 pt-2">
+              <li>Accede a la conexión WIFI de la placa a través del móvil (nombre de red como <i><b>plantcare-sdpoiw9e</b></i>)</li>
+              <li>Configura tu token de autenticación y las credenciales WIFI, y envía el formulario</li>
+              <li>Si las credenciales son válidas, la placa entrará en <b>Modo de calibración</b></li>
+              <li>Si no, permanecerás en <b>Modo de configuración</b> para introducir las credenciales correctas</li>
+            </ul>
         step-3:
-          title: Coloca los dispositivos físicos
+          title: Calibrar tu placa
           description: |
-            Estas son las instrucciones:
-            <ul class="pl-4">
-            <li>
-              El prototipo: se carga a través del sol, <b><i>que recomendamos colocar en el exterior</i></b>.
-              También puedes conectarlo a la red eléctrica a través de alimentador con USB micro
-            </li>
-            <li>El sensor de humedad: colócalo cerca del tronco y de la zona de riego</li>
-            <li>La bomba de agua: colócala tu tanque de agua</li>
+            la placa iniciará el <b>Modo de calibración</b> encendiendo una luz morada:
+            <ul class="pl-3 pt-2">
+              <li>Deja que la placa realice algunas mediciones durante 15 segundos</li>
+              <li>Luego, riega manualmente tu planta (asegúrate de regar la zona donde se colocó la placa)</li>
+              <li>Una vez que la calibración esté completa, la placa entrará en <b>Modo en línea</b></li>
             </ul>
         step-4:
-          title: Plantcare lista
+          title: Plantcare listo
           description: |
-            Una vez coloques todos los elementos, empezarás a recibir información actualizada de manera
-            puntual sobre el estado de tu plantcare (asegúrate que tu placa está sincronizada correctamente
-            comprobando las últimas conexiones en los detalles de tu plantcare)
+            ¡Felicidades! Ahora la placa iniciará el <b>Modo en línea</b> encendiendo una luz verde.
+            A partir de ahora, tu placa tendrá comunicación periódica con la aplicación para hacer un seguimiento de la humedad del suelo de tu maceta
+            y regarla cuando sea necesario.
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el

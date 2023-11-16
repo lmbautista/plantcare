@@ -1,23 +1,50 @@
-.flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-one.png", width: 140, class: "pr-4"
-  .flex.flex-direction-column
-    %h4.weight-3= I18n.t("plantcares.index.instructions.step-1.title")
-    %h5.weight-2= I18n.t("plantcares.index.instructions.step-1.description", link: mail_to("lmiguelbautista@gmail.com", "@lmbautista", class: "general-color")).html_safe
+.hidden-xs
+  .flex.align-center.pt-4.pb-4
+    = image_tag "instructions/step-one.png", width: 500, class: "pr-4"
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-1.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-1.description", link: mail_to("lmiguelbautista@gmail.com", "@lmbautista", class: "general-color")).html_safe
 
-.flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-two.png", width: 140, class: "pr-4"
-  .flex.flex-direction-column
-    %h4.weight-3= I18n.t("plantcares.index.instructions.step-2.title")
-    %h5.weight-2= I18n.t("plantcares.index.instructions.step-2.description", link: link_to(I18n.t("plantcares.new.here"), new_plantcare_path, class: "general-color")).html_safe
+  .flex.align-center.pt-4.pb-4
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-2.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-2.description", link: link_to(I18n.t("plantcares.new.here"), new_plantcare_path, class: "general-color")).html_safe
+    = image_tag "instructions/step-two.png", width: 500, class: "pl-4"
 
-.flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-three.png", width: 140, class: "pr-4"
-  .flex.flex-direction-column
-    %h4.weight-3= I18n.t("plantcares.index.instructions.step-3.title")
-    %h5.weight-2= I18n.t("plantcares.index.instructions.step-3.description").html_safe
+  .flex.align-center.pt-4.pb-4
+    = image_tag "instructions/step-three.png", width: 500, class: "pr-4"
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-3.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-3.description").html_safe
 
-.flex.align-center.pt-2.pb-2
-  = image_tag "instructions/step-four.png", width: 140, class: "pr-4"
-  .flex.flex-direction-column
-    %h4.weight-3= I18n.t("plantcares.index.instructions.step-4.title")
-    %h5.weight-2= I18n.t("plantcares.index.instructions.step-4.description")
+  .flex.align-center.pt-4.pb-4
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-4.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-4.description")
+    = image_tag "instructions/step-four.png", width: 500, class: "pl-4"
+
+
+.visible-xs.p-2
+  .flex.flex-direction-column.align-center.pt-4.pb-4
+    = image_tag "instructions/step-one.png", width: 350
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-1.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-1.description").html_safe
+
+  .flex.flex-direction-column.align-center.pt-4.pb-4
+    = image_tag "instructions/step-two.png", width: 350
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-2.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-2.description").html_safe
+
+  .flex.flex-direction-column.align-center.pt-4.pb-4
+    = image_tag "instructions/step-three.png", width: 350
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-3.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-3.description").html_safe
+
+  .flex.flex-direction-column.align-center.pt-4.pb-4
+    = image_tag "instructions/step-four.png", width: 350
+    .flex.flex-direction-column
+      %h3.weight-3= I18n.t("plantcares.index.instructions.step-4.title")
+      %h4.weight-2= I18n.t("plantcares.index.instructions.step-4.description").html_safe

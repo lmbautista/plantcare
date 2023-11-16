@@ -105,32 +105,37 @@ en:
         title: Setup your plantcare
         subtitle: Here you could find further details about how to configure step by step your board
         step-1:
-          title: Request your prototype
+          title: Register your plant
           description: |
-            Now you got an existing account, the first step is to contact the Author <b>(%{link})</b>
-            to get your prototype. Once you got it you could jump into the next step
+            Now you have an existing account and a Plantcare board, let's register your plant in the application.
+            Take note of the authentication token provided and the WIFI credentials where you will connect your board.
         step-2:
-          title: Register a new plantcare
+          title: Configure your board
           description: |
-            The prototype will have a sticker with the IDs of the wet sensor and the water pump.
-            Those IDs will be needed to register %{link} your Plantcare.
+            Place the Plantcare board within the pot and turn it on.
+            <b><i>Pot should be as dried as usually you have it, so the calibration process could calculate the humidity thresholds</i></b>.<br/>
+            The board will start the <b>Configuration mode</b> blinking a blue light:
+            <ul class="pl-3 pt-2">
+              <li>Access the board WIFI connection via mobile (network name like <i>plantcare-sdpoiw9e</li>
+              <li>Set your authentication token and the WIFI credentials and submit the form</li>
+              <li> If credentials are valid, the board will get into <b>Calibration mode</b></li>
+              <li> If not, you'll stay in <b>Configuration mode</b> to introduce the right credentials
+            </ul>
         step-3:
-          title: Place the physical devices
+          title: Calibrate your board
           description: |
-            Here are the resources to place:
-            <ul class="pl-4">
-            <li>
-              The prototype: as it's charged by the sun, <b><i>we recommended placing it outside</i></b>.
-              If not, you can also plug it into any common electric outlet via USB micro
-            </li>
-            <li>The wet sensor: place it near to the trunk and the watered zones</li>
-            <li>The water pump: place it in a water tank</li>
+            The board will start the <b>Calibration mode</b> turning on a purple light:
+            <ul class="pl-3 pt-2">
+              <li>Let the board to get some measurements during 15 seconds</li>
+              <li>Then, let's irrigate manually your plant (ensure you irrigate the zone where the board was placed)</li>
+              <li>Once the calibration is done, the board will get into <b>Online mode</b></li>
             </ul>
         step-4:
           title: Plantcare ready
           description: |
-            Once you placed all the devices, you'll start receiving fresh information from your plantcare's status
-            (ensure the board is synced with your account with the wifi icon of the plantcare's card).
+            Congratulations! Now the board will start the <b>Online mode</b> turning on a green light
+            From now on your board will have periodically communication with the application to track the soil moisture of your pot
+            and watering it when needed
       plantcare:
         wet: Humidity
         planted_at: Planted on
