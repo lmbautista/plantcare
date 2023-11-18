@@ -98,12 +98,13 @@ en:
       title: New plantcare
       here: here
     index:
-      title: Your Plantcares
+      title: The garden
       subtitle: Check and manage the status of your plants
       how-it-works: How it works?
+      get-back-garden: Get back to garden
       instructions:
-        title: Setup your plantcare
-        subtitle: Here you could find further details about how to configure step by step your board
+        title: Configuration
+        subtitle: Here you will find step-by-step details to set up your Plantcare board
         step-1:
           title: Register your plant
           description: |
@@ -112,30 +113,33 @@ en:
         step-2:
           title: Configure your board
           description: |
-            Place the Plantcare board within the pot and turn it on.
-            <b><i>Pot should be as dried as usually you have it, so the calibration process could calculate the humidity thresholds</i></b>.<br/>
-            The board will start the <b>Configuration mode</b> blinking a blue light:
-            <ul class="pl-3 pt-2">
-              <li>Access the board WIFI connection via mobile (network name like <i>plantcare-sdpoiw9e</li>
-              <li>Set your authentication token and the WIFI credentials and submit the form</li>
-              <li> If credentials are valid, the board will get into <b>Calibration mode</b></li>
-              <li> If not, you'll stay in <b>Configuration mode</b> to introduce the right credentials
-            </ul>
+            <p>Place the Plantcare board within the pot and turn it on.</p>
+            <p><b><i>Pot should be as dried as usually you have it, so the calibration process could calculate the humidity thresholds</i></b>.></p>
+            <p>The board will start the <b>Configuration mode</b> blinking a blue light:
+              <ul class="pl-3 pt-2">
+                <li class="pb-1">Access the board WIFI connection via mobile (network name like <i>plantcare-sdpoiw9e</li>
+                <li class="pb-1">Access the configuration portal through your browser at the address <code>192.168.1.4</code></li>
+                <li class="pb-1">Set your authentication token and the WIFI credentials and submit the form</li>
+                <li class="pb-1">If credentials are valid, the board will get into <b>Calibration mode</b></li>
+                <li>If not, you'll stay in <b>Configuration mode</b> to introduce the right credentials
+              </ul>
+            </p>
         step-3:
           title: Calibrate your board
           description: |
-            The board will start the <b>Calibration mode</b> turning on a purple light:
+            <p>The board will start the <b>Calibration mode</b> turning on a purple light.</p>
+            <p>For 1:30 minutes, your device will take humidity sensor measurements. Follow these steps to perform a proper calibration:</p>
             <ul class="pl-3 pt-2">
-              <li>Let the board to get some measurements during 15 seconds</li>
-              <li>Then, let's irrigate manually your plant (ensure you irrigate the zone where the board was placed)</li>
-              <li>Once the calibration is done, the board will get into <b>Online mode</b></li>
+              <li class="pb-1">Let the board to get some measurements during 15 seconds</li>
+              <li class="pb-1">Then, let's irrigate manually your plant (ensure you irrigate the zone where the board was placed)</li>
+              <li>Once the calibration is done, the board will start the <b>Online mode</b></li>
             </ul>
         step-4:
           title: Plantcare ready
           description: |
-            Congratulations! Now the board will start the <b>Online mode</b> turning on a green light
-            From now on your board will have periodically communication with the application to track the soil moisture of your pot
-            and watering it when needed
+            <p>Congratulations! Now the board will start the <b>Online mode</b> turning on a green light.</p>
+            <p>From now on your board will have periodically communication with the application to track the soil moisture of your pot
+            and watering it when needed</p>
       plantcare:
         wet: Humidity
         planted_at: Planted on

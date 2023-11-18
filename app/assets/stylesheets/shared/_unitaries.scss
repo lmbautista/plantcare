@@ -1,5 +1,6 @@
 @import "shared/_variables";
 
+.general-font { font-family: $general-font; }
 .icon { height: 35px; width: 35px; }
 .flex { display: flex; }
 .flex-inline { display: inline-flex; }
@@ -116,6 +117,7 @@
 .vline-bottom { vertical-align: bottom }
 
 .text-align-center { text-align: center }
+.text-align-justify { text-align: justify }
 
 .no-scroll { overflow: hidden; }
 

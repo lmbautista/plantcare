@@ -8,6 +8,11 @@
     %h1.biggest.mb-3{ class: "#{dark ? "font-color" : "" }" }= raw title
 
   - if subtitle.present?
-    .row
-      .col-xs-12.col-md-8.col-md-offset-2
-        %h4.bigger-2.mt-1.weight-1{ class: "#{dark ? "font-color" : "" }" }= raw subtitle
+    .hidden-xs
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2
+          %h4.bigger-2.mt-1.weight-1{ class: "#{dark ? "font-color" : "" }" }= raw subtitle
+    .visible-xs
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2
+          %h3.general-font.mt-1.weight-1{ class: "#{dark ? "font-color" : "" }" }= raw subtitle

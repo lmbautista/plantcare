@@ -112,6 +112,21 @@ body {
       .non_data { color: $non-data-color; }
     }
 
+    .instruction-step {
+      --notchSize: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      background: #fcfcfc;
+      clip-path: polygon(0% var(--notchSize),
+          var(--notchSize) 0%,
+          calc(100% - var(--notchSize)) 0%,
+          100% var(--notchSize),
+          100% calc(100% - var(--notchSize)),
+          calc(100% - var(--notchSize)) 100%,
+          var(--notchSize) 100%,
+          0% calc(100% - var(--notchSize)));
+    }
+
     .watering-schedule-panel, .watering-panel {
       .watering-schedule-left-panel, .watering-left-panel {
         display: inline-flex;

@@ -1,26 +1,26 @@
 .row
-  .col-xs-12.col-sm-12.col-md-12.col-lg-10.col-xl-8
+  .col-xs-12.col-sm-12.col-md-12.col-lg-10.col-xl-8.pb-4
     .flex.align-center.pt-2.pb-2
       .flex.flex-direction-column
         %h4.weight-2= I18n.t("users.welcome.features.feature-1.description").html_safe
 
-    .flex.align-center.pt-2.pb-2
+    .flex.align-center.pt-2.pb-2.details
       .flex.flex-direction-column
         %h4.bigger-2.weight-3= I18n.t("users.welcome.features.feature-2.title")
         %h4.weight-2= I18n.t("users.welcome.features.feature-2.description").html_safe
 
-    .flex.align-center.pt-2.pb-2
+    .flex.align-center.pt-2.pb-2.details
       .flex.flex-direction-column
         %h4.bigger-2.weight-3= I18n.t("users.welcome.features.feature-3.title")
         %h4.weight-2= I18n.t("users.welcome.features.feature-3.description").html_safe
 
-    .flex.align-center.pt-2.pb-2
+    .flex.align-center.pt-2.pb-2.details
       .flex.flex-direction-column
         %h4.bigger-2.weight-3= I18n.t("users.welcome.features.feature-4.title")
         %h4.weight-2= I18n.t("users.welcome.features.feature-4.description").html_safe
 
 .row.full-width
-  .col-xs-12.col-sm-6.col-md-4.col-md-offset-1.pt-2
+  .col-xs-12.col-sm-6.col-md-4.col-md-offset-1.pt-4
     = link_to t('users.new.title'), signup_path, class: "custom-btn custom-btn-tertiary btn-block"
-  .col-xs-12.col-sm-6.col-md-4.pt-2
+  .col-xs-12.col-sm-6.col-md-4.pt-4
     = link_to t('buttons.back'), '#intro', class: "custom-btn custom-btn-secondary btn-block rf"
