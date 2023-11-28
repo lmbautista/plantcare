@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module WteverApi
-  class WateringSchedule < WteverApi::Base
+module PlantcareApi
+  class WateringSchedule < PlantcareApi::Base
     attributes :starts_on,
                :ends_on,
                :status,

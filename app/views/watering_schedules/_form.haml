@@ -8,16 +8,16 @@
   .watering-schedule-right-panel.vline-middle
     = f.hidden_field :plantcare_id
     .flex
-      = f.text_field :starts_on, class: "form-control datepicker flex-inline", placeholder: I18n.t("watering_schedules.wtever_api.attributes.starts_on")
-      = f.text_field :ends_on, class: "form-control datepicker flex-inline", placeholder: I18n.t("watering_schedules.wtever_api.attributes.ends_on")
+      = f.text_field :starts_on, class: "form-control datepicker flex-inline", placeholder: I18n.t("watering_schedules.plantcare_api.attributes.starts_on")
+      = f.text_field :ends_on, class: "form-control datepicker flex-inline", placeholder: I18n.t("watering_schedules.plantcare_api.attributes.ends_on")
 
     .flex
-      = f.number_field :duration_amount, class: "form-control", placeholder: I18n.t("watering_schedules.wtever_api.attributes.duration_amount")
-      = f.select :duration_unit, WteverApi::WateringSchedule::DURATION_UNITS, { prompt: true }, { class: "form-control" }
+      = f.number_field :duration_amount, class: "form-control", placeholder: I18n.t("watering_schedules.plantcare_api.attributes.duration_amount")
+      = f.select :duration_unit, PlantcareApi::WateringSchedule::DURATION_UNITS, { prompt: true }, { class: "form-control" }
 
     .flex
-      = f.number_field :frequency_amount, class: "form-control", placeholder: I18n.t("watering_schedules.wtever_api.attributes.frequency_amount")
-      = f.select :frequency_unit, WteverApi::WateringSchedule::FREQUENCY_UNITS, { prompt: true }, { class: "form-control" }
+      = f.number_field :frequency_amount, class: "form-control", placeholder: I18n.t("watering_schedules.plantcare_api.attributes.frequency_amount")
+      = f.select :frequency_unit, PlantcareApi::WateringSchedule::FREQUENCY_UNITS, { prompt: true }, { class: "form-control" }
 
     .mt-4
       = render partial: "shared/form/submit", locals: { submit_class: "custom-btn-primary", remote: true }

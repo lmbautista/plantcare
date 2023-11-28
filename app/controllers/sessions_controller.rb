@@ -4,11 +4,11 @@ class SessionsController < ApplicationController
   skip_before_action :authenticator, only: %w(new create)
 
   def new
-    @user = WteverApi::User.new
+    @user = PlantcareApi::User.new
   end
 
   def create
-    @user = WteverApi::User.new(sessions_params)
+    @user = PlantcareApi::User.new(sessions_params)
     redirect_to(plantcares_path) && return if authenticate!(:basic_auth)
 
     redirect_to(root_path) && return

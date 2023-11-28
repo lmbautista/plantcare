@@ -9,7 +9,7 @@
       = svg_icon_tag("watering-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
 
       .inline-flex.pl-1
-        %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+        %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.plantcare_api.attributes.watered_at") }
           = I18n.t("plantcares.index.plantcare.watered_at")
         %h6.weight-2.opposite-color.m-0
           = plantcare.watered_at.presence || "-"
@@ -17,7 +17,7 @@
     .detail.text-left.opposite-color.pt-1
       = svg_icon_tag("board-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
       .inline-flex.pl-1
-        %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.wtever_api.attributes.last_connection_at") }
+        %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.plantcare_api.attributes.last_connection_at") }
           = I18n.t("plantcares.index.plantcare.last_connection_at")
         %h6.weight-2.opposite-color.m-0
           = plantcare.board.last_connection_at.presence || "-"

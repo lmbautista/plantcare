@@ -78,7 +78,7 @@ en:
     update:
       sucessfully: You have successfully updated your profile
 
-    wtever_api:
+    plantcare_api:
       attributes:
         first_name: Name
         last_name: Last name
@@ -192,7 +192,7 @@ en:
               It will enable the configuration mode in your Plantcare, so it could set the configuration
               adjustments such as your WIFI credentials and the web app configuration (the authentication token and web URL)
 
-    wtever_api:
+    plantcare_api:
       attributes:
         name: Name
         wet: Humidity
@@ -242,7 +242,7 @@ en:
       sucessfully: Watering updated successfully
     destroy:
       sucessfully: Watering removed successfully
-    wtever_api:
+    plantcare_api:
       attributes:
         status: Status
         programmed_at: Scheduled at
@@ -260,7 +260,7 @@ en:
       sucessfully: Watering updated successfully
     destroy:
       sucessfully: Watering removed successfully
-    wtever_api:
+    plantcare_api:
       attributes:
         starts_on: Starts on
         ends_on: Ends on

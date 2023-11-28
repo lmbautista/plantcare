@@ -36,7 +36,7 @@
           %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
             = I18n.t("watering_schedules.new.title")
 
-      %h6.text-uppercase.weight-3.mb-0.mt-4{ alt: I18n.t("plantcares.wtever_api.attributes.watered_at") }
+      %h6.text-uppercase.weight-3.mb-0.mt-4{ alt: I18n.t("plantcares.plantcare_api.attributes.watered_at") }
         = I18n.t("watering.next_title")
       - if plantcare.waterings.any?(&:programmed?)
         .mt-1

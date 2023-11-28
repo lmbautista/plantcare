@@ -3,9 +3,9 @@
 .form
   = form_tag sessions_path, id: 'signin_form', method: 'post', remote: remote do
     .form-group
-      = email_field_tag :email, params[:email], class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.email')
+      = email_field_tag :email, params[:email], class: 'form-control', placeholder: I18n.t('users.plantcare_api.attributes.email')
 
     .form-group
-      = password_field_tag :password, nil, class: 'form-control', placeholder: I18n.t('users.wtever_api.attributes.password')
+      = password_field_tag :password, nil, class: 'form-control', placeholder: I18n.t('users.plantcare_api.attributes.password')
 
     = render partial: 'shared/form/submit', locals: { submit_class: 'custom-btn-primary', remote: remote }

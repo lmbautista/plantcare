@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module WteverApi
+module PlantcareApi
   class Base
     include Her::Model
 

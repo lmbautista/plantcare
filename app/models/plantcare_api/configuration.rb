@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module WteverApi
-  class Configuration < WteverApi::Base
+module PlantcareApi
+  class Configuration < PlantcareApi::Base
     attributes :max_dried_value,
                :max_wet_value,
                :calculated_max_dried_value,

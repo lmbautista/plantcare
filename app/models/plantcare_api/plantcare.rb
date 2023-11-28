@@ -3,8 +3,8 @@
 # ERM plantcare model
 require "her/file_upload"
 
-module WteverApi
-  class Plantcare < WteverApi::Base
+module PlantcareApi
+  class Plantcare < PlantcareApi::Base
     include Her::FileUpload
 
     WET_SENSOR_ARDUINO_FIELDS = {

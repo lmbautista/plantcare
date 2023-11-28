@@ -12,11 +12,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = WteverApi::User.new
+    @user = PlantcareApi::User.new
   end
 
   def create
-    @user              = WteverApi::User.new(user_params)
+    @user              = PlantcareApi::User.new(user_params)
     @user.wtever_token = @user.client_name = "plantcare"
 
     if @user.save
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = WteverApi::User.new(user_params)
+    @user = PlantcareApi::User.new(user_params)
 
     if @user.save
       flash[:notice] = I18n.t("users.update.sucessfully")
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:wtever_api_user).permit(
+    params.require(:plantcare_api_user).permit(
       :first_name,
       :last_name,
       :email,
@@ -70,6 +70,6 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = WteverApi::User.find(params[:id]) if params[:id].present?
+    @user = PlantcareApi::User.find(params[:id]) if params[:id].present?
   end
 end

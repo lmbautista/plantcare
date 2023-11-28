@@ -10,9 +10,9 @@ class ApplicationController < ActionController::Base
   before_action :set_user_api_token, if: :logged?
   before_action :set_locale
 
-  rescue_from Wtever::ForbiddenError,      with: :forbidden
-  rescue_from Wtever::NotFoundError,       with: :not_found
-  rescue_from Wtever::InternalServerError, with: :internal_server_error
+  rescue_from PlantcareApi::ForbiddenError,      with: :forbidden
+  rescue_from PlantcareApi::NotFoundError,       with: :not_found
+  rescue_from PlantcareApi::InternalServerError, with: :internal_server_error
 
   protected
 

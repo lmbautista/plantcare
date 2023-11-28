@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module WteverApi
-  class Board < WteverApi::Base
+module PlantcareApi
+  class Board < PlantcareApi::Base
     attributes :auth_token,
                :configured,
                :calibrated,

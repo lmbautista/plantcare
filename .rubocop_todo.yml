@@ -51,11 +51,11 @@ Layout/EmptyLinesAroundBlockBody:
 Layout/EmptyLinesAroundClassBody:
   Exclude:
     - 'app/controllers/sessions_controller.rb'
-    - 'app/models/wtever_api/plantcare.rb'
-    - 'app/models/wtever_api/user.rb'
-    - 'lib/wtever/forbidden_error.rb'
-    - 'lib/wtever/internal_server_error.rb'
-    - 'lib/wtever/not_found_error.rb'
+    - 'app/models/plantcare_api/plantcare.rb'
+    - 'app/models/plantcare_api/user.rb'
+    - 'lib/plantcare_api/forbidden_error.rb'
+    - 'lib/plantcare_api/internal_server_error.rb'
+    - 'lib/plantcare_api/not_found_error.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -144,7 +144,7 @@ Layout/SpaceInsidePercentLiteralDelimiters:
 Layout/TrailingWhitespace:
   Exclude:
     - 'app/helpers/html_helper.rb'
-    - 'app/models/wtever_api/country.rb'
+    - 'app/models/plantcare_api/country.rb'
 
 # Offense count: 1
 Lint/Debugger:
@@ -239,9 +239,9 @@ Style/Documentation:
     - 'app/helpers/plantcares_helper.rb'
     - 'app/helpers/sessions_helper.rb'
     - 'app/helpers/users_helper.rb'
-    - 'app/models/wtever_api/base.rb'
-    - 'app/models/wtever_api/plantcare.rb'
-    - 'app/models/wtever_api/user.rb'
+    - 'app/models/plantcare_api/base.rb'
+    - 'app/models/plantcare_api/plantcare.rb'
+    - 'app/models/plantcare_api/user.rb'
     - 'config/application.rb'
     - 'lib/authenticators/basic_auth.rb'
     - 'lib/custom_token_authentication.rb'

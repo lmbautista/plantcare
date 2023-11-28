@@ -4,18 +4,18 @@ class PlantcaresController < ApplicationController
   before_action :set_plantcare, only: %w(show edit)
 
   def index
-    @plantcares = WteverApi::Plantcare.all
+    @plantcares = PlantcareApi::Plantcare.all
   end
 
   def show
   end
 
   def new
-    @plantcare  = WteverApi::Plantcare.new
+    @plantcare  = PlantcareApi::Plantcare.new
   end
 
   def create
-    @plantcare  = WteverApi::Plantcare.new(plantcare_params)
+    @plantcare  = PlantcareApi::Plantcare.new(plantcare_params)
     if @plantcare.save
       flash[:notice] = I18n.t("plantcares.create.sucessfully")
 
@@ -31,7 +31,7 @@ class PlantcaresController < ApplicationController
   end
 
   def update
-    @plantcare = WteverApi::Plantcare.new(plantcare_params)
+    @plantcare = PlantcareApi::Plantcare.new(plantcare_params)
 
     if @plantcare.save
       flash[:notice] = I18n.t("plantcares.update.sucessfully")
@@ -45,7 +45,7 @@ class PlantcaresController < ApplicationController
   end
 
   def destroy
-    plantcare = WteverApi::Plantcare.find(params[:id])
+    plantcare = PlantcareApi::Plantcare.find(params[:id])
 
     if plantcare.destroy
       flash[:notice] = I18n.t("plantcares.destroy.sucessfully")
@@ -59,7 +59,7 @@ class PlantcaresController < ApplicationController
   private
 
   def plantcare_params
-    params.require(:wtever_api_plantcare).permit(
+    params.require(:plantcare_api).permit(
       :name,
       :picture,
       :attachments,
@@ -71,12 +71,12 @@ class PlantcaresController < ApplicationController
       :configure_board
     ).tap do |permitted_params|
       permitted_params[:id] = params[:id]
-      permitted_params[:wet_sensor_field] = params.dig(:wtever_api_plantcare, :wet_sensor_field)
-      permitted_params[:water_pump_field] = params.dig(:wtever_api_plantcare, :water_pump_field)
+      permitted_params[:wet_sensor_field] = params.dig(:plantcare_api, :wet_sensor_field)
+      permitted_params[:water_pump_field] = params.dig(:plantcare_api, :water_pump_field)
     end
   end
 
   def set_plantcare
-    @plantcare = WteverApi::Plantcare.find(params[:id])
+    @plantcare = PlantcareApi::Plantcare.find(params[:id])
   end
 end

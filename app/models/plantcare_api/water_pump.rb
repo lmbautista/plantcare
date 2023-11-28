@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module WteverApi
-  class WaterPump < WteverApi::Base
+module PlantcareApi
+  class WaterPump < PlantcareApi::Base
     attributes :status,
                :water_for
 

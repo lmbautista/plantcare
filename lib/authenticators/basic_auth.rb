@@ -6,7 +6,7 @@ class BasicAuth < Warden::Strategies::Base
   end
 
   def authenticate!
-    u = WteverApi::User.signin(email: params[:email], password: params[:password])
+    u = PlantcareApi::User.signin(email: params[:email], password: params[:password])
 
     if u.nil?
       fail!("Could not log in")

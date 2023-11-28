@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require "wtever/forbidden_error"
-require "wtever/internal_server_error"
-require "wtever/not_found_error"
+require "plantcare_api/forbidden_error"
+require "plantcare_api/internal_server_error"
+require "plantcare_api/not_found_error"
 
 module Her
   class ApiResponseHandler < Her::Middleware::DefaultParseJSON
@@ -23,11 +23,11 @@ module Her
                    when 204, 304
                      parse("{}")
                    when 403
-                     raise Wtever::ForbiddenError
+                     raise PlantcareApi::ForbiddenError
                    when 404
-                     raise Wtever::NotFoundError
+                     raise PlantcareApi::NotFoundError
                    when 500
-                     raise Wtever::InternalServerError
+                     raise PlantcareApi::InternalServerError
                    else
                      parse(env[:body])
                    end

@@ -2,11 +2,11 @@
 
 class WateringsController < ApplicationController
   def new
-    @watering = WteverApi::Watering.new(water_pump_id: params[:water_pump_id])
+    @watering = PlantcareApi::Watering.new(water_pump_id: params[:water_pump_id])
   end
 
   def create
-    watering = WteverApi::Watering.new(watering_params)
+    watering = PlantcareApi::Watering.new(watering_params)
 
     if watering.save
       flash[:notice] = I18n.t("waterings.create.sucessfully")
@@ -18,7 +18,7 @@ class WateringsController < ApplicationController
   end
 
   def destroy
-    plantcare = WteverApi::Watering.find(params[:id])
+    plantcare = PlantcareApi::Watering.find(params[:id])
 
     if plantcare.destroy
       flash[:notice] = I18n.t("waterings.destroy.sucessfully")
@@ -33,7 +33,7 @@ class WateringsController < ApplicationController
 
   def watering_params
     params
-      .require(:wtever_api_watering)
+      .require(:plantcare_api_watering)
       .permit(
         :water_pump_id,
         :duration_amount,
@@ -44,6 +44,6 @@ class WateringsController < ApplicationController
   end
 
   def watering
-    @watering ||= WteverApi::Watering.find(params[:id])
+    @watering ||= PlantcareApi::Watering.find(params[:id])
   end
 end

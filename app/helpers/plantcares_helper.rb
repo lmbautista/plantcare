@@ -31,15 +31,15 @@ module PlantcaresHelper
   end
 
   def wet_sensors_collection
-    WteverApi::Plantcare::WET_SENSOR_ARDUINO_FIELDS.to_a
+    PlantcareApi::PlantcareApi::WET_SENSOR_ARDUINO_FIELDS.to_a
   end
 
   def water_pumps_collection
-    WteverApi::WaterPump::ARDUINO_FIELDS.to_a
+    PlantcareApi::WaterPump::ARDUINO_FIELDS.to_a
   end
 
   def countries_collection
-    WteverApi::Country.all.map { |country| [country.name.humanize, country.code] }
+    PlantcareApi::Country.all.map { |country| [country.name.humanize, country.code] }
   end
 
   def timezones_collection

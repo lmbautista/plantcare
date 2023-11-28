@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Wtever
+module PlantcareApi
   class InternalServerError < StandardError
   end
 end

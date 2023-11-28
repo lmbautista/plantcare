@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module WteverApi
-  class User < WteverApi::Base
+module PlantcareApi
+  class User < PlantcareApi::Base
     attributes :first_name, :last_name, :email, :country_code,
                :timezone, :lang, :password_confirmation, :password, :api_token, :last_healthy_checks
 

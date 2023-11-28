@@ -76,7 +76,7 @@ es:
     update:
       sucessfully: Has actualizado correctamente tu perfil
 
-    wtever_api:
+    plantcare_api:
       attributes:
         first_name: Nombre
         last_name: Apellidos
@@ -189,7 +189,7 @@ es:
             description: |
               Habilita el modo calibración en tu Plantcare, por lo que podrás ajustar su configuración
               WIFI y de acceso a la aplicación web (token de autenticación y URL)
-    wtever_api:
+    plantcare_api:
       attributes:
         name: Nombre
         wet: Nivel de humedad
@@ -239,7 +239,7 @@ es:
       sucessfully: Riego actualizado correctamente
     destroy:
       sucessfully: Riego eliminado correctamente
-    wtever_api:
+    plantcare_api:
       attributes:
         status: Estado
         programmed_at: Fecha programación
@@ -255,7 +255,7 @@ es:
       title: Programación
     update:
       sucessfully: Riego actualizado correctamente
-    wtever_api:
+    plantcare_api:
       attributes:
         starts_on: Fecha inicio
         ends_on: Fecha fin

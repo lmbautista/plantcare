@@ -74,7 +74,7 @@ module HtmlHelper
 
   def model_name(instance, attribute)
     klass_name = instance.class.name.demodulize.pluralize.downcase
-    I18n.t("#{klass_name}.wtever_api.attributes.#{attribute}")
+    I18n.t("#{klass_name}.plantcare_api.attributes.#{attribute}")
   end
 
   def label_for(instance, attribute, options = {})
