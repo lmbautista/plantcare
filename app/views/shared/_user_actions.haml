@@ -6,16 +6,7 @@
       = svg_icon_tag("plant-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
       %h5.m-0.third-color.vline-middle.inline-block.weight-2
         = [current_user.first_name, current_user.last_name].join(" ")
-  %li.vline-middle
-    = link_to "#last-connections", 'data-target' => '#last-connections', 'data-toggle' => 'modal',
-      title: I18n.t('menu.status_details') do
-      = svg_icon_tag("board-icon", { classes: "icon pr-1 svg-general-color vline-middle" })
-      %h5.m-0.third-color.vline-middle.inline-block.weight-2
-        = I18n.t('menu.status')
-        .smaller-1
-          = last_connection_tag(@board_connection_at)
 
-      = connection_tag_for(@board_connection_at)
   %li.vline-middle
     = link_to signout_path do
       = svg_icon_tag("logout-icon", { classes: "icon pr-1 svg-general-color vline-middle" })

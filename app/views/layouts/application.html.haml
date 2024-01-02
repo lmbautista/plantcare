@@ -13,10 +13,7 @@
   %body{ class: "#{params[:action]} #{params[:controller]} #{ 'logged' if logged? }" }
     %header{ class: "#{logged? ? "logged" : ""}" }
       = render 'shared/header'
-    = render partial: "shared/last_connections" if logged?
 
     = yield
-
     = render 'shared/spinner'
-
     = growl_message
