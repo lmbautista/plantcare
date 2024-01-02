@@ -2,8 +2,11 @@
 
 class BoardConnectionsController < ApplicationController
   def index
-    @board_connections = PlantcareApi::BoardConnection
+    board_connections = PlantcareApi::BoardConnection
       .all(board_id: board_id, page: page, per_page: per_page)
+
+    @paginated_board_connections = PlantcareApi::PaginatedCollection
+      .new(board_connections, board_connections.metadata)
 
     respond_to do |format|
       format.js { render :index }
@@ -12,7 +15,7 @@ class BoardConnectionsController < ApplicationController
 
   private
 
-  DEFAULT_PER_PAGE = 15
+  DEFAULT_PER_PAGE = 10
   DEFAULT_PAGE = 1
 
   def index_params

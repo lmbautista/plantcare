@@ -56,7 +56,7 @@ function linkControl() {
     $('.loading-overlay').removeClass('hidden');
   });
 
-  $('a:not([href^="#"]), button:not([data-dismiss], [data-toggle]), input[type="submit"]').not('.ref').click(function (e) {
+  $('a:not([href^="#"]), a:not([data-remote], button:not([data-dismiss], [data-toggle]), input[type="submit"]').not('.ref').click(function (e) {
     if (!e.shiftKey) { $('.loading-overlay').removeClass('hidden'); }
   });
 }

@@ -1,0 +1,13 @@
+const MODAL_BODY_SELECTOR = ".modal-body";
+var modalIsShown = ($("#board_connections").data('bs.modal') || {isShown: false}).isShown;
+var htmlContent = "<%= j render 'board_connections/index' %>"
+
+if (modalIsShown) {
+  var nodeContent = $.parseHTML(htmlContent);
+  var modalBodyHtml = $(nodeContent).find(MODAL_BODY_SELECTOR).html();
+
+  $("#board_connections_modal").find(MODAL_BODY_SELECTOR).html(modalBodyHtml);
+} else {
+  $("#board_connections_modal").html(htmlContent)
+  $("#board_connections").modal();
+}

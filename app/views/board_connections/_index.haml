@@ -1,0 +1,21 @@
+= modal_for("board_connections", nil, { footer: false, close_button: true }) do
+  - capture_haml do
+    .last-connections-panel
+      .last-connections-left-panel.vline-middle
+        .mr-2.ml-2.font-color
+          = image_tag "connection-status.png", width: "100%"
+          %h1.weight-2= I18n.t('menu.board_status')
+          %h5.weight-2= I18n.t("menu.status_details")
+
+      .last-connections-right-panel.vline-middle.text-center.mt-2.full-width
+        .flex.flex-direction-column
+          - if @paginated_board_connections.blank?
+            = I18n.t("menu.no_board_connections")
+          - @paginated_board_connections.each do |board_connection|
+            .pb-2.pl-2
+              = fa_icon 'far fa-clock font-color pr-1 bigger-1 vline-middle'
+              %h4.m-0.vline-middle.inline-block.font-color.weight-2
+                = board_connection.connected_at
+
+          = paginate @paginated_board_connections, remote: true
+

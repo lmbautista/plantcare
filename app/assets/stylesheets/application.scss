@@ -20,6 +20,7 @@
 @import 'sessions';
 @import 'plantcares';
 @import 'shared/mobile';
+@import 'shared/variables';
 
 
 .last-connections-panel {
@@ -37,3 +38,47 @@
 .connection-less-than-15 { color: $connection-less-than-15-color; }
 .connection-less-than-20 { color: $connection-less-than-20-color; }
 .connection-non-data { color: $non-data-color; }
+
+.pagination {
+  text-align: center;
+  padding: 0;
+
+  a {
+    display: block;
+    color: $general-color;
+    text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 0.3em;
+  }
+
+  .page {
+    text-decoration: none;
+    padding: 5px 7px;
+    border: 2px solid $general-color;
+    color: $font-color;
+
+    a { color: $general-color; }
+
+    &.current {
+      background-color: $general-color;
+      color: $opposite-color;
+      border-color: $general-color;
+      &:hover, &:focus {
+        background-color: darken($general-color,10%);
+        color: darken($opposite-color,10%);
+        border-color: darken($general-color,10%);
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: darken($general-color,10%);
+      color: darken($opposite-color,10%);
+      border-color: darken($general-color,10%);
+      a { color: darken($opposite-color, 10%); }
+    }
+  }
+}

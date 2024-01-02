@@ -38,7 +38,8 @@ module PlantcareApi
                :board_watering_interval,
                :board_watering_interval_delay,
                :calibrate_board,
-               :configure_board
+               :configure_board,
+               :board_id
 
     has_one :board
     has_one :water_pump

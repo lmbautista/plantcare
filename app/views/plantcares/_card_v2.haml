@@ -39,6 +39,10 @@
           = I18n.t("plantcares.index.plantcare.last_connection_at")
         %h6.weight-2.font-color.m-0
           = plantcare.board.last_connection_at.presence || "-"
+          = plantcare.board_id
+
+    = link_to board_connections_path(board_id: plantcare.board_id), remote: true, class: "font-color block mt-1 mb-0 weight-3" do
+      = I18n.t("plantcares.index.plantcare.all_connections")
 
     %h3.weight-2= plantcare.name
     = link_to edit_plantcare_path(plantcare), class: "font-color block mt-1 mb-0" do

@@ -1,4 +1,10 @@
 en:
+  views:
+    pagination:
+      next: Next
+      last: Last
+      first: First
+      previous: Previous
   time:
     formats:
       default: '%y/%m/%d %H:%M'
@@ -146,6 +152,7 @@ en:
         watered_at: Watered on
         wet_synced_at: Sync at %{wet_synced_at}
         last_connection_at: "Last connection at"
+        all_connections: "Check all connections"
     create:
       sucessfully: You already have one more plantcare to take care of
     edit:

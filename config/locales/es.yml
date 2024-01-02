@@ -1,4 +1,10 @@
 es:
+  views:
+    pagination:
+      next: Siguiente
+      last: Último
+      first: Primero
+      previous: Anterior
   time:
     formats:
       default: '%d/%m/%y %H:%M'
@@ -144,6 +150,7 @@ es:
         wet: Humedad actual
         wet_synced_at: "Sincronizado el %{wet_synced_at}"
         last_connection_at: "Última conexión el"
+        all_connections: "Ver todas las conexiones"
     create:
       sucessfully: Ya tienes un plantcare más para cuidar
     edit:
