@@ -29,6 +29,10 @@ en:
     no_board_connections: No board connection notifications
     sign_out: Sign out
     board_status: Last connections
+    waterings: Waterings
+    waterings_details: |
+      In this section you could check the already done and ongoing waterings of your Plantcare
+    no_waterings: No waterings yet
   confirmation: "Are you sure?"
   flash_message:
     notice: "Plantcare says: "
@@ -150,9 +154,11 @@ en:
         wet: Humidity
         planted_at: Planted on
         watered_at: Watered on
+        scheduled_watering_at: Watering scheduled at
         wet_synced_at: Sync at %{wet_synced_at}
         last_connection_at: "Last connection at"
         all_connections: "Check all connections"
+        all_waterings: "Check all waterings"
     create:
       sucessfully: You already have one more plantcare to take care of
     edit:
@@ -276,7 +282,8 @@ en:
         frequency_amount: Frequency
   watering:
     next_title: "Nex waterings:"
-    next: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
+    summary: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
+    wet_summary: "<span class=''>%{wet_before}</span> >>>> <span class=''>%{wet_after}</span>"
     no_pending_title: "No pending waterings"
   sessions:
     new:

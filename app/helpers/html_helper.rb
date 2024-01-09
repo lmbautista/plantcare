@@ -167,9 +167,22 @@ module HtmlHelper
             when "wet_sensor_error"
               "label-warning"
             when "server_error"
-               "label-danger"
+              "label-danger"
             else
               "label-success"
+            end
+
+    raw tag.span(class: "label #{color}") { value.humanize.downcase }
+  end
+
+  def watering_status_tag(value)
+    color = case value
+            when "programmed"
+              "label-default"
+            when "done"
+              "label-success"
+            else
+              "label-default"
             end
 
     raw tag.span(class: "label #{color}") { value.humanize.downcase }

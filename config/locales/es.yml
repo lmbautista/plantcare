@@ -29,6 +29,10 @@ es:
     no_board_connections: No hay notificaciones de conexión de la placa
     sign_out: Salir
     board_status: Últimas conexiones
+    waterings: Riegos
+    waterings_details: |
+      En esta sección podrás comprobar el estado de los riegos realizados y planificados de tu Plantcare
+    no_waterings: No hay riegos aún
   confirmation: "¿Estas seguro?"
   flash_message:
     notice: "Plantcare dice: "
@@ -147,10 +151,12 @@ es:
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el
+        scheduled_watering_at: Riego planificado el
         wet: Humedad actual
         wet_synced_at: "Sincronizado el %{wet_synced_at}"
         last_connection_at: "Última conexión el"
         all_connections: "Ver todas las conexiones"
+        all_waterings: "Ver todos los riegos"
     create:
       sucessfully: Ya tienes un plantcare más para cuidar
     edit:
@@ -271,7 +277,8 @@ es:
         frequency_amount: Frecuencia
   watering:
     next_title: "Próximos riegos:"
-    next: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
+    summary: "<span>%{programmed_at}</span> <b>(%{duration_amount}%{duration_unit})</b>"
+    wet_summary: "<span class=''>%{wet_before}</span> >>>> <span class=''>%{wet_after}</span>"
     no_pending_title: "Sin riegos pendientes"
   sessions:
     new:

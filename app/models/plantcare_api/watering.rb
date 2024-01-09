@@ -9,7 +9,9 @@ module PlantcareApi
                :consumed_at,
                :water_pump_field,
                :water_pump_id,
-               :watering_schedule_id
+               :watering_schedule_id,
+               :wet_before,
+               :wet_after
 
     DURATION_UNITS = [
       DURATION_IN_SECONDS = "seconds",

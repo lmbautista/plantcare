@@ -1,0 +1,19 @@
+= modal_for("waterings", nil, { footer: false, close_button: true }) do
+  - capture_haml do
+    .waterings-panel
+      .waterings-left-panel.vline-middle
+        .mr-2.ml-2.font-color
+          = image_tag "waterings-status.png", width: "100%"
+          %h1.weight-2= I18n.t('menu.waterings')
+          %h5.weight-2= I18n.t("menu.waterings_details")
+
+      .flex.flex-direction-column.vline-middle.text-center.p-2.full-width
+        - if @paginated_waterings.blank?
+          = I18n.t("menu.no_waterings")
+        - else
+          = render partial: "waterings/watering",
+                    collection: @paginated_waterings,
+                    as: :watering
+
+        = paginate @paginated_waterings, remote: true
+

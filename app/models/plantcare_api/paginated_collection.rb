@@ -35,6 +35,6 @@ module PlantcareApi
 
     attr_reader :records, :pagination_params
 
-    delegate :each, to: :records
+    delegate :each, :size, :blank?, to: :records
   end
 end

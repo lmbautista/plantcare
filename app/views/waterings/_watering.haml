@@ -1,0 +1,34 @@
+.visible-xs
+  .flex.flex-justify-space-between.align-center.border-bottom
+    %h5.font-color.weight-2.text-center{ style: "flex-basis: 70%" }
+      = watering_status_tag(watering.status)
+      %span.pl-1
+        = I18n.t("watering.summary", programmed_at: watering.programmed_at,
+                                    duration_amount: watering.duration_amount,
+                                    duration_unit: watering.short_duration_unit).html_safe
+
+    %span{ style: "flex-basis: 20%" }
+      - if watering.consumed_at.present?
+        .flex.flex-justify-space-between.align-center
+          %h5.inline.weight-3.full-dryness-color= "#{watering.wet_before}%"
+          = fa_icon 'far fa-angle-double-right font-color vline-middle'
+          %h4.inline.weight-3.full-wetness-color= "#{watering.wet_after}%"
+      - else
+        %h5= "-"
+
+.hidden-xs
+  .flex.flex-justify-space-between.align-center.border-bottom
+    %span{ style: "flex-basis: 25%" }= watering_status_tag(watering.status)
+    %h5.font-color.weight-2{ style: "flex-basis: 50%" }
+      = I18n.t("watering.summary", programmed_at: watering.programmed_at,
+                                  duration_amount: watering.duration_amount,
+                                  duration_unit: watering.short_duration_unit).html_safe
+
+    %span{ style: "flex-basis: 20%" }
+      - if watering.consumed_at.present?
+        .flex.flex-justify-space-between.align-center
+          %h5.inline.weight-3.full-dryness-color= "#{watering.wet_before}%"
+          = fa_icon 'far fa-angle-double-right font-color vline-middle'
+          %h4.inline.weight-3.full-wetness-color= "#{watering.wet_after}%"
+      - else
+        %h5.font-color.weight-2= "-"

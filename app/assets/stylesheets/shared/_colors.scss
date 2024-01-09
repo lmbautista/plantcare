@@ -12,6 +12,10 @@
 .bg-opposite-color         { background-color: $opposite-color; }
 .bg-one-color              { background-color: $bg-one-color; }
 .bg-two-color              { background-color: $bg-two-color; }
+.full-wetness-color { color: $full-wetness-color; }
+.bit-wetness-color { color: $bit-wetness-color; }
+.bit-dryness-color { color: $bit-dryness-color; }
+.full-dryness-color { color: $full-dryness-color; }
 
 .svg-general-color path            { fill: $general-color; stroke: $general-color; }
 .svg-general-opposite-pathcolor    { fill: $general-opposite-color; stroke: $general-opposite-color; }

@@ -1,0 +1,13 @@
+const MODAL_BODY_SELECTOR = ".modal-body";
+var modalIsShown = ($("#waterings").data('bs.modal') || {isShown: false}).isShown;
+var htmlContent = "<%= j render 'waterings/index' %>"
+
+if (modalIsShown) {
+  var nodeContent = $.parseHTML(htmlContent);
+  var modalBodyHtml = $(nodeContent).find(MODAL_BODY_SELECTOR).html();
+
+  $("#waterings_modal").find(MODAL_BODY_SELECTOR).html(modalBodyHtml);
+} else {
+  $("#waterings_modal").html(htmlContent)
+  $("#waterings").modal();
+}

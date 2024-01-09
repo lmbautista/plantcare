@@ -11,22 +11,25 @@
         = svg_icon_tag("watering-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
 
         .inline-flex
-          %h6.mb-1.mt-1.opposite-color.weight-2{ alt: I18n.t("plantcares.plantcare_api.attributes.watered_at") }
+          %h6.mb-1.mt-1.opposite-color.weight-2
             = I18n.t("plantcares.index.plantcare.watered_at")
           %h6.weight-2.opposite-color.m-0
             = plantcare.watered_at.presence || "-"
 
+      - if plantcare.waterings.any?(&:programmed?)
+        .pl-3.pt-1.detail.text-left
+          = svg_icon_tag("watering-schedule-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
 
-      .pl-3.mb-1.mt-4.opposite-color.text-left
-        %h6.weight-3.mb-0.mt-1
-          = I18n.t("watering.next_title")
-        - if plantcare.waterings.any?(&:programmed?)
-          = render partial: "waterings/info",
-                   collection: plantcare.waterings.select(&:programmed?).last(3),
-                   as: :watering
-        - else
-          = I18n.t("watering.no_pending_title").html_safe
+          .inline-flex
+            %h6.mb-1.mt-1.opposite-color.weight-2
+              = I18n.t("plantcares.index.plantcare.scheduled_watering_at")
+            %h6.weight-2.opposite-color.m-0
+              = plantcare.watered_at.presence || "-"
 
+      .pl-3.pt-2.detail.text-left
+        .inline-flex
+          = link_to waterings_path(board_id: plantcare.board_id), remote: true, class: "opposite-color block weight-3" do
+            = I18n.t("plantcares.index.plantcare.all_waterings")
 
   .plantcare-body.p-2
     .text-right.mb-1
@@ -39,7 +42,6 @@
           = I18n.t("plantcares.index.plantcare.last_connection_at")
         %h6.weight-2.font-color.m-0
           = plantcare.board.last_connection_at.presence || "-"
-          = plantcare.board_id
 
     = link_to board_connections_path(board_id: plantcare.board_id), remote: true, class: "font-color block mt-1 mb-0 weight-3" do
       = I18n.t("plantcares.index.plantcare.all_connections")
