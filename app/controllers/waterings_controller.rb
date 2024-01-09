@@ -43,7 +43,7 @@ class WateringsController < ApplicationController
 
   private
 
-DEFAULT_PER_PAGE = 10
+  DEFAULT_PER_PAGE = 10
   DEFAULT_PAGE = 1
 
   def index_params

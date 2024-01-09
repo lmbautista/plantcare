@@ -4,20 +4,21 @@
 $general-font: 'Roboto', sans-serif;
 $header-font:  'Pacifico', cursive;
 
+$opposite-color: #fff;
+$font-color: #444;
 $general-color:             darken(#18BC9C, 12%);
 $general-opposite-color:    darken(#18BC9C, 12%);
 $second-color:              darken($general-color, 5%);
 $third-color:               #441d38;
+$lite-gray-color:           lighten($font-color, 35%);
+
 $danger-color:              #d9534f;
-$opposite-color:            #fff;
-$font-color:                #444;
 $link-hover-color:          $general-color;
 $background-color:          $general-color;
 $background-opossite-color: $general-color;
 $bg-one-color:              #DADFDF;
 $bg-two-color:              #F6F3F3;
 
-$non-data-color: lighten($font-color, 35%);
 
 $full-wetness-color: rgb(96, 199, 76);
 $bit-wetness-color: rgb(146, 199, 76);
