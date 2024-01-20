@@ -1,7 +1,11 @@
 .plantcare-card.m-1{ data: { plantcare: plantcare.id } }
   .image-card
     = image_tag plantcare_picture(plantcare)
-    .plantcare-info.text-center.p-2
+    .plantcare-info.text-center.pl-2.pr-2
+      - if plantcare.watering_schedule.present?
+        .pb-2.text-right
+          %span.label.label-inverse
+            = I18n.t("plantcares.plantcare_api.watering_scheduler.status.active")
       .pl-1
         .smaller-1.weight-2.opposite-color.text-left
           = I18n.t("plantcares.index.plantcare.wet_synced_at", wet_synced_at: plantcare.wet_synced_at || "-")
@@ -25,11 +29,8 @@
               = I18n.t("plantcares.index.plantcare.scheduled_watering_at")
             %h6.weight-2.opposite-color.m-0
               = plantcare.watered_at.presence || "-"
-
-      .pl-3.pt-2.detail.text-left
-        .inline-flex
-          = link_to waterings_path(board_id: plantcare.board_id), remote: true, class: "opposite-color block weight-3" do
-            = I18n.t("plantcares.index.plantcare.all_waterings")
+              = link_to waterings_path(board_id: plantcare.board_id), remote: true, class: "opposite-color inline-block weight-3" do
+                = I18n.t("plantcares.index.plantcare.all_waterings")
 
   .plantcare-body.p-2
     .text-right.mb-1
@@ -42,31 +43,31 @@
           = I18n.t("plantcares.index.plantcare.last_connection_at")
         %h6.weight-2.font-color.m-0
           = plantcare.board.last_connection_at.presence || "-"
+          = link_to board_connections_path(board_id: plantcare.board_id), remote: true, class: "font-color inline-block weight-3" do
+            = I18n.t("plantcares.index.plantcare.all_connections")
 
-    = link_to board_connections_path(board_id: plantcare.board_id), remote: true, class: "font-color block mt-1 mb-0 weight-3" do
-      = I18n.t("plantcares.index.plantcare.all_connections")
+    %h2.weight-2= plantcare.name
 
-    %h3.weight-2= plantcare.name
     = link_to edit_plantcare_path(plantcare), class: "font-color block mt-1 mb-0" do
       = fa_icon "fal fa-pen-square vline-middle flex-inline"
-      %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
+      %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
         = I18n.t("plantcares.edit.goto-title")
 
     - if plantcare.water_pump.present?
       = link_to new_watering_path(water_pump_id: plantcare.water_pump_id), remote: true, class: "font-color block mt-1 mb-0" do
         = fa_icon "fal fa-dewpoint vline-middle flex-inline"
-        %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
+        %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
           = I18n.t("waterings.new.title")
 
       - if plantcare.watering_schedule.present?
         = link_to edit_watering_schedule_path(id: plantcare.watering_schedule.id), remote: true, class: "font-color block mt-1 mb-0" do
           = fa_icon "far fa-calendar-alt vline-middle flex-inline"
-          %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
+          %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
             = I18n.t("watering_schedules.edit.title")
       - else
         = link_to new_watering_schedule_path(plantcare_id: plantcare.id), remote: true, class: "font-color block mt-1 mb-0" do
           = fa_icon "far fa-calendar-alt vline-middle flex-inline"
-          %h5.bigger-1.weight-3.vline-middle.m-0.flex-inline
+          %h5.bigger-1.weight-2.vline-middle.m-0.flex-inline
             = I18n.t("watering_schedules.new.title")
 
     - else

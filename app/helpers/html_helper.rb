@@ -172,7 +172,11 @@ module HtmlHelper
               "label-success"
             end
 
-    raw tag.span(class: "label #{color}") { value.humanize.downcase }
+    content = tag.span(class: "label #{color}") do
+      I18n.t("plantcares.plantcare_api.boards.status.#{value}")
+    end
+
+    raw content
   end
 
   def watering_status_tag(value)
@@ -185,6 +189,10 @@ module HtmlHelper
               "label-default"
             end
 
-    raw tag.span(class: "label #{color}") { value.humanize.downcase }
+    content = tag.span(class: "label #{color}") do
+      I18n.t("plantcares.plantcare_api.waterings.status.#{value}")
+    end
+
+    raw content
   end
 end

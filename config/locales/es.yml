@@ -151,12 +151,12 @@ es:
       plantcare:
         planted_at: Plantada el
         watered_at: Regada el
-        scheduled_watering_at: Riego planificado el
+        scheduled_watering_at: Próximo riego el
         wet: Humedad actual
         wet_synced_at: "Sincronizado el %{wet_synced_at}"
         last_connection_at: "Última conexión el"
-        all_connections: "Ver todas las conexiones"
-        all_waterings: "Ver todos los riegos"
+        all_connections: "(más)"
+        all_waterings: "(más)"
     create:
       sucessfully: Ya tienes un plantcare más para cuidar
     edit:
@@ -226,6 +226,20 @@ es:
         board_watering_interval_delay: Demora entre intervalos de riego (msec)
         calibrate_board: "Modo calibración"
         configure_board: "Modo configuración"
+      boards:
+        status:
+          configuring: configurando
+          calibrating: calibrando
+          online: online
+          server_error: error de servidor
+          wet_sensor_error: error sensor humedad
+      waterings:
+        status:
+          programmed: programado
+          done: hecho
+      watering_scheduler:
+        status:
+          active: riego programado
     status:
       healthy: Sana
       sick: Malita

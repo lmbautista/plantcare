@@ -157,8 +157,8 @@ en:
         scheduled_watering_at: Watering scheduled at
         wet_synced_at: Sync at %{wet_synced_at}
         last_connection_at: "Last connection at"
-        all_connections: "Check all connections"
-        all_waterings: "Check all waterings"
+        all_connections: "(more)"
+        all_waterings: "(more)"
     create:
       sucessfully: You already have one more plantcare to take care of
     edit:
@@ -229,6 +229,20 @@ en:
         board_watering_interval_delay: Delay between watering interval (msec)
         calibrate_board: Calibration mode
         configure_board: Configuration mode
+      boards:
+        status:
+          configuring: configuring
+          calibrating: calibrating
+          online: online
+          server_error: server error
+          wet_sensor_error: wet sensor error
+      waterings:
+        status:
+          programmed: programmed
+          done: done
+      watering_scheduler:
+        status:
+          active: watering scheduled
     status:
       healthy: Healthy
       sick: Sick
