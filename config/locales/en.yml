@@ -1,10 +1,10 @@
 en:
   views:
     pagination:
-      next: Next
+      next: ">"
       last: Last
       first: First
-      previous: Previous
+      previous: "<"
   time:
     formats:
       default: '%y/%m/%d %H:%M'

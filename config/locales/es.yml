@@ -1,10 +1,10 @@
 es:
   views:
     pagination:
-      next: Siguiente
+      next: ">"
       last: Último
       first: Primero
-      previous: Anterior
+      previous: "<"
   time:
     formats:
       default: '%d/%m/%y %H:%M'
