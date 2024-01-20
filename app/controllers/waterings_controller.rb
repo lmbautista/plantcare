@@ -11,7 +11,7 @@ class WateringsController < ApplicationController
     if watering.save
       flash[:notice] = I18n.t("waterings.create.sucessfully")
     else
-      flash[:error] = to_flash(@watering.response_errors)
+      flash[:error] = to_flash(watering.response_errors)
     end
 
     redirect_to plantcares_path

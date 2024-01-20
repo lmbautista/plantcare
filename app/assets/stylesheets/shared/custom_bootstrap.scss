@@ -123,6 +123,10 @@ body {
   }
 
   .modal-dialog {
+    @media (min-width: $screen-md-min) {
+      width: 600px;
+      margin: 1% auto;
+    }
     .modal-header {
       border-bottom: none;
       h1,h2,h3,h4,h5 {

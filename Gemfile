@@ -25,7 +25,6 @@ gem "turbolinks"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.0"
 
-
 # Code review
 gem "rubocop", require: false
 gem "rubocop-rails"
