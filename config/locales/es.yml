@@ -156,7 +156,8 @@ es:
         wet_synced_at: "Sincronizado el %{wet_synced_at}"
         last_connection_at: "Última conexión el"
         all_connections: "(más)"
-        all_waterings: "(más)"
+        more_waterings: "(más)"
+        all_waterings: "Ver todos los riegos"
     create:
       sucessfully: Ya tienes un plantcare más para cuidar
     edit:

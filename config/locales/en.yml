@@ -158,7 +158,8 @@ en:
         wet_synced_at: Sync at %{wet_synced_at}
         last_connection_at: "Last connection at"
         all_connections: "(more)"
-        all_waterings: "(more)"
+        more_waterings: "(more)"
+        all_waterings: "Check all waterings"
     create:
       sucessfully: You already have one more plantcare to take care of
     edit:

@@ -30,6 +30,14 @@
             %h6.weight-2.opposite-color.m-0
               = plantcare.watered_at.presence || "-"
               = link_to waterings_path(board_id: plantcare.board_id), remote: true, class: "opposite-color inline-block weight-3" do
+                = I18n.t("plantcares.index.plantcare.more_waterings")
+      - elsif plantcare.waterings.any?
+        .pl-3.pt-1.detail.text-left
+          = svg_icon_tag("watering-schedule-icon", { classes: "icon pr-1 svg-opposite-color vline-bottom" })
+
+          .inline-flex
+            %h6.weight-2.opposite-color.m-0
+              = link_to waterings_path(board_id: plantcare.board_id), remote: true, class: "opposite-color inline-block weight-3" do
                 = I18n.t("plantcares.index.plantcare.all_waterings")
 
   .plantcare-body.p-2
