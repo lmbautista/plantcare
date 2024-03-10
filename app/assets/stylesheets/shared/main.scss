@@ -19,6 +19,7 @@ html {
     overflow-x: hidden;
     font-family: $general-font;
     font-size: 14px;
+    font-optical-sizing: auto;
 
     h1,h2,h3,h4,h5,h6 { font-weight: 300  }
     h1,h2,h3 { font-family: $header-font; }
