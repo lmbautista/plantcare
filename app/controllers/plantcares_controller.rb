@@ -59,7 +59,7 @@ class PlantcaresController < ApplicationController
   private
 
   def plantcare_params
-    params.require(:plantcare_api).permit(
+    params.require(:plantcare_api_plantcare).permit(
       :name,
       :picture,
       :attachments,
