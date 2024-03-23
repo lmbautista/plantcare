@@ -145,7 +145,7 @@ es:
         step-4:
           title: Plantcare listo
           description: |
-            <p>¡Felicidades! Ahora la placa iniciará el <b>Modo en línea</b> encendiendo una luz verde.</p>
+            <p>¡Felicidades! Ahora la placa iniciará el <b>Modo en línea</b> encendiendo una luz blanca.</p>
             <p>A partir de ahora, tu placa tendrá comunicación periódica con la aplicación para hacer un seguimiento de la humedad del suelo de tu maceta
             y regarla cuando sea necesario.</p>
       plantcare:

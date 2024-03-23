@@ -147,7 +147,7 @@ en:
         step-4:
           title: Plantcare ready
           description: |
-            <p>Congratulations! Now the board will start the <b>Online mode</b> turning on a green light.</p>
+            <p>Congratulations! Now the board will start the <b>Online mode</b> turning on a white light.</p>
             <p>From now on your board will have periodically communication with the application to track the soil moisture of your pot
             and watering it when needed</p>
       plantcare:

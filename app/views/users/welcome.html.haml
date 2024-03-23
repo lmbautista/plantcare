@@ -34,12 +34,12 @@
     = flex_image_div image_url: "features.png"
     = flex_panel_div classes: "flex-direction-column" do
       = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.features.title'), classes: "text-left full-width" }
-      .full-width.p-2.pt-4
+      .full-width
         = render partial: "features"
 
   .features.flex.align-center.pt-2.pb-2.visible-xs
     = flex_image_div image_url: "features.png", mobile: true
     = flex_panel_div classes: "flex-direction-column", mobile: true do
       = render partial: 'shared/title', locals: { title: I18n.t('users.welcome.features.title') }
-      .full-width.p-2.pt-4
+      .full-width
         = render partial: "features"
