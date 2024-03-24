@@ -49,6 +49,13 @@
   @include hover-effect(darken($danger-color,10%));
 }
 
+.custom-btn-danger-secondary {
+  background-color: transparent;
+  color: $danger-color;
+  border-color: $danger-color;
+  @include hover-effect(darken($danger-color,10%));
+}
+
 .custom-btn-active {
   @include active-effect($general-color);
 }

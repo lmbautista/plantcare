@@ -20,5 +20,19 @@
       = f.number_field :frequency_amount, class: "form-control", placeholder: I18n.t("watering_schedules.plantcare_api.attributes.frequency_amount")
       = f.select :frequency_unit, PlantcareApi::WateringSchedule::FREQUENCY_UNITS, { prompt: true }, { class: "form-control" }
 
-    .mt-4
-      = render partial: "shared/form/submit", locals: { submit_class: "custom-btn-primary", remote: true }
+    - buttons_class = @watering_schedule.id.present? ? "col-sm-4" : "col-sm-6"
+    .mt-4.pt-2.text-right
+      .row
+        .col-xs-12{ class: buttons_class }
+          .form-group
+            = submit_tag I18n.t('buttons.submit'), { class: "custom-btn custom-btn-active btn-block custom-btn-inline" }
+
+        .col-xs-12{ class: buttons_class }
+          .form-group
+            = link_to I18n.t('buttons.cancel'), '#', class: "custom-btn custom-btn-danger btn-block custom-btn-inline", data: { dismiss: "modal" }
+
+        - if @watering_schedule.id.present?
+          .col-xs-12{ class: buttons_class }
+            .form-group
+              = link_to I18n.t('buttons.remove'), watering_schedule_path(@watering_schedule), method: :delete,
+                class: "custom-btn custom-btn-danger-secondary btn-block custom-btn-inline",data: { confirm: I18n.t("confirmation") }

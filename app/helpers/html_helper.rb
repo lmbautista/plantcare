@@ -145,7 +145,7 @@ module HtmlHelper
       "display: flex",
       "justify-content: center",
       "align-items: center",
-      (mobile ? "min-height: 40vh" : "height: 90vh")
+      (mobile ? "min-height: 40vh" : "min-height: 90vh")
     ].compact.join(";")
 
     raw tag.div(class: classes, style: styles) { yield if defined?(yield) }

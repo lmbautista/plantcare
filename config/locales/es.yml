@@ -16,6 +16,7 @@ es:
     add: "Añadir"
     submit: "Enviar"
     cancel: "Cancelar"
+    remove: "Eliminar"
     create: "Crear"
     close: "Cerrar"
     back: "Volver"
@@ -58,9 +59,9 @@ es:
         feature-2:
           title: Autosostenible y ECO
           description: |
-            <p>Plantcare está construida con plasticos biodegradables, y dispondrás de la opción de incluir un panel solar,
+            <p>Plantcare está construida con plasticos biodegradables, Además disponemos de una versión solar,
             por lo que no deberás preocuparte nunca del mantenimiento eléctrico.</p>
-            <p>¡Tu Plantcare nunca se agotará!</p>
+            <p>Tu Plantcare nunca se agotará</p>
         feature-3:
           title: Gran autonomía
           description: |
@@ -283,6 +284,8 @@ es:
       title: Programación
     update:
       sucessfully: Riego actualizado correctamente
+    destroy:
+      sucessfully: Has borrado tu programación de riego correctamente
     plantcare_api:
       attributes:
         starts_on: Fecha inicio

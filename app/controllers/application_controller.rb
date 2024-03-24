@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def to_flash(errors)
-    html_errors = errors.map do |model, attributes|
+    html_errors = Array(errors).map do |model, attributes|
       attributes.map do |name, descriptions|
         "#{model}_#{name}: #{descriptions.map(&:humanize).join(", ")}"
       end

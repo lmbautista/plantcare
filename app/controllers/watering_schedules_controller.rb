@@ -37,6 +37,18 @@ class WateringSchedulesController < ApplicationController
     end
   end
 
+  def destroy
+    watering_schedule = PlantcareApi::WateringSchedule.find(params[:id])
+
+    if watering_schedule.destroy
+      flash[:notice] = I18n.t("watering_schedules.destroy.sucessfully")
+    else
+      flash[:error] = to_flash(watering_schedule.response_errors)
+    end
+
+    redirect_to plantcares_path
+  end
+
   private
 
   def watering_schedule_params

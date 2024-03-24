@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   resources :sessions, only: %w(new create destroy)
   resources :plantcares
   resources :waterings, only: %w(new create destroy index)
-  resources :watering_schedules, except: %w(show destroy)
+  resources :watering_schedules, except: %w(show)
   resources :board_connections, only: %w(index)
 end

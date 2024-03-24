@@ -16,6 +16,7 @@ en:
     add: "Add"
     submit: "Submit"
     cancel: "Cancel"
+    remove: "Remove"
     create: "Create"
     close: "Close"
     back: "Back"
@@ -60,9 +61,9 @@ en:
         feature-2:
           title: Self-sustainable & ECO system
           description: |
-            <p>Plantcare is built with biodegradable plastics, but also, you have the option to assemble a solar panel.
-            By doind that you won't need to take care of the electric maintenance.</p>
-            <p>Your Plantcare will be alive for ever!</p>
+            <p>Plantcare is built with biodegradable plastics. Also, a solar versión is available.
+            By doing that you won't need to take care of the electric maintenance.</p>
+            <p>Your Plantcare will be alive for ever</p>
         feature-3:
           title: Long-life duration system
           description: |
@@ -285,9 +286,9 @@ en:
     edit:
       title: Schedule
     update:
-      sucessfully: Watering updated successfully
+      sucessfully: Watering schedule updated successfully
     destroy:
-      sucessfully: Watering removed successfully
+      sucessfully: Watering schedule removed successfully
     plantcare_api:
       attributes:
         starts_on: Starts on
